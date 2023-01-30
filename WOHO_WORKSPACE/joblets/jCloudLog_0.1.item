@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:model="http://www.talend.com/joblet.ecore" xmi:version="2.0">
-  <model:JobletProcess defaultContext="Default">
+  <model:JobletProcess defaultContext="Default" jobType="Standard">
     <context confirmationNeeded="false" name="Default"/>
     <parameters>
+      <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
       <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
       <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
@@ -30,6 +31,9 @@
       <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
       <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;F:/jdev/t561_tic/Talend-Studio-20141207_1530-V5.6.1/workspace/in.csv&quot;"/>
       <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+      <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
       <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
       <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_11"/>
       <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -42,7 +46,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:wRFtZAM3CLM7Dd9Q4re6PHJOXajZ3E2wOsFexmra"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:VSn6ta0vywi1JP9kll3c8T2JqySsSBZNdUh1aGRQ"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -66,7 +70,6 @@
       <routinesParameter id="_zlLLUNbYEeSdntIOxAqtww" name="DataOperation"/>
       <routinesParameter id="_zpLhkNbYEeSdntIOxAqtww" name="DataQuality"/>
       <routinesParameter id="_zpj8ENbYEeSdntIOxAqtww" name="DqStringHandling"/>
-      <routinesParameter id="_n6nvENbgEeSpSuPG3LASsw" name="MDM"/>
       <routinesParameter id="_zms1UNbYEeSdntIOxAqtww" name="Mathematical"/>
       <routinesParameter id="_znFP0NbYEeSdntIOxAqtww" name="Numeric"/>
       <routinesParameter id="_zndqUNbYEeSdntIOxAqtww" name="Relational"/>
@@ -77,6 +80,8 @@
       <routinesParameter id="_zo5NsNbYEeSdntIOxAqtww" name="TalendString"/>
       <routinesParameter id="_dnpOQD3HEeO7UMG_YqAtyA" name="DQ_METHODS"/>
       <routinesParameter id="_rRULwKS9EeWgZKaFElb6hw" name="DataQualityDependencies"/>
+      <routinesParameter id="_1qD9wJDHEe2MW5pQrfqoXg" name="DataMasking"/>
+      <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
     </parameters>
     <node componentName="tLogCatcher" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="64">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogCatcher_1"/>
@@ -168,6 +173,57 @@
         <column defaultValue="" key="false" length="3" name="code" nullable="true" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       </metadata>
     </node>
+    <node componentName="tPatternMasking" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPatternMasking_1"/>
+      <elementParameter field="TABLE" name="RULE_TABLE"/>
+      <elementParameter field="CLOSED_LIST" name="METHOD" value="BASIC"/>
+      <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:taMu+OFemMBYEtFyyp33iI32pHCevjqtAWo3UrBi"/>
+      <elementParameter field="CHECK" name="USE_TWEAK" show="false" value="false"/>
+      <elementParameter field="CHECK" name="USE_COLUMN_AS_TWEAK" show="false" value="false"/>
+      <elementParameter field="PREV_COLUMN_LIST" name="TWEAK_COLUMN" show="false" value=""/>
+      <elementParameter field="CLOSED_LIST" name="ALGO_VERSION" show="false" value="2"/>
+      <elementParameter field="TEXT" name="RANDOM_SEED" value=""/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+      <elementParameter field="CHECK" name="OUTPUT_ORIGINAL" value="false"/>
+      <elementParameter field="CHECK" name="KEEP_NULL" value="true"/>
+      <elementParameter field="CHECK" name="KEEP_EMPTY" value="false"/>
+      <elementParameter field="CHECK" name="SEPERATE_OUTPUT" value="true"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tPatternMasking_1"/>
+      <metadata connector="FLOW_OUTPUT" name="FLOW_OUTPUT">
+        <column defaultValue="" key="false" length="0" name="ORIGINAL_MARK" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Boolean" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="RAW" name="RAW">
+        <column defaultValue="" key="false" length="0" name="ERROR_MESSAGE" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tDataDecrypt" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataDecrypt_1"/>
+      <elementParameter field="CLOSED_LIST" name="SECRET_TYPE" value="CRYPTO_KEY"/>
+      <elementParameter field="CLOSED_LIST" name="CRYPTO_METHOD" value="AES"/>
+      <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:QK02Ey0FHnXSmMaQMty6Plfd+b0Qw5DcesFSZOqu"/>
+      <elementParameter field="PASSWORD" name="PASSWORD_M1" show="false" value="enc:system.encryption.key.v1:Af48qNYYV1wunf5yW9rmzTSrWJlijZSQdAufatIW"/>
+      <elementParameter field="FILE" name="CRYPTO_FILE_PATH" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TABLE" name="TABLE_CONFIG"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+      <elementParameter field="CLOSED_LIST" name="ALGO_VERSION" show="false" value="2"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDataDecrypt_1"/>
+    </node>
+    <node componentName="tDataEncrypt" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="320">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataEncrypt_1"/>
+      <elementParameter field="CLOSED_LIST" name="SECRET_TYPE" value="CRYPTO_KEY"/>
+      <elementParameter field="CLOSED_LIST" name="CRYPTO_METHOD" value="AES"/>
+      <elementParameter field="PASSWORD" name="SECRET_KEY" value="enc:system.encryption.key.v1:6Zjr7TV4HOy5PdWt/lnOn+ulUlAUloKsOBWlV1iz"/>
+      <elementParameter field="PASSWORD" name="PASSWORD_M1" show="false" value="enc:system.encryption.key.v1:SBlgmydwABeN768TCLzPinSyJ6vP5YlR6GUAn3JB"/>
+      <elementParameter field="FILE" name="CRYPTO_FILE_PATH" show="false" value="&quot;&quot;"/>
+      <elementParameter field="GENERATE_CRYPTO_FILE_CONTROLLER" name="GEN_CRYPTO_FILE_CONTROLLER" show="false" value="false"/>
+      <elementParameter field="TABLE" name="TABLE_CONFIG"/>
+      <elementParameter field="CLOSED_LIST" name="ALGO_VERSION" show="false" value="2"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tDataEncrypt_1"/>
+    </node>
     <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tJobLog_1">
       <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
         <elementValue elementRef="TRACE_COLUMN" value="moment"/>
@@ -225,15 +281,30 @@
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
     </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPatternMasking_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataDecrypt_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataEncrypt_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
   </model:JobletProcess>
   <TalendProperties:ByteArray innerContent="89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7AF40000032C49444154789CC5975B4853711CC7BF1114410F3D48F510D45BD09B19E483B76A1084D9249D9897D49A9754EAC9A07A28A3B7E84AE55113350DCD4B8E5444F38268B99CBD88D10531422B2B3412F421EADBEF781CD8B6B3EDCC5983CF7E3B3BDB7E9FF3FB7FCF390C24F13F597C0A0F0F7FAFE27CF35F6E07FC0311FBF6CCE554623E5B01A34CA18C34EDFE955C81F280048C905D8FED795598CFAF06CF7781975E8045FD604E23682D0553CAF0D6F0121821AF1AB367EAC13BAFC1AA0F60D9047875143CFB0CCC7A02669483490A4602CA8080E5B81D7D1D2CB915E0CD5760E334D839073EFE0A968CCB2446C0DCA760429D4C4296254E41845E53DD0CF814A8414F619DD6D0F60D1CFC09B6CE6853B8FC123CD50DC637C91444E0A8826623021E71FDA2B5121F0B44E0864CE0C124D8F405AC9D026FBD012F4816AC9DE0E1063055041215F41A5902BF0432ABD09B5B035E7480D7C6C0DBD2F8BAC814CBF84F4B10532403A65A30DDC70402CEC0B14A5CB1DE07F365D44512BA737609DF73B0B00F3CDE0EC63E0263CAB50C1C519018F40CC8634D6639E633E4144C6F93D477688D936CE0213933A224A0C9D23C45C1ACB7A30E3803F2D81893BDA5E6440998269330CB721C7C28475D051E28D5469FA6602156C136A3A7A15F02533F2698DA14C6B08490FD96BB78671591938A469682DF6605E37B15348429D810F4EB80B3B95A97A61122AC8F2B8165F97A4BF362A147D81AB40C389B378EDDA3AF2392C6EB8422A152D8B1E20C1869EE22922B3884CD016720D0E64B026B851C41F12B03A12633D58F7AC39FC60E07A32593D443F66FF2980155A05D6EA47D9231FB24393A4D8ECF909FE6C8EF0BC605A47A44DD171919FDD92D036A83D512181EFE1B75BF5B06822560B76B02523934E4194F02869740BD2C7B12181CD404A4BA3130A061D95944E9D962580072CBC5B0E0F08E2AD0DFAF8F9BC0E20BFF9620DAD712F4F4681390AA8BDB120453A0AB4B1390AACB4A32E053A0A3431390AA4BC019F047A0AD4D1390BA486BAB3BAB9A019B4D1390AACBAA66A0B9591390AA8B6E069CD7FC5DF1058BB86E3B05BCFDD56A6860B429D44C15E7F5DF75DB63065C7EB05BC5CBF64AFF9CB6B865E07FF1073F036B3DCBCB274D0000000049454E44AE426082"/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_90880608-3287-4b17-aad0-7f5882b822b7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>50sChFfD4zew3HqL+Lt3O2dJMNR9TiJlzuXnvCSIofpFekPG/hoVrAQhVPVWtQvJf//FGaYeKnLO&#13;
-Ziej2kJNiA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1e76e63a-cd0b-45f5-88c6-b461afaa4fa5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9LrnDNi35opVfUDa8lu6++dhj8eMyILLUMRuTKrGspHWBp4/w3+b73wSPgFnocHIZv6NsTH0Cvv5&#13;
-KuixzzEW0g==</DigestValue></Reference></SignedInfo><SignatureValue>bR+8HIbZJMjMz7v8vAkzv7EDYQ8oD2G4pl/a3FP67+O4Ug29S99LncJ1ZdOa1dC9kBXi1EkSlq3Q&#13;
-9aNeDkbqYMGxzFmemd08KycC0rD4gRVPFGrbIf0Wjh+PeE0JRe13biIi/o7YRVS03HopYAEz+RQi&#13;
-l5nWWpBR+3ZY6R/nrQ6Ls3S281cG+7X1uvtfD7eCju2hrr3phBDYVkrcKcol/tW0AbY/9x0P5p3P&#13;
-V2qVju2X31J+NS5gjdAU2Av6lqvHRk5D03cJ7Nco/hnPcjEExRZpfhpnwFqk848vR3ks4l8hzmkc&#13;
-I87Vlq2LqGdqOqjslQlrZGicIcZSv2HaD7UqRQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_17b31ee3-3638-4aaa-a274-96b1ca333d1c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PcncVry4PAsDcgUaF8qpWnRamodNJaIQSJgPUS7/ZrqBo0b9HuGiGzZoexp/woXTS08fVmL+vxwa&#13;
+U6ipm1RZUQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a9bbf37d-9487-4128-86e5-cfb90264b0ee"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qZAa6NTpZGa0Z/t9mYjKsxhsDkgpAdK8PbwG896mESRCpI9rFhdaemVBBpQ0X9QnhvoE3hc1Da5P&#13;
++bLb9H0XFQ==</DigestValue></Reference></SignedInfo><SignatureValue>Wd7SRUfMui2NVkJKCRAFaGuN3YqJwNxjrR2sIFHsXnaVzatRhXTNxHfhgSopWWTI8VxH8OlSaQG/&#13;
+3IhXKgOfjRagmXUJUS5Z5EUKf2ioWDJYDtFvJKiUDkQten16vWsdiSTA+8dSu0A9HpZY99MjYmAA&#13;
+ztMMyje/GsCcFnuxVwZQ6TDpU1R2eB80f3amQolsx/0AVoUM1li5rySaDxYhX68tDXL8v9eYCwu4&#13;
+lINAvjpSrRoFfq8mo5zLOvOCibM84brHSE0aXRo0Wx7Y/7AIhgPvN0IcMWLtYVECYe7Lmja4Oh+0&#13;
+9KWsd0K+CTPBqRLlZACdvFnU2D1mjjksFkjLpA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -255,4 +326,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1e76e63a-cd0b-45f5-88c6-b461afaa4fa5" Target="#_90880608-3287-4b17-aad0-7f5882b822b7"><Timestamp>2023-01-10 08:51:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a9bbf37d-9487-4128-86e5-cfb90264b0ee" Target="#_17b31ee3-3638-4aaa-a274-96b1ca333d1c"><Timestamp>2023-01-30 17:56:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
