@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:bQ8kiTLsBm6Md1PMI6dtLi6rqbRaOT8V8A36Wt3b"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:3P7l4aX8lUc2T4wLd8r0osw6hb971VVrCyHdJGSc"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:iN7L9uiBggoJOJwwTys8TjHI/d7M2ydowfKVwnCx"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:dIUJl5hqeTtquJZT7q7NO0EXtHPkGh24ra5IRx+n"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -198,7 +198,8 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="out_1" name="out_1">
+    <metadata comment="" label="metadata" name="out_1">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_5125" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -208,9 +209,10 @@
       <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="out_1" sizeState="INTERMEDIATE">
+      <uiProperties/>
+      <varTables name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateCondensedTool="true" activateExpressionFilter="true" columnNameFilter="" expressionFilter="row1.D_5125.equals(&quot;AAQ&quot;) " id="_0cVaEKFUEe27I9KY-bjM5g - metadata" name="out_1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="" name="SEQ_NR" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row1.D_7140 " name="D_7140" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.D_1154 " name="D_1154" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="row1.D_5125 " name="D_5125" nullable="true" type="id_String"/>
@@ -230,7 +232,58 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_u2E7cKDAEe23yrg2iKuPgA-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="ouuu">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_5125" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="6" name="D_5118" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="3" type="id_Float" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_6345" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Numeric.sequence(&quot;s1&quot;,1,1) " name="var1" type="id_Integer"/>
+      </varTables>
+      <outputTables activateCondensedTool="true" id="_0cVaEKFUEe27I9KY-bjM5g - metadata" name="ouuu" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.var1 " name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="out_1.D_7140" name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_1.D_1154" name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="out_1.D_5125" name="D_5125" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_1.D_5118" name="D_5118" nullable="true" type="id_Float"/>
+        <mapperTableEntries expression="out_1.D_6345" name="D_6345" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_1.D_3225" name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_1.D_4052" name="D_4052" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="out_1" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="D_5125" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_5118" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="D_6345" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_4052" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_1"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_0cVaEKFUEe27I9KY-bjM5g - metadata"/>
@@ -244,6 +297,7 @@
     <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tHashOutput_1">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_5125" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -333,18 +387,38 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Out_2" name="Out_2">
+    <metadata comment="" label="metadata" name="Out_2">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="out_34" name="out_34">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="Out_2" sizeState="INTERMEDIATE">
+      <varTables name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row2.D_2005 ==299" id="_nVccUKFUEe27I9KY-bjM5g - metadata" name="Out_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row2.D_7140 " name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.D_1154 " name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="row2.D_2005 " name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row2.D_2380 " name="D_2380" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.D_3225 " name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.D_4052 " name="D_4052" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row2.D_2005 ==300" id="_nVccUKFUEe27I9KY-bjM5g - metadata" name="out_34" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="SEQ_NR" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row2.D_7140 " name="D_7140" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row2.D_1154 " name="D_1154" nullable="true" type="id_Long"/>
         <mapperTableEntries expression="row2.D_2005 " name="D_2005" nullable="true" type="id_Integer"/>
@@ -362,8 +436,58 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_5"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_u2E7cKDAEe23yrg2iKuPgA-tMap_5-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata comment="" label="metadata" name="otser">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Numeric.sequence(&quot;s2&quot;,1,1) " name="var1" type="id_Integer"/>
+      </varTables>
+      <outputTables activateCondensedTool="true" id="_nVccUKFUEe27I9KY-bjM5g - metadata" name="otser" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.var1 " name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="Out_2.D_7140" name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Out_2.D_1154" name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="Out_2.D_2005" name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="Out_2.D_2380" name="D_2380" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="Out_2.D_3225" name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Out_2.D_4052" name="D_4052" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="Out_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="D_2380" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_4052" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_2"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_nVccUKFUEe27I9KY-bjM5g - metadata"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
@@ -373,16 +497,88 @@
     <elementParameter field="CHECK" name="APPEND" value="true"/>
     <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Out_2" name="tHashOutput_2">
+    <metadata connector="FLOW" label="metadata" name="tHashOutput_2">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_6"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_u2E7cKDAEe23yrg2iKuPgA-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata comment="" label="metadata" name="copyOfotser">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Numeric.sequence(&quot;s3&quot;,1,1) " name="var1" type="id_Integer"/>
+      </varTables>
+      <outputTables activateCondensedTool="true" id="_nVccUKFUEe27I9KY-bjM5g - metadata" name="copyOfotser" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="Var.var1 " name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="out_34.D_7140 " name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_34.D_1154 " name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="out_34.D_2005 " name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="out_34.D_2380 " name="D_2380" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="out_34.D_3225 " name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_34.D_4052 " name="D_4052" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="out_34" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="D_2380" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries name="D_4052" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_3"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_nVccUKFUEe27I9KY-bjM5g - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashOutput_3">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="D_2380" nullable="true" pattern="&quot;yyyyMMdd&quot;" precision="0" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4" name="D_3225" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_0cVaEKFUEe27I9KY-bjM5g - metadata"/>
@@ -392,6 +588,7 @@
     <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tHashInput_1">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_5125" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
@@ -401,7 +598,7 @@
       <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="256" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -439,6 +636,7 @@
         <mapperTableEntries expression="row5.D_2380 " name="Datum_gueltig_bis" nullable="true" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="SEQ_NR" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="D_7140" nullable="true" type="id_String"/>
         <mapperTableEntries name="D_1154" nullable="true" type="id_Long"/>
         <mapperTableEntries name="D_5125" nullable="true" type="id_String"/>
@@ -448,24 +646,26 @@
         <mapperTableEntries name="D_4052" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" activateExpressionFilter="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row3.D_7140 " name="D_7140" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="row3.D_1154 " name="D_1154" nullable="true" operator="=" type="id_Long"/>
-        <mapperTableEntries expression="299" name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.SEQ_NR " name="SEQ_NR" nullable="true" operator="=" type="id_Integer"/>
+        <mapperTableEntries expression="" name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="" name="D_2005" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="" name="D_2380" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row3.D_3225 " name="D_3225" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="row3.D_4052 " name="D_4052" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="" name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="D_4052" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row5" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row3.D_7140 " name="D_7140" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row3.D_1154 " name="D_1154" nullable="true" type="id_Long"/>
-        <mapperTableEntries expression="300" name="D_2005" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="row3.SEQ_NR " name="SEQ_NR" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="" name="D_7140" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="D_1154" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="" name="D_2005" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="D_2380" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row3.D_3225 " name="D_3225" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row3.D_4052 " name="D_4052" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="D_3225" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="D_4052" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="448">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_2"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_nVccUKFUEe27I9KY-bjM5g - metadata"/>
@@ -475,6 +675,7 @@
     <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tHashInput_2">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
@@ -483,16 +684,17 @@
       <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="448">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="512">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_3"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_nVccUKFUEe27I9KY-bjM5g - metadata"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_2"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
     <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="metadata" name="tHashInput_3">
+      <column comment="" key="false" length="-1" name="SEQ_NR" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="D_7140" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="D_1154" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Long" usefulColumn="true"/>
       <column comment="" key="false" length="3" name="D_2005" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
@@ -501,7 +703,7 @@
       <column comment="" key="false" length="3" name="D_4052" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="320">
+  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
@@ -536,7 +738,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:EpKq90Yx9ucsROvAkZDFEN43GpisykCnbwyClFZx"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:dyhp0VOLfwZe2rRQxX4c0GtRTxDJ4fytz5sFuYgY"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -569,9 +771,18 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputXML_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_1" target="tFileInputXML_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
-  <connection connectorName="FLOW" label="out_1" lineStyle="0" metaname="out_1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tHashOutput_1">
+  <connection connectorName="FLOW" label="out_1" lineStyle="0" metaname="out_1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="SEQ_NR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_1"/>
+  </connection>
+  <connection connectorName="FLOW" label="ouuu" lineStyle="0" metaname="ouuu" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tHashOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ouuu"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputXML_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_2" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -580,9 +791,36 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputXML_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_2" target="tHashInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
-  <connection connectorName="FLOW" label="Out_2" lineStyle="0" metaname="Out_2" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tHashOutput_2">
+  <connection connectorName="FLOW" label="Out_2" lineStyle="0" metaname="Out_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tMap_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="SEQ_NR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_2"/>
+  </connection>
+  <connection connectorName="FLOW" label="out_34" lineStyle="0" metaname="out_34" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tMap_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_34"/>
+  </connection>
+  <connection connectorName="FLOW" label="otser" lineStyle="0" metaname="otser" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tHashOutput_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="SEQ_NR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="otser"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfotser" lineStyle="0" metaname="copyOfotser" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tHashOutput_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="SEQ_NR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfotser"/>
   </connection>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -641,13 +879,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8e341363-e18d-448c-a039-0f0955b5b281"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>L0C5YrUoGDAsHHqEqpvjrD4N/6mJ0l88Cs0C7Be+mGRZJaKcw8bXMKoMBj4UY3B+yXBg2w+4ynj6&#13;
-IunrToR4mQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1d9089f5-ce08-42a9-a48a-bd3958812d9e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ka+vQjloKoUAlue4QrvfjeKGr03o+XXI8NUc7UGjqwhvE4IOmXN2l52DN6XU/ACoYQgRniwKK7qN&#13;
-Pv3s/bApVQ==</DigestValue></Reference></SignedInfo><SignatureValue>eR0caRNUsh2VgDygYjabqZec59PaxBdEJAo8rtSXR4tYDbWxdm51XAUBmmwbHVeKduvURYs2HFti&#13;
-YR97o7lPYxxdIIHu/tp40YGcz/iNx6O4qlZszFb6gU6bBGQJ896L57XlmDB+Rvv8JKdQT2abY+W7&#13;
-Akt4U1quOPov6HBGWFyevTbY2YG+NIk+uIozHs+Ah+SiKexyI6ZTRV3RrhvY0ZTXxP23qAExJQID&#13;
-PvqWysQBWl8bBlIhGZFiMj2aFGYWYrnhOdOPxzI2qkRlq1c8cboDTuDvoMR5q6z0PdkPih9n9oLf&#13;
-0vfLbEL2c6XQgCrc0SRwcwgJyC3Jl9pG/YgD6w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_297850a3-d223-4907-b08c-4de454fe9e82"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vInHLJ0Bf29wQ/q4F90CnwmukWaBKri4u0zRRRGGFX4UM1oHRHn6DLweo5Sjkk4B+Y9CbCvkgKkk&#13;
+F65pckeD9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7af30a48-e2ce-4b95-9cc5-1aca5073f20a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sl3zuB2Mlm0xFQvckJqv88ymZ9bEIAS5ExbQm4ssaXV819qPZbpLeDuIyyVgD4bsxHfEiZs0Bcwr&#13;
+OZU10ze/qA==</DigestValue></Reference></SignedInfo><SignatureValue>FQczqDXkaNPEtVEi24MoXszkPwC20+WDcMMkJJQ0s49IePhrCCmYvRjSUnzhJ8Tve0gdfvb6gzvS&#13;
+jo3rRDT4U5m/exQ9OiFPDbFepnJDuDbrfoooGdaVeNxgccAUbhZbKGDLyfTr/OGETdm0d/p9LIX2&#13;
+yH4SmmwSIFzyZ2h9UV7G8DPbRT5LH2jeK1nASWdceDVG0hei/BUZg0Ba8gY8KhvcDiUMI+70VzlC&#13;
+hZFqyWwCT5VM/HaHZ7OSTirpzCfkU2+mEL3LKbmtww54C76ML/rMyOfX0zH46mJlgmY/8TaQ7OMN&#13;
+lME5T/2b1y071X5+nqg4EMS9c5XqGFN5JF+TfQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -669,4 +907,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1d9089f5-ce08-42a9-a48a-bd3958812d9e" Target="#_8e341363-e18d-448c-a039-0f0955b5b281"><Timestamp>2023-01-31 13:34:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7af30a48-e2ce-4b95-9cc5-1aca5073f20a" Target="#_297850a3-d223-4907-b08c-4de454fe9e82"><Timestamp>2023-01-31 16:26:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
