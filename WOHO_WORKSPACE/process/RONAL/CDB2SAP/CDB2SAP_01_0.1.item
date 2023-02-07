@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Ih+nFa5ekIWTMHx0BN2kbLwspUrll/bO8aQXzrsI"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:66QWstNwNNpfJ8/7eHLitFQ2eqXhU1LmP55BLVcF"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:CAf56PfZ6opYqTJv7pIGdt72dA0azCTi5AGZiejs"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:iHIAIo6Ikei9NW5W1XHr71OCuawM1yhLU6DAFUeZ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CDBInterface&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:tViPYOVdBuP3gMOQEvQCiVUrxRA8emSgZjXCRl+Fn9DWq02jaMR1bxzhQqS6CtIYxQE="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AobLWSu72xxqFtfWa0g5zVUat3qZ8IHvODxpBFxTIBEHLO+ZmDLRoE648QZQ/1RQSdc="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_zKWuYKbyEe2eHoh5hcMBEg - metadata"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;metadata&quot;"/>
@@ -336,10 +336,74 @@
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <nodeData xsi:type="TalendXMLMap:XmlMapData"/>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
+        <nodes name="ron_design" type="id_String" xpath="row1/ron_design"/>
+        <nodes name="ron_dim_width_str" type="id_String" xpath="row1/ron_dim_width_str"/>
+        <nodes name="ron_dim_diameter_str" type="id_String" xpath="row1/ron_dim_diameter_str"/>
+        <nodes name="ron_hc_diameter_str" type="id_String" xpath="row1/ron_hc_diameter_str"/>
+        <nodes name="ron_hc_count" type="id_String" xpath="row1/ron_hc_count"/>
+        <nodes name="ron_dim_offset_str" type="id_String" xpath="row1/ron_dim_offset_str"/>
+        <nodes name="ron_hubdiameter" type="id_String" xpath="row1/ron_hubdiameter"/>
+        <nodes name="ron_customer" type="id_String" xpath="row1/ron_customer"/>
+        <nodes name="ron_map_marke_2_part" type="id_String" xpath="row1/ron_map_marke_2_part"/>
+        <nodes name="ron_variante" type="id_String" xpath="row1/ron_variante"/>
+        <nodes name="ron_befestigung" type="id_String" xpath="row1/ron_befestigung"/>
+        <nodes name="ron_hub_cap" type="id_String" xpath="row1/ron_hub_cap"/>
+        <nodes name="ron_radlast_str" type="id_String" xpath="row1/ron_radlast_str"/>
+        <nodes name="ron_steigerbohrer" type="id_String" xpath="row1/ron_steigerbohrer"/>
+        <nodes name="cdb_t_project_id" type="id_String" xpath="row1/cdb_t_project_id"/>
+        <nodes name="ron_package" type="id_String" xpath="row1/ron_package"/>
+        <nodes name="ron_surface_cond" type="id_String" xpath="row1/ron_surface_cond"/>
+        <nodes name="ron_oberfl_schutz" type="id_String" xpath="row1/ron_oberfl_schutz"/>
+        <nodes name="ron_marking" type="id_String" xpath="row1/ron_marking"/>
+        <nodes name="ron_matchen" type="id_String" xpath="row1/ron_matchen"/>
+        <nodes name="ron_buchsen" type="id_String" xpath="row1/ron_buchsen"/>
+        <nodes name="ron_ispremium" type="id_String" xpath="row1/ron_ispremium"/>
+        <nodes name="ron_herstellungsart" type="id_String" xpath="row1/ron_herstellungsart"/>
+        <nodes name="ron_logpart_to_tnr" type="id_String" xpath="row1/ron_logpart_to_tnr"/>
+        <nodes name="ron_print_rim_bed" type="id_String" xpath="row1/ron_print_rim_bed"/>
+        <nodes name="ron_sticker" type="id_String" xpath="row1/ron_sticker"/>
+        <nodes name="ron_style_dep_apps" type="id_String" xpath="row1/ron_style_dep_apps"/>
+        <nodes name="ron_mapped_t_werk_kunde" type="id_String" xpath="row1/ron_mapped_t_werk_kunde"/>
+        <nodes name="ron_ece_no" type="id_String" xpath="row1/ron_ece_no"/>
+        <nodes name="ron_mapped_t_werk_ist" type="id_String" xpath="row1/ron_mapped_t_werk_ist"/>
+        <nodes name="ron_colour_id_str" type="id_String" xpath="row1/ron_colour_id_str"/>
+        <nodes name="ron_mapped_klarlack_art" type="id_String" xpath="row1/ron_mapped_klarlack_art"/>
+        <nodes name="ron_mapped_grundierung" type="id_String" xpath="row1/ron_mapped_grundierung"/>
+        <nodes name="ron_pps_release_type" type="id_String" xpath="row1/ron_pps_release_type"/>
+        <nodes name="cdb_status_txt" type="id_String" xpath="row1/cdb_status_txt"/>
+        <nodes name="status" type="id_String" xpath="row1/status"/>
+        <nodes name="ron_wheelno" type="id_String" xpath="row1/ron_wheelno"/>
+        <nodes name="ron_undercut" type="id_String" xpath="row1/ron_undercut"/>
+        <nodes name="ron_mapped_proj_wheelclass" type="id_String" xpath="row1/ron_mapped_proj_wheelclass"/>
+        <nodes name="ron_cdb_sap_materialtype" nullable="false" type="id_String" xpath="row1/ron_cdb_sap_materialtype"/>
+        <nodes name="t_kategorie" type="id_String" xpath="row1/t_kategorie"/>
+        <nodes name="ron_idx" type="id_String" xpath="row1/ron_idx"/>
+        <nodes name="cdb_mdate" type="id_String" xpath="row1/cdb_mdate"/>
+        <nodes name="mapped_mpersno_name" type="id_String" xpath="row1/mapped_mpersno_name"/>
+        <nodes name="ron_phased_out" type="id_String" xpath="row1/ron_phased_out"/>
+        <nodes name="ron_cust_no1" type="id_String" xpath="row1/ron_cust_no1"/>
+        <nodes name="ron_cust_no2" type="id_String" xpath="row1/ron_cust_no2"/>
+        <nodes name="benennung" type="id_String" xpath="row1/benennung"/>
+        <nodes name="techdaten" type="id_String" xpath="row1/techdaten"/>
+        <nodes name="ron_weight" type="id_String" xpath="row1/ron_weight"/>
+        <nodes name="ron_mapped_mat_grp" type="id_String" xpath="row1/ron_mapped_mat_grp"/>
+        <nodes name="ron_mengenbasis" type="id_String" xpath="row1/ron_mengenbasis"/>
+        <nodes name="ron_mapped_xxps_unit_id" type="id_String" xpath="row1/ron_mapped_xxps_unit_id"/>
+        <nodes name="ron_wheelclass7" type="id_String" xpath="row1/ron_wheelclass7"/>
+        <nodes name="ron_plno" type="id_String" xpath="row1/ron_plno"/>
+        <nodes name="ron_prod_category" type="id_String" xpath="row1/ron_prod_category"/>
+        <nodes name="ron_mapped_prod_class" type="id_String" xpath="row1/ron_mapped_prod_class"/>
+        <nodes name="teilenummer" nullable="false" type="id_String" xpath="row1/teilenummer"/>
+        <nodes name="werkstoff_nr" type="id_String" xpath="row1/werkstoff_nr"/>
+        <nodes name="ron_xpps_znum" type="id_String" xpath="row1/ron_xpps_znum"/>
+      </inputTrees>
+      <varTables minimized="true" name="Var"/>
+    </nodeData>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -350,13 +414,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7df9e855-ae26-47db-be84-856dc1dbcaef"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wVKKZWfRVZmyQZLlWJa+snbRjomEuBLbJdy8AlxWGAQQyrfcyl2aQR/AHEbl/DSqB5pdT4sbcl9Y&#13;
-5zhRwfK2/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a764f26b-6961-4b1a-b395-23204715f5f0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SrfzUhzBrG9z1gH+8z4RSHGkwssCCDy5SDKXMm6JYyqQkTGgoQ/Jz7UHOdM5Zcib25YRkYoNCWth&#13;
-izLwh5RJ0g==</DigestValue></Reference></SignedInfo><SignatureValue>GX634jdoSw8uEBtZ/Ra3RlikchYPr3dHsYBzqoCKsktHEpbQNS8eeIe3T2HzXJg3onAns1PPPOLe&#13;
-Wqqn34PtH+pcriH8kqq0+bY4CqDPbISoHnMQDnc6XVf7dbMWhSRs3068P+lCm3a3mTpP8FybugU4&#13;
-pMRXDOWmmzs8wIgSF524Ru5jROpQO7EOtk27ko2YOzgOh/EJEjxAPEceWXFfyoh9EVuSxXRf19uI&#13;
-mESzwGql0hZIaxQcXvhFZAmbq39An3QERfFi+ktUTuMRaUB9kohKOuWUd2a4URhF9D+lcHQPGaE1&#13;
-qkojO5wF1Op2xOg1OY6/w1zUphUUb31gSTPCtQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_13151ceb-a68e-4c9b-a2ca-905341ad343d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cHiWwMIYYEtvutxhvY05FaVb8RYTqQJRG/76N6YilwOVHM46cMsfmDoagNQZ/fk7Qe67WRLk0X0T&#13;
+/yviMo7nyg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4a24052d-d588-495e-b77a-dccdbd59a332"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OGynYsQp+qrVl7EYd9HTmz9/u/2jivnPoPgz0mIpvHYplSaUhMaORsa0lB18XDkxPj9xUiLSk++J&#13;
+JIwsZj2OhA==</DigestValue></Reference></SignedInfo><SignatureValue>lJAK+ynpx0T+oVAfyM9MDBE47DfTQpD3djdcw294No/GFCziLzg7PLP/ChxfrvFqDJOVBySTw7kq&#13;
+Sc4xTbx+4kF5v1x3ljGyVZ3ULmXn4axnq4wxptmt91g6pXqHR/xDHrJNB3MOf0qp6jMi2cPSzSWe&#13;
+gcv7pS4xRUT29XeryKMJzgWnYgCdaVJ7urYxFnM8ON+VN2tvi6D9K3KQpePiXZJ3iWTqN7ocYpV2&#13;
+Cp4rQ/tQr9exvlmKK2QUyHeTZ9kBbuyQSDGlbmLpd8QunTPFXrkxgcE7/wZONuUeu3O5pWgnnli5&#13;
+1Mt8JN7ng83KzVWN5qgcyfcIPt2oD/t9oUqREQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -378,4 +442,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a764f26b-6961-4b1a-b395-23204715f5f0" Target="#_7df9e855-ae26-47db-be84-856dc1dbcaef"><Timestamp>2023-02-07 14:23:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4a24052d-d588-495e-b77a-dccdbd59a332" Target="#_13151ceb-a68e-4c9b-a2ca-905341ad343d"><Timestamp>2023-02-07 15:30:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
