@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:FPt36kU3l3IAFnSF2QtalqtxwXe1y/b9tbiaHihp"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hkOhA3myJx6u3ywKWJGrEMbHGZuHOoAXzK08lFkI"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:fadgtU9LHDJfGvF4BUqR9y+ne+FB1DkIZ+rviGnQ"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zP5Rg655xN6So39vRCSmyk1Cz6la3qftIePBBUPx"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,7 +126,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CDBInterface&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/eMWk+c4ru/b2ccpw5h6qHBTfpjDT+u96O0PUEMI9SqkMWz7zxTv44PdPBjlSApFJmo="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:f4BCj8l/dBWpXdy2nOpRGKOzAXMQoL3LT0iA5BLgeSRiBoLuBIiEDy4AmGbUjsHW+rI="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_zKWuYKbyEe2eHoh5hcMBEg - metadata"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;metadata&quot;"/>
@@ -450,7 +450,7 @@
                 <children name="SERIAL" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/EDI_DC40/SERIAL" xsi:type="TalendXMLMap:OutputTreeNode"/>
               </children>
               <children main="true" name="ZCDBMETA01" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBMETA01" xsi:type="TalendXMLMap:OutputTreeNode">
-                <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBMETA01/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children expression="" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBMETA01/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 <children expression="TalendDate.formatDate(&quot;yyyy-MM-dd'T'HH:mm:ss.SSSZ&quot;,TalendDate.getCurrentDate()) " name="CREATION_DATETIME" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBMETA01/CREATION_DATETIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 <children expression="" loop="true" main="true" name="FILENAME" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBMETA01/FILENAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
               </children>
@@ -515,9 +515,9 @@
                 <children expression="row1.teilenummer" incomingConnections="//@node.1/@nodeData/@connections.55" name="TEILENUMMER" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/TEILENUMMER" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 <children expression="row1.werkstoff_nr" incomingConnections="//@node.1/@nodeData/@connections.56" name="WERKSTOFF_NR" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/WERKSTOFF_NR" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 <children expression="row1.ron_xpps_znum" incomingConnections="//@node.1/@nodeData/@connections.57" name="RON_XPPS_ZNUM" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/RON_XPPS_ZNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                <children name="RON_SOP_DATE" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/RON_SOP_DATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                <children name="RON_OFFER_EOP_DATE" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/RON_OFFER_EOP_DATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                <children name="CLASSNAME" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/CLASSNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children expression="" name="RON_SOP_DATE" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/RON_SOP_DATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children expression="" name="RON_OFFER_EOP_DATE" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/RON_OFFER_EOP_DATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children expression="" name="CLASSNAME" pattern="&quot;dd-MM-yyyy&quot;" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBITEMMASTER01/CLASSNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
               </children>
               <children name="ZCDBCHARACT01" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBCHARACT01" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="out1.payload:/ZCDBPART01/IDOC/ZCDBCHARACT01/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -652,7 +652,7 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TEXT" name="CLIENT" value="&quot;100&quot;"/>
     <elementParameter field="TEXT" name="USERID" value="&quot;RFC_ION&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:w74I4x1WEf5ntrpd/B+5Hpm5P1e6VnY/fcebS7gjwPhtSc+JqFUO"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:tCmf04hvuOEcO6dMI+bMwQW+x8ekM2+Nhgc/6U3H/1fYefPFNIMp"/>
     <elementParameter field="TEXT" name="LANGUAGE" value="&quot;EN&quot;"/>
     <elementParameter field="TEXT" name="HOSTNAME" value="&quot;10.252.9.6&quot;"/>
     <elementParameter field="TEXT" name="SYSTEMNUMBER" value="&quot;03&quot;"/>
@@ -666,6 +666,27 @@
     <metadata connector="FLOW" name="tSAPIDocOutput_1">
       <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
+  </node>
+  <node componentName="tSAPIDocOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPIDocOutput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_dY8_wKa_Ee2F75PdiIceeg"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="CLIENT" value="&quot;100&quot;"/>
+    <elementParameter field="TEXT" name="USERID" value="&quot;RFC_ION&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Mwyxb6EWsVzcOXkVNgBIXuGW5wSoBhI6aGg3GRC9zMemytkx2bsP"/>
+    <elementParameter field="TEXT" name="LANGUAGE" value="&quot;EN&quot;"/>
+    <elementParameter field="TEXT" name="HOSTNAME" value="&quot;10.252.9.6&quot;"/>
+    <elementParameter field="TEXT" name="SYSTEMNUMBER" value="&quot;03&quot;"/>
+    <elementParameter field="COLUMN_LIST" name="IDOC_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="FROM_XML" value="false"/>
+    <elementParameter field="FILE" name="FILE_IDOC_XML" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES"/>
+    <elementParameter field="TEXT" name="LABEL" value="ZCDBPART01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSAPIDocOutput_2"/>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -699,13 +720,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f60cfb26-7859-4e0f-9052-21287346928e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+UC/U6VMwweYC2gq6+9JAdW5PF3wiyQwBxSVyYv8QekT4rG7USD+RcrJtO+cb5KEOLgDAM8xg73j&#13;
-UzXQgO8Onw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f8fe97e2-0b0f-4a7f-9be5-60203868d318"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fuJrRVUFvLgVxIaALNp6KtRSgfvSbWvpc0G3LavncTIPDBOz7Tg2FbMPldISIOvpw65DYfraWFTo&#13;
-TtqpKyZczw==</DigestValue></Reference></SignedInfo><SignatureValue>N2hZaOKLUVdeK7UZIDEWi637GPSig1mw2rU2ClVRYwNdrV19ua+87OrvKkP9ooZ4UIA7NYunOlVs&#13;
-fu3jL0iSzXJixKtr9IVvSdQ4ywgVCzrNq4v/rH5yWlw8gulTF6wVn1iV6nsI25bmDO6LgEJjS1zE&#13;
-jsX+Q7MlA/lgl3QKdNdIjOOKzt6cus4lpqGGIkz+nRC4OfFxK1kvGbLqWxxm100ThK12WL+lwr4h&#13;
-c6kM1zgdwaAiQQjFlPqlWCa2yVxnENqIseczc6IdfWdsXQEPGtgg/+SIjf1jc9xb6v8sS71f+MpV&#13;
-/lWp+idPfFCvUiSNCNapkbZ66gIi8/nMpA5zNg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPIDocOutput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_42ea6cde-6dfe-498f-a6ac-c65602cbcea0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Qq//jIZp7sZZRVgYI61umgEi2/TfQX/6mZvmt0zOVpRwTyrOdnvg6s+Ngxbk0ueDQd/LPieO0GVb&#13;
+KUrK3NWSXw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fcc8a67d-97c8-4c35-b7ba-7c3ac9662864"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ncOm/qvNcVom1QOY81Ge9qHbboTF2DtjXp7sXadOU2+MOUUa007UO/cVLwkDPzlbj16qwvKtr2MP&#13;
+5KrigEtu9A==</DigestValue></Reference></SignedInfo><SignatureValue>mA9+6abWx99FLVpXPyboFtUYyYG34Bb4Z+HgmHUNAnFcbZJXfVU1lN4WK1nNvdXyVN+I7m23JiV4&#13;
+or8NaGcgvfV6pHitFz0LLrnnRJrS7GITNsjTFf472zAzeSvBVNrrFs/aMLSCwR3meeHh7rEveeLN&#13;
+6HBJFdXTFAY2PZBPpT3WVeDNE+xPoEiUTybs4RyLzNhbijjUhylLG3umZFccXxuACyl2PgRVyxJF&#13;
+t7JemZrNEjedfB53W0EX9VlrYWuGMe1G2FFKAohOQVuzXUBvXyZ4yKwymfPEH5CeNb7Pwkk/YXyG&#13;
+4E4G0t10OrIIHU7nt6Pbjp0uVsEJsR7C0zx1hg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -727,4 +753,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f8fe97e2-0b0f-4a7f-9be5-60203868d318" Target="#_f60cfb26-7859-4e0f-9052-21287346928e"><Timestamp>2023-02-07 17:11:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fcc8a67d-97c8-4c35-b7ba-7c3ac9662864" Target="#_42ea6cde-6dfe-498f-a6ac-c65602cbcea0"><Timestamp>2023-02-08 08:22:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
