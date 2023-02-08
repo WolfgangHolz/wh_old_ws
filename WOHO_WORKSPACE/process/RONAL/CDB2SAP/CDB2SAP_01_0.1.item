@@ -4,7 +4,7 @@
     <contextParameter comment="" internalId="_7fHy8aeMEe2vec0s-R-uVg" name="Sap_01_SystemNumber" prompt="Sap_01_SystemNumber?" promptNeeded="false" repositoryContextId="_UmB34KeLEe2mnoBfA1KNdA" type="id_String" value="00"/>
     <contextParameter comment="" internalId="_7fHy8qeMEe2vec0s-R-uVg" name="Sap_01_Host" prompt="Sap_01_Host?" promptNeeded="false" repositoryContextId="_UmB34KeLEe2mnoBfA1KNdA" type="id_String" value="10.252.9.1"/>
     <contextParameter comment="" internalId="_7fHy86eMEe2vec0s-R-uVg" name="Sap_01_Language" prompt="Sap_01_Language?" promptNeeded="false" repositoryContextId="_UmB34KeLEe2mnoBfA1KNdA" type="id_String" value="EN"/>
-    <contextParameter comment="" internalId="_7fIaAKeMEe2vec0s-R-uVg" name="Sap_01_Password" prompt="Sap_01_Password?" promptNeeded="false" repositoryContextId="_UmB34KeLEe2mnoBfA1KNdA" type="id_Password" value="enc:system.encryption.key.v1:sTg+L4vum0saphS5BmOw2+Y5v06PgYKPrBo1nfKh4U0RFqTqeUM="/>
+    <contextParameter comment="" internalId="_7fIaAKeMEe2vec0s-R-uVg" name="Sap_01_Password" prompt="Sap_01_Password?" promptNeeded="false" repositoryContextId="_UmB34KeLEe2mnoBfA1KNdA" type="id_Password" value="enc:system.encryption.key.v1:kxIoy9vNDyGPXGcic/mKvStuDKjTC4bDYS00vrbpnQF071N19zw="/>
     <contextParameter comment="" internalId="_7fIaAaeMEe2vec0s-R-uVg" name="Sap_01_Client" prompt="Sap_01_Client?" promptNeeded="false" repositoryContextId="_UmB34KeLEe2mnoBfA1KNdA" type="id_String" value="100"/>
     <contextParameter comment="" internalId="_TWUQkKeYEe2_srkxCMeC1w" name="FileName" prompt="FileName?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
     <contextParameter comment="" internalId="_AEONcKebEe2Vk_nTGXZk5Q" name="FileExtension" prompt="FileExtension?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=".xml"/>
@@ -53,7 +53,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:h29wug6h2TEx2QpFfC0dDv744836EGNNQs5FzHuc"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:kHQ347eunkzd1K0UYi0nqaUrtYwQwGCaUnYRaOhU"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -88,7 +88,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Hx5NH8Unh4EXWRhXFRO40O5guNbb2dGwNmt/vVhc"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:yLwYagK38knC3OG6IPYIbWb34OgHzrY4wHtM3cbe"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -136,7 +136,7 @@
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;CDBInterface&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:N5xVOpdxTDnaMw061MKIX+yq2utCMVZjBZRm7sAZ5HDpbmZdqGs3AYx8xN1nurHxJAw="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AvIZW77GEGEIlGtk+45O0iJ509ySxg9NX/oOVfTUl0B5KyMwCANspLDHCjjTHabXIMo="/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_zKWuYKbyEe2eHoh5hcMBEg - metadata"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;metadata&quot;"/>
@@ -423,7 +423,9 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.teilenummer.replace(&quot;.&quot;,&quot;&quot;) + &quot;_&quot; + TalendDate.formatDate(&quot;yyyyMMdd_HHmmss&quot;,TalendDate.getCurrentDate()) " name="FileName1" type="id_String"/>
+      </varTables>
       <outputTables name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.ron_design " name="ron_design" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.ron_dim_width_str " name="ron_dim_width_str" nullable="true" type="id_String"/>
@@ -485,7 +487,7 @@
         <mapperTableEntries expression="row3.teilenummer " name="teilenummer" type="id_String"/>
         <mapperTableEntries expression="row3.werkstoff_nr " name="werkstoff_nr" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.ron_xpps_znum " name="ron_xpps_znum" nullable="true" type="id_String"/>
-        <mapperTableEntries name="FileName" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="Var.FileName1 " name="FileName" nullable="true" type="id_String"/>
         <mapperTableEntries expression="context.FileExtension" name="FileExtension" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
@@ -561,6 +563,9 @@
     <metadata connector="FLOW" label="out1" name="out1">
       <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
+    <metadata connector="FLOW" label="out_1" name="out_1">
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
         <nodes name="ron_design" outgoingConnections="//@node.2/@nodeData/@connections.0" type="id_String" xpath="row1/ron_design"/>
@@ -623,7 +628,7 @@
         <nodes name="teilenummer" nullable="false" outgoingConnections="//@node.2/@nodeData/@connections.57" type="id_String" xpath="row1/teilenummer"/>
         <nodes name="werkstoff_nr" outgoingConnections="//@node.2/@nodeData/@connections.58" type="id_String" xpath="row1/werkstoff_nr"/>
         <nodes name="ron_xpps_znum" outgoingConnections="//@node.2/@nodeData/@connections.59" type="id_String" xpath="row1/ron_xpps_znum"/>
-        <nodes name="FileName" outgoingConnections="//@node.2/@nodeData/@connections.3" type="id_String" xpath="row1/FileName"/>
+        <nodes name="FileName" outgoingConnections="//@node.2/@nodeData/@connections.3 //@node.2/@nodeData/@connections.60" type="id_String" xpath="row1/FileName"/>
         <nodes name="FileExtension" outgoingConnections="//@node.2/@nodeData/@connections.4" type="id_String" xpath="row1/FileExtension"/>
       </inputTrees>
       <outputTrees activateCondensedTool="true" enableEmptyElement="false" name="out1">
@@ -763,9 +768,10 @@
           </children>
         </nodes>
       </outputTrees>
-      <varTables name="Var">
-        <nodes expression="TalendDate.formatDate(&quot;yyyyMMdd_HHmmss&quot;,TalendDate.getCurrentDate()) " name="Var1" type="id_String"/>
-      </varTables>
+      <outputTrees name="out_1">
+        <nodes expression="row1.FileName" incomingConnections="//@node.2/@nodeData/@connections.60" name="FileName" type="id_String" xpath="out_1/FileName"/>
+      </outputTrees>
+      <varTables name="Var"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3/@children.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.3" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3/@children.2" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.4" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3/@children.3" xsi:type="TalendXMLMap:Connection"/>
@@ -826,6 +832,7 @@
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.57" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3/@children.57" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.58" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3/@children.58" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.59" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3/@children.59" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.60" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tFileOutputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="192">
@@ -848,7 +855,7 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TEXT" name="CLIENT" value="context.Sap_01_Client"/>
     <elementParameter field="TEXT" name="USERID" value="context.Sap_01_UserName"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:Gnr7KNVZmhcRJFSl2dOZqfh8eGt4JumBxlAKwytTf1T07f/JnA40gh908yNZYQusSpyW"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:JCxGeNBRxG/8XDwMFCIwGsdUETRmhwF/gb4pC+QKPDFKvHmzE5fKeuOqjw/lj6QZ093t"/>
     <elementParameter field="TEXT" name="LANGUAGE" value="context.Sap_01_Language"/>
     <elementParameter field="TEXT" name="HOSTNAME" value="context.Sap_01_Host"/>
     <elementParameter field="TEXT" name="SYSTEMNUMBER" value="context.Sap_01_SystemNumber"/>
@@ -863,6 +870,15 @@
       <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;context.FileName = input_row.FileName1;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out_1" name="tJavaRow_1">
+      <column comment="" key="false" length="-1" name="FileName1" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
@@ -871,7 +887,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tFileOutputRaw_1">
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tXMLMap_1" target="tFileOutputRaw_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="payload"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -879,6 +895,9 @@
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out_1" lineStyle="0" metaname="out_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tXMLMap_1" target="tJavaRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
@@ -890,13 +909,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1f467e0f-9199-4ad4-b422-608d8807cc67"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>cTi9mA5nTHbV8a3/idJRnvL+zJgTk7KtVtoe7+yiE2kX2JxcLIcWKxFnKHjOW/OpZBRUJCY5L/rp&#13;
-L/9G1oiAOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_07f16086-e1b9-463a-9b3e-ef40677bcb2c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3TaofGXOCYVq79KzVT5A/DD2Tye1820gZHF1L/Xe5tQGSj9qiFyHFpCW0959GXtVsEzoBspUZx2U&#13;
-3a31qTSejg==</DigestValue></Reference></SignedInfo><SignatureValue>Cv1aUvK0JX0beAAfDyDcHhxpbfj+izIwUUB/5ve5bHnYGYwAeYTnkl3N4lWWmBpREgeZ41UuO5SA&#13;
-vZ0bLb4SKGt+8zAmoBIz9ho0Oj2nsAI+l3W1Qc3rCzrklvdzEkmKCktzka5Yf8NDvb21RU0t2apy&#13;
-HC7Is1BZCyRdiCY3JwT9xTE+O3zBvOpXZ6xVs62qUZvpOPwyaBh9KNFocKXNiAwUXZ6hbBUiYcW8&#13;
-GYeVqSY9K9cdLxRhReUzMslpi4SOv10VOlYahePSTDVOXuPOsG1TygPBhXIHoLRby1WUgBNfpBt1&#13;
-sdODI9lPTGZN1sHrGTOi1YdxqiWkhaDzv2dc5Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2bc75666-36a2-4be1-8cdf-7799e65a89ba"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>A3+goi7W37XJeJmhCaB/FYci0bKW5Wwpk37DpqejRuwa96WkseBr63O7ByLRHBIREDSIyattTIEB&#13;
+8cSLuXOhaA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_818248f1-4175-4734-b525-77bc6b883b86"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GZlgxYGl/UsxjdO2cvO6Q38slNiy498nIoEx1fwD4P9knxv3MHGW6TUafILKQo67QtQD25veR6KA&#13;
+4comY1gO3Q==</DigestValue></Reference></SignedInfo><SignatureValue>UdhsMlYcoqcCIuiHA+qpBY8fTIaBus1dgQ0d8YHeB4uYgcZxvu0UXOg4pCv+u/xXWy21IQhlZ8/1&#13;
+THH3e2DYBufTuweoX26trOvaT0c/d6O6zTMoZOb9RUrEZv7Cv6GS72OyxuWLUyY3BHhtWjH48u9U&#13;
+fjoLitUUDdh0ZUWoIQiNYcaP9x1SQoyWsDSndvQh9yqqUk13nWZN+nu7kBbGJqAjqN4CBo4tqVVw&#13;
+Z7J72eBvuy733b1lP+9lC929xCxmysHfi40vA+HaWRIrH8iPLmfwWfO6x1yDQe38NUVMu7vH53DP&#13;
+v0GmZmEk3SAjwlrZS/vhF1mWkoWRwB9ASjyQPg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -918,4 +942,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_07f16086-e1b9-463a-9b3e-ef40677bcb2c" Target="#_1f467e0f-9199-4ad4-b422-608d8807cc67"><Timestamp>2023-02-08 10:41:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_818248f1-4175-4734-b525-77bc6b883b86" Target="#_2bc75666-36a2-4be1-8cdf-7799e65a89ba"><Timestamp>2023-02-08 10:51:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
