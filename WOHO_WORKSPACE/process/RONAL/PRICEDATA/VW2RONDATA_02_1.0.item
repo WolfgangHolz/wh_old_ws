@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="DEVELOPMENT" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="DEVELOPMENT"/>
+  <context confirmationNeeded="false" name="PRODUKTIV"/>
+  <context confirmationNeeded="false" name="TEST"/>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ZaPfkkxj9Tmnc+VVN90CBN1gTtHVsadZkoiQLObt"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:R2Sw9eP5z7LH6f+tbSlCVxJBj//bXEtnJzt2jjlV"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_1qliMJDHEe2MW5pQrfqoXg" name="DQTechnical"/>
+    <routinesParameter id="_1qD9wJDHEe2MW5pQrfqoXg" name="DataMasking"/>
+    <routinesParameter id="_09hPkJDBEe2UN6GjnIa2fw" name="DataOperation"/>
+    <routinesParameter id="_1qVqkJDHEe2MW5pQrfqoXg" name="DataQualityDependencies"/>
+    <routinesParameter id="_1qNuwJDHEe2MW5pQrfqoXg" name="DataQuality"/>
+    <routinesParameter id="_1qc_UJDHEe2MW5pQrfqoXg" name="DqStringHandling"/>
+    <routinesParameter id="_09pLYJDBEe2UN6GjnIa2fw" name="Mathematical"/>
+    <routinesParameter id="_09wgIJDBEe2UN6GjnIa2fw" name="Numeric"/>
+    <routinesParameter id="_0-EpMJDBEe2UN6GjnIa2fw" name="Relational"/>
+    <routinesParameter id="_08i_MJDBEe2UN6GjnIa2fw" name="SQLike"/>
+    <routinesParameter id="_0-MlAJDBEe2UN6GjnIa2fw" name="StringHandling"/>
+    <routinesParameter id="_0-T5wJDBEe2UN6GjnIa2fw" name="TalendDataGenerator"/>
+    <routinesParameter id="_0-b1kJDBEe2UN6GjnIa2fw" name="TalendDate"/>
+    <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
+    <routinesParameter id="_0-lmkJDBEe2UN6GjnIa2fw" name="TalendString"/>
+  </parameters>
+  <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Work/Job_Data/Beispiel-Dokumente/VW-Konzern/Audi AG/edixml_s12117131.xml&quot;"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputRaw_1">
+      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_1"/>
+    <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
+    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
+    <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/VW2RONDATA_01/tHMap_1&quot;"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="false"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="RADIO" name="AS_DOCUMENT" value="true"/>
+    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="true"/>
+    <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="true"/>
+    <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
+    <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="EMIT_EMPTY_PAYLOAD" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out">
+      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="outp_001">
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="metadata" name="outp_002">
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="out">
+        <nodes expression="" name="payload" pattern="" type="id_Document" xpath="out/payload">
+          <children main="true" name="csv" type="id_String" xpath="out.payload:/csv">
+            <children loop="true" main="true" name="row" type="id_String" xpath="out.payload:/csv/row">
+              <children name="FileName" type="id_String" xpath="out.payload:/csv/row/FileName"/>
+              <children name="BrandName" outgoingConnections="//@node.2/@nodeData/@connections.1" type="id_String" xpath="out.payload:/csv/row/BrandName"/>
+              <children name="BestellNummer" outgoingConnections="//@node.2/@nodeData/@connections.2" type="id_String" xpath="out.payload:/csv/row/BestellNummer"/>
+              <children name="BestellDatumNeu" outgoingConnections="//@node.2/@nodeData/@connections.3" type="id_String" xpath="out.payload:/csv/row/BestellDatumNeu"/>
+              <children name="ZustaendigkeitsBereich" outgoingConnections="//@node.2/@nodeData/@connections.4" type="id_String" xpath="out.payload:/csv/row/ZustaendigkeitsBereich"/>
+              <children name="Einkaeufer" outgoingConnections="//@node.2/@nodeData/@connections.5" type="id_String" xpath="out.payload:/csv/row/Einkaeufer"/>
+              <children name="LieferantenNummer" outgoingConnections="//@node.2/@nodeData/@connections.6" type="id_String" xpath="out.payload:/csv/row/LieferantenNummer"/>
+              <children name="TeileNummer" outgoingConnections="//@node.2/@nodeData/@connections.7 //@node.2/@nodeData/@connections.12" type="id_String" xpath="out.payload:/csv/row/TeileNummer"/>
+              <children filterOutGoingConnections="//@node.2/@nodeData/@connections.0 //@node.2/@nodeData/@connections.19" name="BasisPreis" outgoingConnections="//@node.2/@nodeData/@connections.8" type="id_String" xpath="out.payload:/csv/row/BasisPreis"/>
+              <children name="BasisPreisEinheitWert" outgoingConnections="//@node.2/@nodeData/@connections.9" type="id_String" xpath="out.payload:/csv/row/BasisPreisEinheitWert"/>
+              <children name="BasisPreisEinheit" outgoingConnections="//@node.2/@nodeData/@connections.10" type="id_String" xpath="out.payload:/csv/row/BasisPreisEinheit"/>
+              <children name="BasisPreisWaehrung" outgoingConnections="//@node.2/@nodeData/@connections.11" type="id_String" xpath="out.payload:/csv/row/BasisPreisWaehrung"/>
+              <children name="GesamtPreis" outgoingConnections="//@node.2/@nodeData/@connections.13" type="id_String" xpath="out.payload:/csv/row/GesamtPreis"/>
+              <children name="GesamtPreisEinheitWert" outgoingConnections="//@node.2/@nodeData/@connections.14" type="id_String" xpath="out.payload:/csv/row/GesamtPreisEinheitWert"/>
+              <children name="GesamtPreisEinheit" outgoingConnections="//@node.2/@nodeData/@connections.15" type="id_String" xpath="out.payload:/csv/row/GesamtPreisEinheit"/>
+              <children name="GesamtPreisWaehrung" outgoingConnections="//@node.2/@nodeData/@connections.16" type="id_String" xpath="out.payload:/csv/row/GesamtPreisWaehrung"/>
+              <children name="GueltigVon" outgoingConnections="//@node.2/@nodeData/@connections.17" type="id_String" xpath="out.payload:/csv/row/GueltigVon"/>
+              <children name="GueltigBis" outgoingConnections="//@node.2/@nodeData/@connections.18" type="id_String" xpath="out.payload:/csv/row/GueltigBis"/>
+            </children>
+          </children>
+        </nodes>
+      </inputTrees>
+      <outputTrees activateExpressionFilter="true" expressionFilter="!([out.payload:/csv/row/BasisPreis]).equals(&quot;&quot;)" filterIncomingConnections="//@node.2/@nodeData/@connections.0" name="outp_001">
+        <nodes expression="((String)globalMap.get(&quot;tFileInputRaw_1_FILENAME_PATH&quot;))" name="FileName" type="id_String" xpath="outp_001/FileName"/>
+        <nodes expression="[out.payload:/csv/row/BrandName]" incomingConnections="//@node.2/@nodeData/@connections.1" name="BrandName" type="id_String" xpath="outp_001/BrandName"/>
+        <nodes expression="[out.payload:/csv/row/BestellNummer]" incomingConnections="//@node.2/@nodeData/@connections.2" name="BestellNummer" type="id_String" xpath="outp_001/BestellNummer"/>
+        <nodes expression="[out.payload:/csv/row/BestellDatumNeu]" incomingConnections="//@node.2/@nodeData/@connections.3" name="BestellDatumNeu" type="id_String" xpath="outp_001/BestellDatumNeu"/>
+        <nodes expression="[out.payload:/csv/row/ZustaendigkeitsBereich]" incomingConnections="//@node.2/@nodeData/@connections.4" name="ZustaendigkeitsBereich" type="id_String" xpath="outp_001/ZustaendigkeitsBereich"/>
+        <nodes expression="[out.payload:/csv/row/Einkaeufer]" incomingConnections="//@node.2/@nodeData/@connections.5" name="Einkaeufer" type="id_String" xpath="outp_001/Einkaeufer"/>
+        <nodes expression="[out.payload:/csv/row/LieferantenNummer]" incomingConnections="//@node.2/@nodeData/@connections.6" name="LieferantenNummer" type="id_String" xpath="outp_001/LieferantenNummer"/>
+        <nodes expression="[out.payload:/csv/row/TeileNummer]" incomingConnections="//@node.2/@nodeData/@connections.7" name="TeileNummer" type="id_String" xpath="outp_001/TeileNummer"/>
+        <nodes expression="[out.payload:/csv/row/BasisPreis]" incomingConnections="//@node.2/@nodeData/@connections.8" name="BasisPreis" type="id_String" xpath="outp_001/BasisPreis"/>
+        <nodes expression="[out.payload:/csv/row/BasisPreisEinheitWert]" incomingConnections="//@node.2/@nodeData/@connections.9" name="BasisPreisEinheitWert" type="id_String" xpath="outp_001/BasisPreisEinheitWert"/>
+        <nodes expression="[out.payload:/csv/row/BasisPreisEinheit]" incomingConnections="//@node.2/@nodeData/@connections.10" name="BasisPreisEinheit" type="id_String" xpath="outp_001/BasisPreisEinheit"/>
+        <nodes expression="[out.payload:/csv/row/BasisPreisWaehrung]" incomingConnections="//@node.2/@nodeData/@connections.11" name="BasisPreisWaehrung" type="id_String" xpath="outp_001/BasisPreisWaehrung"/>
+      </outputTrees>
+      <outputTrees activateExpressionFilter="true" expressionFilter="([out.payload:/csv/row/BasisPreis]).equals(&quot;&quot;)" filterIncomingConnections="//@node.2/@nodeData/@connections.19" name="outp_002">
+        <nodes expression="[out.payload:/csv/row/TeileNummer]" incomingConnections="//@node.2/@nodeData/@connections.12" name="TeileNummer" type="id_String" xpath="outp_002/TeileNummer"/>
+        <nodes expression="[out.payload:/csv/row/GesamtPreis]" incomingConnections="//@node.2/@nodeData/@connections.13" name="GesamtPreis" type="id_String" xpath="outp_002/GesamtPreis"/>
+        <nodes expression="[out.payload:/csv/row/GesamtPreisEinheitWert]" incomingConnections="//@node.2/@nodeData/@connections.14" name="GesamtPreisEinheitWert" type="id_String" xpath="outp_002/GesamtPreisEinheitWert"/>
+        <nodes expression="[out.payload:/csv/row/GesamtPreisEinheit]" incomingConnections="//@node.2/@nodeData/@connections.15" name="GesamtPreisEinheit" type="id_String" xpath="outp_002/GesamtPreisEinheit"/>
+        <nodes expression="[out.payload:/csv/row/GesamtPreisWaehrung]" incomingConnections="//@node.2/@nodeData/@connections.16" name="GesamtPreisWaehrung" type="id_String" xpath="outp_002/GesamtPreisWaehrung"/>
+        <nodes expression="[out.payload:/csv/row/GueltigVon]" incomingConnections="//@node.2/@nodeData/@connections.17" name="GueltigVon" type="id_String" xpath="outp_002/GueltigVon"/>
+        <nodes expression="[out.payload:/csv/row/GueltigBis]" incomingConnections="//@node.2/@nodeData/@connections.18" name="GueltigBis" type="id_String" xpath="outp_002/GueltigBis"/>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.2/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.2/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.2/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.2/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.2/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.2/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.2/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.9" target="//@node.2/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.10" target="//@node.2/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.11" target="//@node.2/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.12" target="//@node.2/@nodeData/@outputTrees.1/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.13" target="//@node.2/@nodeData/@outputTrees.1/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.14" target="//@node.2/@nodeData/@outputTrees.1/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.15" target="//@node.2/@nodeData/@outputTrees.1/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.16" target="//@node.2/@nodeData/@outputTrees.1/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.17" target="//@node.2/@nodeData/@outputTrees.1/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.2/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
+    </nodeData>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_5"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_g2GMcLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_7"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashOutput_5">
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_4"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_dhWeMLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_6"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashOutput_4">
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_dhWeMLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="0"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BrandName"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BestellNummer"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BestellDatumNeu"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZustaendigkeitsBereich"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Einkaeufer"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LieferantenNummer"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TeileNummer"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreis"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreisEinheitWert"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreisEinheit"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreisWaehrung"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_6"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_dhWeMLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashOutput_6">
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_g2GMcLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="0"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="TeileNummer"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreis"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreisEinheitWert"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreisEinheit"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreisWaehrung"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GueltigVon"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GueltigBis"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_7"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_g2GMcLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashOutput_7">
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_4"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_dhWeMLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_6"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashInput_4">
+      <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_7"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_zOOHoLg-Ee2Uc95TcmnjEQ-tMap_7-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="ou34">
+      <column key="false" length="0" name="BestellNummer" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_Long" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_String" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_String" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="ou34" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="StringHandling.TRIM(row6.BestellNummer) " name="BestellNummer" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;ddMMyy&quot;,StringHandling.LEFT(row6.BestellDatumNeu,6)) " name="BestellDatumNeu" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row6.ZustaendigkeitsBereich)" name="ZustaendigkeitsBereich" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row6.Einkaeufer)" name="Einkaeufer" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row6.LieferantenNummer)" name="LieferantenNummer" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row6.TeileNummer)" name="TeileNummer" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="new BigDecimal(row6.BasisPreis) " name="BasisPreis" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row6.BasisPreisEinheitWert" name="BasisPreisEinheitWert" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row6.BasisPreisEinheit)" name="BasisPreisEinheit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row6.BasisPreisWaehrung)" name="BasisPreisWaehrung" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="new BigDecimal(row9.GesamtPreis) " name="GesamtPreis" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row9.GesamtPreisEinheitWert " name="GesamtPreisEinheitWert" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row9.GesamtPreisEinheit)" name="GesamtPreisEinheit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row9.GesamtPreisWaehrung) " name="GesamtPreisWaehrung" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="!row9.GueltigVon.equals(&quot;&quot;)?&#13;&#10;TalendDate.parseDate(&quot;yyyyMMdd&quot;,row9.GueltigVon):null " name="GueltigVon" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="!row9.GueltigBis.equals(&quot;&quot;)?&#13;&#10;TalendDate.parseDate(&quot;yyyyMMdd&quot;,row9.GueltigBis):null " name="GueltigBis" nullable="true" type="id_Date"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row6" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="FileName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BrandName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BestellNummer" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BestellDatumNeu" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ZustaendigkeitsBereich" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Einkaeufer" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LieferantenNummer" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TeileNummer" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BasisPreis" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BasisPreisEinheitWert" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BasisPreisEinheit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="BasisPreisWaehrung" nullable="true" type="id_String"/>
+      </inputTables>
+      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row6.TeileNummer " name="TeileNummer" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries name="GesamtPreis" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GesamtPreisEinheitWert" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GesamtPreisEinheit" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GesamtPreisWaehrung" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GueltigVon" nullable="true" type="id_String"/>
+        <mapperTableEntries name="GueltigBis" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_5"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_g2GMcLtBEe2RTvZEDpqHkA - metadata"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_7"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tHashInput_5">
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputExcel_2"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Work/Job_Data/Beispiel-Dokumente/VW-Konzern/Audi AG/audi_output_test.xlsx&quot;"/>
+    <elementParameter field="TEXT" name="SHEETNAME" value="&quot;Sheet1&quot;"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="APPEND_FILE" value="false"/>
+    <elementParameter field="CHECK" name="APPEND_SHEET" show="false" value="false"/>
+    <elementParameter field="CHECK" name="FIRST_CELL_Y_ABSOLUTE" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_CELL_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="FIRST_CELL_Y" show="false" value="0"/>
+    <elementParameter field="CHECK" name="KEEP_CELL_FORMATING" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="FONT" value=""/>
+    <elementParameter field="CHECK" name="IS_ALL_AUTO_SZIE" value="true"/>
+    <elementParameter field="TABLE" name="AUTO_SZIE_SETTING" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="BestellNummer"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BestellDatumNeu"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ZustaendigkeitsBereich"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Einkaeufer"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LieferantenNummer"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TeileNummer"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreis"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreisEinheitWert"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreisEinheit"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BasisPreisWaehrung"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreis"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreisEinheitWert"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreisEinheit"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GesamtPreisWaehrung"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GueltigVon"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GueltigBis"/>
+      <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:t+ogaHyZeyyLTWagJHnXCMZapVMZNPJliTg4cAz4"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="TRUNCATE_EXCEEDING_CHARACTERS" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="RECALCULATE_FORMULA" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STREAMING_APPEND" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileOutputExcel_2">
+      <column key="false" length="0" name="BestellNummer" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_Long" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_String" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_String" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_2"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Work/Job_Data/Beispiel-Dokumente/VW-Konzern/Porsche/edixml_p0000914887.xml&quot;"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputRaw_2">
+      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tHMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tHashInput_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
+  </connection>
+  <connection connectorName="FLOW" label="outp_001" lineStyle="0" metaname="outp_001" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tXMLMap_1" target="tHashOutput_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp_001"/>
+  </connection>
+  <connection connectorName="FLOW" label="outp_002" lineStyle="0" metaname="outp_002" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tXMLMap_1" target="tHashOutput_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp_002"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tHashOutput_6">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="BrandName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="FileName"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tFixedFlowInput_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tHashOutput_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tMap_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tHashInput_4" offsetLabelX="0" offsetLabelY="0" source="tHashInput_4" target="tFileInputRaw_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
+  </connection>
+  <connection connectorName="FLOW" label="ou34" lineStyle="0" metaname="ou34" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tFileOutputExcel_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ou34"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="8" metaname="tHashInput_5" offsetLabelX="0" offsetLabelY="0" source="tHashInput_5" target="tMap_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;128;64"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="192;192;192"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="255;128;64"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="192;192;192"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_56dd4a9e-0f76-4eed-bca1-110cbd07e3c9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NM8pKv91FhPoXDz+2FVryJGnXjS/xve5IApduZTMvZrQYHIb/38+IE4iwXuPcs6HPNFoTBPBZS+u&#13;
+pxGMInBZ7A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2da85b96-2a91-475e-9d38-ed333198d502"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3N+VCokRZ643zG4qXm3n4ugTIpoD4es4hIWArhOyLTlX9+KzXPDcknn1psIkAERpIUDeru3kKYR8&#13;
+Ij52UBPa4Q==</DigestValue></Reference></SignedInfo><SignatureValue>d4LSJoRbg+rqAyZj7ADOAE0HOtpWT0npiyHY2MNar7TTuwXa1+TrYDb4HrInIaV3zGWl8lao+Abm&#13;
+0+qNG9/+Jxh0zoxIou0pJ5BNnBp7rjRwe/GS0QRUQESQBPOmIgdy7M/t3SCiq0bIGdtG5sBr/9N2&#13;
+/bPHRym2eZ3BT30Hqp7IW/TY6ajCtyDtqN+pXzBktjiZdYvD/puebW9GASPpotPJWqs+xQlWDYP0&#13;
+oDDVc6myLSVpjjdAF6sw4UndY2MIYOZaf2DoZ+6h6QhLHYG58YvDPpzW9ScJrDvJyEH9I2DGiYsW&#13;
++GVuA5uF0Z5hLRhGPDLFByBjrsLgo7m0Jbt1eQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2da85b96-2a91-475e-9d38-ed333198d502" Target="#_56dd4a9e-0f76-4eed-bca1-110cbd07e3c9"><Timestamp>2023-03-06 08:39:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
