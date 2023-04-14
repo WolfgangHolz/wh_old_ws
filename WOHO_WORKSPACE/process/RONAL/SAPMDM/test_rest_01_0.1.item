@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:rExKysK3qweXgCyuEZacFI3Vl8jB3cjnP8trqjRj"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:UntuvnsdmhQun+5LWeAAuJuccdWbtK8Z/LBYirKz"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:c8oCnaaz7ATbv2gj2acYwRjfdtn5SxovZFYXBRVm"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zPBIllg62+HF54Pp3blOfg/euIQzABcKGLxkneMM"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -122,13 +122,13 @@
     <elementParameter field="TABLE" name="SCHEMAS">
       <elementValue elementRef="SCHEMA" value="tRR_01"/>
       <elementValue elementRef="HTTP_VERB" value="POST"/>
-      <elementValue elementRef="URI_PATTERN" value="&quot;/idoc/mat&quot;"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/idoc/adr&quot;"/>
       <elementValue elementRef="CONSUMES" value="XML-JSON"/>
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
       <elementValue elementRef="SCHEMA" value="tRR_02"/>
       <elementValue elementRef="HTTP_VERB" value="POST"/>
-      <elementValue elementRef="URI_PATTERN" value="&quot;/idoc/adr&quot;"/>
+      <elementValue elementRef="URI_PATTERN" value="&quot;/idoc/mat&quot;"/>
       <elementValue elementRef="CONSUMES" value="XML-JSON"/>
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
@@ -137,8 +137,8 @@
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;http://www.talend.org/rest/&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;test_rest_01&quot;"/>
     <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="BASIC"/>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="OIDC_PASSWORD_GRANT"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
     <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
@@ -182,7 +182,7 @@
       <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfout_2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;ok&quot;" name="body" nullable="true" type="id_String"/>
@@ -195,7 +195,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="64">
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_3"/>
     <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
     <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
@@ -208,14 +208,14 @@
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="352">
+  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tReplicate_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out" name="tReplicate_1">
       <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="544" posY="352">
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_1"/>
     <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
     <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
@@ -261,7 +261,7 @@
       <column comment="" key="false" length="-1" name="telegram" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="352">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -285,14 +285,14 @@
       <column comment="" key="false" length="-1" name="telegram" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="480">
+  <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_1"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="480">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -311,21 +311,113 @@
       <column comment="" key="false" length="-1" name="input" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXSLT" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="480">
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+    <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
+    <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
+    <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tConvertType_1">
+      <column comment="" key="false" length="-1" name="input" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="output" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="928" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_XPcpoNg9Ee2aAPBAJBD8GA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="outp">
+      <column comment="" key="false" length="-1" name="input" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="xslt" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="outp" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row5.input " name="input" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row6.xslt " name="xslt" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row5" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="input" nullable="true" type="id_String"/>
+      </inputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row6" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="xslt" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="xslt"/>
+      <elementValue elementRef="VALUE" value="&quot;&lt;xsl:stylesheet version=\&quot;1.0\&quot; xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;!-- Match the root element and create a new root element --&gt;&lt;xsl:template match=\&quot;/ZXMATM01/IDOC\&quot;&gt;&lt;root&gt;&lt;loop&gt;&lt;!-- Iterate over each \&quot;Z1AUSPM\&quot; element --&gt;&lt;xsl:for-each select=\&quot;/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM\&quot;&gt;&lt;!-- Create a new element for each \&quot;CHARACTERISTIC\&quot; element, only if \&quot;CHARCFROMCHARVALUE\&quot; or \&quot;CHARCFROMDECIMALVALUE\&quot; exist --&gt;&lt;xsl:choose&gt;&lt;xsl:when test=\&quot;CHARCDATATYPE = 'CHAR'\&quot;&gt;&lt;xsl:element name=\&quot;{CHARACTERISTIC}\&quot;&gt;&lt;xsl:element name=\&quot;VALUE\&quot;&gt;&lt;xsl:value-of select=\&quot;CHARCVALUE\&quot;/&gt;&lt;/xsl:element&gt;&lt;/xsl:element&gt;&lt;/xsl:when&gt;&lt;xsl:when test=\&quot;CHARCDATATYPE = 'NUM'\&quot;&gt;&lt;xsl:element name=\&quot;{CHARACTERISTIC}\&quot;&gt;&lt;xsl:element name=\&quot;VALUE\&quot;&gt;&lt;xsl:value-of select=\&quot;CHARCFROMDECIMALVALUE\&quot;/&gt;&lt;/xsl:element&gt;&lt;/xsl:element&gt;&lt;/xsl:when&gt;&lt;xsl:when test=\&quot;CHARCDATATYPE = 'CURR'\&quot;&gt;&lt;xsl:element name=\&quot;{CHARACTERISTIC}\&quot;&gt;&lt;xsl:element name=\&quot;VALUE\&quot;&gt;&lt;xsl:value-of select=\&quot;CHARCFROMAMOUNT\&quot;/&gt;&lt;/xsl:element&gt;&lt;/xsl:element&gt;&lt;/xsl:when&gt;&lt;xsl:when test=\&quot;CHARCDATATYPE = 'DATE'\&quot;&gt;&lt;xsl:element name=\&quot;{CHARACTERISTIC}\&quot;&gt;&lt;xsl:element name=\&quot;VALUE\&quot;&gt;&lt;xsl:value-of select=\&quot;CHARCFROMDATE\&quot;/&gt;&lt;/xsl:element&gt;&lt;/xsl:element&gt;&lt;/xsl:when&gt;&lt;xsl:when test=\&quot;CHARCDATATYPE = 'TIME'\&quot;&gt;&lt;xsl:element name=\&quot;{CHARACTERISTIC}\&quot;&gt;&lt;xsl:element name=\&quot;VALUE\&quot;&gt;&lt;xsl:value-of select=\&quot;CHARCFROMTIME\&quot;/&gt;&lt;/xsl:element&gt;&lt;/xsl:element&gt;&lt;/xsl:when&gt;&lt;/xsl:choose&gt;&lt;/xsl:for-each&gt;&lt;/loop&gt;&lt;/root&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="-1" name="xslt" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXSLT" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXSLT_1"/>
-    <elementParameter field="FILE" name="XML_FILE" value="&quot;C:/Work/SAP/idoc_outbound/MATMAS_02765996.xml&quot;"/>
-    <elementParameter field="FILE" name="XSLT_FILE" value="&quot;C:/Work/SAP/xsl/test.xsl&quot;"/>
-    <elementParameter field="FILE" name="OUTPUT_FILE" value="&quot;C:/Work/SAP/idoc_outbound/test.xml&quot;"/>
+    <elementParameter field="FILE" name="XML_FILE" show="false" value="&quot;C:/Work/SAP/idoc_outbound/MATMAS_02765996.xml&quot;"/>
+    <elementParameter field="FILE" name="XSLT_FILE" show="false" value="&quot;C:/Work/SAP/xsl/test.xsl&quot;"/>
+    <elementParameter field="FILE" name="OUTPUT_FILE" show="false" value="&quot;C:/Work/SAP/idoc_outbound/test.xml&quot;"/>
     <elementParameter field="TABLE" name="PARAMS"/>
-    <elementParameter field="CHECK" name="OVERRIDE_INPUT_XML_FILE" value="false"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="INPUT_XML_FILE_COL" show="false" value="input"/>
-    <elementParameter field="CHECK" name="OVERRIDE_INPUT_XSL_FILE" value="false"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="INPUT_XSL_FILE_COL" show="false" value="input"/>
-    <elementParameter field="CHECK" name="OVERRIDE_OUTPUT" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="OUTPUT_COL" show="false" value="output"/>
+    <elementParameter field="CHECK" name="OVERRIDE_INPUT_XML_FILE" value="true"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="INPUT_XML_FILE_COL" value="input"/>
+    <elementParameter field="CHECK" name="OVERRIDE_INPUT_XSL_FILE" value="true"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="INPUT_XSL_FILE_COL" value="xslt"/>
+    <elementParameter field="CHECK" name="OVERRIDE_OUTPUT" value="true"/>
+    <elementParameter field="COLUMN_LIST" name="OUTPUT_COL" value="output"/>
     <elementParameter field="CHECK" name="CACHE_SOURCE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tXSLT_1">
+      <column comment="" key="false" length="-1" name="output" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="output"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_2">
       <column comment="" key="false" length="-1" name="output" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -363,22 +455,43 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tXSLT_1">
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="outp" lineStyle="0" metaname="outp" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tXSLT_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="xslt"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tXSLT_1" offsetLabelX="0" offsetLabelY="0" source="tXSLT_1" target="tLogRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5e406142-8eff-42b2-bef4-d1ca858540f5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X0xwTeFZbes31CCzRxOHe7f2sf1CkIJUTavoXoUz+Lov2S1xmOce5YL7baI+N1hynfxN2ij1lRZF&#13;
-Cjtab8JE/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_259a01c7-43c5-4b69-84f0-f9eb312c0fe3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>D1OEPLtaIttefZgDTJj1LNkDlVmdOfaVWkT5RxI3w5WoySbMiABFGc7EKYbNKSFeM/5CgK2FMhiu&#13;
-pjgkHnBMZA==</DigestValue></Reference></SignedInfo><SignatureValue>j9QoodmH57CFGo83R8xlrAYnpxKrVUbXX2+EtvPUXwB+muLs6M6ZyGLRPyNhpIUsNCL6WaFB1sew&#13;
-sdGzQJyKJQI6Nj3KFYoBtk2LLXfUjumr2/HrxrdYG/FAYUPGrVxtfdd+/9ofHe9YDuYqL7XJlL70&#13;
-kDxdti9crS/4D7kpIvlvg5M54c2hj5cp41STbr3ksPmPvoa23DVjrMb5PJpWDpoyWugEPGMnZuqc&#13;
-PmcVBVfitStYWvpSsD9b180XJX30Zc7jGiYsxG1HNnvv0mwVDHQOqcCk0N9y3Apn7QLX186Z0yoO&#13;
-fxmjLJV1+Xmo/vyZ8KDH9hm85yC/Jb3gA30rRA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_601bd01d-ee8c-44ae-87a5-cd526be1cb1b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>84ZLYsZuY6vqH0cDleqc2ylwoq2i3/pm2yVjhiJpK+9j4ejmSgf2qIgfebUtqAfLgTAJOqMMpsg/&#13;
+8foPFvOPVQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1414be79-f6fa-47cc-9736-b93ee22cf49a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5wNg87i7c/r815L60OYCxPl0scoYhokzn4AomOWZF0AutxvTa5142NxGoxyrHX4Hc0Nm6GoPR0jC&#13;
+jX4PXeOBbQ==</DigestValue></Reference></SignedInfo><SignatureValue>bfMmGlGyGwiyXzLp46PNjTSV1NqVLK7IdH0VlHEFCMPu8soY0Ib0bXouDLr+wDr+pXp2uL4sG09r&#13;
+V+TpNm+ar+ZsP63fUo3/RzEFTQd4xZZ6jzAG3LBZ3/jIqItA8cyi4jOR1TXMMwU9BleHtFyfRhQQ&#13;
+Us55zj1ArdWsKtg3VKW3sBgeSJvP2smVWS8xQCCS9S2NxKVW4dLkQ1+/iJwAz8tZTzJbs9JdbG8b&#13;
+Io+lHQaHIQJR9c5AHewuMU/Y8aDll5OMsZx01clbahMNyBhviAALz3df2PYT12ylj95AlKKNFDsq&#13;
+Qjnl4kKR9PsA5LTI3+aA0cMyxnET2kDoZt8waQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -400,4 +513,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_259a01c7-43c5-4b69-84f0-f9eb312c0fe3" Target="#_5e406142-8eff-42b2-bef4-d1ca858540f5"><Timestamp>2023-04-12 14:39:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1414be79-f6fa-47cc-9736-b93ee22cf49a" Target="#_601bd01d-ee8c-44ae-87a5-cd526be1cb1b"><Timestamp>2023-04-14 05:53:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
