@@ -54,7 +54,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:2TRLpLHkCjinvDPPFlfVvqnuP1yjWVnCyi2VoRii"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:/dcyEV8ftg5nqvDxmkOwX6I3P+ejGVaVnUd2E5ja"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -89,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:sAj3ZScTTwPTPYUGlYywT5ytCVjoLQrmLno1UXy0"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:h75Wc4TaKit7HmklwOEEeVtsAIi6594OOnVhlV/e"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -699,7 +699,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:6DamQ8L/Bv+w3dSc4RUJ2Gl66p2cDO8U1afDF+Qv"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:HqKXA9t+2CQbHWf+AcLW28bYXflBZ92dTJQ4ZeZd"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -770,7 +770,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:2vvN7+zNANp/zv0WK5H+HfJgS8riQ0+dlPIC/Qon"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:mWlumgbr8a77Sy60rZpdutXnL0hgHnhLAmadEroZ"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -1126,7 +1126,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:qNyJJjkve5bvvqFpuNzhHZseFPg/USGl4WCWjOLV"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:MTKyinspu87M+J4YPz/hyfGoU/fivraz8SZ9vEFz"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -1390,33 +1390,40 @@
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="outp_03">
         <nodes expression="" name="payload" pattern="" type="id_Document" xpath="outp_03/payload">
-          <children expression="" main="true" name="csv" type="id_String" xpath="outp_03.payload:/csv">
-            <children expression="" loop="true" main="true" name="row" type="id_String" xpath="outp_03.payload:/csv/row">
+          <children loop="true" main="true" name="csv" type="id_String" xpath="outp_03.payload:/csv">
+            <children name="row" type="id_String" xpath="outp_03.payload:/csv/row">
               <children name="FileName" outgoingConnections="//@node.32/@nodeData/@connections.0" type="id_String" xpath="outp_03.payload:/csv/row/FileName"/>
               <children name="Brand" outgoingConnections="//@node.32/@nodeData/@connections.1" type="id_String" xpath="outp_03.payload:/csv/row/Brand"/>
-              <children filterOutGoingConnections="//@node.32/@nodeData/@connections.3" name="LieferantenNummer" outgoingConnections="//@node.32/@nodeData/@connections.2" type="id_String" xpath="outp_03.payload:/csv/row/LieferantenNummer"/>
-              <children name="SachNummer" type="id_String" xpath="outp_03.payload:/csv/row/SachNummer"/>
-              <children name="BestellNummer" type="id_String" xpath="outp_03.payload:/csv/row/BestellNummer"/>
-              <children name="Preis" type="id_String" xpath="outp_03.payload:/csv/row/Preis"/>
-              <children name="Waehrung" type="id_String" xpath="outp_03.payload:/csv/row/Waehrung"/>
-              <children name="KundenWerk" type="id_String" xpath="outp_03.payload:/csv/row/KundenWerk"/>
-              <children name="IncoTerms" type="id_String" xpath="outp_03.payload:/csv/row/IncoTerms"/>
+              <children name="BestellNummer" type="id_Float" xpath="outp_03.payload:/csv/row/BestellNummer"/>
+              <children name="BestellDatumNeu" type="id_String" xpath="outp_03.payload:/csv/row/BestellDatumNeu"/>
+              <children name="ZustaendigkeitsBereich" type="id_String" xpath="outp_03.payload:/csv/row/ZustaendigkeitsBereich"/>
+              <children name="Einkaeufer" type="id_String" xpath="outp_03.payload:/csv/row/Einkaeufer"/>
+              <children filterOutGoingConnections="//@node.32/@nodeData/@connections.2" name="LieferantenNummer" outgoingConnections="//@node.32/@nodeData/@connections.3" type="id_String" xpath="outp_03.payload:/csv/row/LieferantenNummer"/>
+              <children name="TeileNummer" type="id_String" xpath="outp_03.payload:/csv/row/TeileNummer"/>
+              <children name="BasisPreis" type="id_String" xpath="outp_03.payload:/csv/row/BasisPreis"/>
+              <children name="BasisPreisEinheitWert" type="id_String" xpath="outp_03.payload:/csv/row/BasisPreisEinheitWert"/>
+              <children name="BasisPreisEinheit" type="id_String" xpath="outp_03.payload:/csv/row/BasisPreisEinheit"/>
+              <children name="BasisPreisWaehrung" type="id_String" xpath="outp_03.payload:/csv/row/BasisPreisWaehrung"/>
+              <children name="GesamtPreis" type="id_String" xpath="outp_03.payload:/csv/row/GesamtPreis"/>
+              <children name="GesamtPreisEinheitWert" type="id_String" xpath="outp_03.payload:/csv/row/GesamtPreisEinheitWert"/>
+              <children name="GesamtPreisEinheit" type="id_String" xpath="outp_03.payload:/csv/row/GesamtPreisEinheit"/>
+              <children name="GesamtPreisWaehrung" type="id_String" xpath="outp_03.payload:/csv/row/GesamtPreisWaehrung"/>
               <children name="GueltigVon" type="id_String" xpath="outp_03.payload:/csv/row/GueltigVon"/>
               <children name="GueltigBis" type="id_String" xpath="outp_03.payload:/csv/row/GueltigBis"/>
             </children>
           </children>
         </nodes>
       </inputTrees>
-      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter=" ![outp_03.payload:/csv/row/LieferantenNummer].equals(&quot;&quot;)" filterIncomingConnections="//@node.32/@nodeData/@connections.3" name="outp_04">
+      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter=" ![outp_03.payload:/csv/row/LieferantenNummer].equals(&quot;&quot;)" filterIncomingConnections="//@node.32/@nodeData/@connections.2" name="outp_04">
         <nodes expression="[outp_03.payload:/csv/row/FileName]" incomingConnections="//@node.32/@nodeData/@connections.0" name="FileName" type="id_String" xpath="outp_04/FileName"/>
         <nodes expression="[outp_03.payload:/csv/row/Brand]" incomingConnections="//@node.32/@nodeData/@connections.1" name="Brand" type="id_String" xpath="outp_04/Brand"/>
-        <nodes expression="[outp_03.payload:/csv/row/LieferantenNummer]" incomingConnections="//@node.32/@nodeData/@connections.2" name="LieferantenNummer" type="id_String" xpath="outp_04/LieferantenNummer"/>
+        <nodes expression="[outp_03.payload:/csv/row/LieferantenNummer]" incomingConnections="//@node.32/@nodeData/@connections.3" name="LieferantenNummer" type="id_String" xpath="outp_04/LieferantenNummer"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.32/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.32/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.32/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.32/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.32/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.32/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.32/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.32/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.32/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.32/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.32/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.32/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
@@ -1665,13 +1672,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_efcfcd01-1405-4a1e-93d4-a384e63461fe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6snSe0LXyCbK7KQuOetUp8I1dn4ygjQ+DMktgAyyJnwKTrwr+tO4Eg8Y8/ZkL9GT/MYJKm3gNozf&#13;
-c2KT1+rhAQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8ce5c100-88f0-41b9-ad29-db364495b703"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Dwzk5bRErBcwuj/hCkQ9atuJeVZAcujDplJHBaT9SOIbPKT0fz4Hy8hUn1adYh4qJWWf52PM5F3R&#13;
-irDg8KHNIw==</DigestValue></Reference></SignedInfo><SignatureValue>BgAx+kyTJetKcL1iHM+MmdHUkO9tLr0uswbJME2wVIUYvwZOD5MjbJJkVpcqxHqUmAftX4mqmDUJ&#13;
-7J1K4V14GGDxssqIQJv/D5aWOgPx7u+AhzovD5u72D8T84NxhYroe6tGGH/ZNIOgF2YUWm0uEvMl&#13;
-U0O7WQb784KeP1N7TIkEO/zvH4kV4FZ0P8gMJSy491GYDwisBxhfSK+zBN+OXn8OfDISdZ2O/Iaw&#13;
-BUThos4xqZ1xSlxzzljJvA8PXyp7/F8Zg3kaw3z3PK9GQYV0RkGIeTZelUBhpjcFQjQyqnF17WlK&#13;
-wmwBRsXfe7BYfza+kXXlzd++ORlTfeXJjyNkjw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_503d0ce8-0192-4470-96ed-7e2b93f0f932"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4YvEIV6ADCjV8Hud5auUbRgplOiBLf+B9FBJcyLQyTUjYumqN1RuzPujF/ZQT89unblPOTu6TXIe&#13;
+siG+amTmeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a6c3b805-872d-42cd-a211-11abbce783cd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AhTHmc5nI9y3S3QhYSh59nNF+AYI4SCdtp4hwylx9FI7Okw8tvJTOAf1RDqJkVIWNQKxJSTRxkgF&#13;
+cVZ/TpTfyw==</DigestValue></Reference></SignedInfo><SignatureValue>DXCEaczUKm4sgMLXsbFLKtjm9X8wWdlZ8ymDkk+WJk+kpmJfv5N3gluuWu9K74jPFFZ6c9BYl/y+&#13;
+r/W49wRN74LMupA5HS0M1QEuBlVpX7DaKbBnRYmgeJerr7Tj7Wtqlsv6dig8KVdz0QNoYa3mkVZZ&#13;
+OlAxOalUVTT+/T0kZ8JOgpCQ+F7G9PvoG3ni9ulEc+TLBhNrtYMzaz6ZQfUeHRwMc0Y6KV6IaDiY&#13;
+/eT9dV7dvKcNXo4u9/3z11zFojm6owVhYErIGsQv2bTTA0TCTj9p7WMtRY6omp4wgx9HLfzerDBH&#13;
+qpI9vUVo8IEaKgooKOWnDi1dX+Yy0TjECyYDNg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1693,4 +1700,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8ce5c100-88f0-41b9-ad29-db364495b703" Target="#_efcfcd01-1405-4a1e-93d4-a384e63461fe"><Timestamp>2023-04-18 15:43:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a6c3b805-872d-42cd-a211-11abbce783cd" Target="#_503d0ce8-0192-4470-96ed-7e2b93f0f932"><Timestamp>2023-04-18 15:44:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
