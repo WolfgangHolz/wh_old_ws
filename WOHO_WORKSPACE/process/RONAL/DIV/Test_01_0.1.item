@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:5xD/3pCvKsl7Yl/HkdEJ2IUKkX9gGaIRoEQu7oqD"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:UJkqCmoc0haL4/DTtYv1564nqTWBWOoOyGnrp6fc"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:pd+b8DVHTgLKrXL3OiGP+ip7WNctI5Oq03Tqg6Fe"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:t/WzvuIKDB6AMxfKtJP+E1d9yjHMTkK2Obz6nzFP"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -2413,10 +2413,11 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#10;output_row.HeaderIndex = input_row.HeaderIndex;&#13;&#10;output_row.HeaderIndex = input_row.HeaderIndex;&#13;&#10;output_row.Header = input_row.Header;&#13;&#10;output_row.ValueIndex = input_row.ValueIndex;&#13;&#10;output_row.Value = input_row.Value;&#10;if (input_row.HeaderIndex == 2)&#10;&#9;{&#10;&#9;&#9;if (input_row.ValueIndex == 0)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_year=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;else if (input_row.ValueIndex == 1)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_month=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#10;&#9;}&#13;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#10;output_row.CN = input_row.CN;&#13;&#10;output_row.HeaderIndex = input_row.HeaderIndex;&#13;&#10;output_row.Header = input_row.Header;&#13;&#10;output_row.ValueIndex = input_row.ValueIndex;&#13;&#10;output_row.Value = input_row.Value;&#10;if (input_row.HeaderIndex == 2)&#10;&#9;{&#10;&#9;&#9;if (input_row.ValueIndex == 0)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_year=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;else if (input_row.ValueIndex == 1)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_month=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#10;&#9;}&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_3">
+      <column comment="" key="false" length="-1" name="CN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -2428,7 +2429,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_WsGIYLzHEe2Tw-SIfuumGA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_WsGIYLzHEe2Tw-SIfuumGA-tMap_5-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2448,19 +2449,20 @@
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" expressionFilter="row18.HeaderIndex &gt; 1 &amp;&amp;  row18.ValueIndex &gt;1" name="copyOfout_0" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;Actual&quot;" name="Version" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;1406&quot;" name="Plant" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM&quot;,context.loc_year +'-'+ context.loc_month) " name="Month" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row18.Value" name="Value" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="StringHandling.LEFT(row18.Header,3) " name="Process" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row18.CN " name="Process" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;Auto&quot;" name="Measure" nullable="true" type="id_String"/>
         <mapperTableEntries expression="StringHandling.RIGHT(row18.Header,StringHandling.LEN(row18.Header)-4) " name="Production_Measure" nullable="true" type="id_String"/>
         <mapperTableEntries expression="StringHandling.TRIM(row18.Header) " name="Header" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row18" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="CN" nullable="true" type="id_String"/>
         <mapperTableEntries name="HeaderIndex" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="Header" nullable="true" type="id_String"/>
         <mapperTableEntries name="ValueIndex" nullable="true" type="id_Integer"/>
@@ -2535,7 +2537,7 @@
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="576">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_4"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="// code sample:&#10;//&#10;// multiply by 2 the row identifier&#10;// output_row.id = input_row.id * 2;&#10;//&#10;// lowercase the name&#10;// output_row.name = input_row.name.toLowerCase();&#10;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
@@ -2544,7 +2546,7 @@
       <column comment="" key="false" length="-1" name="CN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="576">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_6"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -2702,6 +2704,9 @@
   <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="Month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CN"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -2996,6 +3001,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="Month"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CN"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row18"/>
@@ -3095,13 +3103,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ac5029b9-0379-439f-98c0-252d684387df"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JEsOYxHjzPBbmvmCT56snmeIeVNXvaHmCESoq6+DTAWQCrgXBL8k/OsKHDYhEC5j/fitfjwR2AiC&#13;
-mVIIz2ByvA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bc07c814-db4c-4fed-aee9-4048636b1727"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nnkzk7Ark+GEDLveS954JtNhYd/wLVPU7H3qFGudQFXQdoeS3E2A+yRr94kqQXTSINGg1+deDY23&#13;
-hGQa+oEGcA==</DigestValue></Reference></SignedInfo><SignatureValue>EF8aQEkKur+wjCZb/rr8/7sNzrJ9eggwDcogIBfnO8JkfLHTrQqoac0BZjOPR6BTPw6+uynUQYUb&#13;
-YNOyzES9wzpbA6P12lKxrPPqFwiU1ZNzuJsxB7GOzAtn/4rcwo0wqFwykLCaAJoA5ZvIrS3OvLKz&#13;
-vJJhmcfp46hqbW2HGdwCC2HLdS6OBwVZC9jcf4RIY0V+kAsha3qbIq04ne6HKZr2r2bZ+oQE90TB&#13;
-sPQ1TJhmp6lik51CKwUuWrOOwTNf4tSY2yG6b3FzROhqZNoZv+snIlAlOOWbOfZa0qi7E+UFFY53&#13;
-MHqKEvXPH6KhiIqYhkBQyGoVTp4Z9YTid3yckQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_847d066f-eb34-48e8-9820-b9c8d587d40f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GbPg3ks3PRlQMCS96dArf9xaxdJbQqPotfRO+aow/dMwvjeQVE98/mkyEDoBcKSHKPjI+6ykKTsd&#13;
+bru87tvIJg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7ab158c2-0b7d-4f7e-b87e-f888d7ade8df"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jSPAClAephpCdLOL5RPa7f402+bxOK4nhHPs7G8UhBbjpRyna4D2JSfNhunbOVBflwcKE3kVpOT7&#13;
+Hqrp6IwQbA==</DigestValue></Reference></SignedInfo><SignatureValue>n/BaPHPcqr6Mc+7Y69OHeX1/54mUqu9xgpioa13mlpGfAn55+QoLQs/Fm3/o7fFIMLyz5nlbEqV0&#13;
+J4XT/fHxGcvbkg2Y3d0BoevAIPGIFVMGkZfJLDldNVQAUddUFa8ngcF0nJGTIci+ZSOnZ2Dkwm/q&#13;
+wJ0nJggjmpRBKsNtIrL9fQ3tc5VfMItbjbJGa7nJNuaETfiWZJhTD/jcejF3ELMoL+wOk498MFAb&#13;
+VhkxP7MyEtnTEjF6gVIXTjQoRcvLX9dEyA3+USFqaVyltQnLQS8j5VD+tCRidI4qPB1vM7R4QfjM&#13;
+GeTS5OqoWigWiPL/CQd94Vhf1uhcl03rRh+O0w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3123,4 +3131,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bc07c814-db4c-4fed-aee9-4048636b1727" Target="#_ac5029b9-0379-439f-98c0-252d684387df"><Timestamp>2023-04-25 13:07:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7ab158c2-0b7d-4f7e-b87e-f888d7ade8df" Target="#_847d066f-eb34-48e8-9820-b9c8d587d40f"><Timestamp>2023-04-25 13:09:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
