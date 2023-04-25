@@ -46,7 +46,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:56T7EcsTZrbOahS8d+SHJAhgwFfENt71lb05qpiV"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:tRDPJnkzh/n8evh3o4oTdxso7+j1BXFNVyb+Sczl"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,7 +81,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ocv2sZ34JzUFoggBIbLsWvlJLoF36LbMtnW77SlB"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:kEhz+hupTJLBJAjHnKnskDUW8xrHghBX0+1SKMAr"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -1643,7 +1643,7 @@
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" expressionFilter="row10.HeaderIndex &gt; 1 &amp;&amp;  row10.ValueIndex &gt;1" name="copyOfout" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;Actual&quot;" name="Version" nullable="true" type="id_String"/>
@@ -1728,109 +1728,6 @@
       <column comment="" key="false" length="-1" name="Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Production_Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tFileExcelSheetInputUnpivot" componentVersion="13.5" offsetLabelX="0" offsetLabelY="0" posX="736" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExcelSheetInputUnpivot_3"/>
-    <elementParameter field="COMPONENT_LIST" name="SHEET_INPUT_COMP" value="tFileExcelSheetInput_1"/>
-    <elementParameter field="TEXT" name="HEADER_ROW_INDEX" value="1"/>
-    <elementParameter field="TEXT" name="UNPIVOT_COLUMN_START_INDEX" value="&quot;CN&quot;"/>
-    <elementParameter field="TEXT" name="UNPIVOT_COLUMN_STOP_INDEX" value="&quot;CU&quot;"/>
-    <elementParameter field="COLUMN_LIST" name="HEADER_COLUMN" value="Header"/>
-    <elementParameter field="COLUMN_LIST" name="VALUE_COLUMN" value="Value"/>
-    <elementParameter field="CHECK" name="IGNORE_VALUE_ERROR" value="false"/>
-    <elementParameter field="LABEL" name="COL_AND_ROW_LABEL" value="The attributes for the row and column index below must be of type Integer."/>
-    <elementParameter field="COLUMN_LIST" name="VALUE_ROW_INDEX_COLUMN" value="HeaderIndex"/>
-    <elementParameter field="COLUMN_LIST" name="VALUE_COL_INDEX_COLUMN" value="ValueIndex"/>
-    <elementParameter field="LABEL" name="RELEASE_LABEL_20220523" value="Release: 13.5 build at: 20220523"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileExcelSheetInputUnpivot_3">
-      <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.HeaderIndex = input_row.HeaderIndex;&#13;&#10;output_row.Header = input_row.Header;&#13;&#10;output_row.ValueIndex = input_row.ValueIndex;&#13;&#10;output_row.Value = input_row.Value;&#10;if (input_row.HeaderIndex == 2)&#10;&#9;{&#10;&#9;&#9;if (input_row.ValueIndex == 0)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_year=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;else if (input_row.ValueIndex == 1)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_month=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#10;&#9;}&#13;&#10;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJavaRow_3">
-      <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_WsGIYLzHEe2Tw-SIfuumGA-tMap_4-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="odfbghsd" name="odfbghsd">
-      <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="row17.HeaderIndex &gt; 1 &amp;&amp;  row17.ValueIndex &gt;1" name="odfbghsd" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row17.HeaderIndex " name="HeaderIndex" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row17.Header " name="Header" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row17.ValueIndex " name="ValueIndex" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="row17.Value " name="Value" nullable="true" type="id_String"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row17" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="HeaderIndex" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="Header" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ValueIndex" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="Value" nullable="true" type="id_String"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="HeaderIndex"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Header"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ValueIndex"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Value"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="odfbghsd" name="tLogRow_5">
-      <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileExcelWorkbookOpen" componentVersion="13.5" offsetLabelX="0" offsetLabelY="0" posX="64" posY="224">
@@ -1922,7 +1819,7 @@
       <column comment="" key="false" length="-1" name="row_output" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="608">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="896">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_1"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
@@ -1940,7 +1837,7 @@
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="640">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="928">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -1974,7 +1871,7 @@
       <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateCondensedTool="true" name="oooot" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row5.Version " name="row_input" nullable="true" type="id_String"/>
@@ -2011,7 +1908,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="704">
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="992">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_2"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
@@ -2023,7 +1920,7 @@
       <column comment="" key="false" length="-1" name="row_output" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="608">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="896">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -2065,7 +1962,7 @@
       <column comment="" key="false" length="-1" name="Production_Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="704">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="992">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
@@ -2288,6 +2185,318 @@
       <column comment="" key="false" length="-1" name="OEE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFileExcelSheetInput" componentVersion="13.5" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExcelSheetInput_2"/>
+    <elementParameter field="COMPONENT_LIST" name="WORKBOOK" value="tFileExcelWorkbookOpen_1"/>
+    <elementParameter field="CHECK" name="CLOSE_WORKBOOK" value="false"/>
+    <elementParameter field="TEXT" name="SHEET_NAME" value="0"/>
+    <elementParameter field="CHECK" name="FIND_SHEET_TOLERANT" value="false"/>
+    <elementParameter field="LABEL" name="FIND_SHEET_TOLERANT_LABEL" value="The option above 'Find sheet tolerant' applies only if the sheet name is given (not the index). With this option the case, spaces and _ is irrelevant."/>
+    <elementParameter field="TEXT" name="ROW_START_INDEX" value="1"/>
+    <elementParameter field="TEXT" name="ROW_STOP_INDEX" value="2"/>
+    <elementParameter field="CHECK" name="STOP_AT_EMPTY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="SKIP_EMPTY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="USE_COLUMN_POSITIONING" value="false"/>
+    <elementParameter field="CHECK" name="CONFIG_COLUMN_BY_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="CONFIG_HEADER_BY_REGEX" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_ROW_INDEX" show="false" value="1"/>
+    <elementParameter field="TEXT" name="COLUMN_START_INDEX" value="91"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CN"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CO"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CP"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CQ"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CR"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CS"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CT"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CU"/>
+      <elementValue elementRef="POSITION" value=""/>
+      <elementValue elementRef="HEADER_NAME" value=""/>
+      <elementValue elementRef="IGNORE_MISSING" value="false"/>
+      <elementValue elementRef="READ_COMMENT" value="false"/>
+      <elementValue elementRef="KEEP_LAST" value="false"/>
+      <elementValue elementRef="IGNORE_ERROR" value="false"/>
+      <elementValue elementRef="READ_CELL_STYLE" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="NUMBERFORMAT_LOCALE" value="&quot;en&quot;"/>
+    <elementParameter field="CHECK" name="USE_GROUPING" value="true"/>
+    <elementParameter field="CHECK" name="OVERRIDE_EXCEL_NUMBER_FORMAT" value="false"/>
+    <elementParameter field="TEXT" name="DEFAULT_DATE_FORMAT" value=""/>
+    <elementParameter field="CHECK" name="PARSE_DATE_FROM_VISIBLE_STRING" value="false"/>
+    <elementParameter field="CHECK" name="PARSE_DATE_LENIENT" value="true"/>
+    <elementParameter field="CHECK" name="RETURN_ZERO_DATE_AS_NULL" value="true"/>
+    <elementParameter field="CHECK" name="RETURN_LINK" value="false"/>
+    <elementParameter field="CHECK" name="ADD_LINK_TO_LABEL" show="false" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CO"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CQ"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CR"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CT"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="CU"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20220523" value="Release: 13.5 build at: 20220523"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileExcelSheetInput_2">
+      <column comment="" key="false" length="-1" name="CN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CO" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CQ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CU" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="512" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_WsGIYLzHEe2Tw-SIfuumGA-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="ouuuut">
+      <column comment="" key="false" length="-1" name="CP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CQ" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CR" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CT" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="CU" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="ouuuut" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row16.CP " name="CP" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row16.CQ " name="CQ" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row16.CR " name="CR" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row16.CS " name="CS" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row16.CT " name="CT" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row16.CU " name="CU" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row16" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="CN" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CO" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CP" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CQ" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CR" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CS" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CT" nullable="true" type="id_String"/>
+        <mapperTableEntries name="CU" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileExcelSheetInputUnpivot" componentVersion="13.5" offsetLabelX="0" offsetLabelY="0" posX="736" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExcelSheetInputUnpivot_3"/>
+    <elementParameter field="COMPONENT_LIST" name="SHEET_INPUT_COMP" value="tFileExcelSheetInput_1"/>
+    <elementParameter field="TEXT" name="HEADER_ROW_INDEX" value="1"/>
+    <elementParameter field="TEXT" name="UNPIVOT_COLUMN_START_INDEX" value="&quot;CP&quot;"/>
+    <elementParameter field="TEXT" name="UNPIVOT_COLUMN_STOP_INDEX" value="&quot;CU&quot;"/>
+    <elementParameter field="COLUMN_LIST" name="HEADER_COLUMN" value="Header"/>
+    <elementParameter field="COLUMN_LIST" name="VALUE_COLUMN" value="Value"/>
+    <elementParameter field="CHECK" name="IGNORE_VALUE_ERROR" value="false"/>
+    <elementParameter field="LABEL" name="COL_AND_ROW_LABEL" value="The attributes for the row and column index below must be of type Integer."/>
+    <elementParameter field="COLUMN_LIST" name="VALUE_ROW_INDEX_COLUMN" value="HeaderIndex"/>
+    <elementParameter field="COLUMN_LIST" name="VALUE_COL_INDEX_COLUMN" value="ValueIndex"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20220523" value="Release: 13.5 build at: 20220523"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileExcelSheetInputUnpivot_3">
+      <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="960" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.HeaderIndex = input_row.HeaderIndex;&#13;&#10;output_row.Header = input_row.Header;&#13;&#10;output_row.ValueIndex = input_row.ValueIndex;&#13;&#10;output_row.Value = input_row.Value;&#10;if (input_row.HeaderIndex == 2)&#10;&#9;{&#10;&#9;&#9;if (input_row.ValueIndex == 0)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_year=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;else if (input_row.ValueIndex == 1)&#10;&#9;&#9;&#9;{&#10;&#9;&#9;&#9;&#9;context.loc_month=input_row.Value;&#10;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#10;&#9;&#9;&#10;&#9;}&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_3">
+      <column comment="" key="false" length="-1" name="HeaderIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ValueIndex" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_5"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_WsGIYLzHEe2Tw-SIfuumGA-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="copyOfout_0">
+      <column comment="" key="false" length="-1" name="Version" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Plant" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Month" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Process" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Production_Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables activateExpressionFilter="true" expressionFilter="row18.HeaderIndex &gt; 1 &amp;&amp;  row18.ValueIndex &gt;1" name="copyOfout_0" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="&quot;Actual&quot;" name="Version" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;1406&quot;" name="Plant" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM&quot;,context.loc_year +'-'+ context.loc_month) " name="Month" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row18.Value" name="Value" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.LEFT(row18.Header,3) " name="Process" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;Auto&quot;" name="Measure" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.RIGHT(row18.Header,StringHandling.LEN(row18.Header)-4) " name="Production_Measure" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.TRIM(row18.Header) " name="Header" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row18" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="HeaderIndex" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="Header" nullable="true" type="id_String"/>
+        <mapperTableEntries name="ValueIndex" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="Value" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_5"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="true"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="Version"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Plant"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Month"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Value"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Process"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Measure"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Production_Measure"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Header"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_5">
+      <column comment="" key="false" length="-1" name="Version" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Plant" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Month" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Process" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Production_Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_7"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" show="false" value="MEMORY"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="TEXT" name="MEMORY_HEAP_MAX_SIZE" show="false" value="2"/>
+    <elementParameter field="CLOSED_LIST" name="KEYS_MANAGEMENT" show="false" value="KEEP_ALL"/>
+    <elementParameter field="CHECK" name="APPEND" show="false" value="true"/>
+    <elementParameter field="CHECK" name="HASH_KEY_FROM_INPUT_CONNECTOR" show="false" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHashOutput_7">
+      <column comment="" key="false" length="-1" name="Version" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Plant" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Month" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Process" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Production_Measure" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Header" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileExcelSheetInput_1" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInput_1" target="tReplicate_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="BY"/>
@@ -2387,7 +2596,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileExcelSheetInput_1" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInput_1" target="tHashInput_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileExcelSheetInput_1" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInput_1" target="tFileExcelSheetInput_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tFileExcelSheetInputUnpivot_1">
@@ -2397,10 +2606,6 @@
   <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tFileExcelSheetInputUnpivot_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
-  </connection>
-  <connection connectorName="FLOW" label="row19" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tReplicate_1" target="tFileExcelSheetInputUnpivot_3">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row19"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tFileExcelSheetInputUnpivot_1" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInputUnpivot_1" target="tJavaRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -2536,37 +2741,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
   </connection>
-  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tFileExcelSheetInputUnpivot_3" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInputUnpivot_3" target="tJavaRow_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="Header"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Value"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="HeaderIndex"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="ValueIndex"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
-  </connection>
-  <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tMap_4">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="Month"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row17"/>
-  </connection>
-  <connection connectorName="FLOW" label="odfbghsd" lineStyle="0" metaname="odfbghsd" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tLogRow_5">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="odfbghsd"/>
-  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileExcelWorkbookOpen_1" offsetLabelX="0" offsetLabelY="0" source="tFileExcelWorkbookOpen_1" target="tFileExcelSheetInput_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
@@ -2673,6 +2847,101 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
   </connection>
+  <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tFileExcelSheetInput_2" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInput_2" target="tMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
+  </connection>
+  <connection connectorName="FLOW" label="ouuuut" lineStyle="0" metaname="ouuuut" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tFileExcelSheetInputUnpivot_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="CS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CU"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CQ"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="CR"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ouuuut"/>
+  </connection>
+  <connection connectorName="FLOW" label="row17" lineStyle="0" metaname="tFileExcelSheetInputUnpivot_3" offsetLabelX="0" offsetLabelY="0" source="tFileExcelSheetInputUnpivot_3" target="tJavaRow_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Header"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Value"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="HeaderIndex"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ValueIndex"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row17"/>
+  </connection>
+  <connection connectorName="FLOW" label="row18" lineStyle="0" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tMap_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row18"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfout_0" lineStyle="0" metaname="copyOfout_0" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tLogRow_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Plant"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Version"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="HeaderIndex"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ValueIndex"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Month"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Year"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Process"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Production_Measure"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Measure"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Header"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfout_0"/>
+  </connection>
+  <connection connectorName="FLOW" label="row19" lineStyle="0" metaname="tLogRow_5" offsetLabelX="0" offsetLabelY="0" source="tLogRow_5" target="tHashOutput_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row19"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExcelSheetInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
@@ -2714,13 +2983,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8bc51312-3cdc-4c4c-a248-cf54d5d94d30"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xT8SH/zSmVAhAMrNCYshD444J09HbAmUx1MybF40uhPzScONQg0J7ZKzray5rI7xBv9Ahah01UXo&#13;
-Smdlw73Bqg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1e309cf6-e55e-48bc-9776-10c10a0faa49"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>N3qrMluFEAWUY9Z0PUG1w6fwJtwFVp8o5nJ/8au7FkvpSO45dbDJbW7hCs/qmUMxhYkuAnX8BIN0&#13;
-eWyv3JUKnA==</DigestValue></Reference></SignedInfo><SignatureValue>Wz7KGrvwETvaLNmtGYVW10YLuNWlgjL2W78DfI3LNldHXijeqsmEtOD3ZI/TDFmwtTHt+kSq6C/8&#13;
-/s5Y9DR+bYDxLuXN5PyFoQJwQc1DSPt0FdiCB7duprtFEXIOXea5MgJlNURHlm2M2k5K7LyFMr5G&#13;
-HG7yl1m/bD/oBiTEmVp0u5BexWNxOtcvxdZbb+dBTHIC2eLCsLzfDcmytik/agnlAB+wiS/rm+5h&#13;
-gBNn3ZXWppCYy8m1M1CFeh7TjA2HJ+sIt76dksIA6SaW9qINcGvYgE6D9dxnSio7u56Zdw+8moff&#13;
-ljXewCy1IFFLQAQd+RvFxATvfJJawApOR1Lp6Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileExcelSheetInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d9022d17-da53-4121-b082-9c186b7ece0a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+nKmQzI3SLiCOl2NSKtyrO+P06DE0fR6NSQlYWueTnXSN2gHqD+fuUMKSJ4awqCd0n6ouqh27VEZ&#13;
+Ko0yiCHS1w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fa082bc4-3288-45cc-9bc7-74bd5fb8e82a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>f4DD8LSfdHS3WvbyC+3Z/mp2CWsFTp6e2OOWc+QG5DyQaDtnjqupWTfTTVn/AWgUYqwOktHSfNXz&#13;
+vogtmZ0Udg==</DigestValue></Reference></SignedInfo><SignatureValue>pTUUVTHHW8GR9xNdIDUjY7DQDN/PBxwrW8DnheH7ISx2LLjXO0vAeO/LHsMexXMDx+eEXGTjdnuz&#13;
+py6emdSvQYR3U4FT1G2lD8tNI71l/+f+kh2S/jm964LbyV0xjNIzT6fSSjFGMfCyFQuHQy46sZOp&#13;
+DQhkeyoAXplON6/pLLtsThutIlNCYcxE7sfoWnUULRKactXaD6HdAcvIf00OAx1fq4QrMxSbwu0N&#13;
+0u/6Kr0wmLjHjLgUqghwEiW0O5Z7jhPuU8rp3r8N701iyZ0bKZQFu7H1hmcmthfB2RhxAQTrkd1G&#13;
+TU1qYrg82AMC2Uw6A1tu5tVCdehAui6WQrn2vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2742,4 +3016,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1e309cf6-e55e-48bc-9776-10c10a0faa49" Target="#_8bc51312-3cdc-4c4c-a248-cf54d5d94d30"><Timestamp>2023-04-25 09:16:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fa082bc4-3288-45cc-9bc7-74bd5fb8e82a" Target="#_d9022d17-da53-4121-b082-9c186b7ece0a"><Timestamp>2023-04-25 13:02:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
