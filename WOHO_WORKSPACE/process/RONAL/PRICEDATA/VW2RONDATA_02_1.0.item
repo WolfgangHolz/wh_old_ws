@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:V8NUTXWrrs613gpTXd6b4hkRMRyzKCR3Ajb1UJRh"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:3x/LLhpOs6zV040FrCjfXsHyjcoqas5bLeHYqnaV"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Yc5kCvcwsSOiQBfuUcfcLFxM+nqR3OHgwyROTaRM"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:0NJKRM//tnO90B/mRwGfFECw0muN8pG0yyvcHOyL"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -452,7 +452,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:KBFIfMbIifgqNHfjMAA3pMBOb6tsbxcWOsl944IJ"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:ZcIIE3/kGvVmJJcEt6h6UdbhyaeDLmBhKbD3JXjF"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -994,11 +994,11 @@
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -1017,11 +1017,11 @@
         <mapperTableEntries expression="row6.Einkaeufer " name="Einkaeufer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.LieferantenNummer " name="LieferantenNummer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.TeileNummer " name="TeileNummer" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.BasisPreis " name="BasisPreis" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%.2f&quot;, new BigDecimal(row6.BasisPreis)) " name="BasisPreis" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row6.BasisPreisEinheitWert " name="BasisPreisEinheitWert" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.BasisPreisEinheit " name="BasisPreisEinheit" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.BasisPreisWaehrung " name="BasisPreisWaehrung" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row7.GesamtPreis " name="GesamtPreis" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="String.format(&quot;%.2f&quot;, new BigDecimal(row7.GesamtPreis)) " name="GesamtPreis" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row7.GesamtPreisEinheitWert " name="GesamtPreisEinheitWert" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row7.GesamtPreisEinheit " name="GesamtPreisEinheit" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row7.GesamtPreisWaehrung " name="GesamtPreisWaehrung" nullable="true" type="id_String"/>
@@ -1203,11 +1203,11 @@
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" precision="-1" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -1372,13 +1372,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b861e67c-1f22-499d-b663-f5a82a395342"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tVEGVIfWudzfkaT4/DEy1AXvfQw7WohxT9JAdsHNl4HCZ0M+Em6HqdNtRX87Vykt4vqZ9f/nptOY&#13;
-Fer4bbfbiQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bca493e6-6db4-4422-b242-19b047f66731"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>yxXknjkime7zi/SIL1EJoIXnSrgdilbSpsXMW2N0dKH9pKY5NjduChtvEIjZW6TP/Qg7yUMp0dHb&#13;
-9EkvF64gNA==</DigestValue></Reference></SignedInfo><SignatureValue>Y+0RrgBp4xwE1jFQRt3OT8ysaMSBkWjJQFwlvCnP6eolytMx5ls4obWkd7X5pZmtr+t+yTX5A9ue&#13;
-Jn9QEhIS8zA36fq2ktS+ehu7xSMUFZzJI6ubV+1YRNIy4OnGu4n0ZU2QiFXqZAJSRWi0vUR5wDgX&#13;
-9qpsjF94IPpk6lgNRl2hmOE6i7HpAODh/SDvht9JK9ViAgcYbhshrjvIGH02iOyXC7eoW5S/b1Kp&#13;
-VKBlEMptRsfdbn/HUFc53HcX3v3ZzZsuup3uDrhZABdqa3cxjKgr2O9bzGpqtuSBcNmi2QPrW9bu&#13;
-D+JPK0QS/rXvgUufVff/5a2ekpa8etRHPhWIZA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_da60a787-90ce-4b0c-89d4-16e73611b1f7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RhWraZXS/kIqj/QpOv2oI0LQ+kk8LMpDY6mNe35G6nTKe1GafjqHJYep2GSoxo4JmfSauqWV7EBP&#13;
+76zOxEL2CQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_33aba2ba-f749-4daa-ba98-2e54afd4c264"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rM0l7S9BxtPQ+2ANQaASW3oYOv/MvVIPOfMiIp38MBNusI+ZO4reazk8mLoSfJERtRA1++QT6+fi&#13;
+IVNWX3WxmQ==</DigestValue></Reference></SignedInfo><SignatureValue>KSi70m/Cw81PtIuf0wp8wxXhEwMEbU7OiXlTeE89oQrESpistEPGpU1YqdM+shRD4A07Kl+uZ1nG&#13;
+oRz1LjjAhQuHfvCqRhi93atov6wTQMn7XK4n7+f9m5KRboHBYxY0OrFlth0qyYjggOOGPwUIW8Pg&#13;
+DPnHvvCqSxXL0MSCpgQM9FWruDnzyPFqILyW1UTMrNDbQoSa09496FDPqeP1U3/AskmKL6P8Ox2X&#13;
+EmtHDn9X0lTKF9qmni53DkKZW5DlEBNv2a75k4iKOp1kO+rreL1rdg9YKBq4Nl7nJgqMmrSC4rrB&#13;
+QOjXvCo7iiA46u+kj2OAS9rueKtr7dCq/PTgCA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1400,4 +1400,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bca493e6-6db4-4422-b242-19b047f66731" Target="#_b861e67c-1f22-499d-b663-f5a82a395342"><Timestamp>2023-04-27 16:48:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_33aba2ba-f749-4daa-ba98-2e54afd4c264" Target="#_da60a787-90ce-4b0c-89d4-16e73611b1f7"><Timestamp>2023-04-27 16:52:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
