@@ -51,7 +51,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ed01FsRcu0X8KoHyf6kh5kgdMFs+aenDFOHO3DfT"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AN6+GiWTWhvCPG0lnQ3mrF7PLcnVj3OIbOpJhQ8o"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -86,7 +86,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:4GJFzeMzIUYmx6tQu/+uKBC3YVgWSWcnJhCIL/fG"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:nlEVKKDztu9KHDNcTg5zvFZJngcRrOkO/l5bU3ik"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -458,7 +458,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:2X7LftsLNUne2O1B+Vj8P7btfVd2sDeTMXWpZ9yE"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:ZMfWxwR0JuP880FO1EPEAPWtXfACOpOZHCoX8gSH"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -901,7 +901,7 @@
       <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DatumVon" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" label="metadata" name="copyOfoutz">
       <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -912,7 +912,7 @@
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DatumBis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row5">
@@ -939,7 +939,7 @@
         <nodes expression="[row5.payload:/root/row/ZustaendigkeitsBereich]" incomingConnections="//@node.19/@nodeData/@connections.4" name="ZustaendigkeitsBereich" type="id_String" xpath="copyOftXM_01TtHO_01/ZustaendigkeitsBereich"/>
         <nodes expression="[row5.payload:/root/row/Einkaeufer]" incomingConnections="//@node.19/@nodeData/@connections.6" name="Einkaeufer" type="id_String" xpath="copyOftXM_01TtHO_01/Einkaeufer"/>
         <nodes expression="[row5.payload:/root/row/LieferantenNummer]" incomingConnections="//@node.19/@nodeData/@connections.8" name="LieferantenNummer" type="id_String" xpath="copyOftXM_01TtHO_01/LieferantenNummer"/>
-        <nodes expression="[row5.payload:/root/row/Datum]" incomingConnections="//@node.19/@nodeData/@connections.11" name="Datum" type="id_String" xpath="copyOftXM_01TtHO_01/Datum"/>
+        <nodes expression="[row5.payload:/root/row/Datum]" incomingConnections="//@node.19/@nodeData/@connections.11" name="DatumVon" type="id_String" xpath="copyOftXM_01TtHO_01/DatumVon"/>
       </outputTrees>
       <outputTrees activateExpressionFilter="true" expressionFilter=" [row5.payload:/root/row/DatumType].equals(&quot;300&quot;)" filterIncomingConnections="//@node.19/@nodeData/@connections.14" name="copyOfoutz">
         <nodes expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))" name="FileName" type="id_String" xpath="copyOfoutz/FileName"/>
@@ -950,7 +950,7 @@
         <nodes expression="[row5.payload:/root/row/Einkaeufer]" incomingConnections="//@node.19/@nodeData/@connections.7" name="Einkaeufer" type="id_String" xpath="copyOfoutz/Einkaeufer"/>
         <nodes expression="[row5.payload:/root/row/LieferantenNummer]" incomingConnections="//@node.19/@nodeData/@connections.9" name="LieferantenNummer" type="id_String" xpath="copyOfoutz/LieferantenNummer"/>
         <nodes expression="[row5.payload:/root/row/TeileNummer]" incomingConnections="//@node.19/@nodeData/@connections.10" name="TeileNummer" type="id_String" xpath="copyOfoutz/TeileNummer"/>
-        <nodes expression="[row5.payload:/root/row/Datum]" incomingConnections="//@node.19/@nodeData/@connections.12" name="Datum" type="id_String" xpath="copyOfoutz/Datum"/>
+        <nodes expression="[row5.payload:/root/row/Datum]" incomingConnections="//@node.19/@nodeData/@connections.12" name="DatumBis" type="id_String" xpath="copyOfoutz/DatumBis"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.19/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.19/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
@@ -998,7 +998,7 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="LieferantenNummer"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Datum"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DatumVon"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -1013,7 +1013,7 @@
       <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DatumVon" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="256">
@@ -1046,7 +1046,7 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="TeileNummer"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Datum"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DatumBis"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -1062,7 +1062,7 @@
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DatumBis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFixedFlowInput_1">
@@ -1194,13 +1194,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c6505dcb-3101-4d2c-9262-1f2e27bfbd88"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kTxxz1O/Ox8oF1JOPmVDokuc+q1ZtMCNeVx0iRLzfwT8TtH4ObTykEINxE0VMtfW6mpdQ7ZgIg3L&#13;
-+aUfobpWLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4487ca72-80ba-48fd-861c-affeb27ba5af"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6GGLVso3o+ODlHSkq60bt99qKmy0lsmu4QkaaN8rnYEWT8anK5kiOMgIRHDRgyCm39eUfnO1o7Cg&#13;
-k5BDERwyHg==</DigestValue></Reference></SignedInfo><SignatureValue>Cbmj9QJSPSVVemMtZb6ZAJzdTxYRZ9LohfI82Pfear9+CJMwyrZuMt88/tx7fTZbFAeR3IZhRwkl&#13;
-JSYvW8piQijXdyBobBS5s/+U/c+VTXbuxZyEod6PSK0wCFBgoPrhntWXEU0lg/St1HTyGgXmqDM4&#13;
-yC8JHinKbWb/bM6uOVhqwi5V6DyObieMESnGtcnnXr4wr9V+kw23nkFUE/d3VYNjJrmhLLY6M4pd&#13;
-EHu3eEouJGu6NieSqX/XLLuT6IyZcsmWGXr6/EqLThxgmk4OpE/Sqk4Qsk35nghmNn69dBjW0R5d&#13;
-pUQ41ER4W6zkQ8uYjxwfraeqx13lfAWihfgX/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_67b02dbd-e18c-442b-acca-5d0e2262bfab"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RE3JcKNqhXCNxbgulB8CTcRWgARjJDwlDV49GjOKxTh1rrD72ayZr75i8wi+iHDamDO6JKNLEVSg&#13;
+MRRA8ZV/0Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_67cbb10c-8860-41c1-a8c1-a9532631faac"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YI1d4h6e+fge6Nyv9Flw9utvto39zP0rodj9vZ+UuSkVjYRnEwD/Zbd+v2CuFb/GxqpJQUNUMzLA&#13;
+SG4PlhyBlA==</DigestValue></Reference></SignedInfo><SignatureValue>py92BJAyQOZR+a8eBsrQkpVvAE6rhEqytS3DAyq9T2u4n7d96655/7S8+RWVlaT6IfidN8Uds+Yz&#13;
+C7Oj1jiT36EEtsi2L3c4WOSkqwYh41EnNO/ghNRQyX4sRJr32e6nyztdODNJvhdvIkTGDHbx8z55&#13;
+i9N1xVnk1Nvq5qt9yx53Cg7n//h8zNRVUKcDIZvWrW1CePBpYXafr/WHQ1PbOU8Z7wAhjni3z8Ni&#13;
+HsabmHcv2nc27oJhsqR4PAG8l+CXSFN12ji00iJEBcCv2KobET91yOWPaXEBNU9VaKjSw+o7x77z&#13;
+QmgFt28oFHeZgZjzn6hIWPe5QCATYCDQocZx8A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1222,4 +1222,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4487ca72-80ba-48fd-861c-affeb27ba5af" Target="#_c6505dcb-3101-4d2c-9262-1f2e27bfbd88"><Timestamp>2023-04-27 13:31:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_67cbb10c-8860-41c1-a8c1-a9532631faac" Target="#_67b02dbd-e18c-442b-acca-5d0e2262bfab"><Timestamp>2023-04-27 13:32:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
