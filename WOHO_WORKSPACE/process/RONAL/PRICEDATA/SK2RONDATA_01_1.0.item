@@ -54,7 +54,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:e0BHQ/gEBPumslAfJ4y8HGBzwyjUwq/X68P12zDk"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ceI/uZVr+HqJMZP80U2w9/yos2myVQAZeEPpz7yw"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -89,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:EnaHErC21mnUy8VIg+lWMMCAfDsIkNzzJmwu4KPj"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:s85E4QrcUnXBfB/oi6E3lvxgVhHIhwguLTEpKZTa"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -126,6 +126,7 @@
   </parameters>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-800" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Work/Job_Data/oem-docs/in&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
@@ -148,6 +149,7 @@
   </node>
   <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-576" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="RADIO" name="AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
@@ -162,6 +164,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.content = input_row.content;&#10;context.LOC_FILENAME= ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;));&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -171,6 +174,7 @@
   </node>
   <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
     <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
     <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
@@ -217,6 +221,7 @@
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="64" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
@@ -319,6 +324,7 @@
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
@@ -344,6 +350,7 @@
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_5"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
@@ -369,6 +376,7 @@
   </node>
   <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-800" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_4"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
@@ -390,6 +398,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-576" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.FileName = input_row.FileName;&#13;&#10;output_row.Brand = input_row.Brand;&#13;&#10;output_row.LieferantenNummer = input_row.LieferantenNummer;&#13;&#10;output_row.SachNummer = input_row.SachNummer;&#13;&#10;output_row.BestellNummer = input_row.BestellNummer;&#13;&#10;output_row.Preis = input_row.Preis;&#13;&#10;output_row.Waehrung = input_row.Waehrung;&#13;&#10;output_row.KundenWerk = input_row.KundenWerk;&#13;&#10;output_row.IncoTerms = input_row.IncoTerms;&#13;&#10;output_row.GueltigVon = input_row.GueltigVon;&#13;&#10;output_row.GueltigBis = input_row.GueltigBis;&#10;context.LOC_BRAND = input_row.Brand;&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -409,6 +418,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_7"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -480,6 +490,7 @@
   </node>
   <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_5"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
@@ -501,6 +512,7 @@
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_11"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -564,6 +576,7 @@
   </node>
   <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-128" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_8"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_8"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
@@ -577,6 +590,7 @@
   </node>
   <node componentName="tUniqRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tUniqRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TABLE" name="UNIQUE_KEY">
       <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
       <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
@@ -660,6 +674,7 @@
   </node>
   <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputExcel_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -699,7 +714,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:vqh2b0kfJeqMYygv2vfXbg2lYi26VZ2DnkujE8oj"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:MUbNDYKEgWT3OSeEK8jvTC7LH7gC4tbFx3dhDfRr"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -731,6 +746,7 @@
   </node>
   <node componentName="tFileOutputExcel" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputExcel_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
@@ -770,7 +786,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:xIl5S5N+/gDlUrN0lWAvI5nH5cNT7orC3HORF/5b"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:m+SDca3FAwrAE9i5ilCnnpxwm0Zcu/4SMK5mH+oI"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -1126,7 +1142,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:5QuQpFk/dcQesi4VnSzsqmMdQBUhpZ9mbFRZmW5r"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:4vzWXK7rxrNtQLOB0D1iztINBgWCQAxDyBh/Ymaz"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -1287,6 +1303,7 @@
   </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-800" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Work/Job_Data/oem-docs/in&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
@@ -1309,6 +1326,7 @@
   </node>
   <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-576" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="RADIO" name="AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
@@ -1323,6 +1341,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-352" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.content = input_row.content;&#10;context.LOC_FILENAME= ((String)globalMap.get(&quot;tFileList_4_CURRENT_FILE&quot;));&#13;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -1332,6 +1351,7 @@
   </node>
   <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="-160" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
     <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
     <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
@@ -1378,6 +1398,7 @@
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="64" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
@@ -1428,6 +1449,7 @@
   </node>
   <node componentName="tHashOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashOutput_8"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="LINK_WITH" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DATA_WRITE_MODEL" value="MEMORY"/>
@@ -1443,36 +1465,276 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-448" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+    <elementParameter field="CHECK" name="AUTOCAST" value="false"/>
+    <elementParameter field="TABLE" name="MANUALTABLE"/>
+    <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tConvertType_1">
+      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="-320" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="out" name="out">
+      <column comment="" key="false" length="-1" name="D_1153" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="D_1154" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row3">
+        <nodes expression="" name="content" type="id_Document" xpath="row3/content">
+          <children loop="true" main="true" name="XMLFACT-ORDERS" type="id_String" xpath="row3.content:/XMLFACT-ORDERS">
+            <children name="xsi:noNamespaceSchemaLocation" nodeType="ATTRIBUT" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/@xsi:noNamespaceSchemaLocation"/>
+            <children name="S_BGM" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_BGM">
+              <children name="C_C002" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_BGM/C_C002">
+                <children name="D_1001" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/S_BGM/C_C002/D_1001"/>
+                <children name="D_1000" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_BGM/C_C002/D_1000"/>
+              </children>
+              <children name="C_C106" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_BGM/C_C106">
+                <children name="D_1004" type="id_Long" xpath="row3.content:/XMLFACT-ORDERS/S_BGM/C_C106/D_1004"/>
+              </children>
+            </children>
+            <children name="S_DTM" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_DTM">
+              <children name="C_C507" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_DTM/C_C507">
+                <children name="D_2005" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/S_DTM/C_C507/D_2005"/>
+                <children name="D_2380" type="id_Long" xpath="row3.content:/XMLFACT-ORDERS/S_DTM/C_C507/D_2380"/>
+                <children name="D_2379" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/S_DTM/C_C507/D_2379"/>
+              </children>
+            </children>
+            <children name="S_IMD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_IMD">
+              <children name="C_C273" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/S_IMD/C_C273">
+                <children name="D_7009" type="id_Character" xpath="row3.content:/XMLFACT-ORDERS/S_IMD/C_C273/D_7009"/>
+                <children name="D_3055" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/S_IMD/C_C273/D_3055"/>
+              </children>
+            </children>
+            <children name="G_RFF" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_RFF">
+              <children name="S_RFF" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_RFF">
+                <children name="C_C506" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506">
+                  <children name="D_1153" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1153"/>
+                  <children name="D_1154" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1154"/>
+                </children>
+              </children>
+              <children name="S_DTM" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_DTM">
+                <children name="C_C507" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507">
+                  <children name="D_2005" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507/D_2005"/>
+                  <children name="D_2380" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507/D_2380"/>
+                  <children name="D_2379" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507/D_2379"/>
+                </children>
+              </children>
+            </children>
+            <children name="G_NAD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD">
+              <children name="S_NAD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD">
+                <children name="D_3035" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3035"/>
+                <children name="C_C082" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C082">
+                  <children name="D_3039" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C082/D_3039"/>
+                  <children name="D_3055" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C082/D_3055"/>
+                </children>
+                <children name="C_C058" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C058">
+                  <children name="D_3124" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C058/D_3124"/>
+                </children>
+                <children name="C_C059" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C059">
+                  <children name="D_3042" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C059/D_3042"/>
+                </children>
+                <children name="D_3164" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3164"/>
+                <children name="D_3251" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3251"/>
+                <children name="D_3207" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3207"/>
+              </children>
+              <children name="G_NAD-CTA" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA">
+                <children name="S_CTA" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA">
+                  <children name="D_3139" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/D_3139"/>
+                  <children name="C_C056" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/C_C056">
+                    <children name="D_3413" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/C_C056/D_3413"/>
+                    <children name="D_3412" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/C_C056/D_3412"/>
+                  </children>
+                </children>
+                <children name="S_COM" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM">
+                  <children name="C_C076" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM/C_C076">
+                    <children name="D_3148" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM/C_C076/D_3148"/>
+                    <children name="D_3155" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM/C_C076/D_3155"/>
+                  </children>
+                </children>
+              </children>
+              <children name="S_LOC" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_LOC">
+                <children name="D_3227" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_LOC/D_3227"/>
+                <children name="C_C517" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_LOC/C_C517">
+                  <children name="D_3225" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_LOC/C_C517/D_3225"/>
+                  <children name="D_3055" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_NAD/S_LOC/C_C517/D_3055"/>
+                </children>
+              </children>
+            </children>
+            <children name="G_LIN" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN">
+              <children name="S_LIN" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_LIN">
+                <children name="D_1082" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_LIN/D_1082"/>
+                <children name="D_1229" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_LIN/D_1229"/>
+                <children name="C_C212" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212">
+                  <children name="D_7140" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140"/>
+                </children>
+              </children>
+              <children name="S_IMD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_IMD">
+                <children name="C_C273" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273">
+                  <children name="D_7008" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273/D_7008"/>
+                  <children name="D_7009" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273/D_7009"/>
+                  <children name="D_3055" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273/D_3055"/>
+                </children>
+              </children>
+              <children name="S_QTY" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_QTY">
+                <children name="C_C186" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186">
+                  <children name="D_6063" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186/D_6063"/>
+                  <children name="D_6060" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186/D_6060"/>
+                  <children name="D_6411" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186/D_6411"/>
+                </children>
+              </children>
+              <children name="S_PCD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_PCD">
+                <children name="C_C501" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501">
+                  <children name="D_5245" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501/D_5245"/>
+                  <children name="D_5482" type="id_Float" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501/D_5482"/>
+                  <children name="D_5249" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501/D_5249"/>
+                </children>
+              </children>
+              <children name="G_LIN-PAT" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT">
+                <children name="S_PAT" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT">
+                  <children name="D_4279" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/D_4279"/>
+                  <children name="C_C110" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/C_C110">
+                    <children name="D_4277" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/C_C110/D_4277"/>
+                    <children name="D_4276" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/C_C110/D_4276"/>
+                  </children>
+                </children>
+              </children>
+              <children name="G_LIN-PRI" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI">
+                <children name="S_PRI" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI">
+                  <children name="C_C509" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509">
+                    <children name="D_5125" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5125"/>
+                    <children name="D_5118" type="id_Float" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5118"/>
+                    <children name="D_5375" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5375"/>
+                    <children name="D_5387" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5387"/>
+                    <children name="D_5284" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5284"/>
+                    <children name="D_6411" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_6411"/>
+                  </children>
+                </children>
+                <children name="S_CUX" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX">
+                  <children name="C_C504" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504">
+                    <children name="D_6347" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504/D_6347"/>
+                    <children name="D_6345" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504/D_6345"/>
+                    <children name="D_6343" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504/D_6343"/>
+                  </children>
+                </children>
+                <children name="S_DTM" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM">
+                  <children name="C_C507" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507">
+                    <children name="D_2005" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2005"/>
+                    <children name="D_2380" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2380"/>
+                    <children name="D_2379" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2379"/>
+                  </children>
+                </children>
+              </children>
+              <children name="G_LIN-PAC" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC">
+                <children name="S_PAC" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC">
+                  <children name="C_C202" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC/C_C202">
+                    <children name="D_3055" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC/C_C202/D_3055"/>
+                    <children name="D_7064" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC/C_C202/D_7064"/>
+                  </children>
+                </children>
+              </children>
+              <children name="G_LIN-TOD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD">
+                <children name="S_TOD" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD">
+                  <children name="D_4055" type="id_Integer" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD/D_4055"/>
+                  <children name="C_C100" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD/C_C100">
+                    <children name="D_4052" type="id_String" xpath="row3.content:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD/C_C100/D_4052"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </inputTrees>
+      <outputTrees name="out">
+        <nodes expression="[row2.content:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1153]" name="D_1153" type="id_String" xpath="out/D_1153"/>
+        <nodes expression="[row2.content:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1154]" name="D_1154" type="id_Integer" xpath="out/D_1154"/>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-32" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1"/>
+  </node>
+  <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="-608" posY="928">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_3"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Work/Job_Data/oem-docs/in/edixml_e15274461.xml&quot;"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputRaw_3">
+      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputRaw_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_4">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tJavaRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tHMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
   </connection>
   <connection connectorName="FLOW" label="oup_1" lineStyle="0" metaname="oup_1" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="oup_1"/>
   </connection>
   <connection connectorName="FLOW" label="out_01" lineStyle="0" metaname="out_01" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tXMLMap_1" target="tHashOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_01"/>
   </connection>
   <connection connectorName="FLOW" label="out_02" lineStyle="0" metaname="out_02" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tXMLMap_1" target="tHashOutput_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_02"/>
   </connection>
   <connection connectorName="FLOW" label="row123" lineStyle="0" metaname="tHashInput_4" offsetLabelX="-4" offsetLabelY="6" source="tHashInput_4" target="tJavaRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row123"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tJavaRow_4" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_4" target="tMap_7">
@@ -1512,41 +1774,48 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
   </connection>
   <connection connectorName="FLOW" label="out_03" lineStyle="0" metaname="out_03" offsetLabelX="0" offsetLabelY="0" source="tMap_7" target="tMap_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_03"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="8" metaname="tHashInput_5" offsetLabelX="0" offsetLabelY="0" source="tHashInput_5" target="tMap_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row8"/>
   </connection>
   <connection connectorName="FLOW" label="outp_06" lineStyle="0" metaname="outp_06" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tUniqRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp_06"/>
   </connection>
   <connection connectorName="FLOW" label="row9" lineStyle="8" metaname="tHashInput_8" offsetLabelX="0" offsetLabelY="0" source="tHashInput_8" target="tMap_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row9"/>
   </connection>
   <connection connectorName="UNIQUE" label="row17" lineStyle="0" metaname="UNIQUE" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tUniqRow_1" target="tFileOutputExcel_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row17"/>
   </connection>
   <connection connectorName="DUPLICATE" label="row18" lineStyle="0" metaname="DUPLICATE" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tUniqRow_1" target="tFileOutputExcel_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row18"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileList_3">
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row18"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileInputXML_3">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileList_3">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFileInputXML_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_3" target="tMap_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1598,15 +1867,15 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tHashInput_6">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
-  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tFileInputXML_4">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tHashInput_6">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk5"/>
   </connection>
   <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tFileInputXML_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_4" target="tMap_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1621,26 +1890,45 @@
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_4" offsetLabelX="0" offsetLabelY="0" source="tFileList_4" target="tFileInputRaw_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate4"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_4" offsetLabelX="0" offsetLabelY="0" source="tFileList_4" target="tHashInput_4">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
   </connection>
   <connection connectorName="FLOW" label="row15" lineStyle="0" metaname="tFileInputRaw_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_2" target="tJavaRow_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
   </connection>
   <connection connectorName="FLOW" label="row16" lineStyle="0" metaname="tJavaRow_3" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_3" target="tHMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row16"/>
   </connection>
   <connection connectorName="FLOW" label="outp_03" lineStyle="0" metaname="outp_03" offsetLabelX="0" offsetLabelY="0" source="tHMap_2" target="tXMLMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp_03"/>
   </connection>
   <connection connectorName="FLOW" label="outp_04" lineStyle="0" metaname="outp_04" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_2" target="tHashOutput_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp_04"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tXMLMap_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="content"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_3" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
@@ -1672,13 +1960,23 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_757191d1-64af-47c4-8838-e51e353b6021"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1a1bns4JUhkXj91glZHfJNBDJUo3CpKEnHvmm1PYZyA4Z7I9nSZFFe3+yYVi2bbu9lMg1Jh2KAeA&#13;
-kW1XYvLw/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0a38d2da-7b72-4bb4-8429-1f710884c28d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rf/1n1kWRuWcXV73VzyUALdRoNZqZdfavWWoPR1kV1sM0ZkE/r2/CT8nzC3djRlYmA/evuIozKFw&#13;
-XeQujUENXA==</DigestValue></Reference></SignedInfo><SignatureValue>pEnxUVC2VL+a/dOnzz/IF0tCzHk9Q+EggsbnbE1PAJ3WiuTX4XVXwgEn94antpQOYuQfAZhbDJ5g&#13;
-PCCLJO81igpMp2WdCgbiFHbe/r0sbMQTHGdQrc8XJCNPkGyoQqSn4Mg3qxRiFpXzQ/4TYe++M4c5&#13;
-MLz398QpMtwd/JpNelLrKRrVKpSzJqMUM3Tn30mDbE6KmQsB4BwSQTVY9yeZr7q7TmY7G74Dz/SL&#13;
-HtJe/Th0/b740fwE2ut1hcFo4AIJsMnTjFjkxOxBN/RWAmzk2LGBqqHgOxOw1bONTyZXx2pCJuBO&#13;
-q9Al8cCv7oiLxcI6OK9X514+0SBjd8r18LTzNw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f75bb068-37fb-430d-94b1-26015b7e81b7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zMRNidbnA7MeqQcHPW9I0E3IRPX1dw3b5nTqpIKs/Y4WjnhKKB7NPWF+I2yq1qApoQoxd1oxexF+&#13;
+vs915/3fvA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a71f12ae-8fb9-4574-82ae-41351910a142"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tvwpHepkdatJ51oZG2+J9jGu6m6Lxw9T1C7q6ZsOD+e1cDw6JEYvP1nAnVSQVxeROzr4PIB6iYYC&#13;
+qGfeBQgNNA==</DigestValue></Reference></SignedInfo><SignatureValue>kH5fVzM6z0VeCXkGZ/dOhN5WLoB9Ngw0Xrvvncjz6DrgnbhLfCaildZ2Yf2SaDL9TCECnMVfc2gE&#13;
+0o4iNU5In2tSyD5Bmm2M/JGPk5qaOl7ESUSnL3UEByHVjpcDrDcw8l+O43pXkYCeJrLx4c0TWABR&#13;
+YR8paZNmZ2j8V9G9h8eUsA78KoAF4H+p4g4e+Y73twmjWFWjNCkxm1VAyq210TuCnrddPPeYL0GV&#13;
++kVwL7L6aVqgUQqmRSce8+Xv3lxFwzM+/jD0WO6xRpQNCaTu7agPr35i2TY9WXI+Ijk4X/Ar4pvA&#13;
+q7xgZL9GUuh0ZRcdHMisr50JbiLzAt2IGttZhA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1700,4 +1998,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0a38d2da-7b72-4bb4-8429-1f710884c28d" Target="#_757191d1-64af-47c4-8838-e51e353b6021"><Timestamp>2023-04-26 15:27:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a71f12ae-8fb9-4574-82ae-41351910a142" Target="#_f75bb068-37fb-430d-94b1-26015b7e81b7"><Timestamp>2023-04-27 08:13:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
