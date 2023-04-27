@@ -51,7 +51,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:dCxIiN264Dra224pnzhW1fuCM0G7AimYIp1sKQaV"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Wl9UhjwH2Znwai/9UKQoXQNoGN4c9gLaObkzka/p"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -86,7 +86,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:sptQwWlBQFJPzrdB2xyZlm/vGgATUP+r/1or8pKF"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:nhfmhrxIP4cUORi+pTG7AJCVIO+ROtnPX8p8ut2Y"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -458,7 +458,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:xN9Bk81DgLw9bkQdSjqY7YA4ZgOdXYkA8COfzCUb"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:02jR186kN0ql0eI8whOpVsbZ5XfnY86aslOHhiJ7"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -677,111 +677,19 @@
       <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.13/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
     </nodeData>
   </node>
-  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
-    <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="FileName"/>
-      <elementValue elementRef="INPUT_COLUMN" value="FileName"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BrandName"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BrandName"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BestellNummer"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BestellNummer"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BestellDatumNeu"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BestellDatumNeu"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="LieferantenNummer"/>
-      <elementValue elementRef="INPUT_COLUMN" value="LieferantenNummer"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="TeileNummer"/>
-      <elementValue elementRef="INPUT_COLUMN" value="TeileNummer"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="ZustaendigkeitsBereich"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="ZustaendigkeitsBereich"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="Einkaeufer"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="Einkaeufer"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BasisPreis"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BasisPreis"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BasisPreisEinheitWert"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BasisPreisEinheitWert"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BasisPreisEinheit"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BasisPreisEinheit"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="BasisPreisWaehrung"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="BasisPreisWaehrung"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GesamtPreis"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GesamtPreis"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GesamtPreisEinheitWert"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GesamtPreisEinheitWert"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GesamtPreisEinheit"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GesamtPreisEinheit"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GesamtPreisWaehrung"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GesamtPreisWaehrung"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GueltigVon"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GueltigVon"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="GueltigBis"/>
-      <elementValue elementRef="FUNCTION" value="avg"/>
-      <elementValue elementRef="INPUT_COLUMN" value="GueltigBis"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
-    </elementParameter>
-    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
-    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
-    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
-    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tAggregateRow_1">
-      <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="TeileNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BasisPreis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BasisPreisEinheitWert" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BasisPreisEinheit" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BasisPreisWaehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GesamtPreis" nullable="true" originalLength="-1" precision="-1" sourceType="id_Float" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GesamtPreisEinheitWert" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GesamtPreisEinheit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GesamtPreisWaehrung" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GueltigVon" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="64">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
     <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
     <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="FileName"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -902,13 +810,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outtt"/>
   </connection>
-  <connection connectorName="FLOW" label="tXM_01TtHO_01" lineStyle="0" metaname="tXM_01TtHO_01" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tAggregateRow_1">
+  <connection connectorName="FLOW" label="tXM_01TtHO_01" lineStyle="0" metaname="tXM_01TtHO_01" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_01TtHO_01"/>
-  </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tLogRow_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
@@ -939,13 +843,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7fa32985-d1e5-4b85-b376-42a8673409ce"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+hPLdbvJ0WXloksUK20pA3NofBgczxTijZ6pMYFX8HrH0r/R5utcIrz6IIba3VaeNDwZk4Se9m+W&#13;
-izNrU78i+g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9d9b4b37-54fb-4511-a70b-8790ddc59d9f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ilAa7NhFqJlS9vkYatVOxlBtMhNmiJBIvE1TgTrYw1Y43RAIsApb8px+5tyAdovz5xnlKA0v8MCE&#13;
-lfiHz8soag==</DigestValue></Reference></SignedInfo><SignatureValue>CD3IiFc2PJxvLJwghjtQsAFPk6p6cevYPK6aAyHqCEOA3B77ZO8YpqUTJkBie4DZRcqdwmHFKGzM&#13;
-+FGdLFnQN4cJxs6AHzIHm0x+LhnJjm5PeSO/6Try6ymez+/qRGIaDonkQs1LmP0ES7jCjVwbgE0Z&#13;
-tG7MBgeAVrcT62brDlfFs3pjALgtBiHynVD1EOwJ7x+Rh9sH8477zRq63SsTy1fhueUnK9Y2qp5K&#13;
-2mmeQrvrWCw8IZSUByBufXWaNPXgeo7GjZrmxSJMpgmqJXWqutl7NJ80gCNOZQk/Uk5MljyZCAVz&#13;
-8/muHTcP3w1uuJSei9GZGOIReIFKybpd0QXvrg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_90ba28b9-bb9d-41d9-a8b4-10bbdc8a8467"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ESMJhX/Qp00q4JL2z1tVwCOEJBDxPhCi5hTQrS1LIAPw21wInV1fmI5WuEgOz4Rtnk0dyZa3lfBB&#13;
+jOwiy7d0Vw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e2bc6985-53e4-4fd8-8fb9-be17c03c2ee2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KsCEWY701bxLXgRz7A1txqE7MhVi0XwZ/WHSQxwIc4U0ey04QccNZDCMk8sTPLPiTlK2WQPro2fO&#13;
+jI5437mufw==</DigestValue></Reference></SignedInfo><SignatureValue>Ljk7/+mBlr7p718LOoUA4nfW8VIjjBeyTS0j1xuSLbDaf/tZ1zI2vwjovPKaB1rMXUbu3O2t03np&#13;
+pzQqC1Gh8lLB3sTzZRphZaPzGIrwfu967ZoBkYriJb0N2J/V4/9DuQtprfXARFEk8jjKJaRh4pia&#13;
+zOQCzxDn8icQkUeE9x7vWvLrPdA1SamgLTDJZxFRP7TWZMQMxbdd4zaX09yRIkAzNEHCc7qhlC2P&#13;
+OGrNgq+oFf97uSyDOxzzafMJ5K6w9FVG9xeFFL6bu0ImttruHHzulkTQUEHO3OTTcst7FY/jlqti&#13;
+yDK2VmBCu7snIHAUuEyzaKarmep+6eqXcDOraQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -967,4 +871,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9d9b4b37-54fb-4511-a70b-8790ddc59d9f" Target="#_7fa32985-d1e5-4b85-b376-42a8673409ce"><Timestamp>2023-04-27 10:31:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e2bc6985-53e4-4fd8-8fb9-be17c03c2ee2" Target="#_90ba28b9-bb9d-41d9-a8b4-10bbdc8a8467"><Timestamp>2023-04-27 10:31:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
