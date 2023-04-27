@@ -51,7 +51,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:inS6ofc3/sVfF5E2rxhq31260QLOVbnucwjKQEw9"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Ug2Zy1n0i7/az8k1+Vsok0yhM4h2ZIg/YTrGn5yD"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -86,7 +86,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:C+bqU/J0bQLpuNmG+YQF5tZiWnrFcA1cSxagQpkG"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Zb3YpYyogVVPGxhPlOPQB8pZKVdsjHM95JSF0Y9F"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -458,7 +458,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:tlKJpKNK2t0WocrLoflzcMRiQePeMZgO8fEAgcJn"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:4KdRyd2KzPDkhVyHjMZPlMwWCyKq6h2oGFaAE+4c"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -548,10 +548,10 @@
     <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
     <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
-    <elementParameter field="RADIO" name="AS_STRING" value="false"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
     <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
-    <elementParameter field="RADIO" name="AS_DOCUMENT" value="true"/>
+    <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
     <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" show="false" value=""/>
     <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value=""/>
     <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
@@ -566,7 +566,7 @@
     <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
     <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="true"/>
     <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
-    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="false"/>
     <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
     <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="true"/>
     <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
@@ -581,8 +581,8 @@
     <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
     <elementParameter field="TEXT" name="LABEL" value="tHMap_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="outtt" name="outtt">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    <metadata connector="FLOW" label="ou1" name="ou1">
+      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
@@ -613,67 +613,32 @@
       <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
-      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="outtt">
-        <nodes expression="" name="newColumn" pattern="" type="id_Document" xpath="outtt/newColumn">
-          <children main="true" name="csv" type="id_String" xpath="outtt.newColumn:/csv">
-            <children loop="true" main="true" name="row" type="id_String" xpath="outtt.newColumn:/csv/row">
-              <children name="BestellNummer" outgoingConnections="//@node.13/@nodeData/@connections.0" type="id_String" xpath="outtt.newColumn:/csv/row/BestellNummer"/>
-              <children name="BestellDatumNeu" outgoingConnections="//@node.13/@nodeData/@connections.1" type="id_String" xpath="outtt.newColumn:/csv/row/BestellDatumNeu"/>
-              <children name="ZustaendigkeitsBereich" outgoingConnections="//@node.13/@nodeData/@connections.2" type="id_String" xpath="outtt.newColumn:/csv/row/ZustaendigkeitsBereich"/>
-              <children name="Einkaeufer" outgoingConnections="//@node.13/@nodeData/@connections.3" type="id_String" xpath="outtt.newColumn:/csv/row/Einkaeufer"/>
-              <children name="LieferantenNummer" outgoingConnections="//@node.13/@nodeData/@connections.4" type="id_String" xpath="outtt.newColumn:/csv/row/LieferantenNummer"/>
-              <children name="TeileNummer" outgoingConnections="//@node.13/@nodeData/@connections.5" type="id_String" xpath="outtt.newColumn:/csv/row/TeileNummer"/>
-              <children name="BasisPreis" outgoingConnections="//@node.13/@nodeData/@connections.6" type="id_String" xpath="outtt.newColumn:/csv/row/BasisPreis"/>
-              <children name="BasisPreisEinheitWert" outgoingConnections="//@node.13/@nodeData/@connections.7" type="id_String" xpath="outtt.newColumn:/csv/row/BasisPreisEinheitWert"/>
-              <children name="BasisPreisEinheit" outgoingConnections="//@node.13/@nodeData/@connections.8" type="id_String" xpath="outtt.newColumn:/csv/row/BasisPreisEinheit"/>
-              <children name="BasisPreisWaehrung" outgoingConnections="//@node.13/@nodeData/@connections.9" type="id_String" xpath="outtt.newColumn:/csv/row/BasisPreisWaehrung"/>
-              <children name="GesamtPreis" outgoingConnections="//@node.13/@nodeData/@connections.10" type="id_String" xpath="outtt.newColumn:/csv/row/GesamtPreis"/>
-              <children name="GesamtPreisEinheitWert" outgoingConnections="//@node.13/@nodeData/@connections.11" type="id_String" xpath="outtt.newColumn:/csv/row/GesamtPreisEinheitWert"/>
-              <children name="GesamtPreisEinheit" outgoingConnections="//@node.13/@nodeData/@connections.12" type="id_String" xpath="outtt.newColumn:/csv/row/GesamtPreisEinheit"/>
-              <children name="GesamtPreisWaehrung" outgoingConnections="//@node.13/@nodeData/@connections.13" type="id_String" xpath="outtt.newColumn:/csv/row/GesamtPreisWaehrung"/>
-              <children name="GueltigVon" outgoingConnections="//@node.13/@nodeData/@connections.14" type="id_String" xpath="outtt.newColumn:/csv/row/GueltigVon"/>
-              <children name="GueltigBis" outgoingConnections="//@node.13/@nodeData/@connections.15" type="id_String" xpath="outtt.newColumn:/csv/row/GueltigBis"/>
-            </children>
-          </children>
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="ou1">
+        <nodes expression="" name="payload" pattern="" type="id_Document" xpath="ou1/payload">
+          <children loop="true" main="true" name="root" type="id_String" xpath="ou1.payload:/root"/>
         </nodes>
       </inputTrees>
       <outputTrees expressionFilter="" name="tXM_01TtHO_01">
         <nodes expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;))" name="FileName" type="id_String" xpath="tXM_01TtHO_01/FileName"/>
         <nodes expression="&quot;Skoda&quot;" name="BrandName" type="id_String" xpath="tXM_01TtHO_01/BrandName"/>
-        <nodes expression="[outtt.newColumn:/csv/row/BestellNummer]" incomingConnections="//@node.13/@nodeData/@connections.0" name="BestellNummer" type="id_String" xpath="tXM_01TtHO_01/BestellNummer"/>
-        <nodes expression="[outtt.newColumn:/csv/row/BestellDatumNeu]" incomingConnections="//@node.13/@nodeData/@connections.1" name="BestellDatumNeu" type="id_String" xpath="tXM_01TtHO_01/BestellDatumNeu"/>
-        <nodes expression="[outtt.newColumn:/csv/row/ZustaendigkeitsBereich]" incomingConnections="//@node.13/@nodeData/@connections.2" name="ZustaendigkeitsBereich" type="id_String" xpath="tXM_01TtHO_01/ZustaendigkeitsBereich"/>
-        <nodes expression="[outtt.newColumn:/csv/row/Einkaeufer]" incomingConnections="//@node.13/@nodeData/@connections.3" name="Einkaeufer" type="id_String" xpath="tXM_01TtHO_01/Einkaeufer"/>
-        <nodes expression="[outtt.newColumn:/csv/row/LieferantenNummer]" incomingConnections="//@node.13/@nodeData/@connections.4" name="LieferantenNummer" type="id_String" xpath="tXM_01TtHO_01/LieferantenNummer"/>
-        <nodes expression="[outtt.newColumn:/csv/row/TeileNummer]" incomingConnections="//@node.13/@nodeData/@connections.5" name="TeileNummer" type="id_String" xpath="tXM_01TtHO_01/TeileNummer"/>
-        <nodes expression="[outtt.newColumn:/csv/row/BasisPreis]" incomingConnections="//@node.13/@nodeData/@connections.6" name="BasisPreis" type="id_String" xpath="tXM_01TtHO_01/BasisPreis"/>
-        <nodes expression="[outtt.newColumn:/csv/row/BasisPreisEinheitWert]" incomingConnections="//@node.13/@nodeData/@connections.7" name="BasisPreisEinheitWert" type="id_String" xpath="tXM_01TtHO_01/BasisPreisEinheitWert"/>
-        <nodes expression="[outtt.newColumn:/csv/row/BasisPreisEinheit]" incomingConnections="//@node.13/@nodeData/@connections.8" name="BasisPreisEinheit" type="id_String" xpath="tXM_01TtHO_01/BasisPreisEinheit"/>
-        <nodes expression="[outtt.newColumn:/csv/row/BasisPreisWaehrung]" incomingConnections="//@node.13/@nodeData/@connections.9" name="BasisPreisWaehrung" type="id_String" xpath="tXM_01TtHO_01/BasisPreisWaehrung"/>
-        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreis]" incomingConnections="//@node.13/@nodeData/@connections.10" name="GesamtPreis" type="id_String" xpath="tXM_01TtHO_01/GesamtPreis"/>
-        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreisEinheitWert]" incomingConnections="//@node.13/@nodeData/@connections.11" name="GesamtPreisEinheitWert" type="id_String" xpath="tXM_01TtHO_01/GesamtPreisEinheitWert"/>
-        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreisEinheit]" incomingConnections="//@node.13/@nodeData/@connections.12" name="GesamtPreisEinheit" type="id_String" xpath="tXM_01TtHO_01/GesamtPreisEinheit"/>
-        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreisWaehrung]" incomingConnections="//@node.13/@nodeData/@connections.13" name="GesamtPreisWaehrung" type="id_String" xpath="tXM_01TtHO_01/GesamtPreisWaehrung"/>
-        <nodes expression="[outtt.newColumn:/csv/row/GueltigVon]" incomingConnections="//@node.13/@nodeData/@connections.14" name="GueltigVon" type="id_String" xpath="tXM_01TtHO_01/GueltigVon"/>
-        <nodes expression="[outtt.newColumn:/csv/row/GueltigBis]" incomingConnections="//@node.13/@nodeData/@connections.15" name="GueltigBis" type="id_String" xpath="tXM_01TtHO_01/GueltigBis"/>
+        <nodes expression="[outtt.newColumn:/csv/row/BestellNummer]" name="BestellNummer" type="id_String" xpath="tXM_01TtHO_01/BestellNummer"/>
+        <nodes expression="[outtt.newColumn:/csv/row/BestellDatumNeu]" name="BestellDatumNeu" type="id_String" xpath="tXM_01TtHO_01/BestellDatumNeu"/>
+        <nodes expression="[outtt.newColumn:/csv/row/ZustaendigkeitsBereich]" name="ZustaendigkeitsBereich" type="id_String" xpath="tXM_01TtHO_01/ZustaendigkeitsBereich"/>
+        <nodes expression="[outtt.newColumn:/csv/row/Einkaeufer]" name="Einkaeufer" type="id_String" xpath="tXM_01TtHO_01/Einkaeufer"/>
+        <nodes expression="[outtt.newColumn:/csv/row/LieferantenNummer]" name="LieferantenNummer" type="id_String" xpath="tXM_01TtHO_01/LieferantenNummer"/>
+        <nodes expression="[outtt.newColumn:/csv/row/TeileNummer]" name="TeileNummer" type="id_String" xpath="tXM_01TtHO_01/TeileNummer"/>
+        <nodes expression="[outtt.newColumn:/csv/row/BasisPreis]" name="BasisPreis" type="id_String" xpath="tXM_01TtHO_01/BasisPreis"/>
+        <nodes expression="[outtt.newColumn:/csv/row/BasisPreisEinheitWert]" name="BasisPreisEinheitWert" type="id_String" xpath="tXM_01TtHO_01/BasisPreisEinheitWert"/>
+        <nodes expression="[outtt.newColumn:/csv/row/BasisPreisEinheit]" name="BasisPreisEinheit" type="id_String" xpath="tXM_01TtHO_01/BasisPreisEinheit"/>
+        <nodes expression="[outtt.newColumn:/csv/row/BasisPreisWaehrung]" name="BasisPreisWaehrung" type="id_String" xpath="tXM_01TtHO_01/BasisPreisWaehrung"/>
+        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreis]" name="GesamtPreis" type="id_String" xpath="tXM_01TtHO_01/GesamtPreis"/>
+        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreisEinheitWert]" name="GesamtPreisEinheitWert" type="id_String" xpath="tXM_01TtHO_01/GesamtPreisEinheitWert"/>
+        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreisEinheit]" name="GesamtPreisEinheit" type="id_String" xpath="tXM_01TtHO_01/GesamtPreisEinheit"/>
+        <nodes expression="[outtt.newColumn:/csv/row/GesamtPreisWaehrung]" name="GesamtPreisWaehrung" type="id_String" xpath="tXM_01TtHO_01/GesamtPreisWaehrung"/>
+        <nodes expression="[outtt.newColumn:/csv/row/GueltigVon]" name="GueltigVon" type="id_String" xpath="tXM_01TtHO_01/GueltigVon"/>
+        <nodes expression="[outtt.newColumn:/csv/row/GueltigBis]" name="GueltigBis" type="id_String" xpath="tXM_01TtHO_01/GueltigBis"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.13/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.13/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.13/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.13/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.13/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.13/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.13/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.13/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.13/@nodeData/@outputTrees.0/@nodes.10" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.9" target="//@node.13/@nodeData/@outputTrees.0/@nodes.11" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.10" target="//@node.13/@nodeData/@outputTrees.0/@nodes.12" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.11" target="//@node.13/@nodeData/@outputTrees.0/@nodes.13" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.12" target="//@node.13/@nodeData/@outputTrees.0/@nodes.14" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.13" target="//@node.13/@nodeData/@outputTrees.0/@nodes.15" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.14" target="//@node.13/@nodeData/@outputTrees.0/@nodes.16" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.13/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.15" target="//@node.13/@nodeData/@outputTrees.0/@nodes.17" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="64">
@@ -805,9 +770,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
-  <connection connectorName="FLOW" label="outtt" lineStyle="0" metaname="outtt" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tXMLMap_1">
+  <connection connectorName="FLOW" label="ou1" lineStyle="0" metaname="ou1" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outtt"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ou1"/>
   </connection>
   <connection connectorName="FLOW" label="tXM_01TtHO_01" lineStyle="0" metaname="tXM_01TtHO_01" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -842,13 +807,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2aa43ef6-13d6-46cc-a4fc-8d6a39299c4b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>V3r4oTTMCJZEbzgKevF2gAyZspjgzHdwJlyuwHeDFpUCdsOrOgyTddfDWbiK8Q152027NLIVLW9l&#13;
-jggGpsuwpw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_169abc6d-e4b4-41bc-b03d-2db25ba54475"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6+4xabwkrL/CstPsveaq8ZIxpKizzPRIXGDWEt1bBT5MwPpVebtYzKxfYFP/1zhATM4QMfrXhixn&#13;
-N+UjKJd7Dg==</DigestValue></Reference></SignedInfo><SignatureValue>QbRpOdDwOqs7EcnawbaEHC9LdKXtdH3+gRAM2l/fHpi94PwqAtsWhAaVqbK+nHtyXDQP/p4HetMh&#13;
-D9QyWpJM4c08NS/xgojX7zV4KgkTCpeH+FawKyDROpKDZwHyzH71oAPAN8qi86wLSXP1nX17s2Mv&#13;
-HiHTANgCI6XlZ1Ss8/bTFXCkjO4/US9oiEOvssCx0iUlFCFuvdEO1icR9pXD68LEk1af9IOr3fxe&#13;
-hJgn8dED/3wB5loVAaUJR0uoLSj+SzXdokQZqYfLAyLmT29se/QxKhhxamTbl87XNE+2ahTdTs+l&#13;
-CrspUOioYM3uDP8x4jqtZHeD3iIMxANdXDK/CQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6ebae2e3-2ab4-4974-8796-d82fc09b6b2c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SUWpWwWvkOq4ySadWfwOrFYGk1ePJBrQD7XLkPm/mNsDdeY27rW5CsZ+LVAPX43iGxJc15ToZG5i&#13;
+LEO7HZ88uA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fcd68929-8ab6-4c1d-bbde-ae4c83cc92df"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Yoqw8byzNF8vaJTtdbbHuE5t2aNbpByn4CmZVAtkQ5zLElmYr2+0miOZH+D60f5mYAYXLY5E4iIs&#13;
+QumFlscKNw==</DigestValue></Reference></SignedInfo><SignatureValue>hnQZvqrnmcUs199eYGAv2jg935XSg/vEgEmK9c4UU9TE03jXqASL90i42Mb0g/qEULZ8DWgZJoAq&#13;
+wsaPF/Ar91JlI7sPa2nFUL72u87Dy/j5uQVJU1nxnr/i7Up18vWTBwjP58D53YjAkJTxLtza4dKf&#13;
+tCOULjF36tT3qZa13tOpHK3I1Qy0syafOJzvIY1f3ZgVczo3lfVm64T2mhNuGnxMa3Ewciv3lIpd&#13;
+FLGqp16ZW3uvs0iorXhajTiOSZT7/Fr7pCYUotcuwvPRMzAfrj4VB7Ks5qLztRf3aFOy3UHgSBdW&#13;
+MWSYBdkt5vbg8amT6WJH9Ogx/8xn5aV0MWbY8w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -870,4 +835,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_169abc6d-e4b4-41bc-b03d-2db25ba54475" Target="#_2aa43ef6-13d6-46cc-a4fc-8d6a39299c4b"><Timestamp>2023-04-27 10:33:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fcd68929-8ab6-4c1d-bbde-ae4c83cc92df" Target="#_6ebae2e3-2ab4-4974-8796-d82fc09b6b2c"><Timestamp>2023-04-27 11:57:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
