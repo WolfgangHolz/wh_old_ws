@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:uqx+WioUDna2eG5PiQiZx9V248knPSL1yGDsid5n"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:3i7iyrkTEemF/swYEKjJjRxHR+sx3kSqUlecAyLt"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:s8jS6TY5lB3tnY7liuKItE3bJij3spXU9hDMa2dM"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:kbrDksuM1q/UAZVLYkJTGN6e++X64XcVbEtq8QDd"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -452,7 +452,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:Wf2Je3v6ho2T61QQo93AqG07RDCGVEHyAYk/qcLw"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:NgqhM9gfi2xoopOM73xAeDIbhQu6qJmQWGwGocy4"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -989,7 +989,7 @@
       <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_Long" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
@@ -1012,7 +1012,7 @@
         <mapperTableEntries expression="row6.FileName " name="FileName" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.BrandName " name="BrandName" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.BestellNummer " name="BestellNummer" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="Relational.ISNULL(row8.BestellDatumNeu)?&quot;&quot;:TalendDate.parseDate(&quot;yyMMdd&quot;,row8.BestellDatumNeu) " name="BestellDatumNeu" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="Relational.ISNULL(row8.BestellDatumNeu)?&quot;&quot;:TalendDate.parseDate(&quot;yyMMdd&quot;,row8.BestellDatumNeu) " name="BestellDatumNeu" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.ZustaendigkeitsBereich " name="ZustaendigkeitsBereich" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.Einkaeufer " name="Einkaeufer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row6.LieferantenNummer " name="LieferantenNummer" nullable="true" type="id_String"/>
@@ -1198,7 +1198,7 @@
       <column comment="" key="false" length="-1" name="FileName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BrandName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="0" name="BestellNummer" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_Long" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="BestellDatumNeu" nullable="true" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_Long" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ZustaendigkeitsBereich" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_Integer" type="id_String" usefulColumn="true"/>
@@ -1372,13 +1372,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d044dafb-3435-4273-bca1-cf7855bdb67f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Un7AFSKSU7fyznNJZC4ZitHDbcrJZvnNP3y3RR1OwW1/4/LR+Ls/wYNF2tdlZmqcNpTk07TGVbjk&#13;
-fyWTeGf7hQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3c6c5711-aecb-4575-94b1-21a92ee04e6e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0nQYBICpXr9noZFBt1BXy7iO2SH6ovexqNZFWifFs7hedn3J3or21vjhF4lOZNWvDs8EiLOgAVkv&#13;
-kyglY2LzgA==</DigestValue></Reference></SignedInfo><SignatureValue>i70EBp0ckK273hd/I4CuIerCbfyc+WeQy7ilP2LqxCEsk//YIPmne6tTaFjVmr7O9qqhFYlE1in6&#13;
-HIdd/EeOgzTVe5g9Fns9aRewaAv05fqJRI5RGTIfiYv/MzrYf9wLEdRJy0bJqPjAEVKciQ3FZTTN&#13;
-AkEW7Eb0vsFvU9Hb1np6By3vDSTaxzFpaAz3oRaOU1Uomfryp1X0b1EwXK8rUYvj0oQoZVShvHsZ&#13;
-ldzsWZNIxrS5qBJIkKluIVJORcqeHErFPrMJGb/Zdb7mo7q3hyVvCDykqQGH+sAmvmvFrIQKoLjo&#13;
-zLs1WqOz5gZlgzAVZ0ObJIrGV41yWhCnfGkDYg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c5c6eb9f-a261-42f5-8f5b-19d9eeea25a8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zmQqYC7Dq6pUxBhtQR6e21P3zqhOFpYcZYKm9e59UAMoiByRD//K4o8onnb/hHXHmvmRUYt1Hqkm&#13;
+lC3Z9mQ4RQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bb9d7cde-28b7-4236-9d9c-da033d17c012"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zRAnKZYrMFJYj0UFk7KjLa1D+rBd+6t7yM3iwd526h8IG7sikBE9/oPTUvvVEg1xcPnWX2cXzere&#13;
+zf9mx+U3MA==</DigestValue></Reference></SignedInfo><SignatureValue>Tm9TTqgM6QPWUxLKjpb47+LNPlc0Jg1WcR3lzOfGq+dS/zVzCv4SrX0pVta79p7J97QSWKurc8HI&#13;
+xFOGZi03NTZjn5FQM+uEdW3diDXAokP+G8yODV71+Qw9q8HA0sHp2/pmI9uDEeMNC75riz1Ke2XL&#13;
+Lr7fZtZBsvgbb5b0JBzgGqmGIj/EaDQ4OKWU55x16LFE1Eo4xpIy4iHqzyp2L/SRbUQ7k80vw+rd&#13;
+pc6rIFUroSurzDJKg458/xeVu9Bs6cJCYyCRr0JWBAgBm7gt3E615SllpASzjImD3XZfTzzbW5m2&#13;
+m4KSEI8Ev8maopA7wqg6I9Qqmu4KGxP3EwuX6g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1400,4 +1400,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3c6c5711-aecb-4575-94b1-21a92ee04e6e" Target="#_d044dafb-3435-4273-bca1-cf7855bdb67f"><Timestamp>2023-04-27 16:44:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bb9d7cde-28b7-4236-9d9c-da033d17c012" Target="#_c5c6eb9f-a261-42f5-8f5b-19d9eeea25a8"><Timestamp>2023-04-27 16:44:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
