@@ -54,7 +54,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:YEz38/CmfrM+oEbkr/Md6Pi8NG3s2Wl9UPaopEhI"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:1fRLezex9t80KShogobozRqXpcLKoCcLPamnr22D"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -89,7 +89,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:4NZyg1Dmlq3mZvq/Pjy5n0CM1EW0saaziswqUQij"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:qfyUvDmL+BSiWct8cOdEf1h12O5uXIuHRRpOc/wC"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -398,7 +398,7 @@
     <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_1"/>
     <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tHI_01"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tHashInput_4">
@@ -550,7 +550,7 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SachNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BestellNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="2" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Waehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="KundenWerk" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="IncoTerms" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -558,7 +558,7 @@
       <column comment="" key="false" length="-1" name="GueltigBis" nullable="true" originalLength="-1" pattern="&quot;dd.MM.yyyy&quot;" precision="-1" sourceType="id_String" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="tM_02TtUR_01" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="tM_01TtM_02.FileName " name="FileName" nullable="true" type="id_String"/>
@@ -566,7 +566,7 @@
         <mapperTableEntries expression="tHI_03TtM_02.LieferantenNummer " name="LieferantenNummer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="tM_01TtM_02.SachNummer " name="SachNummer" nullable="true" type="id_String"/>
         <mapperTableEntries expression="tM_01TtM_02.BestellNummer " name="BestellNummer" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="tM_01TtM_02.Preis" name="Preis" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="new BigDecimal(tM_01TtM_02.Preis) " name="Preis" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="tM_01TtM_02.Waehrung " name="Waehrung" nullable="true" type="id_String"/>
         <mapperTableEntries expression="tM_01TtM_02.KundenWerk " name="KundenWerk" nullable="true" type="id_String"/>
         <mapperTableEntries expression="tM_01TtM_02.IncoTerms " name="IncoTerms" nullable="true" type="id_String"/>
@@ -657,7 +657,7 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SachNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BestellNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="2" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Waehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="KundenWerk" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="IncoTerms" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -670,7 +670,7 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SachNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BestellNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="2" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Waehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="KundenWerk" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="IncoTerms" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -683,7 +683,7 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SachNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BestellNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="2" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Waehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="KundenWerk" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="IncoTerms" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -732,7 +732,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:Hh+aUM1fC/O0YdBE700eqme4PEa5VXdlp1UPJBxo"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:xUIFAeMdFtic5VdKuRnFg7W3KGZWUqxiTi8mVk2y"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -755,7 +755,7 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SachNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BestellNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="2" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Waehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="KundenWerk" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="IncoTerms" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -804,7 +804,7 @@
       <elementValue elementRef="IS_AUTO_SIZE" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROTECT_FILE" value="false"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:ZAJEJEvt2xx0oztcEp5WOQrDNgdG0p2o8wo+COJh"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:Ed1WyIhnda9EoCSWNy//kUE17IxhpxqzocJzzDlA"/>
     <elementParameter field="CHECK" name="CREATE" value="true"/>
     <elementParameter field="CHECK" name="FLUSHONROW" show="false" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="100"/>
@@ -827,7 +827,7 @@
       <column comment="" key="false" length="-1" name="LieferantenNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SachNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BestellNummer" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Preis" nullable="true" precision="2" sourceType="id_String" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Waehrung" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="KundenWerk" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="IncoTerms" nullable="true" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -1402,13 +1402,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d67cb5eb-d9e0-4f5c-ac29-32978cb5f7f7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YUEGTwK9rE3ZgKH9gNSabbdpx/XZQQaFOJIKufo8XE9VVqLwPJHyhXnJNhPgyxx/1ZBJB6VpuLPO&#13;
-ySq4+7C5cg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1dbc67fd-216d-403d-8072-376ee0e0395f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9fFUUQMu7I1T5YhX0gE7MRlyAF6I8sL2jLDPbq79fH/QOgwRjXMHg5yK7HSI9h6E9RL0klVfyrW1&#13;
-ZmCHHcPu8Q==</DigestValue></Reference></SignedInfo><SignatureValue>YtH99Qz2byo+vFqqcuUQmEMr9l+9QDMwz4+tZEMVTeTZxFnwBAyHtS/EACRG+b0G8YCwiwQl0LLL&#13;
-1jChy3x903WHAreT/Smi3DPHL0LAs1/zklYWbgCJGe3iLVZGamtro2lPZey9cuwZ+PWRGVXH1FKo&#13;
-2KfOpOlN5YWzejHPeFb5n0cAXcR6FGTcspE1buvVTwIEM0Y1b8i2sTHx1ITrBdB0gTicRZdGEyz+&#13;
-i9mpHOM8RrXEIFBhHY1XHUlr+C8YoqdLQwDJDMz0zld8UsDQgnwheIiZTa9dZaqwKcvysiJ48KZh&#13;
-xBQODiXrt3+2AD4AUEoLDLleYsj0UoBTYhFacw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e8f199a3-ff35-480b-991c-a2bea04d2792"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5/MWn9sZWFlttN4CVFMQbAsuIv1jIdMW5GazSQDE+wFTcNRK0d7Mkaygy/g6k+trLjxCUtUy66Ex&#13;
+zbSrQBf9nA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1b7fcf56-21c4-483c-9b1a-532a5b9aba93"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rBiI+4FFBIB4WpFcz3xl+CGjStxZ0VqaRSbrndDUfOANYeI4bxQ6Jj+C+qcOOtu5cPKVcffs8E9e&#13;
+/dcee9JgYg==</DigestValue></Reference></SignedInfo><SignatureValue>e6k2yROwo68fmnRp0yiv68kuJAts5LWfYTj/DhmcwAQ7xFmwuJeO13f4VXWFqbvW3Xhgo8vfF2xx&#13;
+39srkmWUhdNCkstPplFous00bT9ClrD0wj3XBAGuJNGaW/8CpkbIXfrTY6WJVOAuuY5IEyo7pflG&#13;
+irGSmCm5LLoEoG2L+PVjeM2Z59neZ4x/jHs1ezsE52IxZdS/VA7VZUr/ECBFaH4fCAVJbtpB8XT7&#13;
+VKEJYKluHVurWSVXC9wUq33E7HFwIhaXhiUOAjr72VVERHNqXgW8HGroBL/xMkFiCS7Fjb4+0siF&#13;
+gtzI01MQEjVe3LKB9Tgv14OXyQXJt9cMaz8K6Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1430,4 +1430,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1dbc67fd-216d-403d-8072-376ee0e0395f" Target="#_d67cb5eb-d9e0-4f5c-ac29-32978cb5f7f7"><Timestamp>2023-04-27 17:45:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1b7fcf56-21c4-483c-9b1a-532a5b9aba93" Target="#_e8f199a3-ff35-480b-991c-a2bea04d2792"><Timestamp>2023-04-27 17:48:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
