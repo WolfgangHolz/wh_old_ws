@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/VW2RONDATA_02/edixml_e23050461.xml' outStruct='REFERENCEPROJECT:Structures/SALES/OEM/SEAT/HMST_SOEM_SEAT_OUTPUT.xml' inputRep='172' outputRep='172' nextMap='' inputStructUserName='edixml_e23050461' outputStructUserName='HMST_SOEM_SEAT_OUTPUT' V1='4' name='tHMap_1' incarnation='3932'>
+<root t='190' id='1' V190='11' inStruct='Structures/VW2RONDATA_02/edixml_e23050461.xml' outStruct='REFERENCEPROJECT:Structures/SALES/OEM/SEAT/HMST_SOEM_SEAT_OUTPUT.xml' inputRep='172' outputRep='172' nextMap='' inputStructUserName='edixml_e23050461' outputStructUserName='HMST_SOEM_SEAT_OUTPUT' V1='4' name='tHMap_1' incarnation='3998'>
   <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='97' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='XMLFACT-ORDERS'>
     <mapNode t='190' idref='1'/>
     <child t='200' id='11' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='3' repHandlerStruct='' inheritsFrom='' V281='13' V1='4' name='Attributes'>
@@ -162,10 +162,10 @@
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='3' V200='8' structElemExists='true' usedCount='100' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='csv'>
+  <outputMapElem t='200' id='3' V200='8' structElemExists='true' usedCount='102' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='csv'>
     <mapNode t='190' idref='1'/>
     <loop>SimpleLoop([autoAdded="true"],in$/XMLFACT-ORDERS,{Filter},{Sort Keys},{Contexts})</loop>
-    <child t='200' id='71' V200='8' rowElem='true' structElemExists='true' usedCount='92' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='row'>
+    <child t='200' id='71' V200='8' rowElem='true' structElemExists='true' usedCount='94' V283='2' occurMaxTimes='-1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='row'>
       <mapNode t='190' idref='1'/>
       <loop>SimpleLoop(in$/XMLFACT-ORDERS/G_LIN,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM,{Filter},{Sort Keys},{Contexts})))))</loop>
       <child t='200' id='72' V200='8' structElemExists='true' usedCount='6' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='BestellNummer'>
@@ -241,9 +241,9 @@
         <delimTerminator>;</delimTerminator>
         <value>Concat(in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2005,Constant([value=":",dataType="2"],),in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2380)</value>
       </child>
-      <child t='200' id='87' V200='8' structElemExists='true' usedCount='6' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='GueltigBis'>
+      <child t='200' id='87' V200='8' structElemExists='true' usedCount='8' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='Builtin:Structures/Representation Handlers/OptionalQuotes.xml' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='GueltigBis'>
         <mapNode t='190' idref='1'/>
-        <value>IfThen(Equal(in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5125,Constant([value="AAQ",dataType="2"],)),IfThen(Equal(in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2005,Constant([value="299",dataType="2"],)),in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2380))</value>
+        <value>Concat(in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2005,Constant([value=":",dataType="2"],),in$/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2380)</value>
       </child>
     </child>
   </outputMapElem>
