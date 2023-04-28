@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:YL0uP7GtZBEJkiuOpFdBU18YZeZiSEyd+Lzf/WsM"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:t7MuXqPr+D0wqguG1LAMXyRyoKK88uLLTFCERvnj"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ZtDFuVUKlLYLT2BeMrUQEwLST5GQnqMI2dIB7MfD"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:K8KTHVcxKdUuwaZmKgRHQ7Fw9LYYw1ER7qMmgqyr"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -113,7 +113,7 @@
     <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
     <routinesParameter id="_0-lmkJDBEe2UN6GjnIa2fw" name="TalendString"/>
   </parameters>
-  <node componentName="tRESTRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
+  <node componentName="tRESTRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
     <elementParameter field="TEXT" name="API_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;/erp&quot;"/>
@@ -151,7 +151,7 @@
       <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -192,7 +192,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
@@ -215,7 +215,7 @@
       <column comment="" key="false" length="-1" name="xsd_string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_2"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
@@ -234,7 +234,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="String xmlString = input_row.xml_string; // Ersetzen Sie &quot;input_row.xml&quot; durch den Namen des Eingabefelds, das den XML-String enthält&#10;String xsdString = input_row.xsd_string; // Ersetzen Sie &quot;input_row.xsd&quot; durch den Namen des Eingabefelds, das den XSD-String enthält&#10;&#10;try {&#10;    // Erstellen Sie ein Schema-Objekt aus dem XSD-String&#10;    SchemaFactory factory = SchemaFactory.newInstance(&quot;http://www.w3.org/2001/XMLSchema&quot;);&#10;    Schema schema = factory.newSchema(new StreamSource(new StringReader(xsdString)));&#10;&#10;    // Erstellen Sie einen Validator aus dem Schema-Objekt und führen Sie die Validierung des XML-Strings durch&#10;    Validator validator = schema.newValidator();&#10;    validator.validate(new StreamSource(new StringReader(xmlString)));&#10;&#10;    // Wenn die Validierung erfolgreich war, geben Sie den XML-String zurück&#10;    output_row.payload = xmlString;&#10;} catch (SAXException e) {&#10;    // Wenn die Validierung fehlschlägt, geben Sie eine Fehlermeldung zurück&#10;    output_row.error_msg = &quot;XML does not conform to XSD: &quot; + e.getMessage();&#10;}&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.utiimport javax.xml.XMLConstants;&#10;import java.io.StringReader;&#10;import javax.xml.transform.stream.StreamSource;&#10;import javax.xml.validation.Schema;&#10;import javax.xml.validation.SchemaFactory;&#10;import javax.xml.validation.Validator;&#10;import org.xml.sax.SAXException;"/>
@@ -245,7 +245,7 @@
       <column comment="" key="false" length="-1" name="error_msg" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="64">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -309,7 +309,7 @@
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="false"/>
     <elementParameter field="TABLE" name="MANUALTABLE"/>
@@ -326,7 +326,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -369,7 +369,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="160">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_rt7xYOQBEe2th4_ee3b5BQ"/>
@@ -382,7 +382,7 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;adm.oho&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:bbNU5SN/yPzd8fEbGNpLScBALvlNfmAFzDLKpVtjf5MPtjkFkHU="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:pA2H2/Vvc3cRH4DsSverGHPBDnHCvzU2m4GZxR5LqJ1nEfpOZAg="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rest_results&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -516,13 +516,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c72d5785-d0f9-48db-ac85-a7b8692593b4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h35FYQn5zFyt5CmvJlCECrefEXAOlyqEeCS14shX60KeX4h315OBOAysUptEdDgRIOosM2iY40jN&#13;
-3J7HQ1RIFA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_15152f15-3865-4161-8615-50056a8e9e7f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c+heApCBSw2U6/FU0PFk+XTeuqBy2jfEIXmGfTnTTAcRb0Ghlfpayb52r291qizueHlyOWLqRK9R&#13;
-0xADELqmsw==</DigestValue></Reference></SignedInfo><SignatureValue>AIY8K/PmwnI96iyGcKiTOEs7QWe3fLZLL0XQj1LRJTQn4bDt6IvgHchvZD8lTj2g0gQzVz3QUoob&#13;
-NQnPgdEMoCNgFEwcwO8TBuqxUhxXP6G1Omlt7vZ9N0F8z/yORISgiilquOArdX/mTUcCaAquT2D4&#13;
-PruIitmVfJtAd2uI9XNInhoEfK50Krjxbnpk7wnvlkh28tpO5n1TMgPBw3uyn0C8r4TFp8B1Hqv4&#13;
-Hn0YbUv4aEb2p+Z7Ix0tv4ewKF9ufjj0jwzC+tkbrVgBl4H7sb7zAZRG4cyyZWf2Nh+teQULf6Iu&#13;
-tpOcH/kIZGhfKf3gN19a6CSR2NIZ9Gp7FUwetQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9f35e0da-7ea0-4581-972e-c0deb67991fb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vY4LDGlMmWPJXFWHrs/Go5/+oXfEDLX7HabbyGH/qDZzZForMEOY83pZofaNCoVxlaFVTXdphwyf&#13;
++vR78Unl0g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e98eccc4-9a8e-48b5-9ecc-9919040bd0f6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7Vefqsu4rBjVoOLL6+A2wDlbdyrTAzxg8RXc5ubTK1YxdGYiiOQrb0Uz+iVfyU7nyhUNp/XIJ6Dq&#13;
+K4CXOJ2nuQ==</DigestValue></Reference></SignedInfo><SignatureValue>Af8nLDT+Z6lr9cyLn4AIHSDlPanqdcQ7YknjhuXwWtliT8DsjmjQtnTjeVGmHwsx2U5EhbSvi5SY&#13;
+LO5/Sw7QaTrdjQUUFTDNuQYzWsaR5MLmyn/FFpCbrorhQ4IozOeyxKej8uULH9401+NkBT5zdXXN&#13;
+ZEaQN/vqdqquUkYXF++ogpU2dZuBgn1avcNeRfhtf/KJ+yFcdVbfRI3Grb+VFvJ8XsP59gn1IoGk&#13;
+q/zqctWpd+/+WWkCk7rXKi5BnzA3WlPTYCNfiBudeJYs/vPSt+d8jf3rKazDhk7eTBeGxUhclyL5&#13;
+T1gqk5SvBhvy7rXNEQGKd7/hDAStHp1AMrqLSA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -544,4 +544,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_15152f15-3865-4161-8615-50056a8e9e7f" Target="#_c72d5785-d0f9-48db-ac85-a7b8692593b4"><Timestamp>2023-04-28 07:29:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e98eccc4-9a8e-48b5-9ecc-9919040bd0f6" Target="#_9f35e0da-7ea0-4581-972e-c0deb67991fb"><Timestamp>2023-04-28 07:30:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
