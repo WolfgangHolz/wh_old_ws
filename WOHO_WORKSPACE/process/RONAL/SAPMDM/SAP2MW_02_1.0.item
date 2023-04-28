@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:nRT+4Th9F8kfLCZfBB0ACjUTWSuz8/NHuY+sQU16"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:GApCbuPyVvhieMja+sG9bmi+3AGVWHd4htZg9up6"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:smdAIm7w8eh+Rt0sK81Bn/5AKY70E3oVySEEUJ/m"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:CutnBWEKwxqQHzK+wcGeGYXOCMY/ITM4NyH2KqaQ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -394,7 +394,7 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;adm.oho&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:eiU8E1mPLt2zPGpS8mEhg2eYp3rVcUPJ64I0h1QsGZ0u//a55S0="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:8UFCMxOXD4oSSuaYEQIScO3PiHA3Hp2YLM/kJl4LX8dNF0dydJc="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rest_results&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -492,6 +492,9 @@
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tXM_01"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="log_out" name="log_out">
+      <column comment="" key="false" length="-1" name="wamas_out" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tR_01TtXM_01">
         <nodes expression="" name="xml_document" type="id_Document" xpath="tR_01TtXM_01/xml_document">
@@ -638,8 +641,102 @@
           </children>
         </nodes>
       </inputTrees>
+      <outputTrees name="log_out">
+        <nodes expression="" name="wamas_out" type="id_Document" xpath="log_out/wamas_out">
+          <children main="true" name="DI_TELEGRAM" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children name="header" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/header" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="FULL" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/header/FULL" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children name="HEADER_SOURCE" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/header/FULL/HEADER_SOURCE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="HEADER_DESTINATION" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/header/FULL/HEADER_DESTINATION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="HEADER_SEQUENCE" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/header/FULL/HEADER_SEQUENCE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="HEADER_RECORDTYPENAME" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/header/FULL/HEADER_RECORDTYPENAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              </children>
+            </children>
+            <children main="true" name="body" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children main="true" name="LogimatItemGroup" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children loop="true" main="true" name="LOGIMATITEM00006" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children name="Item_itemNo" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Item_Client_clientId" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/Item_Client_clientId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Item_variant" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/Item_variant" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Item_baseQtyUnit_id" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/Item_baseQtyUnit_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Item_batchStockMode" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/Item_batchStockMode" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="igBatchRegistration" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/igBatchRegistration" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="ogBatchRegistration" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/ogBatchRegistration" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="csiaStockMode01" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/csiaStockMode01" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="csiaStockMode02" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/csiaStockMode02" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="csiaIgRegistration01" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/csiaIgRegistration01" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="csiaIgRegistration02" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/csiaIgRegistration02" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="csiaOgRegistration01" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/csiaOgRegistration01" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="csiaOgRegistration02" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/csiaOgRegistration02" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Item_LogimatItem_tiltAllowed" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/Item_LogimatItem_tiltAllowed" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="LOGIMATITEMDESC00002" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATITEMDESC00002" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="ItemDesc_Item_Client_clientId" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATITEMDESC00002/ItemDesc_Item_Client_clientId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="ItemDesc_Item_itemNo" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATITEMDESC00002/ItemDesc_Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="ItemDesc_description" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATITEMDESC00002/ItemDesc_description" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="ItemDesc_description2" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATITEMDESC00002/ItemDesc_description2" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="ItemDesc_Language_langId" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATITEMDESC00002/ItemDesc_Language_langId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="LOGIMATPKV00003" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="PackagingVersion_Item_Client_clientId" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/PackagingVersion_Item_Client_clientId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="PackagingVersion_Item_itemNo" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/PackagingVersion_Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="PackagingVersion_id" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/PackagingVersion_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="PackagingVersion_whQtyUnit" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/PackagingVersion_whQtyUnit" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="default" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/default" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="LOGIMATQTYUNIT00001" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children name="ItemQtyUnit_PackagingVersion_Item_Client_clientId" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_PackagingVersion_Item_Client_clientId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_PackagingVersion_Item_itemNo" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_PackagingVersion_Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_PackagingVersion_Item_variant" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_PackagingVersion_Item_variant" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_PackagingVersion_id" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_PackagingVersion_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_qtyUnit" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_qtyUnit" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_factor" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_factor" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_referenceQtyUnit" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_referenceQtyUnit" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_width" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_width" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_height" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_height" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_length" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_length" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="ItemQtyUnit_grossWeight" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATQTYUNIT00001/ItemQtyUnit_grossWeight" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                    <children name="LOGIMATITEMCUBATURE00003" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children name="Pkv2LuCubature_LoadUnitCubature_cubatureId" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_LoadUnitCubature_cubatureId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="Pkv2LuCubature_PackagingVersion_Item_Client" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_PackagingVersion_Item_Client" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="Pkv2LuCubature_PackagingVersion_Item_itemNo" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_PackagingVersion_Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="Pkv2LuCubature_PackagingVersion_Item_variant" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_PackagingVersion_Item_variant" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="Pkv2LuCubature_PackagingVersion_id" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_PackagingVersion_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="Pkv2LuCubature_maxNumBaseQtyUnits" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_maxNumBaseQtyUnits" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="Pkv2LuCubature_sequence" type="id_Integer" xpath="log_out.wamas_out:/DI_TELEGRAM/body/LogimatItemGroup/LOGIMATITEM00006/LOGIMATPKV00003/LOGIMATITEMCUBATURE00003/Pkv2LuCubature_sequence" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
       <varTables minimized="true" name="Var"/>
     </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1632" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="wamas_out"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="wamas_out" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
   </node>
   <connection connectorName="FLOW" label="tRRQ_01TtM_01" lineStyle="0" metaname="tRRQ_01TtM_01" offsetLabelX="0" offsetLabelY="0" source="tRESTRequest_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -709,19 +806,28 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tR_01TtXM_01"/>
   </connection>
+  <connection connectorName="FLOW" label="log_out" lineStyle="0" metaname="log_out" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="wamas_out"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="log_out"/>
+  </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTRequest_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7e9b03a6-c5a6-4b7c-a811-17ef44bf706f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IFphCABhqNvXJz+VKfEsNog1XgOQb5hOEIOE2jU6MhXfkX7/Jb4OSjyUbXTTqUQidH0FLv1kbkDw&#13;
-7vWOBYwIPQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1f6ce239-1805-45e7-a08d-b7ce5699516c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lRdjjvxV2lNKMWIp2L+RXH2/VeFrpVvBlkSl1mtMIyc9LpoOsIkiWh5/nc9/n7Md+uo+1sRXw/kk&#13;
-WmsGQsPHtw==</DigestValue></Reference></SignedInfo><SignatureValue>fNW86HUXxZKXmrljeuQ3YH0t8NWRo6AlapDjWFtLzU6J8D2N+O7HZatgWAfn1WFwHOxoNU/lB+MF&#13;
-TsNyGoFDnlwsnKZfiWnHRzFBVaGt9nyeNNMavO5wVkE2q5GtqVtppASjgWFGkF/xMluN/Mdizf74&#13;
-WOMH2hjJMv5fXuhvYQqiVyUSXiOu9hmCnVkKQljgx1irRqQ0iFhY9W795+DA3ZJAw8+KXKdWB4sE&#13;
-Hy8dnCU7k6pcPCUnW/ZB3xJacJ3QDBHnTSfRB4+TsogaMXMh7eiL9X+XwxATUrxBIFKwz/zbI7dp&#13;
-IrqLwfeEyKoMBDCpIWrQe9SRyicCk/5g8N0B0A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ba720f1e-503c-4f3e-9fbe-b6814ef6312f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WNlz13JuRZNS5m8xepQRNJYE+E8NXuPIjqMa3wtWLoqHEtDNYYfZNmNnr6P2qo4+PY+Aim3nT/j1&#13;
+ufsxuP4mPA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_de1f904c-e0aa-4995-b1f0-5e9d84a9ee15"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VP5mPMs33Kqbcl+c4SsplFQx7zhuiccGhhzTymoDaj3hE6aeaIqZm/7a7KsSKxFTYUJnKTINlHaL&#13;
+fotcJz4wLg==</DigestValue></Reference></SignedInfo><SignatureValue>PnPLUvMBBAuCz6lPv2EB7SgBp38hCiuqaNIVOCA2R/Eqga6o2M5Q8ogBeGbzc681JMdzw4ZlMxAy&#13;
+ke2FNrnyLH/VEDGpQpn1kGWSGGMqgYWa23+0sOn5NpBUxN+GmNPADbpOZkncHXkAiHVazKZpXxkN&#13;
+XVKCEFalsbvkfqNHJR5JNLoNaoLlloyPh6eGRUW8O+vRybMRMLxh7xL5C5+0V/Q/ahpby5+KVA5t&#13;
+mQIT8EnfV0i8+RjDArvH/OrVQvGJ0co5PylH8yoFg3r8ZvwsEWP1C2pm+kSusOySluXbfusq9idy&#13;
+oPK4+Lot8HMcUYvsUNvOjTFAJJHfWO9Rnu4VGg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -743,4 +849,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1f6ce239-1805-45e7-a08d-b7ce5699516c" Target="#_7e9b03a6-c5a6-4b7c-a811-17ef44bf706f"><Timestamp>2023-04-28 07:38:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_de1f904c-e0aa-4995-b1f0-5e9d84a9ee15" Target="#_ba720f1e-503c-4f3e-9fbe-b6814ef6312f"><Timestamp>2023-04-28 07:40:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
