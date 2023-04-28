@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:uNkGYPXqMFrE7ZtNI083y/qT+1OVJKMlDuW0JVHG"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:4c3FKylURus4YdIlpUBQVIw1oeoPy8RsM6ESgXt2"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:PrTKhskBwxBU83hWt5ijaoZzsQilKNAXIpAYlkuS"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zdEKemhPHfFAzhh9dbU+2N8Z+sXBkggNNTeKZrxq"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -166,27 +166,83 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tM_01"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfout_2">
-      <column key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" label="out" name="tM_01TtRP_01">
-      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    <metadata connector="FLOW" name="outp1">
+      <column comment="" key="false" length="-1" name="xml_string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="xsd_string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="copyOfout_2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="&quot;data successful received&quot;" name="body" nullable="true" type="id_String"/>
-      </outputTables>
-      <outputTables name="tM_01TtRP_01" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="tRRQ_01TtM_01.body " name="body" nullable="true" type="id_Document"/>
+      <outputTables name="outp1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="tRRQ_01TtM_01.body " name="xml_string" nullable="true" type="id_Document"/>
+        <mapperTableEntries expression="row2.xsd_string " name="xsd_string" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="tRRQ_01TtM_01" sizeState="INTERMEDIATE">
         <mapperTableEntries name="body" nullable="true" type="id_Document"/>
       </inputTables>
+      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="1" name="id" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="xsd_string" nullable="true" type="id_String"/>
+      </inputTables>
     </nodeData>
   </node>
-  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="xsd_string"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="xsd_string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_2"/>
+    <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
+    <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
+    <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tConvertType_2">
+      <column comment="" key="false" length="-1" name="xml_string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="xsd_string" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error_msg" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaFlex" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaFlex_1"/>
+    <elementParameter field="CHECK" name="DATA_AUTO_PROPAGATE" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_START" value="import javax.xml.XMLConstants;&#10;import javax.xml.transform.stream.StreamSource;&#10;import javax.xml.validation.Schema;&#10;import javax.xml.validation.SchemaFactory;&#10;import org.xml.sax.SAXException;&#10;      "/>
+    <elementParameter field="MEMO_JAVA" name="CODE_MAIN" value="String xmlString = input_row.xml_string; // Ersetzen Sie &quot;input_row.xml&quot; durch den Namen des Eingabefelds, das den XML-String enthält&#10;String xsdString = input_row.xsd_string; // Ersetzen Sie &quot;input_row.xsd&quot; durch den Namen des Eingabefelds, das den XSD-String enthält&#10;&#10;try {&#10;    // Erstellen Sie eine SchemaFactory und einen StreamSource aus dem XSD-String&#10;    SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);&#10;    StreamSource xsdStream = new StreamSource(new java.io.StringReader(xsdString));&#10;    Schema schema = factory.newSchema(xsdStream);&#10;&#10;    // Erstellen Sie einen StreamSource aus dem XML-String und führen Sie die Schema-Prüfung durch&#10;    StreamSource xmlStream = new StreamSource(new java.io.StringReader(xmlString));&#10;    schema.newValidator().validate(xmlStream);&#10;&#10;    // Wenn die Validierung erfolgreich war, geben Sie den XML-String zurück&#10;    output_row.payload = xmlString;&#10;} catch (SAXException e) {&#10;    // Wenn die Validierung fehlschlägt, geben Sie eine Fehlermeldung zurück&#10;    output_row.error_msg = &quot;XML does not conform to XSD: &quot; + e.getMessage();&#10;}&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE_END" value="// end of the component, outside/closing the loop&#10;      "/>
+    <elementParameter field="CHECK" name="Version_V2_0" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V3_2" show="false" value="false"/>
+    <elementParameter field="CHECK" name="Version_V4.0" show="false" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaFlex_1">
+      <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="error_msg" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_3"/>
     <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
     <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
@@ -200,7 +256,39 @@
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_tLKocOWCEe2SgdU6AWVxHg-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tM_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="copyOfcopyOfout_2">
+      <column key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="out" name="copyOftM_01TtRP_01">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="copyOfcopyOfout_2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="&quot;data successful received&quot;" name="body" nullable="true" type="id_String"/>
+      </outputTables>
+      <outputTables name="copyOftM_01TtRP_01" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="tRRQ_01TtM_01.body " name="body" nullable="true" type="id_Document"/>
+      </outputTables>
+    </nodeData>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="896" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
@@ -292,21 +380,21 @@
                     <children name="STATU" type="id_Integer" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/STATU"/>
                   </children>
                   <children loop="true" main="true" name="Z1AUSPM" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" outgoingConnections="//@node.3/@nodeData/@connections.14" type="id_Integer" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT"/>
-                    <children name="CHARACTERISTIC" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC"/>
-                    <children name="CHARCDATATYPE" outgoingConnections="//@node.3/@nodeData/@connections.1" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE"/>
-                    <children name="CHARCVALUEINTERVALTYPE" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_Integer" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE"/>
-                    <children name="CHARCFROMNUMERICVALUE" outgoingConnections="//@node.3/@nodeData/@connections.3" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE"/>
-                    <children name="CHARCTONUMERICVALUE" outgoingConnections="//@node.3/@nodeData/@connections.4" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE"/>
-                    <children name="CHARCFROMDECIMALVALUE" outgoingConnections="//@node.3/@nodeData/@connections.5" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE"/>
-                    <children name="CHARCTODECIMALVALUE" outgoingConnections="//@node.3/@nodeData/@connections.6" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE"/>
-                    <children name="CHARCFROMAMOUNT" outgoingConnections="//@node.3/@nodeData/@connections.7" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT"/>
-                    <children name="CHARCTOAMOUNT" outgoingConnections="//@node.3/@nodeData/@connections.8" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT"/>
-                    <children name="CHARCFROMDATE" outgoingConnections="//@node.3/@nodeData/@connections.9" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE"/>
-                    <children name="CHARCTODATE" outgoingConnections="//@node.3/@nodeData/@connections.10" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE"/>
-                    <children name="CHARCFROMTIME" outgoingConnections="//@node.3/@nodeData/@connections.11" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME"/>
-                    <children name="CHARCTOTIME" outgoingConnections="//@node.3/@nodeData/@connections.12" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME"/>
-                    <children name="CHARCVALUE" outgoingConnections="//@node.3/@nodeData/@connections.13" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE"/>
+                    <children name="SEGMENT" nodeType="ATTRIBUT" outgoingConnections="//@node.7/@nodeData/@connections.14" type="id_Integer" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT"/>
+                    <children name="CHARACTERISTIC" outgoingConnections="//@node.7/@nodeData/@connections.0" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC"/>
+                    <children name="CHARCDATATYPE" outgoingConnections="//@node.7/@nodeData/@connections.1" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE"/>
+                    <children name="CHARCVALUEINTERVALTYPE" outgoingConnections="//@node.7/@nodeData/@connections.2" type="id_Integer" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE"/>
+                    <children name="CHARCFROMNUMERICVALUE" outgoingConnections="//@node.7/@nodeData/@connections.3" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE"/>
+                    <children name="CHARCTONUMERICVALUE" outgoingConnections="//@node.7/@nodeData/@connections.4" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE"/>
+                    <children name="CHARCFROMDECIMALVALUE" outgoingConnections="//@node.7/@nodeData/@connections.5" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE"/>
+                    <children name="CHARCTODECIMALVALUE" outgoingConnections="//@node.7/@nodeData/@connections.6" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE"/>
+                    <children name="CHARCFROMAMOUNT" outgoingConnections="//@node.7/@nodeData/@connections.7" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT"/>
+                    <children name="CHARCTOAMOUNT" outgoingConnections="//@node.7/@nodeData/@connections.8" type="id_Float" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT"/>
+                    <children name="CHARCFROMDATE" outgoingConnections="//@node.7/@nodeData/@connections.9" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE"/>
+                    <children name="CHARCTODATE" outgoingConnections="//@node.7/@nodeData/@connections.10" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE"/>
+                    <children name="CHARCFROMTIME" outgoingConnections="//@node.7/@nodeData/@connections.11" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME"/>
+                    <children name="CHARCTOTIME" outgoingConnections="//@node.7/@nodeData/@connections.12" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME"/>
+                    <children name="CHARCVALUE" outgoingConnections="//@node.7/@nodeData/@connections.13" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE"/>
                   </children>
                   <children name="Z1DATEM" type="id_String" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM">
                     <children name="SEGMENT" nodeType="ATTRIBUT" type="id_Integer" xpath="tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM/@SEGMENT"/>
@@ -358,43 +446,43 @@
       <outputTrees activateCondensedTool="true" allInOne="true" name="outtt">
         <nodes expression="" name="newColumn" pattern="" type="id_Document" xpath="outtt/newColumn">
           <children expression="" loop="true" main="true" name="ZAREA" type="id_String" xpath="outtt.newColumn:/ZAREA" xsi:type="TalendXMLMap:OutputTreeNode">
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC]" incomingConnections="//@node.3/@nodeData/@connections.0" name="CHARACTERISTIC" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARACTERISTIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE]" incomingConnections="//@node.3/@nodeData/@connections.1" name="CHARCDATATYPE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCDATATYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE]" incomingConnections="//@node.3/@nodeData/@connections.2" name="CHARCVALUEINTERVALTYPE" type="id_Integer" xpath="outtt.newColumn:/ZAREA/CHARCVALUEINTERVALTYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE]" incomingConnections="//@node.3/@nodeData/@connections.3" name="CHARCFROMNUMERICVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMNUMERICVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE]" incomingConnections="//@node.3/@nodeData/@connections.4" name="CHARCTONUMERICVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTONUMERICVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE]" incomingConnections="//@node.3/@nodeData/@connections.5" name="CHARCFROMDECIMALVALUE" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCFROMDECIMALVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE]" incomingConnections="//@node.3/@nodeData/@connections.6" name="CHARCTODECIMALVALUE" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCTODECIMALVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT]" incomingConnections="//@node.3/@nodeData/@connections.7" name="CHARCFROMAMOUNT" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCFROMAMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT]" incomingConnections="//@node.3/@nodeData/@connections.8" name="CHARCTOAMOUNT" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCTOAMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE]" incomingConnections="//@node.3/@nodeData/@connections.9" name="CHARCFROMDATE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMDATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE]" incomingConnections="//@node.3/@nodeData/@connections.10" name="CHARCTODATE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTODATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME]" incomingConnections="//@node.3/@nodeData/@connections.11" name="CHARCFROMTIME" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMTIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME]" incomingConnections="//@node.3/@nodeData/@connections.12" name="CHARCTOTIME" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTOTIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE]" incomingConnections="//@node.3/@nodeData/@connections.13" name="CHARCVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT]" incomingConnections="//@node.3/@nodeData/@connections.14" name="SEGMENT" nodeType="ATTRIBUT" type="id_Integer" xpath="outtt.newColumn:/ZAREA/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC]" incomingConnections="//@node.7/@nodeData/@connections.0" name="CHARACTERISTIC" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARACTERISTIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE]" incomingConnections="//@node.7/@nodeData/@connections.1" name="CHARCDATATYPE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCDATATYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE]" incomingConnections="//@node.7/@nodeData/@connections.2" name="CHARCVALUEINTERVALTYPE" type="id_Integer" xpath="outtt.newColumn:/ZAREA/CHARCVALUEINTERVALTYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE]" incomingConnections="//@node.7/@nodeData/@connections.3" name="CHARCFROMNUMERICVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMNUMERICVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE]" incomingConnections="//@node.7/@nodeData/@connections.4" name="CHARCTONUMERICVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTONUMERICVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE]" incomingConnections="//@node.7/@nodeData/@connections.5" name="CHARCFROMDECIMALVALUE" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCFROMDECIMALVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE]" incomingConnections="//@node.7/@nodeData/@connections.6" name="CHARCTODECIMALVALUE" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCTODECIMALVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT]" incomingConnections="//@node.7/@nodeData/@connections.7" name="CHARCFROMAMOUNT" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCFROMAMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT]" incomingConnections="//@node.7/@nodeData/@connections.8" name="CHARCTOAMOUNT" type="id_Float" xpath="outtt.newColumn:/ZAREA/CHARCTOAMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE]" incomingConnections="//@node.7/@nodeData/@connections.9" name="CHARCFROMDATE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMDATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE]" incomingConnections="//@node.7/@nodeData/@connections.10" name="CHARCTODATE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTODATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME]" incomingConnections="//@node.7/@nodeData/@connections.11" name="CHARCFROMTIME" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMTIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME]" incomingConnections="//@node.7/@nodeData/@connections.12" name="CHARCTOTIME" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTOTIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE]" incomingConnections="//@node.7/@nodeData/@connections.13" name="CHARCVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[tM_01TtRP_01.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT]" incomingConnections="//@node.7/@nodeData/@connections.14" name="SEGMENT" nodeType="ATTRIBUT" type="id_Integer" xpath="outtt.newColumn:/ZAREA/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.1" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.2" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.3" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.4" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.5" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.6" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.7" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.8" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.9" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.10" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.11" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.10" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.12" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.11" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.13" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.12" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.14" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.13" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.0" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.14" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.1" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.2" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.3" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.4" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.5" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.6" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.7" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.8" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.9" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.10" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.11" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.10" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.12" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.11" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.13" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.12" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.14" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.13" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.40/@children.8/@children.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.14" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
-  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="192">
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
@@ -410,7 +498,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -439,7 +527,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;/erp/zxmatm01/&quot;" name="endpoint" type="id_String"/>
@@ -452,7 +540,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="192">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="384">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_rt7xYOQBEe2th4_ee3b5BQ"/>
@@ -465,7 +553,7 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;adm.oho&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:2zih8WROW2OHsJlb6LfYY1+FNZMziEH4LRCQeKmw3zTO66DK4Jo="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:fsXZnAAWEWhP5Vqg95uXlVhOXZmfW/S8Wp/mv5hfzi5019HIEJI="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rest_results&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -552,13 +640,22 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRRQ_01TtM_01"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfout_2" lineStyle="0" metaname="copyOfout_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tRESTResponse_3">
+  <connection connectorName="FLOW" label="outp1" lineStyle="0" metaname="outp1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tConvertType_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfout_2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp1"/>
   </connection>
-  <connection connectorName="FLOW" label="tM_01TtRP_01" lineStyle="0" metaname="tM_01TtRP_01" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tXMLMap_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tMap_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="id"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tM_01TtRP_01"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tConvertType_2" offsetLabelX="0" offsetLabelY="0" source="tConvertType_2" target="tJavaFlex_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="outtt" lineStyle="0" metaname="outtt" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -578,13 +675,28 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_55532cda-ea0e-4add-91dd-d47a09d8dfd8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7F+QA4TPG0l2wYbMdBPG1kTEbhLxoZ4/hm+pa9CZIYC1vRGTUjqmyi7cFeYbEpwECY++G5ibZwL/&#13;
-4CCxI+oPDg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c5092bf7-d3bd-45f3-a8e4-83c2707ef635"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bCJDLZ1XhpKtsufLrkmdHOah0+KuAx6ECQ9yB05AK7YgINIitdnPbzLQ/OWg5/VBcff2xjBQExEO&#13;
-et7E9f0YCg==</DigestValue></Reference></SignedInfo><SignatureValue>hAYHqUDvGonhCkYGILUKTJcsCG2H4hb4xnJ0p6a0v3sV8jsTNYCLriyqzGVbap7mEEy1+Dk7lwpj&#13;
-IwuZwdClIQbtaLOGwufvC8YX6jJttNNNus9uttxfs7FRsxnnqGgZcKt7e5THoqgx0wFPCettkbh5&#13;
-CzFTer1Dcw8CPpBxaHlOv2X/Jz2QIu6UDDNaVYGE4cb6H9sT9/rAbHFDyCDZLGYt2sh7RyLLPwPh&#13;
-ivO2YK93NeBwEImjCjjf69VmBAmEgxKwxuqwsisEl66+zp2UCQlbKLnOBVVSDBAnVTmyUP8NJHoJ&#13;
-RyEPQnpw5VX7gZaI5itKDES0+iuTP/RnVSHDWA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_56b7295f-49ee-4779-bcb2-f9db0cf269d0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7WPiK1R9aN/jC6ZDlGCYLSEN5TVH7jOmULH/p2/9dWVAB8JY8l7vYUou044RZtUr6P3MQnoKyRl8&#13;
+V3fibQsJpw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b0581dfb-cba1-4aa5-9974-e394beb5aa49"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Vfh3Bz3Esg3OVxbL0RyoGfWIosfYzid/yfqc4ncwUvZK5IufWk/9tvinK1TuCz8yzRH/KrO6XxUU&#13;
+jJBvWcZ27w==</DigestValue></Reference></SignedInfo><SignatureValue>RTxKXQp87PmwWLmffRDcaBltTVlZk3h5zq+q2+/Z4aXLsk1+U60bxvk4SiA08hlmmAdkR5qnmOeE&#13;
+lLExeetGCFVqbYKXaNF8BbpAzo5IXA9gx5yoU6R2KdQRJjhycV8lyZbCYqas2vLrSmNjuWvs2J0G&#13;
+ld3x1lPFuNoIunDIltQFlbZSRSPbzq6u1sD7uXr/ZZdN6P+QhJpbnF75fpyGkpyNgYn+vXoO3X1g&#13;
+sSFHNQkmKVVtIx3vijqCVH3CEThEmuJ4hemMq2lLDZ5LPd5MqaWy7x8sDI6EaCy9zcuY3hHsYtIl&#13;
+r1/MAgOEioF8MlMW4DDYICmZbwkEcSDWg8Yd6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -606,4 +718,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c5092bf7-d3bd-45f3-a8e4-83c2707ef635" Target="#_55532cda-ea0e-4add-91dd-d47a09d8dfd8"><Timestamp>2023-04-28 05:32:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b0581dfb-cba1-4aa5-9974-e394beb5aa49" Target="#_56b7295f-49ee-4779-bcb2-f9db0cf269d0"><Timestamp>2023-04-28 06:04:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
