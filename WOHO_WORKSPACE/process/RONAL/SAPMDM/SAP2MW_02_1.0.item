@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:8wDkUHnGQmDNcySOk3nYpgAKaB6+SLtHuLLxnJRL"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:VvCuNHIsscayRLANdu2uF+XnCy02CcK3fkB/wU3u"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Em0BLyJMT5U2AZ2Nz4Xy690qyzT3JxkLJOe3Zo3z"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:zF6fm1WBhAK1c6U06ldQiDPjsfvHNI+Dn5KOX5ki"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -391,7 +391,7 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;adm.oho&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:/RX0R2w8H+rv9SIt+EYSZbc9trZRks9c8halZqYP+2ifniLsfgQ="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:TuqfeHFB7AwXf0NLyynNOufIdF+IV8R2xFFShNgwJCkUKV9CYNQ="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rest_results&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -493,6 +493,7 @@
   </node>
   <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tReplicate_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="tR_01"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tReplicate_1">
       <column comment="" key="false" length="-1" name="payload" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
@@ -509,6 +510,151 @@
       <column comment="" key="false" length="-1" name="wamas_out" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tR_01TtXM_01">
+        <nodes expression="" name="payload" type="id_Document" xpath="tR_01TtXM_01/payload">
+          <children loop="true" main="true" name="ZXMATM01" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01">
+            <children name="IDOC" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC">
+              <children name="BEGIN" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/@BEGIN"/>
+              <children name="EDI_DC40" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40">
+                <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/@SEGMENT"/>
+                <children name="TABNAM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/TABNAM"/>
+                <children name="MANDT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/MANDT"/>
+                <children name="DOCNUM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/DOCNUM"/>
+                <children name="DOCREL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/DOCREL"/>
+                <children name="STATUS" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/STATUS"/>
+                <children name="DIRECT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/DIRECT"/>
+                <children name="OUTMOD" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/OUTMOD"/>
+                <children name="IDOCTYP" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/IDOCTYP"/>
+                <children name="CIMTYP" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/CIMTYP"/>
+                <children name="MESTYP" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/MESTYP"/>
+                <children name="SNDPOR" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/SNDPOR"/>
+                <children name="SNDPRT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/SNDPRT"/>
+                <children name="SNDPRN" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/SNDPRN"/>
+                <children name="RCVPOR" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/RCVPOR"/>
+                <children name="RCVPRT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/RCVPRT"/>
+                <children name="RCVPRN" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/RCVPRN"/>
+                <children name="CREDAT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/CREDAT"/>
+                <children name="CRETIM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/CRETIM"/>
+                <children name="SERIAL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/EDI_DC40/SERIAL"/>
+              </children>
+              <children name="E1MARAM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM">
+                <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/@SEGMENT"/>
+                <children name="MSGFN" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MSGFN"/>
+                <children name="MATNR" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MATNR"/>
+                <children name="ERSDA" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/ERSDA"/>
+                <children name="ERNAM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/ERNAM"/>
+                <children name="LAEDA" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/LAEDA"/>
+                <children name="AENAM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/AENAM"/>
+                <children name="PSTAT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/PSTAT"/>
+                <children name="MTART" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MTART"/>
+                <children name="MBRSH" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MBRSH"/>
+                <children name="MEINS" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MEINS"/>
+                <children name="ZEINR" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/ZEINR"/>
+                <children name="BLANZ" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/BLANZ"/>
+                <children name="BRGEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/BRGEW"/>
+                <children name="NTGEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/NTGEW"/>
+                <children name="GEWEI" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/GEWEI"/>
+                <children name="VOLUM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/VOLUM"/>
+                <children name="WESCH" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/WESCH"/>
+                <children name="LAENG" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/LAENG"/>
+                <children name="BREIT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/BREIT"/>
+                <children name="HOEHE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/HOEHE"/>
+                <children name="ERGEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/ERGEW"/>
+                <children name="ERVOL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/ERVOL"/>
+                <children name="GEWTO" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/GEWTO"/>
+                <children name="VOLTO" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/VOLTO"/>
+                <children name="FUELG" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/FUELG"/>
+                <children name="STFAK" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/STFAK"/>
+                <children name="MHDRZ" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MHDRZ"/>
+                <children name="MHDHB" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MHDHB"/>
+                <children name="MHDLP" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MHDLP"/>
+                <children name="VPSTA" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/VPSTA"/>
+                <children name="MSTDE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MSTDE"/>
+                <children name="MSTDV" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MSTDV"/>
+                <children name="COMPL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/COMPL"/>
+                <children name="MTPOS_MARA" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MTPOS_MARA"/>
+                <children name="GEWTO_NEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/GEWTO_NEW"/>
+                <children name="VOLTO_NEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/VOLTO_NEW"/>
+                <children name="WRKST_NEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/WRKST_NEW"/>
+                <children name="ANP" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/ANP"/>
+                <children name="MATNR_LONG" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/MATNR_LONG"/>
+                <children name="Z1OCLFM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/@SEGMENT"/>
+                  <children name="OBTAB" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBTAB"/>
+                  <children name="OBJEK" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBJEK"/>
+                  <children name="KLART" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/KLART"/>
+                  <children name="MAFID" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/MAFID"/>
+                  <children name="OBJECT_TABLE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBJECT_TABLE"/>
+                  <children name="OBJEK_LONG" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBJEK_LONG"/>
+                  <children name="Z1KSSKM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM">
+                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/@SEGMENT"/>
+                    <children name="CLASS" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/CLASS"/>
+                    <children name="STATU" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/STATU"/>
+                  </children>
+                  <children name="Z1AUSPM" optional="true" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM">
+                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT"/>
+                    <children name="CHARACTERISTIC" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC"/>
+                    <children name="CHARCDATATYPE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE"/>
+                    <children name="CHARCVALUEINTERVALTYPE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE"/>
+                    <children name="CHARCVALUE" optional="true" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE"/>
+                    <children name="CHARCFROMNUMERICVALUE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE"/>
+                    <children name="CHARCTONUMERICVALUE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE"/>
+                    <children name="CHARCFROMDECIMALVALUE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE"/>
+                    <children name="CHARCTODECIMALVALUE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE"/>
+                    <children name="CHARCFROMAMOUNT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT"/>
+                    <children name="CHARCTOAMOUNT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT"/>
+                    <children name="CHARCFROMDATE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE"/>
+                    <children name="CHARCTODATE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE"/>
+                    <children name="CHARCFROMTIME" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME"/>
+                    <children name="CHARCTOTIME" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME"/>
+                  </children>
+                  <children name="Z1DATEM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM">
+                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM/@SEGMENT"/>
+                    <children name="KEY_DATE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM/KEY_DATE"/>
+                  </children>
+                </children>
+                <children name="E1MARA1" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/@SEGMENT"/>
+                  <children name="MATNR_EXTERNAL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MATNR_EXTERNAL"/>
+                  <children name="MAXC" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXC"/>
+                  <children name="MAXC_TOL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXC_TOL"/>
+                  <children name="MAXL" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXL"/>
+                  <children name="MAXB" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXB"/>
+                  <children name="MAXH" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXH"/>
+                  <children name="QQTIME" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/QQTIME"/>
+                  <children name="MEDIUM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MEDIUM"/>
+                  <children name="COMMODITY" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/COMMODITY"/>
+                  <children name="SCM_MATURITY_DUR" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/SCM_MATURITY_DUR"/>
+                  <children name="SCM_SHLF_LFE_REQ_MAX" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARA1/SCM_SHLF_LFE_REQ_MAX"/>
+                </children>
+                <children name="E1MAKTM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MAKTM">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/@SEGMENT"/>
+                  <children name="MSGFN" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/MSGFN"/>
+                  <children name="SPRAS" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/SPRAS"/>
+                  <children name="MAKTX" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/MAKTX"/>
+                  <children name="SPRAS_ISO" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/SPRAS_ISO"/>
+                </children>
+                <children name="E1MARMM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/@SEGMENT"/>
+                  <children name="MSGFN" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/MSGFN"/>
+                  <children name="MEINH" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/MEINH"/>
+                  <children name="UMREZ" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/UMREZ"/>
+                  <children name="UMREN" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/UMREN"/>
+                  <children name="LAENG" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/LAENG"/>
+                  <children name="BREIT" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/BREIT"/>
+                  <children name="HOEHE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/HOEHE"/>
+                  <children name="VOLUM" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/VOLUM"/>
+                  <children name="BRGEW" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/BRGEW"/>
+                  <children name="GEWEI" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/GEWEI"/>
+                  <children name="NEST_FTR" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/NEST_FTR"/>
+                  <children name="MAX_STACK" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/MAX_STACK"/>
+                  <children name="CAPAUSE" type="id_String" xpath="tR_01TtXM_01.payload:/ZXMATM01/IDOC/E1MARAM/E1MARMM/CAPAUSE"/>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </inputTrees>
       <outputTrees activateCondensedTool="true" activateExpressionFilter="true" allInOne="true" expressionFilter="Var.Value=&quot;X&quot; &amp;&amp; Var.Key=&quot;LOGIMAT_W08&quot; &amp;&amp; Var.Datatype=&quot;CHAR&quot;" filterIncomingConnections="//@node.13/@nodeData/@connections.0 //@node.13/@nodeData/@connections.1 //@node.13/@nodeData/@connections.2" name="log_out">
         <nodes expression="" name="wamas_out" type="id_Document" xpath="log_out/wamas_out">
           <children main="true" name="DI_TELEGRAM" type="id_String" xpath="log_out.wamas_out:/DI_TELEGRAM" xsi:type="TalendXMLMap:OutputTreeNode">
@@ -677,9 +823,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tM_03TtPGO_01"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tConvertType_3" offsetLabelX="0" offsetLabelY="0" source="tConvertType_3" target="tReplicate_1">
+  <connection connectorName="FLOW" label="tCT_02TtR_01" lineStyle="0" metaname="tConvertType_3" offsetLabelX="0" offsetLabelY="0" source="tConvertType_3" target="tReplicate_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tCT_02TtR_01"/>
+  </connection>
+  <connection connectorName="FLOW" label="tR_01TtXM_01" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" source="tReplicate_1" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tR_01TtXM_01"/>
   </connection>
   <connection connectorName="FLOW" label="log_out" lineStyle="0" metaname="log_out" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -696,18 +846,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2eede706-f93f-42de-8972-17c9d363d2d7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>22XJMKNxeaoklugdj+KP5V5WBhKlPv/JDP1Nk1xP6dcC/HBCAVkb4uAYCIBF2tMCnd3j43arA7Vz&#13;
-bKgOYxJxvw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3eb8c690-0771-44db-8d94-51cf30e728c6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ubx4FLL+Lv+QnZ7c4Ula9MBQhRE3jMkzkgkyZXRoTXXEV+Q5smn6d/S7bGc51cMPgiIql3l9Zzn4&#13;
-g10HbNsN2w==</DigestValue></Reference></SignedInfo><SignatureValue>VhprcOb96XE39V93iizJzZYQht3dxZ6w+ssk8lMiw7aYMhjzNezei5U42Ck8OMv3FY2e2uFpIUMp&#13;
-V3Ypzx/uYoIVpZHLco9zjvEavmNKTBUBD1J3jQV4Ibfs0vHmOmydBZLSxsyCfIa4kUkjCWGlwXTn&#13;
-UzCFyhCzYTipeNHhg0FZgQQ3p9+imT79mbWvkqhcL3N0a6d9GcgDN5U7H4fsRwmtMtnaga55AuYD&#13;
-NWAurf+ZXOJMLxgCTw0dk06D8SyHHXatv11F4ww68UHmW/hZgprtxl38OVaFB+Zpmuwx9+3drxZO&#13;
-VDCQ4++9AiLbq3pVKak/d4QVI1PiZIspxPabtw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_590ac78e-c7a2-464d-8747-0686af706b28"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>87NeaEme8Gn4CmfZbF+P04D8/Q8XVgXqZ59Myu63WwGfM1M1on2KmjZy7nBQMlc4NSJVsdVQv+bb&#13;
+YjUnMfvD3g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e1857ea1-6bf0-47c9-b76e-94d3cb8d21b1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7fOgcfd0praNkhAqrLng6+6KBR7CXcfLZjU9ZfjV1UP8KAuTFu8SMQFv5D2znfQ2HDjFlZ+nPWWV&#13;
+GaP+L/hPew==</DigestValue></Reference></SignedInfo><SignatureValue>FTvkz36WgOSYnB0Js4VxgmjmiTVXzacIaR2hjR7u+T39MJK3GuptCs/GZ9QLtbPSt5hr/Xn63Zxg&#13;
+hJcm9F3QCqzz7y+onl7QYTBG+aOwcteSqSxvywLQcH5Y8vLKsvZ2iJ5Rqf6h7h6Tj1HhbMdyJnSa&#13;
+wlJKD6u+PKU11JTxWWsKWWFIcbuSHKWNLN4zDjCt6Ne85iSIUO02lA3ayOAJUs2kpGWnASjrKjH0&#13;
+SHPZREUpTnHREr3AL8n4jDf4exRNuCeJw80l5JwUjXoy+kbTeKdrh6LL7g5IMgsW12lVxaa2tz8+&#13;
+vF6NDb7f4GufTwU4mkAbce+HR7xcoAubfjBMbw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -729,4 +874,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3eb8c690-0771-44db-8d94-51cf30e728c6" Target="#_2eede706-f93f-42de-8972-17c9d363d2d7"><Timestamp>2023-04-28 08:44:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e1857ea1-6bf0-47c9-b76e-94d3cb8d21b1" Target="#_590ac78e-c7a2-464d-8747-0686af706b28"><Timestamp>2023-04-28 08:46:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
