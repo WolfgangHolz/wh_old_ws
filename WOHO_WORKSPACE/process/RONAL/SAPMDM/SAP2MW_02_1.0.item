@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:bSh477ge1dkxh9gA49XxnDD9x5gd2tNhG0mSD2MA"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:ie+j2KqzBhONyjkANG0tNrIJC06xx+FoibxQ16jW"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:yraInFwbfiOZhML+8hNQi+AUv37oZNOZqLpyf8xi"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:T/KkbilDBa1IyesSCmkJAiBKUqpxSwgzBYJrLRdv"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -263,7 +263,7 @@
       <column key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateExpressionFilter="true" columnNameFilter="" expressionFilter="StringHandling.LEN(row4.payload)&gt;0" name="outpp1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;data successful received&quot;" name="body" nullable="true" type="id_String"/>
@@ -291,471 +291,32 @@
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
-    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_1"/>
+    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
+    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="400"/>
+    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" show="false" value="200"/>
+    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
+    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
+    <elementParameter field="TEXT" name="LABEL" value="tRRP_01"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="outtt" name="outtt">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tRESTResponse_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <nodeData xsi:type="TalendXMLMap:XmlMapData">
-      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="outpp3">
-        <nodes expression="" name="body" type="id_Document" xpath="outpp3/body">
-          <children main="true" name="ZXMATM01" type="id_String" xpath="outpp3.body:/ZXMATM01">
-            <children main="true" name="IDOC" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC">
-              <children name="BEGIN" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/@BEGIN"/>
-              <children name="EDI_DC40" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40">
-                <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/@SEGMENT"/>
-                <children name="TABNAM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/TABNAM"/>
-                <children name="MANDT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/MANDT"/>
-                <children name="DOCNUM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/DOCNUM"/>
-                <children name="DOCREL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/DOCREL"/>
-                <children name="STATUS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/STATUS"/>
-                <children name="DIRECT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/DIRECT"/>
-                <children name="OUTMOD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/OUTMOD"/>
-                <children name="IDOCTYP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/IDOCTYP"/>
-                <children name="CIMTYP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/CIMTYP"/>
-                <children name="MESTYP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/MESTYP"/>
-                <children name="SNDPOR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/SNDPOR"/>
-                <children name="SNDPRT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/SNDPRT"/>
-                <children name="SNDPRN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/SNDPRN"/>
-                <children name="RCVPOR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/RCVPOR"/>
-                <children name="RCVPRT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/RCVPRT"/>
-                <children name="RCVPRN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/RCVPRN"/>
-                <children name="CREDAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/CREDAT"/>
-                <children name="CRETIM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/CRETIM"/>
-                <children name="SERIAL" type="id_Long" xpath="outpp3.body:/ZXMATM01/IDOC/EDI_DC40/SERIAL"/>
-              </children>
-              <children main="true" name="E1MARAM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM">
-                <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/@SEGMENT"/>
-                <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MSGFN"/>
-                <children name="MATNR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MATNR"/>
-                <children name="ERSDA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/ERSDA"/>
-                <children name="ERNAM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/ERNAM"/>
-                <children name="LAEDA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/LAEDA"/>
-                <children name="AENAM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/AENAM"/>
-                <children name="PSTAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/PSTAT"/>
-                <children name="MTART" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MTART"/>
-                <children name="MBRSH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MBRSH"/>
-                <children name="MATKL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MATKL"/>
-                <children name="BISMT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/BISMT"/>
-                <children name="MEINS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MEINS"/>
-                <children name="BLANZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/BLANZ"/>
-                <children name="GROES" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/GROES"/>
-                <children name="EKWSL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/EKWSL"/>
-                <children name="BRGEW" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/BRGEW"/>
-                <children name="NTGEW" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/NTGEW"/>
-                <children name="GEWEI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/GEWEI"/>
-                <children name="VOLUM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/VOLUM"/>
-                <children name="WESCH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/WESCH"/>
-                <children name="LAENG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/LAENG"/>
-                <children name="BREIT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/BREIT"/>
-                <children name="HOEHE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/HOEHE"/>
-                <children name="ERGEW" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/ERGEW"/>
-                <children name="ERVOL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/ERVOL"/>
-                <children name="GEWTO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/GEWTO"/>
-                <children name="VOLTO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/VOLTO"/>
-                <children name="XCHPF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/XCHPF"/>
-                <children name="FUELG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/FUELG"/>
-                <children name="STFAK" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/STFAK"/>
-                <children name="QMPUR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/QMPUR"/>
-                <children name="MHDRZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MHDRZ"/>
-                <children name="MHDHB" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MHDHB"/>
-                <children name="MHDLP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MHDLP"/>
-                <children name="VPSTA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/VPSTA"/>
-                <children name="MSTAE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MSTAE"/>
-                <children name="MSTDE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MSTDE"/>
-                <children name="MSTDV" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MSTDV"/>
-                <children name="COMPL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/COMPL"/>
-                <children name="MTPOS_MARA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MTPOS_MARA"/>
-                <children name="GEWTO_NEW" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/GEWTO_NEW"/>
-                <children name="VOLTO_NEW" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/VOLTO_NEW"/>
-                <children name="SLED_BBD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/SLED_BBD"/>
-                <children name="ANP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/ANP"/>
-                <children name="MATNR_LONG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/MATNR_LONG"/>
-                <children name="BISMT_LONG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/BISMT_LONG"/>
-                <children main="true" name="Z1OCLFM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/@SEGMENT"/>
-                  <children name="OBTAB" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBTAB"/>
-                  <children name="OBJEK" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBJEK"/>
-                  <children name="KLART" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/KLART"/>
-                  <children name="MAFID" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/MAFID"/>
-                  <children name="OBJECT_TABLE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBJECT_TABLE"/>
-                  <children name="OBJEK_LONG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/OBJEK_LONG"/>
-                  <children name="Z1KSSKM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/@SEGMENT"/>
-                    <children name="CLASS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/CLASS"/>
-                    <children name="STATU" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1KSSKM/STATU"/>
-                  </children>
-                  <children loop="true" main="true" name="Z1AUSPM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" outgoingConnections="//@node.7/@nodeData/@connections.14" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT"/>
-                    <children name="CHARACTERISTIC" outgoingConnections="//@node.7/@nodeData/@connections.0" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC"/>
-                    <children name="CHARCDATATYPE" outgoingConnections="//@node.7/@nodeData/@connections.1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE"/>
-                    <children name="CHARCVALUEINTERVALTYPE" outgoingConnections="//@node.7/@nodeData/@connections.2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE"/>
-                    <children name="CHARCVALUE" optional="true" outgoingConnections="//@node.7/@nodeData/@connections.3" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE"/>
-                    <children name="CHARCFROMNUMERICVALUE" outgoingConnections="//@node.7/@nodeData/@connections.4" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE"/>
-                    <children name="CHARCTONUMERICVALUE" outgoingConnections="//@node.7/@nodeData/@connections.5" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE"/>
-                    <children name="CHARCFROMDECIMALVALUE" outgoingConnections="//@node.7/@nodeData/@connections.6" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE"/>
-                    <children name="CHARCTODECIMALVALUE" outgoingConnections="//@node.7/@nodeData/@connections.7" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE"/>
-                    <children name="CHARCFROMAMOUNT" outgoingConnections="//@node.7/@nodeData/@connections.8" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT"/>
-                    <children name="CHARCTOAMOUNT" outgoingConnections="//@node.7/@nodeData/@connections.9" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT"/>
-                    <children name="CHARCFROMDATE" outgoingConnections="//@node.7/@nodeData/@connections.10" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE"/>
-                    <children name="CHARCTODATE" outgoingConnections="//@node.7/@nodeData/@connections.11" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE"/>
-                    <children name="CHARCFROMTIME" outgoingConnections="//@node.7/@nodeData/@connections.12" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME"/>
-                    <children name="CHARCTOTIME" outgoingConnections="//@node.7/@nodeData/@connections.13" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME"/>
-                  </children>
-                  <children name="Z1DATEM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM/@SEGMENT"/>
-                    <children name="KEY_DATE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1DATEM/KEY_DATE"/>
-                  </children>
-                </children>
-                <children name="E1MARA1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/@SEGMENT"/>
-                  <children name="MATNR_EXTERNAL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MATNR_EXTERNAL"/>
-                  <children name="MAXC" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXC"/>
-                  <children name="MAXC_TOL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXC_TOL"/>
-                  <children name="MAXL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXL"/>
-                  <children name="MAXB" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXB"/>
-                  <children name="MAXH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MAXH"/>
-                  <children name="QQTIME" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/QQTIME"/>
-                  <children name="MEDIUM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/MEDIUM"/>
-                  <children name="COMMODITY" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/COMMODITY"/>
-                  <children name="SCM_MATURITY_DUR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/SCM_MATURITY_DUR"/>
-                  <children name="SCM_SHLF_LFE_REQ_MAX" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARA1/SCM_SHLF_LFE_REQ_MAX"/>
-                </children>
-                <children name="E1MAKTM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MAKTM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/MSGFN"/>
-                  <children name="SPRAS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/SPRAS"/>
-                  <children name="MAKTX" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/MAKTX"/>
-                  <children name="SPRAS_ISO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MAKTM/SPRAS_ISO"/>
-                </children>
-                <children name="E1MARCM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MSGFN"/>
-                  <children name="WERKS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/WERKS"/>
-                  <children name="PSTAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/PSTAT"/>
-                  <children name="EKGRP" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/EKGRP"/>
-                  <children name="DISMM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/DISMM"/>
-                  <children name="DISPO" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/DISPO"/>
-                  <children name="PLIFZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/PLIFZ"/>
-                  <children name="WEBAZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/WEBAZ"/>
-                  <children name="PERKZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/PERKZ"/>
-                  <children name="AUSSS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/AUSSS"/>
-                  <children name="DISLS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/DISLS"/>
-                  <children name="BESKZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BESKZ"/>
-                  <children name="MINBE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MINBE"/>
-                  <children name="EISBE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/EISBE"/>
-                  <children name="BSTMI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BSTMI"/>
-                  <children name="BSTMA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BSTMA"/>
-                  <children name="BSTFE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BSTFE"/>
-                  <children name="BSTRF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BSTRF"/>
-                  <children name="MABST" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MABST"/>
-                  <children name="LOSFX" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/LOSFX"/>
-                  <children name="AUSDT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/AUSDT"/>
-                  <children name="BEARZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BEARZ"/>
-                  <children name="RUEZT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/RUEZT"/>
-                  <children name="TRANZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/TRANZ"/>
-                  <children name="BASMG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/BASMG"/>
-                  <children name="DZEIT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/DZEIT"/>
-                  <children name="MAXLZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MAXLZ"/>
-                  <children name="UEETO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/UEETO"/>
-                  <children name="UNETO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/UNETO"/>
-                  <children name="WZEIT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/WZEIT"/>
-                  <children name="VZUSL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VZUSL"/>
-                  <children name="INSMK" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/INSMK"/>
-                  <children name="SSQSS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/SSQSS"/>
-                  <children name="UMLMC" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/UMLMC"/>
-                  <children name="XCHPF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/XCHPF"/>
-                  <children name="LGRAD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/LGRAD"/>
-                  <children name="OBJID" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/OBJID"/>
-                  <children name="MTVFP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MTVFP"/>
-                  <children name="VRVEZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VRVEZ"/>
-                  <children name="VBAMG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VBAMG"/>
-                  <children name="VBEAZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VBEAZ"/>
-                  <children name="TRAME" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/TRAME"/>
-                  <children name="FXHOR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/FXHOR"/>
-                  <children name="VINT1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VINT1"/>
-                  <children name="VINT2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VINT2"/>
-                  <children name="LOSGR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/LOSGR"/>
-                  <children name="KAUSF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/KAUSF"/>
-                  <children name="TAKZT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/TAKZT"/>
-                  <children name="AWSLS" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/AWSLS"/>
-                  <children name="VRBDT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VRBDT"/>
-                  <children name="VRBFK" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/VRBFK"/>
-                  <children name="AUTRU" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/AUTRU"/>
-                  <children name="PREND" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/PREND"/>
-                  <children name="PRENG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/PRENG"/>
-                  <children name="PRFRQ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/PRFRQ"/>
-                  <children name="LGFSB" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/LGFSB"/>
-                  <children name="MMSTA" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MMSTA"/>
-                  <children name="SHZET" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/SHZET"/>
-                  <children name="MMSTD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MMSTD"/>
-                  <children name="DPLHO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/DPLHO"/>
-                  <children name="MINLS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MINLS"/>
-                  <children name="MAXLS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/MAXLS"/>
-                  <children name="FIXLS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/FIXLS"/>
-                  <children name="LTINC" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/LTINC"/>
-                  <children name="COMPL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/COMPL"/>
-                  <children name="EISLO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/EISLO"/>
-                  <children name="E1MARC1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/@SEGMENT"/>
-                    <children name="SCM_GRPRT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_GRPRT"/>
-                    <children name="SCM_GIPRT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_GIPRT"/>
-                    <children name="SCM_SCOST" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SCOST"/>
-                    <children name="SCM_RELDT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_RELDT"/>
-                    <children name="SCM_SSPEN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SSPEN"/>
-                    <children name="SCM_CONHAP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_CONHAP"/>
-                    <children name="SCM_CONHAP_OUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_CONHAP_OUT"/>
-                    <children name="SCM_SHELF_LIFE_DUR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SHELF_LIFE_DUR"/>
-                    <children name="SCM_MATURITY_DUR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_MATURITY_DUR"/>
-                    <children name="SCM_SHLF_LFE_REQ_MIN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SHLF_LFE_REQ_MIN"/>
-                    <children name="SCM_SHLF_LFE_REQ_MAX" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SHLF_LFE_REQ_MAX"/>
-                    <children name="SCM_REORD_DUR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_REORD_DUR"/>
-                    <children name="SCM_TARGET_DUR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_TARGET_DUR"/>
-                    <children name="SCM_PEG_PAST_ALERT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PEG_PAST_ALERT"/>
-                    <children name="SCM_PEG_FUTURE_ALERT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PEG_FUTURE_ALERT"/>
-                    <children name="SCM_PEG_STRATEGY" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PEG_STRATEGY"/>
-                    <children name="SCM_PRIO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PRIO"/>
-                    <children name="SCM_MIN_PASS_AMOUNT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_MIN_PASS_AMOUNT"/>
-                    <children name="SCM_THRUPUT_TIME" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_THRUPUT_TIME"/>
-                    <children name="SCM_SAFTY_V" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SAFTY_V"/>
-                    <children name="SCM_PPSAFTYSTK" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PPSAFTYSTK"/>
-                    <children name="SCM_PPSAFTYSTK_V" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PPSAFTYSTK_V"/>
-                    <children name="SCM_REPSAFTY" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_REPSAFTY"/>
-                    <children name="SCM_REPSAFTY_V" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_REPSAFTY_V"/>
-                    <children name="SCM_REORD_V" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_REORD_V"/>
-                    <children name="SCM_MAXSTOCK_V" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_MAXSTOCK_V"/>
-                    <children name="SCM_SCOST_PRCNT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_SCOST_PRCNT"/>
-                    <children name="SCM_PROC_COST" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_PROC_COST"/>
-                    <children name="SCM_NDCOSTWE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_NDCOSTWE"/>
-                    <children name="SCM_NDCOSTWA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARC1/SCM_NDCOSTWA"/>
-                  </children>
-                  <children name="E1MARDM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/@SEGMENT"/>
-                    <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/MSGFN"/>
-                    <children name="LGORT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/LGORT"/>
-                    <children name="PSTAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/PSTAT"/>
-                    <children name="LMINB" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/LMINB"/>
-                    <children name="LBSTF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/LBSTF"/>
-                    <children name="BSKRF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MARDM/BSKRF"/>
-                  </children>
-                  <children name="E1MPGDM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPGDM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPGDM/@SEGMENT"/>
-                    <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPGDM/MSGFN"/>
-                  </children>
-                  <children name="E1MPOPM" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/@SEGMENT"/>
-                    <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/MSGFN"/>
-                    <children name="MODAV" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/MODAV"/>
-                    <children name="KZINI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/KZINI"/>
-                    <children name="PRMOD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PRMOD"/>
-                    <children name="ALPHA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/ALPHA"/>
-                    <children name="BETA1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/BETA1"/>
-                    <children name="GAMMA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/GAMMA"/>
-                    <children name="DELTA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/DELTA"/>
-                    <children name="EPSIL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/EPSIL"/>
-                    <children name="SIGGR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/SIGGR"/>
-                    <children name="PERKZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PERKZ"/>
-                    <children name="PRDAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PRDAT"/>
-                    <children name="PERAN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PERAN"/>
-                    <children name="PERIN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PERIN"/>
-                    <children name="PERIO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PERIO"/>
-                    <children name="PEREX" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PEREX"/>
-                    <children name="ANZPR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/ANZPR"/>
-                    <children name="FIMON" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/FIMON"/>
-                    <children name="GWERT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/GWERT"/>
-                    <children name="GWER1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/GWER1"/>
-                    <children name="GWER2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/GWER2"/>
-                    <children name="VMGWE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/VMGWE"/>
-                    <children name="VMGW1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/VMGW1"/>
-                    <children name="VMGW2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/VMGW2"/>
-                    <children name="TWERT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/TWERT"/>
-                    <children name="VMTWE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/VMTWE"/>
-                    <children name="PRMAD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/PRMAD"/>
-                    <children name="VMMAD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/VMMAD"/>
-                    <children name="FSUMM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/FSUMM"/>
-                    <children name="VMFSU" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/VMFSU"/>
-                    <children name="THKOF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARCM/E1MPOPM/THKOF"/>
-                  </children>
-                </children>
-                <children name="E1MARMM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/MSGFN"/>
-                  <children name="MEINH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/MEINH"/>
-                  <children name="UMREZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/UMREZ"/>
-                  <children name="UMREN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/UMREN"/>
-                  <children name="LAENG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/LAENG"/>
-                  <children name="BREIT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/BREIT"/>
-                  <children name="HOEHE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/HOEHE"/>
-                  <children name="VOLUM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/VOLUM"/>
-                  <children name="BRGEW" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/BRGEW"/>
-                  <children name="GEWEI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/GEWEI"/>
-                  <children name="NEST_FTR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/NEST_FTR"/>
-                  <children name="MAX_STACK" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/MAX_STACK"/>
-                  <children name="CAPAUSE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MARMM/CAPAUSE"/>
-                </children>
-                <children name="E1MBEWM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/MSGFN"/>
-                  <children name="BWKEY" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BWKEY"/>
-                  <children name="VPRSV" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VPRSV"/>
-                  <children name="VERPR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VERPR"/>
-                  <children name="STPRS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/STPRS"/>
-                  <children name="PEINH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PEINH"/>
-                  <children name="BKLAS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BKLAS"/>
-                  <children name="VMVPR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VMVPR"/>
-                  <children name="VMVER" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VMVER"/>
-                  <children name="VMSTP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VMSTP"/>
-                  <children name="VMPEI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VMPEI"/>
-                  <children name="VMBKL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VMBKL"/>
-                  <children name="VJVPR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJVPR"/>
-                  <children name="VJVER" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJVER"/>
-                  <children name="VJSTP" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJSTP"/>
-                  <children name="LFGJA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/LFGJA"/>
-                  <children name="LFMON" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/LFMON"/>
-                  <children name="ZKPRS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZKPRS"/>
-                  <children name="ZKDAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZKDAT"/>
-                  <children name="BWPRS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BWPRS"/>
-                  <children name="BWPRH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BWPRH"/>
-                  <children name="VJBWS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJBWS"/>
-                  <children name="VJBWH" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJBWH"/>
-                  <children name="VVJLB" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VVJLB"/>
-                  <children name="VVMLB" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VVMLB"/>
-                  <children name="VVSAL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VVSAL"/>
-                  <children name="ZPLPR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLPR"/>
-                  <children name="ZPLP1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLP1"/>
-                  <children name="ZPLP2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLP2"/>
-                  <children name="ZPLP3" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLP3"/>
-                  <children name="ZPLD1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLD1"/>
-                  <children name="ZPLD2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLD2"/>
-                  <children name="ZPLD3" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ZPLD3"/>
-                  <children name="BWPH1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BWPH1"/>
-                  <children name="BWPS1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BWPS1"/>
-                  <children name="ABWKZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/ABWKZ"/>
-                  <children name="PSTAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PSTAT"/>
-                  <children name="KALN1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/KALN1"/>
-                  <children name="KALNR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/KALNR"/>
-                  <children name="VERS1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VERS1"/>
-                  <children name="VERS2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VERS2"/>
-                  <children name="VERS3" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VERS3"/>
-                  <children name="PPRDZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PPRDZ"/>
-                  <children name="PPRDL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PPRDL"/>
-                  <children name="PPRDV" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PPRDV"/>
-                  <children name="PDATZ" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PDATZ"/>
-                  <children name="PDATL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PDATL"/>
-                  <children name="PDATV" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/PDATV"/>
-                  <children name="EKALR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/EKALR"/>
-                  <children name="VPLPR" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VPLPR"/>
-                  <children name="MLMAA" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/MLMAA"/>
-                  <children name="MLAST" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/MLAST"/>
-                  <children name="VJBKL" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJBKL"/>
-                  <children name="VJPEI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/VJPEI"/>
-                  <children name="BWPEI" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MBEWM/BWPEI"/>
-                </children>
-                <children name="E1MLGNM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/MSGFN"/>
-                  <children name="LGNUM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/LGNUM"/>
-                  <children name="LHMG1" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/LHMG1"/>
-                  <children name="LHMG2" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/LHMG2"/>
-                  <children name="LHMG3" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/LHMG3"/>
-                  <children name="MKAPV" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLGNM/MKAPV"/>
-                </children>
-                <children name="E1MVKEM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/MSGFN"/>
-                  <children name="VKORG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/VKORG"/>
-                  <children name="VTWEG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/VTWEG"/>
-                  <children name="SKTOF" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/SKTOF"/>
-                  <children name="VMSTD" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/VMSTD"/>
-                  <children name="AUMNG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/AUMNG"/>
-                  <children name="LFMNG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/LFMNG"/>
-                  <children name="EFMNG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/EFMNG"/>
-                  <children name="SCMNG" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/SCMNG"/>
-                  <children name="MTPOS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MVKEM/MTPOS"/>
-                </children>
-                <children name="E1MLANM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLANM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLANM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLANM/MSGFN"/>
-                  <children name="ALAND" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLANM/ALAND"/>
-                  <children name="TATY1" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLANM/TATY1"/>
-                  <children name="TAXM1" optional="true" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MLANM/TAXM1"/>
-                </children>
-                <children name="E1MTXHM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM">
-                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/@SEGMENT"/>
-                  <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/MSGFN"/>
-                  <children name="TDOBJECT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/TDOBJECT"/>
-                  <children name="TDNAME" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/TDNAME"/>
-                  <children name="TDID" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/TDID"/>
-                  <children name="TDSPRAS" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/TDSPRAS"/>
-                  <children name="TDTEXTTYPE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/TDTEXTTYPE"/>
-                  <children name="SPRAS_ISO" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/SPRAS_ISO"/>
-                  <children name="E1MTXLM" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/E1MTXLM">
-                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/E1MTXLM/@SEGMENT"/>
-                    <children name="MSGFN" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/E1MTXLM/MSGFN"/>
-                    <children name="TDFORMAT" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/E1MTXLM/TDFORMAT"/>
-                    <children name="TDLINE" type="id_String" xpath="outpp3.body:/ZXMATM01/IDOC/E1MARAM/E1MTXHM/E1MTXLM/TDLINE"/>
-                  </children>
-                </children>
-              </children>
-            </children>
-          </children>
-        </nodes>
-      </inputTrees>
-      <outputTrees activateCondensedTool="true" allInOne="true" name="outtt">
-        <nodes expression="" name="newColumn" pattern="" type="id_Document" xpath="outtt/newColumn">
-          <children expression="" loop="true" main="true" name="ZAREA" type="id_String" xpath="outtt.newColumn:/ZAREA" xsi:type="TalendXMLMap:OutputTreeNode">
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARACTERISTIC]" incomingConnections="//@node.7/@nodeData/@connections.0" name="CHARACTERISTIC" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARACTERISTIC" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCDATATYPE]" incomingConnections="//@node.7/@nodeData/@connections.1" name="CHARCDATATYPE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCDATATYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUEINTERVALTYPE]" incomingConnections="//@node.7/@nodeData/@connections.2" name="CHARCVALUEINTERVALTYPE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCVALUEINTERVALTYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCVALUE]" incomingConnections="//@node.7/@nodeData/@connections.3" name="CHARCVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMNUMERICVALUE]" incomingConnections="//@node.7/@nodeData/@connections.4" name="CHARCFROMNUMERICVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMNUMERICVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTONUMERICVALUE]" incomingConnections="//@node.7/@nodeData/@connections.5" name="CHARCTONUMERICVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTONUMERICVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDECIMALVALUE]" incomingConnections="//@node.7/@nodeData/@connections.6" name="CHARCFROMDECIMALVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMDECIMALVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODECIMALVALUE]" incomingConnections="//@node.7/@nodeData/@connections.7" name="CHARCTODECIMALVALUE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTODECIMALVALUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMAMOUNT]" incomingConnections="//@node.7/@nodeData/@connections.8" name="CHARCFROMAMOUNT" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMAMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOAMOUNT]" incomingConnections="//@node.7/@nodeData/@connections.9" name="CHARCTOAMOUNT" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTOAMOUNT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMDATE]" incomingConnections="//@node.7/@nodeData/@connections.10" name="CHARCFROMDATE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMDATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTODATE]" incomingConnections="//@node.7/@nodeData/@connections.11" name="CHARCTODATE" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTODATE" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCFROMTIME]" incomingConnections="//@node.7/@nodeData/@connections.12" name="CHARCFROMTIME" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCFROMTIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/CHARCTOTIME]" incomingConnections="//@node.7/@nodeData/@connections.13" name="CHARCTOTIME" type="id_String" xpath="outtt.newColumn:/ZAREA/CHARCTOTIME" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[outpp3.body:/ZXMATM01/IDOC/E1MARAM/Z1OCLFM/Z1AUSPM/@SEGMENT]" incomingConnections="//@node.7/@nodeData/@connections.14" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="outtt.newColumn:/ZAREA/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-          </children>
-        </nodes>
-      </outputTrees>
-      <varTables minimized="true" name="Var"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.1" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.2" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.3" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.4" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.5" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.6" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.7" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.8" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.9" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.10" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.9" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.11" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.10" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.12" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.11" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.13" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.12" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.14" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.13" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.47/@children.8/@children.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.14" xsi:type="TalendXMLMap:Connection"/>
-    </nodeData>
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
-    <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
-    <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
+    <elementParameter field="CHECK" name="AUTOCAST" value="false"/>
+    <elementParameter field="TABLE" name="MANUALTABLE"/>
     <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
     <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="outtt" name="tConvertType_1">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="outpp3" name="tConvertType_1">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" label="outtt" name="REJECT">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="REJECT" label="outpp3" name="REJECT">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -794,15 +355,15 @@
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="&quot;/erp/zxmatm01/&quot;" name="endpoint" type="id_String"/>
         <mapperTableEntries expression="&quot;1.0.0&quot;" name="version" type="id_String"/>
-        <mapperTableEntries expression="row1.newColumn " name="value" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;Z1AUSPM Segment&quot;" name="description" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.body " name="value" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;input ZXMATM01&quot;" name="description" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="newColumn" nullable="true" type="id_String"/>
+        <mapperTableEntries name="body" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="160">
+  <node componentName="tPostgresqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_rt7xYOQBEe2th4_ee3b5BQ"/>
@@ -815,7 +376,7 @@
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;adm.oho&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:03pg3OjoMIcx2FMo7OdKqt+oTMA30j61Tyarap/iZe/YTfC3kLI="/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:enuMwogUzXbjLxYC6uSRBb/8J2awFwUna1KkWkVhaOn3zf2h7k4="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rest_results&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -898,20 +459,6 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_1"/>
-    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
-    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="400"/>
-    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" show="false" value="200"/>
-    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
-    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
-    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
-    <elementParameter field="TEXT" name="LABEL" value="tRRP_01"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tRESTResponse_1">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="FLOW" label="tRRQ_01TtM_01" lineStyle="0" metaname="tRRQ_01TtM_01" offsetLabelX="0" offsetLabelY="0" source="tRESTRequest_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRRQ_01TtM_01"/>
@@ -920,7 +467,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outp1"/>
   </connection>
-  <connection connectorName="FLOW" label="outpp3" lineStyle="0" metaname="outpp3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tXMLMap_1">
+  <connection connectorName="FLOW" label="outpp3" lineStyle="0" metaname="outpp3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outpp3"/>
   </connection>
@@ -949,10 +496,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ouptfg"/>
   </connection>
-  <connection connectorName="FLOW" label="outtt" lineStyle="0" metaname="outtt" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tConvertType_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="outtt"/>
-  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -967,13 +510,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b7315120-62a0-4d11-8c0a-0d2ff5ff1c1f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GbN6cbAK5t8xmwSUBxrcEtpyXdIowR4q/8RRJHtaMirFgV7MfhgrEv+aMEhpzz9e9gNz0vbiasPH&#13;
-Bp5H6p1wiw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f45d2418-5b6f-4b0d-903a-10a3ef421deb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XM7LYcXu3eUy0oq2lKdl5708/+OHH4a6KAfvDN+9XFHc7k/OFTfMts99YoyS/vLL5ifAMkQI07o6&#13;
-VLLM9/8+aA==</DigestValue></Reference></SignedInfo><SignatureValue>AYJltBjypR+CfuqZEKemOMAln4uFTbVQQKV9/UO5qFYQ0Ko2xf4UOnbNmikN2Lmq/YdTCnaSGh86&#13;
-+ulmTRhZeY/3F0FzxcmdlmQARyYKj0nB2dz0tCgdGNJplUhBds11WIzexajDwzHFQSZNijdsyZlj&#13;
-eiOUgrtzKOd6P1GvFEL/VfECa60p924x7VAPGWiYY2PXjxslbbLZOhDzy0NSMGC9tFmUJx9bTJ6a&#13;
-zAxSELvkxzpvYdybBZbRgDFm+Y779p0/G4970UOsV3wg+pAlHrFeP1TxDqw+zfbiifMjxoNZtgvK&#13;
-WiH8c2VHcguO7GxTEeSGuQqug+me5ix3N0XDKw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3463b5d6-6fa2-4ecd-9e12-fae5723a04c5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RmvNbUKipNpakuOJpBN5O8/ao/n/fkzdolZkPWkYaUO3hasyEO5cu235kWYN3Q+ZpCWg2jzN0X6b&#13;
+wGnf8ryBLg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5fa19ed1-9435-41f3-9fa5-8300160ca40d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lf5wuEJ1Xh0IJ2mgxXtD9eCxpxFIJO7TtlYFm4/uo71GuqjiazCpAfPFm8GY1MA15Hq9QR4uuox3&#13;
+YXTcoU+/4w==</DigestValue></Reference></SignedInfo><SignatureValue>L0velnWitmc/j0hL3KB55Ct5Cou5/H05z24FqUkINrlf4xnPQIRZiDfQqN6twlpc5frBDxci09q7&#13;
+8oRBoH9SrBua5fl3BDslzGnapMrYZt/Rhub1lO5DxXSwLDr+dYqer7tmtKBGBixTnFpePIlRjhMz&#13;
+Avin7+HIMikE3D9Mmr4HrkIlqAiAxzzvpaeiK86BS+YQH+yHcfk833k2DdIv4BxR4dNZ53dJ002w&#13;
+SS9oMjZaBcfST/58oJxZ77/noH1cwVdbLzxCvZJluKzsLgce9wSMjHeiTK0UZovNddGUFgLbrftT&#13;
+X/y2n15ZK+PGByPVHZJqNiXWS2Pq0xuaj/Q6Ng==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -995,4 +538,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f45d2418-5b6f-4b0d-903a-10a3ef421deb" Target="#_b7315120-62a0-4d11-8c0a-0d2ff5ff1c1f"><Timestamp>2023-04-28 06:59:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5fa19ed1-9435-41f3-9fa5-8300160ca40d" Target="#_3463b5d6-6fa2-4ecd-9e12-fae5723a04c5"><Timestamp>2023-04-28 07:25:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
