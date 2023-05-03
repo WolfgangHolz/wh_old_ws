@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:bPP4nNVdkOk8M6+jYkOjaG28BRKwUAoxsJNNPQ5u"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:SEEUgHZGtgFAJfqdl8NgPiy6721auy7ozi5OzSMi"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:oR6N/dL7jWzuzUR9IHUyvqX1wOXZL0vPFbpZ2C0K"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:hOcFEfs3eUVPPhsloTDIMrhdxkKeAK/3+PKLmc+F"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -156,6 +156,8 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out" name="out">
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="D_1153" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="D_1154" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" multiLoops="true" name="row2">
@@ -244,7 +246,7 @@
                 <children name="D_1082" type="id_String" xpath="row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/D_1082"/>
                 <children name="D_1229" type="id_Integer" xpath="row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/D_1229"/>
                 <children name="C_C212" type="id_String" xpath="row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212">
-                  <children name="D_7140" outgoingConnections="//@node.2/@nodeData/@connections.5" type="id_String" xpath="row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140"/>
+                  <children lookupOutgoingConnections="//@node.2/@nodeData/@connections.6" name="D_7140" outgoingConnections="//@node.2/@nodeData/@connections.5" type="id_String" xpath="row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140"/>
                 </children>
               </children>
               <children name="S_IMD" type="id_String" xpath="row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_IMD">
@@ -323,6 +325,171 @@
           </children>
         </nodes>
       </inputTrees>
+      <inputTrees activateCondensedTool="true" innerJoin="true" lookup="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4">
+        <nodes expression="" name="newColumn" type="id_Document" xpath="row4/newColumn">
+          <children main="true" name="XMLFACT-ORDERS" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS">
+            <children name="xsi:noNamespaceSchemaLocation" nodeType="ATTRIBUT" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/@xsi:noNamespaceSchemaLocation"/>
+            <children name="S_BGM" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_BGM">
+              <children name="C_C002" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_BGM/C_C002">
+                <children name="D_1001" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/S_BGM/C_C002/D_1001"/>
+                <children name="D_1000" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_BGM/C_C002/D_1000"/>
+              </children>
+              <children name="C_C106" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_BGM/C_C106">
+                <children name="D_1004" type="id_Long" xpath="row4.newColumn:/XMLFACT-ORDERS/S_BGM/C_C106/D_1004"/>
+              </children>
+            </children>
+            <children name="S_DTM" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_DTM">
+              <children name="C_C507" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_DTM/C_C507">
+                <children name="D_2005" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/S_DTM/C_C507/D_2005"/>
+                <children name="D_2380" type="id_Long" xpath="row4.newColumn:/XMLFACT-ORDERS/S_DTM/C_C507/D_2380"/>
+                <children name="D_2379" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/S_DTM/C_C507/D_2379"/>
+              </children>
+            </children>
+            <children name="S_IMD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_IMD">
+              <children name="C_C273" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/S_IMD/C_C273">
+                <children name="D_7009" type="id_Character" xpath="row4.newColumn:/XMLFACT-ORDERS/S_IMD/C_C273/D_7009"/>
+                <children name="D_3055" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/S_IMD/C_C273/D_3055"/>
+              </children>
+            </children>
+            <children main="true" name="G_RFF" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF">
+              <children loop="true" main="true" name="S_RFF" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_RFF">
+                <children name="C_C506" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506">
+                  <children name="D_1153" outgoingConnections="//@node.2/@nodeData/@connections.7" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1153"/>
+                  <children name="D_1154" outgoingConnections="//@node.2/@nodeData/@connections.8" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1154"/>
+                </children>
+              </children>
+              <children name="S_DTM" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_DTM">
+                <children name="C_C507" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507">
+                  <children name="D_2005" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507/D_2005"/>
+                  <children name="D_2380" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507/D_2380"/>
+                  <children name="D_2379" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_DTM/C_C507/D_2379"/>
+                </children>
+              </children>
+            </children>
+            <children name="G_NAD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD">
+              <children name="S_NAD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD">
+                <children name="D_3035" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3035"/>
+                <children name="C_C082" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C082">
+                  <children name="D_3039" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C082/D_3039"/>
+                  <children name="D_3055" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C082/D_3055"/>
+                </children>
+                <children name="C_C058" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C058">
+                  <children name="D_3124" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C058/D_3124"/>
+                </children>
+                <children name="C_C059" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C059">
+                  <children name="D_3042" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/C_C059/D_3042"/>
+                </children>
+                <children name="D_3164" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3164"/>
+                <children name="D_3251" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3251"/>
+                <children name="D_3207" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_NAD/D_3207"/>
+              </children>
+              <children name="G_NAD-CTA" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA">
+                <children name="S_CTA" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA">
+                  <children name="D_3139" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/D_3139"/>
+                  <children name="C_C056" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/C_C056">
+                    <children name="D_3413" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/C_C056/D_3413"/>
+                    <children name="D_3412" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_CTA/C_C056/D_3412"/>
+                  </children>
+                </children>
+                <children name="S_COM" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM">
+                  <children name="C_C076" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM/C_C076">
+                    <children name="D_3148" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM/C_C076/D_3148"/>
+                    <children name="D_3155" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/G_NAD-CTA/S_COM/C_C076/D_3155"/>
+                  </children>
+                </children>
+              </children>
+              <children name="S_LOC" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_LOC">
+                <children name="D_3227" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_LOC/D_3227"/>
+                <children name="C_C517" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_LOC/C_C517">
+                  <children name="D_3225" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_LOC/C_C517/D_3225"/>
+                  <children name="D_3055" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_NAD/S_LOC/C_C517/D_3055"/>
+                </children>
+              </children>
+            </children>
+            <children name="G_LIN" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN">
+              <children name="S_LIN" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN">
+                <children name="D_1082" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/D_1082"/>
+                <children name="D_1229" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/D_1229"/>
+                <children name="C_C212" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212">
+                  <children expression="[row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140]" lookupIncomingConnections="//@node.2/@nodeData/@connections.6" name="D_7140" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140"/>
+                </children>
+              </children>
+              <children name="S_IMD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_IMD">
+                <children name="C_C273" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273">
+                  <children name="D_7008" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273/D_7008"/>
+                  <children name="D_7009" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273/D_7009"/>
+                  <children name="D_3055" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_IMD/C_C273/D_3055"/>
+                </children>
+              </children>
+              <children name="S_QTY" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_QTY">
+                <children name="C_C186" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186">
+                  <children name="D_6063" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186/D_6063"/>
+                  <children name="D_6060" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186/D_6060"/>
+                  <children name="D_6411" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_QTY/C_C186/D_6411"/>
+                </children>
+              </children>
+              <children name="S_PCD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_PCD">
+                <children name="C_C501" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501">
+                  <children name="D_5245" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501/D_5245"/>
+                  <children name="D_5482" type="id_Float" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501/D_5482"/>
+                  <children name="D_5249" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/S_PCD/C_C501/D_5249"/>
+                </children>
+              </children>
+              <children name="G_LIN-PAT" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT">
+                <children name="S_PAT" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT">
+                  <children name="D_4279" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/D_4279"/>
+                  <children name="C_C110" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/C_C110">
+                    <children name="D_4277" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/C_C110/D_4277"/>
+                    <children name="D_4276" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAT/S_PAT/C_C110/D_4276"/>
+                  </children>
+                </children>
+              </children>
+              <children name="G_LIN-PRI" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI">
+                <children name="S_PRI" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI">
+                  <children name="C_C509" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509">
+                    <children name="D_5125" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5125"/>
+                    <children name="D_5118" type="id_Float" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5118"/>
+                    <children name="D_5375" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5375"/>
+                    <children name="D_5387" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5387"/>
+                    <children name="D_5284" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5284"/>
+                    <children name="D_6411" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_6411"/>
+                  </children>
+                </children>
+                <children name="S_CUX" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX">
+                  <children name="C_C504" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504">
+                    <children name="D_6347" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504/D_6347"/>
+                    <children name="D_6345" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504/D_6345"/>
+                    <children name="D_6343" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_CUX/C_C504/D_6343"/>
+                  </children>
+                </children>
+                <children name="S_DTM" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM">
+                  <children name="C_C507" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507">
+                    <children name="D_2005" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2005"/>
+                    <children name="D_2380" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2380"/>
+                    <children name="D_2379" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_DTM/C_C507/D_2379"/>
+                  </children>
+                </children>
+              </children>
+              <children name="G_LIN-PAC" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC">
+                <children name="S_PAC" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC">
+                  <children name="C_C202" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC/C_C202">
+                    <children name="D_3055" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC/C_C202/D_3055"/>
+                    <children name="D_7064" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PAC/S_PAC/C_C202/D_7064"/>
+                  </children>
+                </children>
+              </children>
+              <children name="G_LIN-TOD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD">
+                <children name="S_TOD" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD">
+                  <children name="D_4055" type="id_Integer" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD/D_4055"/>
+                  <children name="C_C100" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD/C_C100">
+                    <children name="D_4052" type="id_String" xpath="row4.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-TOD/S_TOD/C_C100/D_4052"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+      </inputTrees>
       <outputTrees name="out">
         <nodes expression="" name="newColumn" pattern="" type="id_Document" xpath="out/newColumn">
           <children expression="" inputLoopNodesTable="//@node.2/@nodeData/@outputTrees.0/@inputLoopNodesTables.0" loop="true" main="true" name="root" type="id_String" xpath="out.newColumn:/root" xsi:type="TalendXMLMap:OutputTreeNode">
@@ -331,9 +498,11 @@
             <children expression="[row2.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5125]" incomingConnections="//@node.2/@nodeData/@connections.2" name="D_5125" type="id_String" xpath="out.newColumn:/root/D_5125" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children expression="[row2.newColumn:/XMLFACT-ORDERS/G_LIN/G_LIN-PRI/S_PRI/C_C509/D_5118]" incomingConnections="//@node.2/@nodeData/@connections.3" name="D_5118" type="id_Float" xpath="out.newColumn:/root/D_5118" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children expression="[row2.newColumn:/XMLFACT-ORDERS/S_BGM/C_C106/D_1004]" incomingConnections="//@node.2/@nodeData/@connections.4" name="D_1004" type="id_Long" xpath="out.newColumn:/root/D_1004" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="[row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140]" incomingConnections="//@node.2/@nodeData/@connections.5" name="D_7140" type="id_String" xpath="out.newColumn:/root/D_7140" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="[row2.newColumn:/XMLFACT-ORDERS/G_LIN/S_LIN/C_C212/D_7140] " incomingConnections="//@node.2/@nodeData/@connections.5" name="D_7140" type="id_String" xpath="out.newColumn:/root/D_7140" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
+        <nodes expression="[row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1153]" incomingConnections="//@node.2/@nodeData/@connections.7" name="D_1153" type="id_String" xpath="out/D_1153"/>
+        <nodes expression="[row4.newColumn:/XMLFACT-ORDERS/G_RFF/S_RFF/C_C506/D_1154]" incomingConnections="//@node.2/@nodeData/@connections.8" name="D_1154" type="id_Integer" xpath="out/D_1154"/>
         <inputLoopNodesTables inputloopnodes="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.6/@children.5/@children.2"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
@@ -343,6 +512,9 @@
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.6/@children.5/@children.0/@children.0/@children.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.1/@children.1/@children.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.6/@children.0/@children.2/@children.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.6/@children.0/@children.2/@children.0" target="//@node.2/@nodeData/@inputTrees.1/@nodes.0/@children.0/@children.6/@children.0/@children.2/@children.0" xsi:type="TalendXMLMap:LookupConnection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.1/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.1/@nodes.0/@children.0/@children.4/@children.0/@children.0/@children.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
@@ -369,6 +541,41 @@
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="VALUE" value="&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;XMLFACT-ORDERS xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xsi:noNamespaceSchemaLocation=\&quot;XMLFACT-ORDERS.xsd\&quot;&gt;&lt;S_BGM&gt;&lt;C_C002&gt;&lt;D_1001&gt;230&lt;/D_1001&gt;&lt;D_1000&gt;ORDERCHANGE&lt;/D_1000&gt;&lt;/C_C002&gt;&lt;C_C106&gt;&lt;D_1004&gt;2212071746&lt;/D_1004&gt;&lt;/C_C106&gt;&lt;/S_BGM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;171&lt;/D_2005&gt;&lt;D_2380&gt;2212071746&lt;/D_2380&gt;&lt;D_2379&gt;201&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;S&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;G_RFF&gt;&lt;S_RFF&gt;&lt;C_C506&gt;&lt;D_1153&gt;ON&lt;/D_1153&gt;&lt;D_1154&gt;189176&lt;/D_1154&gt;&lt;/C_C506&gt;&lt;/S_RFF&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;4&lt;/D_2005&gt;&lt;D_2380&gt;221207&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;42&lt;/D_2005&gt;&lt;D_2380&gt;210921&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_RFF&gt;&lt;G_NAD&gt;&lt;S_NAD&gt;&lt;D_3035&gt;BY&lt;/D_3035&gt;&lt;C_C082&gt;&lt;D_3039&gt;CS&lt;/D_3039&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C082&gt;&lt;C_C058&gt;&lt;D_3124&gt;\u00C5\u00A0KODA AUTO a.s.&lt;/D_3124&gt;&lt;D_3124&gt;T\u00C5\u2122. V\u00C3\u00A1clava Klementa 869&lt;/D_3124&gt;&lt;/C_C058&gt;&lt;C_C059&gt;&lt;D_3042&gt;u M\u00C4\u203Astsk\u00C3\u00A9ho soudu v Praze pod spisovou zna\u00C4\uFFFDkou B 332&lt;/D_3042&gt;&lt;/C_C059&gt;&lt;D_3164&gt;293 60 Mlad\u00C3\u00A1 Boleslav, \u00C4\u0152esk\u00C3\u00A1 republika&lt;/D_3164&gt;&lt;D_3251&gt;I\u00C4\u0152O: 00177041, zapsan\u00C3\u00A1 v obchodn\u00C3\u00ADm rejst\u00C5\u2122\u00C3\u00ADku&lt;/D_3251&gt;&lt;D_3207&gt;CZ&lt;/D_3207&gt;&lt;/S_NAD&gt;&lt;G_NAD-CTA&gt;&lt;S_CTA&gt;&lt;D_3139&gt;AE&lt;/D_3139&gt;&lt;C_C056&gt;&lt;D_3413&gt;O8AD&lt;/D_3413&gt;&lt;D_3412&gt;DUFKOVA,KAROLINA       &lt;/D_3412&gt;&lt;/C_C056&gt;&lt;/S_CTA&gt;&lt;S_COM&gt;&lt;C_C076&gt;&lt;D_3148/&gt;&lt;D_3155&gt;TE&lt;/D_3155&gt;&lt;/C_C076&gt;&lt;/S_COM&gt;&lt;/G_NAD-CTA&gt;&lt;/G_NAD&gt;&lt;G_NAD&gt;&lt;S_NAD&gt;&lt;D_3035&gt;SE&lt;/D_3035&gt;&lt;C_C082&gt;&lt;D_3039&gt;0001425200&lt;/D_3039&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C082&gt;&lt;/S_NAD&gt;&lt;S_LOC&gt;&lt;D_3227&gt;1&lt;/D_3227&gt;&lt;C_C517&gt;&lt;D_3225&gt;360556542&lt;/D_3225&gt;&lt;D_3055&gt;16&lt;/D_3055&gt;&lt;/C_C517&gt;&lt;/S_LOC&gt;&lt;/G_NAD&gt;&lt;G_LIN&gt;&lt;S_LIN&gt;&lt;D_1082&gt;00001&lt;/D_1082&gt;&lt;D_1229&gt;7&lt;/D_1229&gt;&lt;C_C212&gt;&lt;D_7140&gt; 5E3 601 025          &lt;/D_7140&gt;&lt;/C_C212&gt;&lt;/S_LIN&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7008&gt;ALLOY WHEEL                   &lt;/D_7008&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;0455&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_QTY&gt;&lt;C_C186&gt;&lt;D_6063&gt;11&lt;/D_6063&gt;&lt;D_6060&gt;0&lt;/D_6060&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C186&gt;&lt;/S_QTY&gt;&lt;S_PCD&gt;&lt;C_C501&gt;&lt;D_5245&gt;16&lt;/D_5245&gt;&lt;D_5482&gt;80.000&lt;/D_5482&gt;&lt;D_5249&gt;1&lt;/D_5249&gt;&lt;/C_C501&gt;&lt;/S_PCD&gt;&lt;G_LIN-PAT&gt;&lt;S_PAT&gt;&lt;D_4279&gt;35&lt;/D_4279&gt;&lt;C_C110&gt;&lt;D_4277&gt;7&lt;/D_4277&gt;&lt;D_4276&gt;23&lt;/D_4276&gt;&lt;/C_C110&gt;&lt;/S_PAT&gt;&lt;/G_LIN-PAT&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;INF&lt;/D_5125&gt;&lt;D_5118&gt;3413.000&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;AAA&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;AAQ&lt;/D_5125&gt;&lt;D_5118&gt;5890.900&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;CON&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;299&lt;/D_2005&gt;&lt;D_2380&gt;20220331&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;300&lt;/D_2005&gt;&lt;D_2380&gt;20220101&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PAC&gt;&lt;S_PAC&gt;&lt;C_C202&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;D_7064&gt;  &lt;/D_7064&gt;&lt;/C_C202&gt;&lt;/S_PAC&gt;&lt;/G_LIN-PAC&gt;&lt;G_LIN-TOD&gt;&lt;S_TOD&gt;&lt;D_4055&gt;6&lt;/D_4055&gt;&lt;C_C100&gt;&lt;D_4052&gt;AP&lt;/D_4052&gt;&lt;/C_C100&gt;&lt;/S_TOD&gt;&lt;/G_LIN-TOD&gt;&lt;/G_LIN&gt;&lt;G_LIN&gt;&lt;S_LIN&gt;&lt;D_1082&gt;00001&lt;/D_1082&gt;&lt;D_1229&gt;7&lt;/D_1229&gt;&lt;C_C212&gt;&lt;D_7140&gt; 5E3 601 025          &lt;/D_7140&gt;&lt;/C_C212&gt;&lt;/S_LIN&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7008&gt;ALLOY WHEEL                   &lt;/D_7008&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;0455&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_QTY&gt;&lt;C_C186&gt;&lt;D_6063&gt;11&lt;/D_6063&gt;&lt;D_6060&gt;0&lt;/D_6060&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C186&gt;&lt;/S_QTY&gt;&lt;S_PCD&gt;&lt;C_C501&gt;&lt;D_5245&gt;16&lt;/D_5245&gt;&lt;D_5482&gt;80.000&lt;/D_5482&gt;&lt;D_5249&gt;1&lt;/D_5249&gt;&lt;/C_C501&gt;&lt;/S_PCD&gt;&lt;G_LIN-PAT&gt;&lt;S_PAT&gt;&lt;D_4279&gt;35&lt;/D_4279&gt;&lt;C_C110&gt;&lt;D_4277&gt;7&lt;/D_4277&gt;&lt;D_4276&gt;23&lt;/D_4276&gt;&lt;/C_C110&gt;&lt;/S_PAT&gt;&lt;/G_LIN-PAT&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;INF&lt;/D_5125&gt;&lt;D_5118&gt;3413.000&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;AAA&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;AAQ&lt;/D_5125&gt;&lt;D_5118&gt;6175.680&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;CON&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;299&lt;/D_2005&gt;&lt;D_2380&gt;20220420&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;300&lt;/D_2005&gt;&lt;D_2380&gt;20220401&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PAC&gt;&lt;S_PAC&gt;&lt;C_C202&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;D_7064&gt;  &lt;/D_7064&gt;&lt;/C_C202&gt;&lt;/S_PAC&gt;&lt;/G_LIN-PAC&gt;&lt;G_LIN-TOD&gt;&lt;S_TOD&gt;&lt;D_4055&gt;6&lt;/D_4055&gt;&lt;C_C100&gt;&lt;D_4052&gt;AP&lt;/D_4052&gt;&lt;/C_C100&gt;&lt;/S_TOD&gt;&lt;/G_LIN-TOD&gt;&lt;/G_LIN&gt;&lt;/XMLFACT-ORDERS&gt;&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_2"/>
+    <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
+    <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
+    <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
+    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tConvertType_2">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -381,18 +588,26 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
   </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tConvertType_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tConvertType_2" offsetLabelX="0" offsetLabelY="0" source="tConvertType_2" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f66cefae-3940-4b1c-906a-a91044b0e3c8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0loC7XXq89oNl27IzodI6KoY7yvDziq7e0w0SBDtiE6/CriU3uvC4NADLRe2ANl4+uCaP9h+dbe8&#13;
-LCRXn3uatg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0e87395e-3cb1-4d43-954c-c170757494a1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MTKqs+AkLR8ge6YR1M7SOkRhEruwNKup/pUN4RDS9/zLr0Cqg0hYuOZealaecMPoxyep15t8QRPP&#13;
-ehn+C3feUw==</DigestValue></Reference></SignedInfo><SignatureValue>MtRzRJLR1+moaQzZgk2BJxQt4vk4kzgg6gGNzBIPrgbbY6T3OXPNZP5nxKPKeCNYfkR+WkZJUhSY&#13;
-wMgYF8mDTmn+zEn1eXOqT0H+lB+8EGRvWunbHXbvYsmQyi8YvuxqZ/yPJfL3+k8gawJ22b5XvmSG&#13;
-eV3HtfO2k1WfoRzdShhMgTSsxtDTnODoODb8hs1mekYrw4ERESAI+frUBOtQkBbBiEMTo3n87jOo&#13;
-CrtqQRqKM1M8nPPasqJyyqs186e/OiB0ZFXQxePfcJm9Edij9+7mKtxUbrYRjuWC8hdCcv9PWJ9k&#13;
-KThOFQ/WirymVsJeB/2kuOdMF/HvzsdMmkORTg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_93d1225b-b42a-46fc-90c7-676e154285d3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lOk9G68NNc4UgPObNzYwOuL2kueVv4i+N2wigo98a8ciytpXEPSI0tz0RGf2XamPkIgtLIMGwmV3&#13;
+YH1jMWKSWg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_069bb9fb-0238-4de6-9a83-558d782f3c6a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WGUFMMUkuCY+aFsLH/d1XtHUIF94xRLd6zgqezhogoAbZWzGnibEFb3Xy4eTMvhvwe6e7qXIAHqH&#13;
+AQ1G/YzS6A==</DigestValue></Reference></SignedInfo><SignatureValue>e+C3S+sVrbTkW1BJ211aotq+tVbOWpQX3nqc2uGSnNwytFBDrMAnnhJxHr+d3ORfaYHIL91svtcY&#13;
+0HBMekmWYWIxFzKLuwpKdnLq+aOcpw6xQzo4Ekzc2jDQka7IlIPE6wZjWvkNhoe5WIsyg1yQfvdL&#13;
+AwOsCFd9jFMF2hgxtQKHrhQYIXblhF/tVwlHpK6TJut1h9jjstkeNCKC9MjCjrXi1/qtKYf+kKMg&#13;
+GSF0uO688Euk3pvdDH0biNC1ZvphDe/4FgC+wQgRFiIlWegYKiUfMzSu6rOP6GtJtB9HqfxuesS6&#13;
+kZYefbYH8dsY8QD02HHrhfConO96DwZQhojZ6w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -414,4 +629,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0e87395e-3cb1-4d43-954c-c170757494a1" Target="#_f66cefae-3940-4b1c-906a-a91044b0e3c8"><Timestamp>2023-05-03 15:18:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_069bb9fb-0238-4de6-9a83-558d782f3c6a" Target="#_93d1225b-b42a-46fc-90c7-676e154285d3"><Timestamp>2023-05-03 15:21:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
