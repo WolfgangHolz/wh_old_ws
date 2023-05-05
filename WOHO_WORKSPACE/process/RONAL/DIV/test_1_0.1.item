@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:X2nzfzbg5mAshGPeOY/4EYHSuO7nMdvCuh54lE7P"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:RFy0lEURhq9Xyzk1pNad4WflqI6W09kFX/0snOJE"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:K9qO1HzMk2exqHsxIGUOkuDjc7qpdcNsCxDeltAr"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:1xccsNwYcCdyvwWvLSGP5DJQWu73gze2usUsDBw1"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -115,6 +115,7 @@
   </parameters>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
     <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
     <elementParameter field="TABLE" name="VALUES">
@@ -134,6 +135,7 @@
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
     <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
@@ -150,6 +152,7 @@
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
@@ -537,6 +540,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -559,27 +563,9 @@
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-    <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
-      <elementValue elementRef="VALUE" value="&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;XMLFACT-ORDERS xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xsi:noNamespaceSchemaLocation=\&quot;XMLFACT-ORDERS.xsd\&quot;&gt;&lt;S_BGM&gt;&lt;C_C002&gt;&lt;D_1001&gt;230&lt;/D_1001&gt;&lt;D_1000&gt;ORDERCHANGE&lt;/D_1000&gt;&lt;/C_C002&gt;&lt;C_C106&gt;&lt;D_1004&gt;2212071746&lt;/D_1004&gt;&lt;/C_C106&gt;&lt;/S_BGM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;171&lt;/D_2005&gt;&lt;D_2380&gt;2212071746&lt;/D_2380&gt;&lt;D_2379&gt;201&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;S&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;G_RFF&gt;&lt;S_RFF&gt;&lt;C_C506&gt;&lt;D_1153&gt;ON&lt;/D_1153&gt;&lt;D_1154&gt;189176&lt;/D_1154&gt;&lt;/C_C506&gt;&lt;/S_RFF&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;4&lt;/D_2005&gt;&lt;D_2380&gt;221207&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;42&lt;/D_2005&gt;&lt;D_2380&gt;210921&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_RFF&gt;&lt;G_NAD&gt;&lt;S_NAD&gt;&lt;D_3035&gt;BY&lt;/D_3035&gt;&lt;C_C082&gt;&lt;D_3039&gt;CS&lt;/D_3039&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C082&gt;&lt;C_C058&gt;&lt;D_3124&gt;\u00C5\u00A0KODA AUTO a.s.&lt;/D_3124&gt;&lt;D_3124&gt;T\u00C5\u2122. V\u00C3\u00A1clava Klementa 869&lt;/D_3124&gt;&lt;/C_C058&gt;&lt;C_C059&gt;&lt;D_3042&gt;u M\u00C4\u203Astsk\u00C3\u00A9ho soudu v Praze pod spisovou zna\u00C4\uFFFDkou B 332&lt;/D_3042&gt;&lt;/C_C059&gt;&lt;D_3164&gt;293 60 Mlad\u00C3\u00A1 Boleslav, \u00C4\u0152esk\u00C3\u00A1 republika&lt;/D_3164&gt;&lt;D_3251&gt;I\u00C4\u0152O: 00177041, zapsan\u00C3\u00A1 v obchodn\u00C3\u00ADm rejst\u00C5\u2122\u00C3\u00ADku&lt;/D_3251&gt;&lt;D_3207&gt;CZ&lt;/D_3207&gt;&lt;/S_NAD&gt;&lt;G_NAD-CTA&gt;&lt;S_CTA&gt;&lt;D_3139&gt;AE&lt;/D_3139&gt;&lt;C_C056&gt;&lt;D_3413&gt;O8AD&lt;/D_3413&gt;&lt;D_3412&gt;DUFKOVA,KAROLINA       &lt;/D_3412&gt;&lt;/C_C056&gt;&lt;/S_CTA&gt;&lt;S_COM&gt;&lt;C_C076&gt;&lt;D_3148/&gt;&lt;D_3155&gt;TE&lt;/D_3155&gt;&lt;/C_C076&gt;&lt;/S_COM&gt;&lt;/G_NAD-CTA&gt;&lt;/G_NAD&gt;&lt;G_NAD&gt;&lt;S_NAD&gt;&lt;D_3035&gt;SE&lt;/D_3035&gt;&lt;C_C082&gt;&lt;D_3039&gt;0001425200&lt;/D_3039&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C082&gt;&lt;/S_NAD&gt;&lt;S_LOC&gt;&lt;D_3227&gt;1&lt;/D_3227&gt;&lt;C_C517&gt;&lt;D_3225&gt;360556542&lt;/D_3225&gt;&lt;D_3055&gt;16&lt;/D_3055&gt;&lt;/C_C517&gt;&lt;/S_LOC&gt;&lt;/G_NAD&gt;&lt;G_LIN&gt;&lt;S_LIN&gt;&lt;D_1082&gt;00001&lt;/D_1082&gt;&lt;D_1229&gt;7&lt;/D_1229&gt;&lt;C_C212&gt;&lt;D_7140&gt; 5E3 601 025          &lt;/D_7140&gt;&lt;/C_C212&gt;&lt;/S_LIN&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7008&gt;ALLOY WHEEL                   &lt;/D_7008&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;0455&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_QTY&gt;&lt;C_C186&gt;&lt;D_6063&gt;11&lt;/D_6063&gt;&lt;D_6060&gt;0&lt;/D_6060&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C186&gt;&lt;/S_QTY&gt;&lt;S_PCD&gt;&lt;C_C501&gt;&lt;D_5245&gt;16&lt;/D_5245&gt;&lt;D_5482&gt;80.000&lt;/D_5482&gt;&lt;D_5249&gt;1&lt;/D_5249&gt;&lt;/C_C501&gt;&lt;/S_PCD&gt;&lt;G_LIN-PAT&gt;&lt;S_PAT&gt;&lt;D_4279&gt;35&lt;/D_4279&gt;&lt;C_C110&gt;&lt;D_4277&gt;7&lt;/D_4277&gt;&lt;D_4276&gt;23&lt;/D_4276&gt;&lt;/C_C110&gt;&lt;/S_PAT&gt;&lt;/G_LIN-PAT&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;INF&lt;/D_5125&gt;&lt;D_5118&gt;3413.000&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;AAA&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;AAQ&lt;/D_5125&gt;&lt;D_5118&gt;5890.900&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;CON&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;299&lt;/D_2005&gt;&lt;D_2380&gt;20220331&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;300&lt;/D_2005&gt;&lt;D_2380&gt;20220101&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PAC&gt;&lt;S_PAC&gt;&lt;C_C202&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;D_7064&gt;  &lt;/D_7064&gt;&lt;/C_C202&gt;&lt;/S_PAC&gt;&lt;/G_LIN-PAC&gt;&lt;G_LIN-TOD&gt;&lt;S_TOD&gt;&lt;D_4055&gt;6&lt;/D_4055&gt;&lt;C_C100&gt;&lt;D_4052&gt;AP&lt;/D_4052&gt;&lt;/C_C100&gt;&lt;/S_TOD&gt;&lt;/G_LIN-TOD&gt;&lt;/G_LIN&gt;&lt;G_LIN&gt;&lt;S_LIN&gt;&lt;D_1082&gt;00001&lt;/D_1082&gt;&lt;D_1229&gt;7&lt;/D_1229&gt;&lt;C_C212&gt;&lt;D_7140&gt; 5E3 601 025          &lt;/D_7140&gt;&lt;/C_C212&gt;&lt;/S_LIN&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7008&gt;ALLOY WHEEL                   &lt;/D_7008&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;0455&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_QTY&gt;&lt;C_C186&gt;&lt;D_6063&gt;11&lt;/D_6063&gt;&lt;D_6060&gt;0&lt;/D_6060&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C186&gt;&lt;/S_QTY&gt;&lt;S_PCD&gt;&lt;C_C501&gt;&lt;D_5245&gt;16&lt;/D_5245&gt;&lt;D_5482&gt;80.000&lt;/D_5482&gt;&lt;D_5249&gt;1&lt;/D_5249&gt;&lt;/C_C501&gt;&lt;/S_PCD&gt;&lt;G_LIN-PAT&gt;&lt;S_PAT&gt;&lt;D_4279&gt;35&lt;/D_4279&gt;&lt;C_C110&gt;&lt;D_4277&gt;7&lt;/D_4277&gt;&lt;D_4276&gt;23&lt;/D_4276&gt;&lt;/C_C110&gt;&lt;/S_PAT&gt;&lt;/G_LIN-PAT&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;INF&lt;/D_5125&gt;&lt;D_5118&gt;3413.000&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;AAA&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;AAQ&lt;/D_5125&gt;&lt;D_5118&gt;6175.680&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;CON&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;299&lt;/D_2005&gt;&lt;D_2380&gt;20220420&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;300&lt;/D_2005&gt;&lt;D_2380&gt;20220401&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PAC&gt;&lt;S_PAC&gt;&lt;C_C202&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;D_7064&gt;  &lt;/D_7064&gt;&lt;/C_C202&gt;&lt;/S_PAC&gt;&lt;/G_LIN-PAC&gt;&lt;G_LIN-TOD&gt;&lt;S_TOD&gt;&lt;D_4055&gt;6&lt;/D_4055&gt;&lt;C_C100&gt;&lt;D_4052&gt;AP&lt;/D_4052&gt;&lt;/C_C100&gt;&lt;/S_TOD&gt;&lt;/G_LIN-TOD&gt;&lt;/G_LIN&gt;&lt;/XMLFACT-ORDERS&gt;&quot;"/>
-    </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-    <elementParameter field="TABLE" name="INTABLE" show="false"/>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFixedFlowInput_2">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
     <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
@@ -621,14 +607,14 @@
     <elementParameter field="RADIO" name="AS_BYTEARRAY" show="false" value="false"/>
     <elementParameter field="RADIO" name="AS_INPUTSTREAM" show="false" value="false"/>
     <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
-    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value="42"/>
+    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value="14"/>
     <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" show="false" value="&quot;Structures/Jobs/test_1/tHMap_1/OutputWrapper.xml&quot;"/>
-    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="true"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
     <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="false"/>
     <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
     <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
     <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
     <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="false"/>
@@ -671,14 +657,14 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="row"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="out_1" name="tLogRow_2">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    <metadata connector="FLOW" label="Out_1" name="tLogRow_2">
+      <column comment="" key="false" length="-1" name="row" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="224">
@@ -695,14 +681,14 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="row"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_2" name="tLogRow_3">
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="row" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1312" posY="288">
@@ -719,34 +705,54 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="row"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Out_3" name="tLogRow_4">
+      <column comment="" key="false" length="-1" name="row" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="VALUE" value="&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;&lt;XMLFACT-ORDERS xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xsi:noNamespaceSchemaLocation=\&quot;XMLFACT-ORDERS.xsd\&quot;&gt;&lt;S_BGM&gt;&lt;C_C002&gt;&lt;D_1001&gt;230&lt;/D_1001&gt;&lt;D_1000&gt;ORDERCHANGE&lt;/D_1000&gt;&lt;/C_C002&gt;&lt;C_C106&gt;&lt;D_1004&gt;2212071746&lt;/D_1004&gt;&lt;/C_C106&gt;&lt;/S_BGM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;171&lt;/D_2005&gt;&lt;D_2380&gt;2212071746&lt;/D_2380&gt;&lt;D_2379&gt;201&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;S&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;G_RFF&gt;&lt;S_RFF&gt;&lt;C_C506&gt;&lt;D_1153&gt;ON&lt;/D_1153&gt;&lt;D_1154&gt;189176&lt;/D_1154&gt;&lt;/C_C506&gt;&lt;/S_RFF&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;4&lt;/D_2005&gt;&lt;D_2380&gt;221207&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;42&lt;/D_2005&gt;&lt;D_2380&gt;210921&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_RFF&gt;&lt;G_NAD&gt;&lt;S_NAD&gt;&lt;D_3035&gt;BY&lt;/D_3035&gt;&lt;C_C082&gt;&lt;D_3039&gt;CS&lt;/D_3039&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C082&gt;&lt;C_C058&gt;&lt;D_3124&gt;\u00C5\u00A0KODA AUTO a.s.&lt;/D_3124&gt;&lt;D_3124&gt;T\u00C5\u2122. V\u00C3\u00A1clava Klementa 869&lt;/D_3124&gt;&lt;/C_C058&gt;&lt;C_C059&gt;&lt;D_3042&gt;u M\u00C4\u203Astsk\u00C3\u00A9ho soudu v Praze pod spisovou zna\u00C4\uFFFDkou B 332&lt;/D_3042&gt;&lt;/C_C059&gt;&lt;D_3164&gt;293 60 Mlad\u00C3\u00A1 Boleslav, \u00C4\u0152esk\u00C3\u00A1 republika&lt;/D_3164&gt;&lt;D_3251&gt;I\u00C4\u0152O: 00177041, zapsan\u00C3\u00A1 v obchodn\u00C3\u00ADm rejst\u00C5\u2122\u00C3\u00ADku&lt;/D_3251&gt;&lt;D_3207&gt;CZ&lt;/D_3207&gt;&lt;/S_NAD&gt;&lt;G_NAD-CTA&gt;&lt;S_CTA&gt;&lt;D_3139&gt;AE&lt;/D_3139&gt;&lt;C_C056&gt;&lt;D_3413&gt;O8AD&lt;/D_3413&gt;&lt;D_3412&gt;DUFKOVA,KAROLINA       &lt;/D_3412&gt;&lt;/C_C056&gt;&lt;/S_CTA&gt;&lt;S_COM&gt;&lt;C_C076&gt;&lt;D_3148/&gt;&lt;D_3155&gt;TE&lt;/D_3155&gt;&lt;/C_C076&gt;&lt;/S_COM&gt;&lt;/G_NAD-CTA&gt;&lt;/G_NAD&gt;&lt;G_NAD&gt;&lt;S_NAD&gt;&lt;D_3035&gt;SE&lt;/D_3035&gt;&lt;C_C082&gt;&lt;D_3039&gt;0001425200&lt;/D_3039&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C082&gt;&lt;/S_NAD&gt;&lt;S_LOC&gt;&lt;D_3227&gt;1&lt;/D_3227&gt;&lt;C_C517&gt;&lt;D_3225&gt;360556542&lt;/D_3225&gt;&lt;D_3055&gt;16&lt;/D_3055&gt;&lt;/C_C517&gt;&lt;/S_LOC&gt;&lt;/G_NAD&gt;&lt;G_LIN&gt;&lt;S_LIN&gt;&lt;D_1082&gt;00001&lt;/D_1082&gt;&lt;D_1229&gt;7&lt;/D_1229&gt;&lt;C_C212&gt;&lt;D_7140&gt; 5E3 601 025          &lt;/D_7140&gt;&lt;/C_C212&gt;&lt;/S_LIN&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7008&gt;ALLOY WHEEL                   &lt;/D_7008&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;0455&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_QTY&gt;&lt;C_C186&gt;&lt;D_6063&gt;11&lt;/D_6063&gt;&lt;D_6060&gt;0&lt;/D_6060&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C186&gt;&lt;/S_QTY&gt;&lt;S_PCD&gt;&lt;C_C501&gt;&lt;D_5245&gt;16&lt;/D_5245&gt;&lt;D_5482&gt;80.000&lt;/D_5482&gt;&lt;D_5249&gt;1&lt;/D_5249&gt;&lt;/C_C501&gt;&lt;/S_PCD&gt;&lt;G_LIN-PAT&gt;&lt;S_PAT&gt;&lt;D_4279&gt;35&lt;/D_4279&gt;&lt;C_C110&gt;&lt;D_4277&gt;7&lt;/D_4277&gt;&lt;D_4276&gt;23&lt;/D_4276&gt;&lt;/C_C110&gt;&lt;/S_PAT&gt;&lt;/G_LIN-PAT&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;INF&lt;/D_5125&gt;&lt;D_5118&gt;3413.000&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;AAA&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;AAQ&lt;/D_5125&gt;&lt;D_5118&gt;5890.900&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;CON&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;299&lt;/D_2005&gt;&lt;D_2380&gt;20220331&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;300&lt;/D_2005&gt;&lt;D_2380&gt;20220101&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PAC&gt;&lt;S_PAC&gt;&lt;C_C202&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;D_7064&gt;  &lt;/D_7064&gt;&lt;/C_C202&gt;&lt;/S_PAC&gt;&lt;/G_LIN-PAC&gt;&lt;G_LIN-TOD&gt;&lt;S_TOD&gt;&lt;D_4055&gt;6&lt;/D_4055&gt;&lt;C_C100&gt;&lt;D_4052&gt;AP&lt;/D_4052&gt;&lt;/C_C100&gt;&lt;/S_TOD&gt;&lt;/G_LIN-TOD&gt;&lt;/G_LIN&gt;&lt;G_LIN&gt;&lt;S_LIN&gt;&lt;D_1082&gt;00001&lt;/D_1082&gt;&lt;D_1229&gt;7&lt;/D_1229&gt;&lt;C_C212&gt;&lt;D_7140&gt; 5E3 601 025          &lt;/D_7140&gt;&lt;/C_C212&gt;&lt;/S_LIN&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7008&gt;ALLOY WHEEL                   &lt;/D_7008&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_IMD&gt;&lt;C_C273&gt;&lt;D_7009&gt;0455&lt;/D_7009&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;/C_C273&gt;&lt;/S_IMD&gt;&lt;S_QTY&gt;&lt;C_C186&gt;&lt;D_6063&gt;11&lt;/D_6063&gt;&lt;D_6060&gt;0&lt;/D_6060&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C186&gt;&lt;/S_QTY&gt;&lt;S_PCD&gt;&lt;C_C501&gt;&lt;D_5245&gt;16&lt;/D_5245&gt;&lt;D_5482&gt;80.000&lt;/D_5482&gt;&lt;D_5249&gt;1&lt;/D_5249&gt;&lt;/C_C501&gt;&lt;/S_PCD&gt;&lt;G_LIN-PAT&gt;&lt;S_PAT&gt;&lt;D_4279&gt;35&lt;/D_4279&gt;&lt;C_C110&gt;&lt;D_4277&gt;7&lt;/D_4277&gt;&lt;D_4276&gt;23&lt;/D_4276&gt;&lt;/C_C110&gt;&lt;/S_PAT&gt;&lt;/G_LIN-PAT&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;INF&lt;/D_5125&gt;&lt;D_5118&gt;3413.000&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;AAA&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PRI&gt;&lt;S_PRI&gt;&lt;C_C509&gt;&lt;D_5125&gt;AAQ&lt;/D_5125&gt;&lt;D_5118&gt;6175.680&lt;/D_5118&gt;&lt;D_5375&gt;CT&lt;/D_5375&gt;&lt;D_5387&gt;CON&lt;/D_5387&gt;&lt;D_5284&gt;100&lt;/D_5284&gt;&lt;D_6411&gt;PCE&lt;/D_6411&gt;&lt;/C_C509&gt;&lt;/S_PRI&gt;&lt;S_CUX&gt;&lt;C_C504&gt;&lt;D_6347&gt;1&lt;/D_6347&gt;&lt;D_6345&gt;EUR&lt;/D_6345&gt;&lt;D_6343&gt;9&lt;/D_6343&gt;&lt;/C_C504&gt;&lt;/S_CUX&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;299&lt;/D_2005&gt;&lt;D_2380&gt;20220420&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;S_DTM&gt;&lt;C_C507&gt;&lt;D_2005&gt;300&lt;/D_2005&gt;&lt;D_2380&gt;20220401&lt;/D_2380&gt;&lt;D_2379&gt;102&lt;/D_2379&gt;&lt;/C_C507&gt;&lt;/S_DTM&gt;&lt;/G_LIN-PRI&gt;&lt;G_LIN-PAC&gt;&lt;S_PAC&gt;&lt;C_C202&gt;&lt;D_3055&gt;92&lt;/D_3055&gt;&lt;D_7064&gt;  &lt;/D_7064&gt;&lt;/C_C202&gt;&lt;/S_PAC&gt;&lt;/G_LIN-PAC&gt;&lt;G_LIN-TOD&gt;&lt;S_TOD&gt;&lt;D_4055&gt;6&lt;/D_4055&gt;&lt;C_C100&gt;&lt;D_4052&gt;AP&lt;/D_4052&gt;&lt;/C_C100&gt;&lt;/S_TOD&gt;&lt;/G_LIN-TOD&gt;&lt;/G_LIN&gt;&lt;/XMLFACT-ORDERS&gt;&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_2">
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
-  </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tConvertType_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tConvertType_2" offsetLabelX="0" offsetLabelY="0" source="tConvertType_2" target="tXMLMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tHMap_1">
@@ -754,31 +760,21 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
   </connection>
   <connection connectorName="FLOW" label="Out_1" lineStyle="0" metaname="Out_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tHMap_1" target="tLogRow_2">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="row"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_1"/>
   </connection>
   <connection connectorName="FLOW" label="Out_2" lineStyle="0" metaname="Out_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tHMap_1" target="tLogRow_3">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="row"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_2"/>
   </connection>
   <connection connectorName="FLOW" label="Out_3" lineStyle="0" metaname="Out_3" offsetLabelX="0" offsetLabelY="0" outputId="3" source="tHMap_1" target="tLogRow_4">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="row"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Out_3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFixedFlowInput_2" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_2" target="tConvertType_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
@@ -790,13 +786,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4739a793-16e7-4e43-8527-def062e66089"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hzayhcIZkFAguFgriDV6/siDs/BpdltIWUtWfbfzReN8GQBj0syYiHrNrhbPLzc553YrpCYp+ueB&#13;
-PloSyf975Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_33111523-91df-44e3-ae6f-ab026c2a9021"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>B+bE/tUZdhEWBokXiJNcqYXoJTc8TW/qtwoB9fN83KnUSFZpgliCheAeprPav1I69J3K8N1Q5vfj&#13;
-BjWNe7jk9g==</DigestValue></Reference></SignedInfo><SignatureValue>puEGvjdsp411nOOItN/LZm7kc2CvWxhc+F7WYRj8BwWMzmaWOXOl6AVlRCjjwg/Zsalc/pdouQ8R&#13;
-KKqcWbJaRCyifaEPzs6zEX1H2JKAp7EM9HHdYo18Xj/dbaioAS/FtgKZUIESc45nWD7qXFfWov1Y&#13;
-GfLBkO0cKYEkl4BHZSqkN0w3jOf9+mzZtUYZFTxnwaAIZ1UsOuFR/RtZk4zIpQt3vDtWLp+gpXMS&#13;
-LQ86BKYbiUdqcO6YGxTxEIEa78w7A2Ef1wcVI4ODXXqx5BpxxqbIvcwbgPiPtRWrgrxFom498t0n&#13;
-Aqas79MCCW+FQ4/aVFttoqBLkyYLxj2mL01opg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4e9a1cac-f624-40b7-b135-6cdadf013e7b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Arj6jFCovXSC3NO1g9wGg/zmru1YcyjyaA72Cq/+q+CIDIP21B1mkvZpZUHZtwhxLoBrXWNKCe3y&#13;
+Hb/VPhespQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e24dded7-35a6-418a-a646-a9fe0faf7d5b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SBikI9tO93OdjcTrJIY8LT92HHiIwGyYNTozrB3FfgwGLbWhlYJYZwT17bcKdNw/+PXt4FqXLAX/&#13;
+KyZXl8xF/A==</DigestValue></Reference></SignedInfo><SignatureValue>WUUyF1QWftvfntlyCNlpdOQmOGeTFSkNE4a0a3Nyc0rortzo/0k0/oDjVy8wknqYJ03eYx27NT07&#13;
+9dmBm9lxKb+5rj36LVYWTi5C3UOrVyFVotP4Q/YA5tLCNM+Dxz91H/FBpQDJL0ckV84e96jkrgtK&#13;
+TmiCXN2WTCSZrtaoLP3D9M5RHOH3QioTOHpJKr+sbZrTTuUqvqoT4bhqbvs9u8W7X8zIDu9EXKEc&#13;
+iCrBNJ42ZV6LMgCB4GoXYaAAn7tRijg1srTOVLJIAcd/6G+XgayEUk4UmvVBQLxfgUg6IzaWWAl8&#13;
+eVYBgSmtrV39Iz6kadjF7kdNHbHNzVhDOy80Vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -818,4 +819,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_33111523-91df-44e3-ae6f-ab026c2a9021" Target="#_4739a793-16e7-4e43-8527-def062e66089"><Timestamp>2023-05-04 13:35:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e24dded7-35a6-418a-a646-a9fe0faf7d5b" Target="#_4e9a1cac-f624-40b7-b135-6cdadf013e7b"><Timestamp>2023-05-05 06:53:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
