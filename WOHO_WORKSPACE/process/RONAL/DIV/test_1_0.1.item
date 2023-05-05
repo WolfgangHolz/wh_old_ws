@@ -46,7 +46,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:oREuKfr7PXChWV89UsH2vhQSrh/JTMf/yuukK1kD"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:EBtS8vQcOCI97qcbSvLAWpaPRppxnvR2zViwSfjx"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,7 +81,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:vnv4+86Ps1tB/VuqxEyRZp3uZciMWXl42K76Fwyl"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:xnIKShtBdmNsXsvgKV16ormqQXAsrU2xraWIJflQ"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -561,17 +561,45 @@
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="Out_1">
         <nodes expression="" name="row" pattern="" type="id_Document" xpath="Out_1/row">
-          <children loop="true" main="true" name="root" type="id_String" xpath="Out_1.row:/root"/>
+          <children main="true" name="root" type="id_String" xpath="Out_1.row:/root">
+            <children loop="true" main="true" name="row" type="id_String" xpath="Out_1.row:/root/row">
+              <children filterOutGoingConnections="//@node.17/@nodeData/@connections.5" name="XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1153" outgoingConnections="//@node.17/@nodeData/@connections.0" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1153"/>
+              <children name="XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1154" outgoingConnections="//@node.17/@nodeData/@connections.1" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1154"/>
+              <children name="XMLFACT-ORDERS_G_RFF_S_DTM_C_C507_D_2005" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_DTM_C_C507_D_2005"/>
+              <children name="XMLFACT-ORDERS_G_RFF_S_DTM_C_C507_D_2380" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_DTM_C_C507_D_2380"/>
+              <children filterOutGoingConnections="//@node.17/@nodeData/@connections.6" name="XMLFACT-ORDERS_G_NAD_S_NAD_D_3035" outgoingConnections="//@node.17/@nodeData/@connections.2" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_D_3035"/>
+              <children name="XMLFACT-ORDERS_G_NAD_S_NAD_C_C082_D_3039" outgoingConnections="//@node.17/@nodeData/@connections.3" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_C_C082_D_3039"/>
+              <children name="XMLFACT-ORDERS_G_NAD_G_NAD-CTA_S_CTA_C_C056_D_3412" outgoingConnections="//@node.17/@nodeData/@connections.4" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_G_NAD-CTA_S_CTA_C_C056_D_3412"/>
+              <children name="XMLFACT-ORDERS_G_NAD_S_LOC_D_3227" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_LOC_D_3227"/>
+              <children name="XMLFACT-ORDERS_G_NAD_S_LOC_C_C517_D_3225" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_LOC_C_C517_D_3225"/>
+              <children name="XMLFACT-ORDERS_G_LIN_S_LIN_D_1082" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_S_LIN_D_1082"/>
+              <children name="XMLFACT-ORDERS_G_LIN_S_LIN_C_C212_D_7140" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_S_LIN_C_C212_D_7140"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_5125" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_5125"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_5118" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_5118"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_5284" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_5284"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_6411" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_PRI_C_C509_D_6411"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_CUX_C_C504_D_6345" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_CUX_C_C504_D_6345"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_DTM_C_C507_D_2005" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_DTM_C_C507_D_2005"/>
+              <children name="XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_DTM_C_C507_D_2380" type="id_String" xpath="Out_1.row:/root/row/XMLFACT-ORDERS_G_LIN_G_LIN-PRI_S_DTM_C_C507_D_2380"/>
+            </children>
+          </children>
         </nodes>
       </inputTrees>
-      <outputTrees expressionFilter="" name="Out_11">
-        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1153]" name="D_1153" type="id_String" xpath="Out_11/D_1153"/>
-        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1154]" name="D_1154" type="id_String" xpath="Out_11/D_1154"/>
-        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_D_3035]" name="D_3035" type="id_String" xpath="Out_11/D_3035"/>
-        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_C_C082_D_3039]" name="D_3039" type="id_String" xpath="Out_11/D_3039"/>
-        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_G_NAD-CTA_S_CTA_C_C056_D_3412]" name="D_3412" type="id_String" xpath="Out_11/D_3412"/>
+      <outputTrees activateExpressionFilter="true" expressionFilter="[Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1153].equals(&quot;ON&quot;) &amp;&amp; [Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_D_3035].equals(&quot;BY&quot;)" filterIncomingConnections="//@node.17/@nodeData/@connections.5 //@node.17/@nodeData/@connections.6" name="Out_11">
+        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1153]" incomingConnections="//@node.17/@nodeData/@connections.0" name="D_1153" type="id_String" xpath="Out_11/D_1153"/>
+        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_RFF_S_RFF_C_C506_D_1154]" incomingConnections="//@node.17/@nodeData/@connections.1" name="D_1154" type="id_String" xpath="Out_11/D_1154"/>
+        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_D_3035]" incomingConnections="//@node.17/@nodeData/@connections.2" name="D_3035" type="id_String" xpath="Out_11/D_3035"/>
+        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_S_NAD_C_C082_D_3039]" incomingConnections="//@node.17/@nodeData/@connections.3" name="D_3039" type="id_String" xpath="Out_11/D_3039"/>
+        <nodes expression="[Out_1.row:/root/row/XMLFACT-ORDERS_G_NAD_G_NAD-CTA_S_CTA_C_C056_D_3412]" incomingConnections="//@node.17/@nodeData/@connections.4" name="D_3412" type="id_String" xpath="Out_11/D_3412"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.17/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.17/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.17/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.17/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.17/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.17/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.17/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.17/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
     </nodeData>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1824" posY="-64">
@@ -596,9 +624,9 @@
       <column comment="" key="false" length="-1" name="Einkaeufer" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="Out_11.D_1153.equals(&quot;ON&quot;)  &amp;&amp; Out_11.D_3035.equals(&quot;BY&quot;) " name="Out_21" sizeState="INTERMEDIATE">
+      <outputTables activateExpressionFilter="true" name="Out_21" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="context.loc_filename" name="Filename" nullable="true" type="id_String"/>
         <mapperTableEntries expression="context.loc_brand" name="Brand" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Out_11.D_1154 " name="Bestellnummer" nullable="true" type="id_String"/>
@@ -1226,13 +1254,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_47fccce6-2bc6-4443-a711-bae384ae2741"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lhWuMmZKe2b4QN59MhRFy4y1TGs9fCLBgBgunKGcIlPg772CQFT85GwOsbfY6HHAaP8LlgbwzJCC&#13;
-1zZ9FRrTIA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1a1d470d-bab5-4d0d-93d1-96c06460a35c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7ptc/SAUjexI/t6S7z+S7Kj8R0Eq5KsTLV9jyw2F5Y27mt70U8oIajVSCVox9hjeKaG5lM96hxld&#13;
-Uci06oD9MA==</DigestValue></Reference></SignedInfo><SignatureValue>UwjQL5KRasMiN2F1Z/P7wLZ9xGHGzMPZwVYL0xxtJ9faHj/9zZWxAUKvO/qrFOt5E8CDUUmeNwcb&#13;
-9plsW9UnOZB0qUNI+/yFm/bSjvwXrgVTWgMKDEoQ1DG1zwFyfyb+FMe/14+po9sHdo/YaWpSaSIS&#13;
-/LjfP+2YkET+Zxb4bvTtPMysTKy1x8lKmhfsydoUANomCGemps+8h3ffOEeMRa3Zj84tKHYYFxHl&#13;
-96j6k4XH38GVTJ0UrSFUdp2NYgNMZqh+Tssce7yJ6+A67Cd/3hucKmOSf5UnDtXMtAM1kBP6xqxq&#13;
-db2cN8CJdZs2YhkQctvLblrcHo6/EEVELBc/JQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e0c07f5d-1637-492d-be5a-82073078aa19"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6tpPtf6gKS9lbhGUoA6wOit56uar4bdpVYzdBWjVYeiprk5jtN5KAHMAybh15VH5iusZnlVL0lH6&#13;
+9PldBBiDsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f5e11584-393d-4414-8b40-a5723eae7d6c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Cvl7clZdWzKv+H4div7mPOfOinoI+CylbhL7WI7PCXt4ukrntaydPHx7aBXWbhb4bWOr/2bBx67Q&#13;
+6uDq6I+r1w==</DigestValue></Reference></SignedInfo><SignatureValue>gddvEG0OMb3n9Rw1o5URToq3qK2nsiwRYm1GCmPestf92/cbsrtrHQi44yUHS9vL7t2k1BTXGMfH&#13;
+bHNjzdFc2R0ESvEX91PTEv1Xq6j8kSMugllb/E0+YfC6hOLitPLRNf4Qp3oo6rRprTpeiwIK0Q3r&#13;
+HCQZaZAtHs/t5OHdpRqJmOgIZxJzsNDVdI3XoSfkpHzmB9NumOB5qgyX2Ba66dMGing4vQaodrqG&#13;
+jewRlhvoOCtz5+rpyDaBMNSB9dR0N4QpYhbYjIBDOvdVxp1f9i3cc2rfx+R5jTVD/VDJGoAVT9g8&#13;
+U7vZ7CrsgQDOb8TX6TB0JeL3KzKk5cZqYmEZsA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1254,4 +1282,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1a1d470d-bab5-4d0d-93d1-96c06460a35c" Target="#_47fccce6-2bc6-4443-a711-bae384ae2741"><Timestamp>2023-05-05 11:21:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f5e11584-393d-4414-8b40-a5723eae7d6c" Target="#_e0c07f5d-1637-492d-be5a-82073078aa19"><Timestamp>2023-05-05 11:24:24</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
