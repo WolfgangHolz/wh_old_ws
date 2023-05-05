@@ -46,7 +46,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:X9C7xNHRrR+0Kf7K1k4VoQpvlsjhSJYIbMxuS1TV"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:6mgkii+wvZ9R5Ae1URMFntsC9F5gzW6mi32xI/AU"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -81,7 +81,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+AhPmtHPIkdUIhu4JreIQPLI7JhwVhyRI2O599uN"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:QeUY5/pl7JNu+QBrkqJQ3MjymKJ5kMlbNajRZfGU"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -1313,8 +1313,8 @@
         <mapperTableEntries expression="row17.Preis_Menge " name="GesamtPreis_Menge" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row17.Preis_Einheit " name="GesamtPreis_Einheit" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row17.Preis_Waehrung " name="GesamtPreis_Waehrung" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row18.Datum " name="GueltigVon" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row19.Datum " name="GueltigBis" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="GueltigVon" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="GueltigBis" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="out_91" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Filename" nullable="true" type="id_String"/>
@@ -1325,16 +1325,16 @@
         <mapperTableEntries name="Lieferantennummer" nullable="true" type="id_String"/>
         <mapperTableEntries name="Bestelldatum_Neu" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row16.Preis_Typ.equals(&quot;INF&quot;) " innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row16" sizeState="INTERMEDIATE">
+      <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row16.Preis_Typ.equals(&quot;INF&quot;) " innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row16" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="out_91.Filename " name="Filename" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_91.Brand " name="Brand" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_91.Bestellnummer " name="Bestellnummer" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="" name="TeilenummerID" nullable="true" type="id_String"/>
         <mapperTableEntries name="Teilenummer" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Preis_Typ" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="Preis_Typ" nullable="true" type="id_String"/>
         <mapperTableEntries name="Preis" nullable="true" type="id_String"/>
         <mapperTableEntries name="Preis_Menge" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Preis_Einheit" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="Preis_Einheit" nullable="true" type="id_String"/>
         <mapperTableEntries name="Preis_Waehrung" nullable="true" type="id_String"/>
       </inputTables>
       <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row17.Preis_Typ.equals(&quot;AAQ&quot;) " innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row17" sizeState="INTERMEDIATE">
@@ -1348,24 +1348,6 @@
         <mapperTableEntries name="Preis_Menge" nullable="true" type="id_String"/>
         <mapperTableEntries name="Preis_Einheit" nullable="true" type="id_String"/>
         <mapperTableEntries name="Preis_Waehrung" nullable="true" type="id_String"/>
-      </inputTables>
-      <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row18.Datum_Type.equals(&quot;300&quot;) " lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row18" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="out_91.Filename " name="Filename" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_91.Brand " name="Brand" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_91.Bestellnummer " name="Bestellnummer" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row16.TeilenummerID " name="TeilenummerID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Teilenummer" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Datum_Type" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Datum" nullable="true" type="id_String"/>
-      </inputTables>
-      <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row19.Datum_Type.equals(&quot;299&quot;) " lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row19" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="out_91.Filename " name="Filename" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_91.Brand " name="Brand" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_91.Bestellnummer " name="Bestellnummer" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row16.TeilenummerID " name="TeilenummerID" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Teilenummer" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Datum_Type" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Datum" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1482,40 +1464,6 @@
       <column comment="" key="false" length="-1" name="Preis_Menge" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Preis_Einheit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Preis_Waehrung" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="608">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_5"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Out_15" name="tHashInput_5">
-      <column comment="" key="false" length="-1" name="Filename" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Bestellnummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="TeilenummerID" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Teilenummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum_Type" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="608">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_7"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_5"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Out_15" name="tHashInput_7">
-      <column comment="" key="false" length="-1" name="Filename" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Brand" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Bestellnummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="TeilenummerID" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Teilenummer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum_Type" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Datum" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tFixedFlowInput_3">
@@ -1692,14 +1640,6 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row17"/>
   </connection>
-  <connection connectorName="FLOW" label="row18" lineStyle="8" metaname="tHashInput_5" offsetLabelX="0" offsetLabelY="0" source="tHashInput_5" target="tMap_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row18"/>
-  </connection>
-  <connection connectorName="FLOW" label="row19" lineStyle="8" metaname="tHashInput_7" offsetLabelX="0" offsetLabelY="0" source="tHashInput_7" target="tMap_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row19"/>
-  </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
@@ -1741,13 +1681,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8e53e409-a5b0-43b8-bfc7-fb3f535e2496"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JahO7dmF7F895GAVUSXKmlOYQEcVTW0HYOfk9oosoK8rb17pPNUy0mJpdsEqNYkT9H12IiRFpj1U&#13;
-7V2cy1lLRQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34a991b0-14dd-457d-a3f7-714c36a7aefc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ghWYNFVcKxoIYTII8Wd8KDS/+IwSDpoOLufzFtZOXeX5WR13H19x+wDap6G0JYCjReTL1D1pZN3t&#13;
-PcqO6eknhA==</DigestValue></Reference></SignedInfo><SignatureValue>d3g2z0y5pXsLkF85WWBmkSgPfH0MBMWoghT3JcW4BGFq4nQpzzrQ5aOug+6vC1m2M9d7eSH2wSdg&#13;
-RtFXBwn1ACPUTzRjrAXyeUMxLONFu9JgZLhYPi2q0WhMjKWtYRKXz51t+skkWxfsasOlDLjljOMW&#13;
-J6Pbs96Ws4Zxk011WI71v+IZmhvEED57XpZTv5d++msHONxOjuTatW2xY4IbJ1EF4v008c4ZqCxB&#13;
-2/SViYUzp/+xl0M2LJ6BAaHn8TCMlvx+ePHB/ldc/wu09lVv0c3+fDrXTRTvw5J3drEPr32JFBfI&#13;
-g2ItwgWH4xRT7++CahtrMvkxT/nfgdcDMl4izA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ebcfcb66-12b9-4937-a00e-0d988f54acef"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VaxOmY2Ozm0+fWnbC7oeg4Ch+QjOvqVLhhmXGtl1kyrikp/6p7DAAFUCZ+YZyS5s1p+fjegGUBNj&#13;
+eizpfa5nuw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bb4fa0f3-115f-43f0-9695-e57077e24f9a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>keIflgnGKeDq3ljgYHMq7lJ/uAlAEJ6C4+MZfxw65WKb69ExRMTvft6qUKSgM2lf3TFkvRtd0HLg&#13;
+C09RGT1fIw==</DigestValue></Reference></SignedInfo><SignatureValue>MsPDIw5GkkfTk8TyFiZ/SdR7kT5eqHfnwSLp3dAS4HGQnYom5WRYq4bgi2OWW8whY4wiUDaWYbyd&#13;
+u/X9v3S7EQOHHC/VUfY2Fg2vAn+shsL0/MZ7n/PNo787SrsLieKegR1uuFETeCK5aj0QuHvN0Rlr&#13;
+f7MbEyKi7UvpMFc8pG4bVZxVz2Qlmt3UKc6sV81hzCzE1+6ZZZ7zulW89EPOPc2i/5HVWE09Z2jY&#13;
+wgvFMtolVG5W2O8Y0y3a7woKSx62HrRzJV4lqefQyEmOMlLdJI6pmnn0utbymhfYdVy62TFrZUEC&#13;
+TAC3kZM0CxW7E/tZeIh6C1Hwq7TozkVK48PwWQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1769,4 +1709,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34a991b0-14dd-457d-a3f7-714c36a7aefc" Target="#_8e53e409-a5b0-43b8-bfc7-fb3f535e2496"><Timestamp>2023-05-05 13:34:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bb4fa0f3-115f-43f0-9695-e57077e24f9a" Target="#_ebcfcb66-12b9-4937-a00e-0d988f54acef"><Timestamp>2023-05-05 13:36:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
