@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:xiTBhC+hwQbxCtE9XGe0TBsKl7XTWhlkLe2vDebe"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:KZspmmGftafIpyqsGynwTFZuoMhFWoaOzPQxOEpl"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:sD8kQbQsSJC0iuJKTpCGu15qtCg0tYyov7hXhVXK"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:MNHik7lcYuhqbU0xMht/D1hEMKms25DTb/zGIrsr"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -272,18 +272,26 @@
       <column comment="" key="false" length="-1" name="new_xml" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="544">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Work/CDB2SAP/new_xml_test.xml&quot;"/>
-    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
-    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
-    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="672">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_3"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="key"/>
+      <elementValue elementRef="VALUE" value="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="org_xml"/>
+      <elementValue elementRef="VALUE" value="&quot;&lt;ZCDBITEMMASTER01&gt;&lt;a bemerkung=\&quot;\&quot; benennung2=\&quot;Rotation links\&quot; ron_customer=\&quot;RONAL\&quot; ron_customer_corp=\&quot;RONAL-Gruppe\&quot; ron_map_marke_2_part=\&quot;RONAL\&quot; cdb_t_project_id=\&quot;000.1003\&quot; ron_mapped_proj_wheelclass=\&quot;\&quot; ron_style_dep_apps=\&quot;Nein\&quot; cdb_status_txt=\&quot;freigegeben\&quot; STATUS=\&quot;200\&quot; ron_cdb_sap_materialtype=\&quot;Z21\&quot; t_kategorie=\&quot;SPANNMITTEL\&quot; ron_idx=\&quot;D\&quot; cdb_mdate=\&quot;2005-08-24T00:00:00\&quot; mapped_mpersno_name=\&quot;W00FeSt\&quot; ron_cust_no1=\&quot;\&quot; benennung=\&quot;Zylinder\&quot; techdaten=\&quot;\&quot; ron_weight=\&quot;0.00\&quot; ron_mengenbasis=\&quot;1\&quot; ron_mapped_x005F_xxps_unit_id=\&quot;1\&quot; ron_prod_category=\&quot;F - Werkzeug Fremdfertigung\&quot; ron_mapped_prod_class=\&quot;0100\&quot; teilenummer=\&quot;000.1003.023\&quot; werkstoff_nr=\&quot;1.7131\&quot; ron_mapped_style_dep_ml=\&quot;No\&quot; ron_plno=\&quot;\&quot; ron_pr=\&quot;Normteile-Spannmittel\&quot; ron_pr_ml_en=\&quot;Standard parts clamping device\&quot; st_gewicht=\&quot;0.00\&quot; /&gt;&lt;/ZCDBITEMMASTER01&gt;&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFileInputRaw_1">
-      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_3">
+      <column comment="" key="false" length="-1" name="key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="org_xml" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="384">
@@ -294,10 +302,10 @@
     <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tConvertType_1">
-      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="org_xml" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="org_xml" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -313,39 +321,39 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row5">
-        <nodes expression="" name="content" type="id_Document" xpath="row5/content">
-          <children loop="true" main="true" name="ZCDBITEMMASTER01" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01">
-            <children name="a" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a">
-              <children name="bemerkung" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@bemerkung"/>
-              <children name="benennung2" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@benennung2"/>
-              <children name="ron_customer" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_customer"/>
-              <children name="ron_customer_corp" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_customer_corp"/>
-              <children name="ron_map_marke_2_part" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_map_marke_2_part"/>
-              <children name="cdb_t_project_id" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@cdb_t_project_id"/>
-              <children name="ron_mapped_proj_wheelclass" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_mapped_proj_wheelclass"/>
-              <children name="ron_style_dep_apps" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_style_dep_apps"/>
-              <children name="cdb_status_txt" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@cdb_status_txt"/>
-              <children name="STATUS" nodeType="ATTRIBUT" type="id_Integer" xpath="row5.content:/ZCDBITEMMASTER01/a/@STATUS"/>
-              <children name="ron_cdb_sap_materialtype" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_cdb_sap_materialtype"/>
-              <children name="t_kategorie" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@t_kategorie"/>
-              <children name="ron_idx" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_idx"/>
-              <children name="cdb_mdate" nodeType="ATTRIBUT" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row5.content:/ZCDBITEMMASTER01/a/@cdb_mdate"/>
-              <children name="mapped_mpersno_name" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@mapped_mpersno_name"/>
-              <children name="ron_cust_no1" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_cust_no1"/>
-              <children name="benennung" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@benennung"/>
-              <children name="techdaten" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@techdaten"/>
-              <children name="ron_weight" nodeType="ATTRIBUT" type="id_Float" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_weight"/>
-              <children name="ron_mengenbasis" nodeType="ATTRIBUT" type="id_Integer" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_mengenbasis"/>
-              <children name="ron_mapped_x005F_xxps_unit_id" nodeType="ATTRIBUT" type="id_Integer" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_mapped_x005F_xxps_unit_id"/>
-              <children name="ron_prod_category" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_prod_category"/>
-              <children name="ron_mapped_prod_class" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_mapped_prod_class"/>
-              <children name="teilenummer" nodeType="ATTRIBUT" outgoingConnections="//@node.9/@nodeData/@connections.0" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@teilenummer"/>
-              <children name="werkstoff_nr" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@werkstoff_nr"/>
-              <children name="ron_mapped_style_dep_ml" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_mapped_style_dep_ml"/>
-              <children name="ron_plno" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_plno"/>
-              <children name="ron_pr" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_pr"/>
-              <children name="ron_pr_ml_en" nodeType="ATTRIBUT" type="id_String" xpath="row5.content:/ZCDBITEMMASTER01/a/@ron_pr_ml_en"/>
-              <children name="st_gewicht" nodeType="ATTRIBUT" type="id_Float" xpath="row5.content:/ZCDBITEMMASTER01/a/@st_gewicht"/>
+        <nodes expression="" name="org_xml" type="id_Document" xpath="row5/org_xml">
+          <children loop="true" main="true" name="ZCDBITEMMASTER01" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01">
+            <children name="a" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a">
+              <children name="bemerkung" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@bemerkung"/>
+              <children name="benennung2" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@benennung2"/>
+              <children name="ron_customer" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_customer"/>
+              <children name="ron_customer_corp" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_customer_corp"/>
+              <children name="ron_map_marke_2_part" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_map_marke_2_part"/>
+              <children name="cdb_t_project_id" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@cdb_t_project_id"/>
+              <children name="ron_mapped_proj_wheelclass" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_mapped_proj_wheelclass"/>
+              <children name="ron_style_dep_apps" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_style_dep_apps"/>
+              <children name="cdb_status_txt" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@cdb_status_txt"/>
+              <children name="STATUS" nodeType="ATTRIBUT" type="id_Integer" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@STATUS"/>
+              <children name="ron_cdb_sap_materialtype" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_cdb_sap_materialtype"/>
+              <children name="t_kategorie" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@t_kategorie"/>
+              <children name="ron_idx" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_idx"/>
+              <children name="cdb_mdate" nodeType="ATTRIBUT" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@cdb_mdate"/>
+              <children name="mapped_mpersno_name" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@mapped_mpersno_name"/>
+              <children name="ron_cust_no1" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_cust_no1"/>
+              <children name="benennung" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@benennung"/>
+              <children name="techdaten" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@techdaten"/>
+              <children name="ron_weight" nodeType="ATTRIBUT" type="id_Float" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_weight"/>
+              <children name="ron_mengenbasis" nodeType="ATTRIBUT" type="id_Integer" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_mengenbasis"/>
+              <children name="ron_mapped_x005F_xxps_unit_id" nodeType="ATTRIBUT" type="id_Integer" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_mapped_x005F_xxps_unit_id"/>
+              <children name="ron_prod_category" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_prod_category"/>
+              <children name="ron_mapped_prod_class" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_mapped_prod_class"/>
+              <children name="teilenummer" nodeType="ATTRIBUT" outgoingConnections="//@node.9/@nodeData/@connections.0" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@teilenummer"/>
+              <children name="werkstoff_nr" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@werkstoff_nr"/>
+              <children name="ron_mapped_style_dep_ml" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_mapped_style_dep_ml"/>
+              <children name="ron_plno" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_plno"/>
+              <children name="ron_pr" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_pr"/>
+              <children name="ron_pr_ml_en" nodeType="ATTRIBUT" type="id_String" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@ron_pr_ml_en"/>
+              <children name="st_gewicht" nodeType="ATTRIBUT" type="id_Float" xpath="row5.org_xml:/ZCDBITEMMASTER01/a/@st_gewicht"/>
             </children>
           </children>
         </nodes>
@@ -412,7 +420,7 @@
               </children>
               <children name="ZCDBEXTENSION01" optional="true" type="id_String" xpath="out_p.row:/ZCDBPART01/IDOC/ZCDBEXTENSION01" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="out_p.row:/ZCDBPART01/IDOC/ZCDBEXTENSION01/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
-                <children expression=" [row5.content:/ZCDBITEMMASTER01/a/@teilenummer]" incomingConnections="//@node.9/@nodeData/@connections.0" name="FIELDNAME" optional="true" type="id_String" xpath="out_p.row:/ZCDBPART01/IDOC/ZCDBEXTENSION01/FIELDNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children expression=" [row5.org_xml:/ZCDBITEMMASTER01/a/@teilenummer]" incomingConnections="//@node.9/@nodeData/@connections.0" name="FIELDNAME" optional="true" type="id_String" xpath="out_p.row:/ZCDBPART01/IDOC/ZCDBEXTENSION01/FIELDNAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 <children name="VALUE_CHAR" optional="true" type="id_String" xpath="out_p.row:/ZCDBPART01/IDOC/ZCDBEXTENSION01/VALUE_CHAR" xsi:type="TalendXMLMap:OutputTreeNode"/>
                 <children name="VALUE_NUM" optional="true" type="id_String" xpath="out_p.row:/ZCDBPART01/IDOC/ZCDBEXTENSION01/VALUE_NUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
               </children>
@@ -488,7 +496,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tFileInputRaw_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tFixedFlowInput_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
   <connection connectorName="FLOW" label="out_nmew" lineStyle="0" metaname="out_nmew" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tLogRow_1">
@@ -496,13 +504,16 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_nmew"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tConvertType_1">
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFixedFlowInput_3" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_3" target="tConvertType_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tXMLMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="content"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="org_xml"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -524,17 +535,17 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_3"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_94bedeb9-a7a2-4ebe-958a-2c067c131f6f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZRp4wc3y46SBW4A4QA5Q7aUL5j4dfG5g3GimMA50cR3/EJDDUA/RE+gnWEdHckAtWwMZJDePIo8m&#13;
-1IgdjD6TYw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_db431b12-bfef-4e93-93bb-49aa7c69108e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UPGeANykQ2CfgoBofdrP2mU/9400w2CTk44R/GZaGS1rOenskpvx5/n5KYOLrapbfhvi//wylTb8&#13;
-zoSrZFBn7Q==</DigestValue></Reference></SignedInfo><SignatureValue>hoOTd8DP0XVRyckgMcVbHZqsThiMpkoydm1WI2rRXKvaDmH14XNHvnyAcdO196PJ8iwh6AQrxKRl&#13;
-vLd+KRFX9ads3vLEUuhssAHOx/7XtuwQla6VdZO+6RGRocndTiJLwhSdSyqcDG35nvbhCSy8iFP6&#13;
-nZXMfrIn5NK9bMomnXsy3WXDu6Ko1aKcMw9854wNBXnoBDLQ8b7lZqrq/q66s2Qmxyq6mQHXm/fv&#13;
-zGlk2x4wPmT6dQibFdPNGN4K5U8aMd4q6hPLUMjVmFx9xV0Ici6OGp7s0VtZhSy411mHrhcmOvps&#13;
-KPFCMjhFaNCoyKSUmBJe3S8iaVRX6NMA+aKzuA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_95f300d2-6753-4f60-b2fb-923ad7ff5698"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>l0kpedjc2lPzjk8ovuJIeSQBmaeVonCV1dNzgdGJwCX+Ap7P7+BKWgH6T/kMg7oOIhmm7p1h+4ar&#13;
++mtKsbBgGA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d50c7984-0934-4452-b76b-a6da9f7813a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tg9XlJ0WhEcjyDGBApkgKl5vrJffyZ8wt7Nt1pjdDDhdjo0cgTt8yUhgpwSJMHppo4C59l9Hw9ee&#13;
+uOBYKYZh6Q==</DigestValue></Reference></SignedInfo><SignatureValue>hOANgBnLSluPOIGOiEQXXay1lq/HCpbaaTrJSQP7vjqPtb6etHeFcOYcN/HonZGElNueMJXo1358&#13;
+EncuYrWMX2MHv0Z1BGHnlWiKbygk0dA/xoCXFWYSJKFX3oKNHZ36h/BK+G1g9M+ICCcgKAvNp+sn&#13;
+Rprw6KafIPPIxCI/FV6QiT6P7AJha4lHzVP3n2d8tle2pVAuJro9V3fpEI4MqwzN6ju5LE5jC9b+&#13;
+OSvRmLOpfyUR7MU2TlPcWEX4dWELO+QspdtWy9oOV9Ip1bVs3bij1BStKGvBemGjnfqPf5+gTEiU&#13;
+7dSVER2tcd2lhaQI/YCy88oWc+pSJnHh3CfVBQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -556,4 +567,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_db431b12-bfef-4e93-93bb-49aa7c69108e" Target="#_94bedeb9-a7a2-4ebe-958a-2c067c131f6f"><Timestamp>2023-05-10 13:33:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d50c7984-0934-4452-b76b-a6da9f7813a2" Target="#_95f300d2-6753-4f60-b2fb-923ad7ff5698"><Timestamp>2023-05-10 13:35:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
