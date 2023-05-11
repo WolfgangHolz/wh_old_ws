@@ -1,24 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root t='190' id='1' V190='11' inStruct='Structures/GEN/database_input.xml' outStruct='REFERENCEPROJECT:Structures/SAP/ZCDPART01/IDocs/ZCDBPART01.xml' inputRep='172' outputRep='172' nextMap='' inputStructUserName='database_input' outputStructUserName='ZCDBPART01' V1='4' name='new_map_01' incarnation='5615'>
-  <inputMapElem t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='88' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+<root t='190' id='1' V190='11' inStruct='Structures/GEN/database_input.xml' outStruct='REFERENCEPROJECT:Structures/SAP/ZCDPART01/IDocs/ZCDBPART01.xml' inputRep='172' outputRep='172' nextMap='' inputStructUserName='database_input' outputStructUserName='ZCDBPART01' V1='4' name='new_map_01' incarnation='6330'>
+  <inputMapElem t='200' id='4' V200='8' input='true' structElemExists='true' usedCount='91' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
     <mapNode t='190' idref='1'/>
-    <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='58' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='ZCDBITEMMASTER01'>
+    <child t='200' id='5' V200='8' input='true' structElemExists='true' usedCount='60' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='ZCDBITEMMASTER01'>
       <mapNode t='190' idref='1'/>
-      <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='56' V283='2' occurMinTimes='1' occurMaxTimes='-1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='fields'>
+      <child t='200' id='6' V200='8' input='true' structElemExists='true' usedCount='58' V283='2' occurMinTimes='1' occurMaxTimes='-1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='fields'>
         <mapNode t='190' idref='1'/>
         <xpathName>child::*</xpathName>
       </child>
     </child>
   </inputMapElem>
-  <outputMapElem t='200' id='7' V200='8' structElemExists='true' usedCount='121' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='ZCDBPART01' description='CDB-Interface - Material Master'>
+  <outputMapElem t='200' id='7' V200='8' structElemExists='true' usedCount='147' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='ZCDBPART01' description='CDB-Interface - Material Master'>
     <mapNode t='190' idref='1'/>
-    <child t='200' id='205' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/EDI_DC40.xml' V281='13' V1='4' name='EDI_DC40' description='Control record'>
+    <loop>SimpleLoop([autoAdded="true"],in$/root,{Filter},{Sort Keys},{Contexts})</loop>
+    <child t='200' id='205' V200='8' structElemExists='true' usedCount='18' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/EDI_DC40.xml' V281='13' V1='4' name='EDI_DC40' description='Control record'>
       <mapNode t='190' idref='1'/>
       <delimTerminator>\n</delimTerminator>
+      <child t='200' id='289' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='TABNAM' description='Table Name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>EDI_DC40  </delimInitiator>
+      </child>
+      <child t='200' id='290' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_SAP_CLIENT"],)</value>
+      </child>
+      <child t='200' id='291' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='292' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='4' maxSize='4' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCREL' description='SAP release'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='293' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STATUS' description='Status'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='294' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DIRECT' description='Direction'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='295' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='OUTMOD' description='Output Mode'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='296' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EXPRSS' description='Express'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='297' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='TEST' description='Test flag'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='298' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='IDOCTYP' description='EDBAS Basic type'>
+        <mapNode t='190' idref='1'/>
+        <value>Constant([value="ZCDBPART01",dataType="2"],)</value>
+      </child>
+      <child t='200' id='299' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CIMTYP' description='EDCIM Extension'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='300' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='MESTYP' description='EDMSG Message type'>
+        <mapNode t='190' idref='1'/>
+        <value>Constant([value="ZCDBPART",dataType="2"],)</value>
+      </child>
+      <child t='200' id='301' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MESCOD' description='Message code'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='302' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MESFCT' description='Message Function'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='303' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STD' description='EDI Standard'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='304' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STDVRS' description='EDI std version'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='305' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STDMES' description='EDI message type'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='306' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SNDPOR' description='Sender port'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_SNDPOR"],)</value>
+      </child>
+      <child t='200' id='307' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SNDPRT' description='Sender partner type'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_SNDPRT"],)</value>
+      </child>
+      <child t='200' id='308' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SNDPFC' description='Sender function'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='309' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SNDPRN' description='Sender partner no.'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_SNDPRN"],)</value>
+      </child>
+      <child t='200' id='310' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='21' maxSize='21' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SNDSAD' description='SADR sender address'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='311' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='70' maxSize='70' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SNDLAD'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='312' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='RCVPOR' description='Receiver port'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_RCVPOR"],)</value>
+      </child>
+      <child t='200' id='313' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='RCVPRT' description='Receiver Partn. Type'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_RCVPRT"],)</value>
+      </child>
+      <child t='200' id='314' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RCVPFC' description='Recipient partn. funct.'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='315' V200='8' structElemExists='true' usedCount='2' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='RCVPRN' description='Receiv. Partner No.'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_RCVPRN"],)</value>
+      </child>
+      <child t='200' id='316' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='21' maxSize='21' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RCVSAD' description='SADR recipient addr.'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='317' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='70' maxSize='70' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RCVLAD'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='318' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='8' maxSize='8' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CREDAT' description='Created on'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='319' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CRETIM' description='Created at'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='320' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='14' maxSize='14' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='REFINT' description='Transmission'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='321' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='14' maxSize='14' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='REFGRP' description='Message Group'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='322' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='14' maxSize='14' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='REFMES' description='EDI message'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='323' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='70' maxSize='70' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ARCKEY' description='Archive Key'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='324' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SERIAL' description='Serialization'>
+        <mapNode t='190' idref='1'/>
+      </child>
     </child>
-    <child t='200' id='206' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/ZCDBMETA01000.xml' V281='13' V1='4' name='ZCDBMETA01000' description='CDB-Interface - Meta-Daten (Header)'>
+    <child t='200' id='206' V200='8' structElemExists='true' usedCount='4' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/ZCDBMETA01000.xml' V281='13' V1='4' name='ZCDBMETA01000' description='CDB-Interface - Meta-Daten (Header)'>
       <mapNode t='190' idref='1'/>
       <delimTerminator>\n</delimTerminator>
+      <child t='200' id='325' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>ZCDBMETA01000                 </delimInitiator>
+      </child>
+      <child t='200' id='326' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='327' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='328' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='329' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='330' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='331' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CREATION_DATETIME' description='30 Characters'>
+        <mapNode t='190' idref='1'/>
+        <value>FormatDateTime([pattern="yyyy-MM-dd HH:mm:ss"],GetCurrentDateTime())</value>
+      </child>
+      <child t='200' id='332' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='255' maxSize='255' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='FILENAME' description='Char255'>
+        <mapNode t='190' idref='1'/>
+        <value>Concat(Constant([value="PART",dataType="2"],),FormatDateTime([pattern="_yyyyMMdd_HHmmss"],GetCurrentDateTime()))</value>
+      </child>
     </child>
     <child t='200' id='207' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/ZCDBITEMMASTER01000.xml' V281='13' V1='4' name='ZCDBITEMMASTER01000' description='CDB-Interface - Material-Master (MARA)'>
       <mapNode t='190' idref='1'/>
@@ -233,9 +379,10 @@
       <mapNode t='190' idref='1'/>
       <delimTerminator>\n</delimTerminator>
     </child>
-    <child t='200' id='209' V200='8' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='999' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/ZCDBEXTENSION01000.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='ZCDBEXTENSION01000' description='CDB-Interface - Generic Extension'>
+    <child t='200' id='209' V200='8' structElemExists='true' usedCount='9' V283='2' occurMaxTimes='999' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='REFERENCEPROJECT:Structures/SAP/ZCDPART01/Segments/ZCDBEXTENSION01000.xml' V281='13' modifiedFromParent_loop='true' V1='4' name='ZCDBEXTENSION01000' description='CDB-Interface - Generic Extension'>
       <mapNode t='190' idref='1'/>
       <delimTerminator>\n</delimTerminator>
+      <loop>SimpleLoop(in$/root/ZCDBITEMMASTER01/fields,{Filter},{Sort Keys},{Contexts})</loop>
       <child t='200' id='280' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
         <mapNode t='190' idref='1'/>
         <delimInitiator>ZCDBEXTENSION01000            </delimInitiator>
@@ -255,11 +402,13 @@
       <child t='200' id='285' V200='8' structElemExists='true' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
         <mapNode t='190' idref='1'/>
       </child>
-      <child t='200' id='286' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='FIELDNAME' description='Field Name'>
+      <child t='200' id='286' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='FIELDNAME' description='Field Name'>
         <mapNode t='190' idref='1'/>
+        <value>GetElementProperty([property="1"],in$/root/ZCDBITEMMASTER01/fields)</value>
       </child>
-      <child t='200' id='287' V200='8' structElemExists='true' usedCount='2' V283='2' occurMaxTimes='1' minSize='512' maxSize='512' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='VALUE_CHAR' description='Character 512'>
+      <child t='200' id='287' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='512' maxSize='512' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='VALUE_CHAR' description='Character 512'>
         <mapNode t='190' idref='1'/>
+        <value>in$/root/ZCDBITEMMASTER01/fields</value>
       </child>
       <child t='200' id='288' V200='8' structElemExists='true' V283='2' occurMaxTimes='1' minSize='24' maxSize='24' dataType='21' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='VALUE_NUM' description='Internal floating point from'>
         <mapNode t='190' idref='1'/>
