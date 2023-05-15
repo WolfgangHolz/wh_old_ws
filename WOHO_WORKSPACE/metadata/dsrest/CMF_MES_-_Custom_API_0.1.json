@@ -1,0 +1,123 @@
+{
+  "openapi" : "3.0.3",
+  "info" : {
+    "title" : "CMF MES - Custom API",
+    "description" : "Definition on the _CMF MES Custom API_ for Ronal AG (Mexico) project.",
+    "contact" : {
+      "name" : "Critical Manufacturing, SA",
+      "email" : "ronalgroupmex@criticalmanufacturing.com"
+    },
+    "version" : "1.4.0"
+  },
+  "externalDocs" : {
+    "description" : "Ronal AG (Mexico) - CMF MES Custgomization project",
+    "url" : "https://ronalintegration.ds.criticalmanufacturing.dev/Help/cmf.custom.help"
+  },
+  "servers" : [ {
+    "url" : "https://ronalintegration.ds.criticalmanufacturing.dev/api"
+  } ],
+  "tags" : [ {
+    "name" : "Custom Service",
+    "description" : "Ronal AG (Mexico Custom Web Services)",
+    "externalDocs" : {
+      "description" : "Documentation",
+      "url" : "https://ronalintegration.ds.criticalmanufacturing.dev/Help/cmf.custom.help/cmf.custom.help.techspec%3Ecmf.custom.help.artifacts%3Ecmf.custom.help.services"
+    }
+  } ],
+  "paths" : {
+    "/RONALMX/CustomAcknowledgeIonMessage" : {
+      "post" : {
+        "tags" : [ "Custom Service" ],
+        "summary" : "Receives the message from the ION and creates a new integration entry",
+        "description" : "Receives the message from the ION and creates a new Integration Entry",
+        "operationId" : "CustomAcknowledgeIonMessage",
+        "requestBody" : {
+          "description" : "Receives the message from the ION and creates a new integration entry",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/CustomAcknowledgeIonMessageInput"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/CustomAcknowledgeIonMessageOutput"
+                }
+              }
+            }
+          },
+          "500" : {
+            "description" : "Multiple errors"
+          },
+          "400" : {
+            "description" : "Multiple errors"
+          },
+          "415" : {
+            "description" : "Unsupported Media Type"
+          }
+        },
+        "security" : [ {
+          "bearerAuth" : [ "write:Ion Service" ]
+        } ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "CustomAcknowledgeIonMessageOutput" : {
+        "properties" : {
+          "$id" : {
+            "type" : "string",
+            "example" : "1"
+          },
+          "$type" : {
+            "type" : "string",
+            "example" : "Cmf.Custom.RONALMX.Orchestration.OutputObjects.CustomAcknowledgeIonMessageOutput, Cmf.Custom.RONALMX.Orchestration"
+          },
+          "Message" : {
+            "type" : "string",
+            "example" : "Service call successful IE created:284e45a4-aa74-4efa-ad6c-0085c95823bb | PO Name: 15289_0000"
+          },
+          "TotalRows" : {
+            "type" : "integer",
+            "format" : "int64",
+            "example" : 0
+          }
+        }
+      },
+      "CustomAcknowledgeIonMessageInput" : {
+        "properties" : {
+          "IonMessage" : {
+            "type" : "string",
+            "example" : "XML MESSAGE"
+          }
+        }
+      }
+    },
+    "requestBodies" : {
+      "CustomAcknowledgeIonMessageInput" : {
+        "description" : "Input object that needs to be sent to the service",
+        "content" : {
+          "application/json" : {
+            "schema" : {
+              "$ref" : "#/components/schemas/CustomAcknowledgeIonMessageInput"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "bearerAuth" : {
+        "type" : "http",
+        "scheme" : "bearer"
+      }
+    }
+  }
+}
