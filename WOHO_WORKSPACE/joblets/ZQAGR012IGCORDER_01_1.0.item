@@ -57,7 +57,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AK74eTxAA++P2G//l4t+6uIkVaP5GnCWqrJR8sbJ"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:J38ru2x8otYyMs6JMVZaImJYYdkNDqItNr5eZRvE"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -196,6 +196,40 @@
         <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
       </metadata>
     </node>
+    <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
+      <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
+      <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+      <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;net use P: \\\\10.6.2.174\\SAP_Interface\\InBound\\IN d&amp;8djeGerd67 /user:QMS_SAP&quot;"/>
+      <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+      <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+        <elementValue elementRef="VALUE" value="&quot;net use Q: \\\\R00SQSENT1\\QLIKData\\InputData RonalW00 /user:RONAL/adm.oho&quot;"/>
+      </elementParameter>
+      <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+      <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+      <elementParameter field="TABLE" name="PARAMS"/>
+      <elementParameter field="TEXT" name="LABEL" value="tS_01"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tSystem_1"/>
+    </node>
+    <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="416">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileOutputRaw_1_FILENAME_PATH&quot;))"/>
+      <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+      <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="DIRECTORY" name="DESTINATION" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="CHECK" name="RENAME" value="false"/>
+      <elementParameter field="TEXT" name="DESTINATION_RENAME" show="false" value="&quot;NewName.temp&quot;"/>
+      <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
+      <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+      <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+      <elementParameter field="CHECK" name="FAILON" value="false"/>
+      <elementParameter field="CHECK" name="FORCE_COPY_DELETE" show="false" value="false"/>
+      <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFileCopy_1"/>
+    </node>
     <connection connectorName="FLOW" label="tJL_INP_01TtFTI_01" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tFlowToIterate_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJL_INP_01TtFTI_01"/>
@@ -227,11 +261,29 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHM_01TtFOR_01"/>
     </connection>
+    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputRaw_1" target="tSystem_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
+    </connection>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileCopy_1">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+    </connection>
     <subjob>
       <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
       <elementParameter field="TEXT" name="SUBJOB_TITLE" value="input data from main job"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
+      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="set network share Q:"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
     <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
@@ -249,13 +301,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_035210d2-9841-4413-a891-900c04646ac5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Olv1F/mdCi0vn2ekbRMqJ2GIEwazEQ6X5morRZzmHjkS7aTr+I34DfEgUOpldTYp02jq7s3OkXcL&#13;
-9A7dqkJBMA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_103d774a-bc55-430b-94d3-79299f2252b8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>98gLPxh2obXSCAXtmZwYCKdLcALiM/xrz7uo3ImaYlxF/TKMvNM/Py9jV+rWeneCxTulyNj3zJfO&#13;
-C6DvBNlHPg==</DigestValue></Reference></SignedInfo><SignatureValue>EG0Pwvuou/7O4ccQTNz/vIXP43jnmEfeOONGlylvWWwgWGcrkz09eROUW31ByHFaWXIEMRf2WBzm&#13;
-2fY20t481nV+s4itWPkJvU8Q7RRwNUNJGeGkKhF1Sx3OCV0Vpj8jUhbxr6Br0eomVlRVk5jQzN34&#13;
-gURVjPbo+3g8cZMByYsSjTn4079Q7bjGjFpI0sMiAYmuR5ttjUxNqRDmqSYQ4EJfun7c0XeU9IrM&#13;
-jb6lPeM0W0OXa+x2Thtzzhr/f22dt9H9IL6pckSAONZmmZaSW4OmocQeYSN3rKYZeUpQYXmg2/cV&#13;
-HiWkqs282AYdmGq4CfBp3EQx250RhcQjmpRkwQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e7d70a53-443b-4cf5-b1a6-5e858563d93a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K6LLuDx9IVAm2ydNprinKKOb0ImQhZEdp11qmE37Low0DCWz6jeBwNyMqT2C6jVZEaeCZNijM41v&#13;
+y0sP4dN2Gg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0374f997-e978-45d5-aa9a-57da901db5f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UsfdoYzOc9aaaDkHLR0ELG7/bubil18Oov/O5D/wjur5x94k9uflMudqNo6SWbSi6bdvDZEbT1YA&#13;
+EU1Ty/rb6A==</DigestValue></Reference></SignedInfo><SignatureValue>YKgatbhhgHmZLvV4hZ3/oFmVmsDZhtva4h5FBiwJ2y8rkyhCDLgvbY7Xa+FBco0uTwkF5E3hqQhB&#13;
+QNpIKx8HgJU+9jZ12Z+7VM30/JFySdr/c5wBCKhlLMQe/xFgMU6WzdU43eSfFy9VOJ7po7YuhxV+&#13;
+FzffdIito5gDyn0Ft182sNPIbHU/nk5PHt0/16zLfmeQnh79pfaXq90VQL5y41LVTSzDOSicVGBi&#13;
+ztbxoYM6LYX2Puf8UcPoLW/DoOdTIV67JtNMMEeuIyf7nTIxm18+Jd/uJf6G11gSJjHpykBWAdwe&#13;
+Z5Oqo2WsRtsfeLGMPS+eLrc9FnpTw1FVGoB0xA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -277,4 +329,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_103d774a-bc55-430b-94d3-79299f2252b8" Target="#_035210d2-9841-4413-a891-900c04646ac5"><Timestamp>2023-05-25 12:32:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0374f997-e978-45d5-aa9a-57da901db5f4" Target="#_e7d70a53-443b-4cf5-b1a6-5e858563d93a"><Timestamp>2023-05-25 12:38:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
