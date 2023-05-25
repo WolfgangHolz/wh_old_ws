@@ -57,7 +57,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:J38ru2x8otYyMs6JMVZaImJYYdkNDqItNr5eZRvE"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:JQ3nc8SjbExS+jNA6CTWbK9e9iUCa8d/fl/Lgpra"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -213,12 +213,32 @@
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tSystem_1"/>
     </node>
-    <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="416">
+    <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="416">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+      <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+      <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+      <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+      <elementParameter field="CHECK" name="ERROR" value="false"/>
+      <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+      <elementParameter field="TABLE" name="FILES"/>
+      <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+      <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+      <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+      <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+      <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+      <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+      <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+      <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+      <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    </node>
+    <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="416">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
-      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileOutputRaw_1_FILENAME_PATH&quot;))"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
       <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
       <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
-      <elementParameter field="DIRECTORY" name="DESTINATION" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="DIRECTORY" name="DESTINATION" value="&quot;P:/&quot;"/>
       <elementParameter field="CHECK" name="RENAME" value="false"/>
       <elementParameter field="TEXT" name="DESTINATION_RENAME" show="false" value="&quot;NewName.temp&quot;"/>
       <elementParameter field="CHECK" name="REMOVE_FILE" value="false"/>
@@ -229,6 +249,23 @@
       <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
       <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
       <metadata connector="FLOW" name="tFileCopy_1"/>
+    </node>
+    <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="544">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_2"/>
+      <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
+      <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+      <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;net use P: /delete&quot;"/>
+      <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+      <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+        <elementValue elementRef="VALUE" value="&quot;net use Q: \\\\R00SQSENT1\\QLIKData\\InputData RonalW00 /user:RONAL/adm.oho&quot;"/>
+      </elementParameter>
+      <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+      <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+      <elementParameter field="TABLE" name="PARAMS"/>
+      <elementParameter field="TEXT" name="LABEL" value="tS_02"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tSystem_2"/>
     </node>
     <connection connectorName="FLOW" label="tJL_INP_01TtFTI_01" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tFlowToIterate_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -264,8 +301,16 @@
     <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputRaw_1" target="tSystem_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
     </connection>
-    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileCopy_1">
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileList_1">
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+    </connection>
+    <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileCopy_1">
+      <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+      <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
+    </connection>
+    <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tSystem_2">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
     </connection>
     <subjob>
       <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -282,8 +327,15 @@
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
     <subjob>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_2"/>
+      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="delete network share Q:"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
     <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
@@ -301,13 +353,13 @@
     </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e7d70a53-443b-4cf5-b1a6-5e858563d93a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K6LLuDx9IVAm2ydNprinKKOb0ImQhZEdp11qmE37Low0DCWz6jeBwNyMqT2C6jVZEaeCZNijM41v&#13;
-y0sP4dN2Gg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0374f997-e978-45d5-aa9a-57da901db5f4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>UsfdoYzOc9aaaDkHLR0ELG7/bubil18Oov/O5D/wjur5x94k9uflMudqNo6SWbSi6bdvDZEbT1YA&#13;
-EU1Ty/rb6A==</DigestValue></Reference></SignedInfo><SignatureValue>YKgatbhhgHmZLvV4hZ3/oFmVmsDZhtva4h5FBiwJ2y8rkyhCDLgvbY7Xa+FBco0uTwkF5E3hqQhB&#13;
-QNpIKx8HgJU+9jZ12Z+7VM30/JFySdr/c5wBCKhlLMQe/xFgMU6WzdU43eSfFy9VOJ7po7YuhxV+&#13;
-FzffdIito5gDyn0Ft182sNPIbHU/nk5PHt0/16zLfmeQnh79pfaXq90VQL5y41LVTSzDOSicVGBi&#13;
-ztbxoYM6LYX2Puf8UcPoLW/DoOdTIV67JtNMMEeuIyf7nTIxm18+Jd/uJf6G11gSJjHpykBWAdwe&#13;
-Z5Oqo2WsRtsfeLGMPS+eLrc9FnpTw1FVGoB0xA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c682c95-f526-43fa-8fa2-f3d8f1346656"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8JBPty3Dbmq5NDgQ1+6nk5oe4TkzNh906/0BKKOrfB2v9RSKkJOCq2Ku/4MIlsbMBZ3Yy1iM3TMt&#13;
+zCKI11qjow==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2657c1ce-1879-4c2f-affa-851f80657b3b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8HsT5fsZXGBxqA+ouzkhA7fA2CWphsqL+R+JQdt3S+v0vspQK7TljF2sav9w6+iVVpDTxNcDKPpj&#13;
+m5MlwHujWQ==</DigestValue></Reference></SignedInfo><SignatureValue>bcux0aCmj0WO2x4tRZTceFovLRUY0J9pXvRGcEe08Wjy3hy08ci22hL25yiBCQLGb5JR3EiC0Oz2&#13;
+ahHPjoNvTM0iW0Qp8CyhayBeUx2tsFwb9Utv31cyy0nazsWtm2QHAVWgGugesYXi6/zsKKkJpFTf&#13;
+WNGWKqX69v36vAmEda7SDiZY8AHs8PObCu446UJ3YxHi7gN+US1q1SKLlzXFHYUuhW242FsGoTb8&#13;
+/CQ1znlLuNBWCa9YcmW72sqj85Ei3lDq3tivnZKg70Uca/Zp9xwpa6AdS9wm/3dwARsWTdq++Yh4&#13;
+zW+1PaNAKXh7nvK4Jk4U2/6RMhZfaHzd6ASZUA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -329,4 +381,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0374f997-e978-45d5-aa9a-57da901db5f4" Target="#_e7d70a53-443b-4cf5-b1a6-5e858563d93a"><Timestamp>2023-05-25 12:38:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2657c1ce-1879-4c2f-affa-851f80657b3b" Target="#_7c682c95-f526-43fa-8fa2-f3d8f1346656"><Timestamp>2023-05-25 12:40:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
