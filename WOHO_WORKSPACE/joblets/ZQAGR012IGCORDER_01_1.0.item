@@ -57,7 +57,7 @@
       <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:WbZ0xpRRWc0CTbo8x04oH6UI876t20rowhQX3u7h"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:lW/YD/fTvr33ypg8y0BPuZrLO4qIq1ztb57/xm8p"/>
       <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
       <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -195,72 +195,6 @@
         <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
       </metadata>
     </node>
-    <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="128">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-      <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
-      <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
-      <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
-      <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;net use R: \\\\10.6.2.174\\SAP_Interface\\InBound\\IN RonalW00 /user:QMS_SAP /password:d&amp;8djeGerd67&quot;"/>
-      <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
-      <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
-        <elementValue elementRef="VALUE" value="&quot;net use Q: \\\\R00SQSENT1\\QLIKData\\InputData RonalW00 /user:RONAL/adm.oho&quot;"/>
-      </elementParameter>
-      <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
-      <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
-      <elementParameter field="TABLE" name="PARAMS"/>
-      <elementParameter field="TEXT" name="LABEL" value="tS_01"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tSystem_1"/>
-    </node>
-    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="256">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-      <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-      <elementParameter field="MEMO_JAVA" name="CODE" value="context.loc_result_id = 401;&#10;context.loc_result_message= &quot;no connection to the QSYS server possible&quot;;"/>
-      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-      <elementParameter field="TEXT" name="LABEL" value="tJ_01"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tJava_1"/>
-    </node>
-    <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="480">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_5"/>
-      <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-      <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-      <elementParameter field="TABLE" name="VALUES">
-        <elementValue elementRef="SCHEMA_COLUMN" value="result_id"/>
-        <elementValue elementRef="VALUE" value="context.loc_result_id"/>
-        <elementValue elementRef="SCHEMA_COLUMN" value="result_message"/>
-        <elementValue elementRef="VALUE" value="context.loc_result_message"/>
-      </elementParameter>
-      <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-      <elementParameter field="TABLE" name="INTABLE" show="false"/>
-      <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-      <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-      <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
-      <elementParameter field="TEXT" name="LABEL" value="tFFI_001"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tFixedFlowInput_5">
-        <column comment="" key="false" length="-1" name="result_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="result_message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      </metadata>
-    </node>
-    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="32">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
-      <elementParameter field="MEMO_JAVA" name="CODE" value="context.loc_result_id = 402;&#10;context.loc_result_message= &quot;file &quot; + ((String)globalMap.get(&quot;tFileOutputRaw_1_FILENAME_PATH&quot;)) + &quot; couldn't write to the QSYS server&quot;;"/>
-      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-      <elementParameter field="TEXT" name="LABEL" value="tJ_02"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tJava_2"/>
-    </node>
-    <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1216" posY="288">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
-      <elementParameter field="MEMO_JAVA" name="CODE" value="context.loc_result_id = 200;&#10;context.loc_result_message= &quot;file &quot; + ((String)globalMap.get(&quot;tFileOutputRaw_1_FILENAME_PATH&quot;)) + &quot; successful written to the QSYS server&quot;;"/>
-      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
-      <elementParameter field="TEXT" name="LABEL" value="tJ_03"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <metadata connector="FLOW" name="tJava_3"/>
-    </node>
     <connection connectorName="FLOW" label="tJL_INP_01TtFTI_01" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tFlowToIterate_1">
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJL_INP_01TtFTI_01"/>
@@ -292,59 +226,10 @@
       <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHM_01TtFOR_01"/>
     </connection>
-    <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tFileOutputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputRaw_1" target="tJava_2">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentError1"/>
-    </connection>
-    <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tFileOutputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputRaw_1" target="tJava_3">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
-    </connection>
-    <connection connectorName="SUBJOB_ERROR" label="OnSubjobError" lineStyle="4" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tJava_1">
-      <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobError2"/>
-    </connection>
-    <connection connectorName="FLOW" label="tFFI_001TtJL_OUT_001" lineStyle="0" metaname="tFixedFlowInput_5" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_5" target="OUTPUT_4">
-      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFFI_001TtJL_OUT_001"/>
-    </connection>
     <subjob>
       <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
       <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
       <elementParameter field="TEXT" name="SUBJOB_TITLE" value="input data from main job"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
-    <subjob>
-      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
-      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="set network share Q:"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
-    <subjob>
-      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="error when no network connection"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
-    <subjob>
-      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_5"/>
-      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="write results to joblet output"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
-    <subjob>
-      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
-      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="error when no file written"/>
-      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
-      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-    </subjob>
-    <subjob>
-      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
-      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_3"/>
-      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="error when no file written"/>
       <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
       <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     </subjob>
@@ -361,29 +246,15 @@
         <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       </metadata>
     </jobletNodes>
-    <jobletNodes componentName="OUTPUT" componentVersion="0.1" offsetLabelX="0" offsetLabelY="0" posX="1440" posY="480">
-      <elementParameter field="TEXT" name="UNIQUE_NAME" value="OUTPUT_4"/>
-      <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-      <elementParameter field="CHECK" name="START" show="false" value="false"/>
-      <elementParameter field="TEXT" name="LABEL" value="tJL_OUT_001"/>
-      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
-      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
-      <elementParameter field="MEMO" name="COMMENT" value=""/>
-      <metadata connector="FLOW" name="OUTPUT_4">
-        <column comment="" key="false" length="-1" name="result_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-        <column comment="" key="false" length="-1" name="result_message" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      </metadata>
-    </jobletNodes>
   </model:JobletProcess>
   <TalendProperties:ByteArray/>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_789c54de-3b6c-43ec-b619-7752a6763736"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oowKk1Bp6AG4L78WC83pcKTyla4GeBDuulDi/l3Savc8tHqavg3QQKSvzoTzLWg2W7Sgatl/awU8&#13;
-GrxrhkWCZw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_de914172-d5c6-4aa7-87ed-482779dbc7fb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rYhtWzLW3MHM77/iWSn8MAGdAiKYlNTXXdJxoqCmTt1qbFWFBazYirnXEtMVYL1D062iddooqwAF&#13;
-gem+moJDHA==</DigestValue></Reference></SignedInfo><SignatureValue>RgIv4EdxgXRbIay9Nu3mPrs3kefHVixetrwF+juj8V3SN4XRYKjktE5W2YynWd3KwcwvpoFWT9KK&#13;
-UK0a4AKfdnrusMDyedUYsYtDr3Jbl9dtrW+VZuHvCWCzGTs4/ju3GqouMZyngxhpxoVf0Jjf8UHl&#13;
-LM3u9lJAG2vrms+EFmmtgiogB9d/1upldExoWj6386EBRAhBqTcYAwbvAV6ENeDb7BE4MOmtInUu&#13;
-vT8jSdmejr6onHmjBN7S41jW7QV4j0f+tARwOEpaV/f9BJgkrBBOmYNIRrg6kqRQ//MJGfT231O0&#13;
-GomGPK+ypPtiHo+EhidN6siJNDrIL8T9JSqJTg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2e1e5713-c8e9-4d6d-bade-591ffe5015b2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uD7vdyDm73QL6EtWmz75w78nIWGsvZ35XkBxQS1VWCVM8PAu3QExPP4jF9q5soGzc8unVUg8oLRG&#13;
+j/KabtV5uA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3cdf8d8d-d6e2-4c25-8224-04aa6cef6e09"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QN0FQ7YbG714mR3xhomzY+QgDVhB8exV07meU6iXUwnwVtaG2V2oxMazG0dqESSexEQyQmKp6NPV&#13;
+aPEPSzKWeg==</DigestValue></Reference></SignedInfo><SignatureValue>iB2AgwvxcGmQKsaD84bFp4Ub85bUdTseSZooPcY+2dhFwcRcJQE6XFyPwFSDm0sLdkNc3/dQRcAd&#13;
+lloV2VEA7G3WSkV22s0HbH+6DSLyCY/O+qa3TwafOKQE1bLLjd+9mwza0SgpwjcI+2O4tzOTAgOH&#13;
+DdxHmgKN5vjIFwU+EY/UpDKE31QcDlncfkE4+Iy1PeMfBg08oVYFuRBBL+lBW+gQ9+hmdO77Ulhl&#13;
+QLbq0kTXFKy7PaR4oTTeYnWHnnb8Vg6m4EVd8uDjc4VC+VND5n6Usqrz0zh8ZXd2nV/It2xwauVH&#13;
+k8+/zxogwUb4mwWctPGFg3wR2RdQEDoolxQFFA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -405,4 +276,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_de914172-d5c6-4aa7-87ed-482779dbc7fb" Target="#_789c54de-3b6c-43ec-b619-7752a6763736"><Timestamp>2023-05-25 12:29:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3cdf8d8d-d6e2-4c25-8224-04aa6cef6e09" Target="#_2e1e5713-c8e9-4d6d-bade-591ffe5015b2"><Timestamp>2023-05-25 12:31:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>
