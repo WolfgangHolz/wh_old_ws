@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" internalId="_TgteEPsbEe25l7CzQt2Unw" name="body_str" prompt="body_str?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
   </context>
@@ -45,7 +45,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:/4H3SN6hkVE1kfWjWdQPuY+IfQYXZBT/J9AJYQSX"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:Lx1PRaYVrYIsSuFO+R3gwJzfVZSSJqFLSRPWPNxQ"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -80,7 +80,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:vnMzjmqqhHJAcF/zbU04N79pqF1u5gLH7ZCPG7TN"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ruIRAHJ3Fu93adQr/Gt75GEgptBuCZOu1FWEZSmC"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -115,52 +115,107 @@
     <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
     <routinesParameter id="_0-lmkJDBEe2UN6GjnIa2fw" name="TalendString"/>
   </parameters>
-  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="context.body_str =&quot;&lt;soapenv:Envelope xmlns:soapenv=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; xmlns:mp=\&quot;http://schemas.datastream.net/MP_functions\&quot; xmlns:sec=\&quot;http://schemas.xmlsoap.org/ws/2002/04/secext\&quot; xmlns:mp0=\&quot;http://schemas.datastream.net/MP_functions/MP0023_001\&quot; xmlns:mp1=\&quot;http://schemas.datastream.net/MP_fields\&quot; xmlns:oag=\&quot;http://www.openapplications.org/oagis_fields\&quot; xmlns:wor=\&quot;http://schemas.datastream.net/MP_entities/WorkOrder_001\&quot; xmlns:act=\&quot;http://schemas.datastream.net/MP_entities/Activity_001\&quot; xmlns:wor1=\&quot;http://schemas.datastream.net/MP_entities/WorkOrderEquipment_001\&quot;&gt;&lt;soapenv:Header&gt;&lt;mp:SessionScenario&gt;terminate&lt;/mp:SessionScenario&gt;&lt;sec:Security&gt;&lt;UserNameToken xmlns:xsd=\&quot;http://www.w3.org/2001/XMLSchema\&quot; xmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot; xmlns=\&quot;\&quot; Id=\&quot;WSToolkitUserID\&quot;&gt;&lt;Username&gt;W01-MES-INTEGR@TEST&lt;/Username&gt;&lt;!--userid@tenant--&gt;&lt;Password&gt;RonalMes01/&lt;/Password&gt;&lt;/UserNameToken&gt;&lt;/sec:Security&gt;&lt;mp:Organization&gt;*&lt;/mp:Organization&gt;&lt;!--constant--&gt;&lt;/soapenv:Header&gt;&lt;soapenv:Body&gt;&lt;mp0:MP0023_AddWorkOrder_001 verb=\&quot;Add\&quot; noun=\&quot;WorkOrder\&quot; version=\&quot;001\&quot; callname=\&quot;AddWorkOrder\&quot;&gt;&lt;!--Optional:--&gt;&lt;wor:WorkOrder recordid=\&quot;0\&quot; is_completed=\&quot;true\&quot; is_cancelled=\&quot;true\&quot; has_department_security=\&quot;has_1\&quot; is_batchwo=\&quot;true\&quot; is_parentpmwo=\&quot;true\&quot; is_batchwo_update=\&quot;true\&quot; is_room_occupied=\&quot;false\&quot;&gt;&lt;mp1:WORKORDERID auto_generated=\&quot;true\&quot;&gt;&lt;mp1:JOBNUM&gt;1&lt;/mp1:JOBNUM&gt;&lt;mp1:ORGANIZATIONID entity=\&quot;EVNT\&quot;&gt;&lt;mp1:ORGANIZATIONCODE&gt;W01&lt;/mp1:ORGANIZATIONCODE&gt;&lt;!--wo organization--&gt;&lt;/mp1:ORGANIZATIONID&gt;&lt;!--Optional:--&gt;&lt;mp1:DESCRIPTION&gt;MES create WorkOrder&lt;/mp1:DESCRIPTION&gt;&lt;!--wo description--&gt;&lt;/mp1:WORKORDERID&gt;&lt;mp1:STATUS entity=\&quot;EVNT\&quot;&gt;&lt;mp1:STATUSCODE&gt;Q&lt;/mp1:STATUSCODE&gt;&lt;!--wo status (Q - work request, R - Relqase)--&gt;&lt;/mp1:STATUS&gt;&lt;mp1:EQUIPMENTID&gt;&lt;mp1:EQUIPMENTCODE&gt;12401&lt;/mp1:EQUIPMENTCODE&gt;&lt;!--equipment code--&gt;&lt;mp1:ORGANIZATIONID entity=\&quot;OBJ\&quot;&gt;&lt;mp1:ORGANIZATIONCODE&gt;W01&lt;/mp1:ORGANIZATIONCODE&gt;&lt;!--equipment organization--&gt;&lt;/mp1:ORGANIZATIONID&gt;&lt;/mp1:EQUIPMENTID&gt;&lt;mp1:TYPE entity=\&quot;EVNT\&quot;&gt;&lt;mp1:TYPECODE&gt;BRKD&lt;/mp1:TYPECODE&gt;&lt;!--wo job type--&gt;&lt;/mp1:TYPE&gt;&lt;mp1:DEPARTMENTID&gt;&lt;mp1:DEPARTMENTCODE&gt;W01-M01&lt;/mp1:DEPARTMENTCODE&gt;&lt;!--wo department--&gt;&lt;/mp1:DEPARTMENTID&gt;&lt;!--Optional:--&gt;&lt;mp1:COSTCODEID&gt;&lt;mp1:COSTCODE&gt;40100&lt;/mp1:COSTCODE&gt;&lt;!--wo cost code--&gt;&lt;/mp1:COSTCODEID&gt;&lt;!--Optional:--&gt;&lt;mp1:REPORTED qualifier=\&quot;ACCOUNTING\&quot;&gt;&lt;!--wo reported date--&gt;&lt;oag:YEAR&gt;2022&lt;/oag:YEAR&gt;&lt;oag:MONTH&gt;7&lt;/oag:MONTH&gt;&lt;oag:DAY&gt;19&lt;/oag:DAY&gt;&lt;oag:HOUR&gt;15&lt;/oag:HOUR&gt;&lt;oag:MINUTE&gt;0&lt;/oag:MINUTE&gt;&lt;oag:SECOND&gt;0&lt;/oag:SECOND&gt;&lt;oag:SUBSECOND&gt;0&lt;/oag:SUBSECOND&gt;&lt;oag:TIMEZONE&gt;W. Europe Standard Time&lt;/oag:TIMEZONE&gt;&lt;/mp1:REPORTED&gt;&lt;mp1:FIXED&gt;V&lt;/mp1:FIXED&gt;&lt;!--constant--&gt;&lt;mp1:OBJTYPE xmlns=\&quot;http://schemas.datastream.net/MP_fields\&quot;&gt;A&lt;/mp1:OBJTYPE&gt;&lt;!--equipment type (A-Asset, P-Position, S-System, L-Location)--&gt;&lt;mp1:PRINTED xmlns=\&quot;http://schemas.datastream.net/MP_fields\&quot;&gt;-&lt;/mp1:PRINTED&gt;&lt;!--constant--&gt;&lt;mp1:SURVEY xmlns=\&quot;http://schemas.datastream.net/MP_fields\&quot;&gt;false&lt;/mp1:SURVEY&gt;&lt;!--constant--&gt;&lt;/wor:WorkOrder&gt;&lt;/mp0:MP0023_AddWorkOrder_001&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;&quot;;"/>
-    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tJava_1"/>
-  </node>
-  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
-    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
-    <elementParameter field="TABLE" name="VALUES">
-      <elementValue elementRef="SCHEMA_COLUMN" value="body"/>
-      <elementValue elementRef="VALUE" value="context.body_str"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="string"/>
-      <elementValue elementRef="VALUE" value=""/>
-    </elementParameter>
-    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
-    <elementParameter field="TABLE" name="INTABLE" show="false"/>
-    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
-    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
-    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tFixedFlowInput_1">
-      <column key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="416">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
-    <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
-    <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
-    <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
-    <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tConvertType_1">
+    <metadata connector="FLOW" name="out_1">
       <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
       <column key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
-      <column key="false" length="4048" name="string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <outputTrees name="out_1">
+        <nodes expression="" name="body" type="id_Document" xpath="out_1/body">
+          <children loop="true" main="true" name="soapenv:Envelope" type="id_String" xpath="out_1.body:/soapenv:Envelope" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children defaultValue="http://www.openapplications.org/oagis_fields" name="oag" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:oag" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.datastream.net/MP_fields" name="mp1" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:mp1" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.datastream.net/MP_entities/WorkOrder_001" name="wor" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:wor" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.datastream.net/MP_functions/MP0023_001" name="mp0" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:mp0" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.xmlsoap.org/ws/2002/04/secext" name="sec" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:sec" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.datastream.net/MP_functions" name="mp" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:mp" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children defaultValue="http://schemas.xmlsoap.org/soap/envelope/" name="soapenv" nodeType="NAME_SPACE" type="id_String" xpath="out_1.body:/soapenv:Envelope/xmlns:soapenv" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children name="soapenv:Header" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="mp:SessionScenario" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/mp:SessionScenario" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children name="sec:Security" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/sec:Security" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children name="UserNameToken" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/sec:Security/UserNameToken" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children name="Id" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/sec:Security/UserNameToken/@Id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Username" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/sec:Security/UserNameToken/Username" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="Password" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/sec:Security/UserNameToken/Password" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+              </children>
+              <children expression="" name="mp:Organization" type="id_Character" xpath="out_1.body:/soapenv:Envelope/soapenv:Header/mp:Organization" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            </children>
+            <children name="soapenv:Body" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="mp0:MP0023_AddWorkOrder_001" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children name="verb" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/@verb" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="noun" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/@noun" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="version" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/@version" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="callname" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/@callname" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="wor:WorkOrder" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children name="recordid" nodeType="ATTRIBUT" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@recordid" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="is_completed" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@is_completed" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="is_cancelled" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@is_cancelled" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="has_department_security" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@has_department_security" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="is_batchwo" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@is_batchwo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="is_parentpmwo" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@is_parentpmwo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="is_batchwo_update" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@is_batchwo_update" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="is_room_occupied" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/@is_room_occupied" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="mp1:WORKORDERID" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="auto_generated" nodeType="ATTRIBUT" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID/@auto_generated" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="mp1:JOBNUM" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID/mp1:JOBNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="mp1:ORGANIZATIONID" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID/mp1:ORGANIZATIONID" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children name="entity" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID/mp1:ORGANIZATIONID/@entity" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="mp1:ORGANIZATIONCODE" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID/mp1:ORGANIZATIONID/mp1:ORGANIZATIONCODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                    <children name="mp1:DESCRIPTION" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:WORKORDERID/mp1:DESCRIPTION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="mp1:STATUS" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:STATUS" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="entity" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:STATUS/@entity" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="mp1:STATUSCODE" type="id_Character" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:STATUS/mp1:STATUSCODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="mp1:EQUIPMENTID" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:EQUIPMENTID" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="mp1:EQUIPMENTCODE" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:EQUIPMENTID/mp1:EQUIPMENTCODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="mp1:ORGANIZATIONID" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:EQUIPMENTID/mp1:ORGANIZATIONID" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children name="entity" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:EQUIPMENTID/mp1:ORGANIZATIONID/@entity" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="mp1:ORGANIZATIONCODE" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:EQUIPMENTID/mp1:ORGANIZATIONID/mp1:ORGANIZATIONCODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                  </children>
+                  <children name="mp1:TYPE" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:TYPE" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="entity" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:TYPE/@entity" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="mp1:TYPECODE" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:TYPE/mp1:TYPECODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="mp1:DEPARTMENTID" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:DEPARTMENTID" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="mp1:DEPARTMENTCODE" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:DEPARTMENTID/mp1:DEPARTMENTCODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="mp1:COSTCODEID" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:COSTCODEID" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="mp1:COSTCODE" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:COSTCODEID/mp1:COSTCODE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="mp1:REPORTED" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children name="qualifier" nodeType="ATTRIBUT" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/@qualifier" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:YEAR" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:YEAR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:MONTH" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:MONTH" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:DAY" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:DAY" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:HOUR" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:HOUR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:MINUTE" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:MINUTE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:SECOND" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:SECOND" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:SUBSECOND" type="id_Integer" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:SUBSECOND" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="oag:TIMEZONE" type="id_String" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:REPORTED/oag:TIMEZONE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                  <children name="mp1:FIXED" type="id_Character" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:FIXED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="mp1:OBJTYPE" type="id_Character" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:OBJTYPE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="mp1:PRINTED" type="id_Character" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:PRINTED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children name="mp1:SURVEY" type="id_Boolean" xpath="out_1.body:/soapenv:Envelope/soapenv:Body/mp0:MP0023_AddWorkOrder_001/wor:WorkOrder/mp1:SURVEY" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+              </children>
+            </children>
+          </children>
+        </nodes>
+        <nodes name="string" type="id_String" xpath="out_1/string"/>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+    </nodeData>
   </node>
   <node componentName="tRESTClient" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTClient_1"/>
@@ -177,7 +232,7 @@
     <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="BASIC"/>
     <elementParameter field="TEXT" name="AUTH_USERNAME" show="false" value="&quot;username&quot;"/>
-    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:wmAGXMofE4sH5Jcyl1ro1jYOSC774cgdyv5Z5wcjc8Xzfdr2S6o="/>
+    <elementParameter field="PASSWORD" name="AUTH_PASSWORD" show="false" value="enc:system.encryption.key.v1:N+n4ryUMukQV5VEajEkMj+U/p5v4bJBvfGslvvB+Il3Wv36NVHk="/>
     <elementParameter field="TEXT" name="AUTH_BEARER_TOKEN" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROLE" show="false" value="&quot;&quot;"/>
@@ -211,7 +266,7 @@
     <elementParameter field="TEXT" name="PROXY_HOST" show="false" value="&quot;127.0.0.1&quot;"/>
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:9h1QJ/oF5ZifAR+B+3o2zjfiZ1r0D/FXulPFgBZc"/>
+    <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:Ja01HqXf5B6jc2DD9DIj0o6XRFob/6DtgeqTMkgp"/>
     <elementParameter field="TEXT" name="ARRAY_KEYS" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRESTClient_1">
@@ -285,16 +340,9 @@
       <column defaultValue="" key="false" length="1024" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFixedFlowInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
-  </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tConvertType_1">
+  <connection connectorName="FLOW" label="out_1" lineStyle="0" metaname="out_1" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tRESTClient_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
-  </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tRESTClient_1">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_1"/>
   </connection>
   <connection connectorName="RESPONSE" label="row3" lineStyle="0" metaname="RESPONSE" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tRESTClient_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -305,22 +353,17 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_455f20d4-5003-4027-a2a9-7bde0d182481"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YEagKpRZznsk0ixiJNoaiT+W79Jy4KEOxvE/QvkZX7weC06yncIxZvTTuit7nitBNXUWPnqcIPIh&#13;
-SuQjI4+eeA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ff283c68-1cc9-490f-862b-b590defad68f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MSf0ztS3Kj0VyESmsJIQrCYiN+9+8zMh5X78VhnRMEPxvOn585MNJVrvJ49uBQHhlAy/WxN6qQJa&#13;
-IFAw76ag9w==</DigestValue></Reference></SignedInfo><SignatureValue>j4S2cw3jHzzB9RsYz397K6TfMef4o5CWtNyNe8OJhRf7jKUTbth06fX+tZwz/VYOogs1XNEE2TNh&#13;
-Ts7mdto11d6B5twCi5FB0N9FxJEhGDEEk+GYqdeUYA52jYgFFZ25darHHCnhJpdz7XhSngR9DP3I&#13;
-KgX2/ZU3HpSVHuDOtW3Uf4PJRk3eQ4hVu4tpcvvFWdDb7+bw7iq0O4BmO0KW7C2xl9cAl/Ch5Rb1&#13;
-MVMUQjwhKFU1aEYkURlQoB9kgb/Y7L3CnpC7UzXpbJO6fIehgunypkQcYcdYah75OoEohENqrszt&#13;
-+T/FlSy+6FWr9nmhiDAH7OxdfanZdEq/U4YA/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9f0e734b-da0f-49a1-b2b4-abc7cc21461e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EfmJI8qloEf5pKpUGShfmgivKreonwpUvjC2SCGBla/7opfXovvCNIFAyNxzqFDRIr2OUSKM35wa&#13;
+mYIxsNBanw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f31ab944-87e6-4564-b902-b62a970aa018"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LjpYKe7h+MEnA3zoCFN7jYEbXC+kr/kiqQj2DSi9V6sRjB/90yzmEIKAHVIqAPobU5LAR4BwV9Uu&#13;
+fNkRamDhJw==</DigestValue></Reference></SignedInfo><SignatureValue>oud7gKzi9T2un8/pgpr+tln9zqsa6fwLQtwEcdNyaKoe7FLfT4ngSwyfAYR1CCc59vqrEavb3tyS&#13;
+RhSLidDzS3w9ooNHQTYW+DPHCm8KMaLL6LxfJVlkkuiYHnidECuExGf/2m9pHQuYvQ9QfLelh4s0&#13;
+vc1e1Bn1Cn7n61LzO+CbsixKMORqjnNBl2ucz7IinSC0DwShtmtE2Kf3DK1VKDpVrClkR2J5bht/&#13;
+8cq8ko79d624zZI1f63ZT1nZfkcjAunq4G9DZi0Vhl42xwxBP3TbM+PTBxe0ZBkRgp7PuNRmoQsC&#13;
+vKNyk0in9nfleqAmnjfSsxxq+Jhn7oc5/tjZMQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -342,4 +385,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ff283c68-1cc9-490f-862b-b590defad68f" Target="#_455f20d4-5003-4027-a2a9-7bde0d182481"><Timestamp>2023-05-25 16:47:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f31ab944-87e6-4564-b902-b62a970aa018" Target="#_9f0e734b-da0f-49a1-b2b4-abc7cc21461e"><Timestamp>2023-05-26 06:32:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
