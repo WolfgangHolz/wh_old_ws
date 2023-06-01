@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" internalId="_KdKVIABZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_Server" prompt="LOC_CON_POSTG_PUBLIC_ESB_Server?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_String" value="r00smwre1.ronal.int"/>
+    <contextParameter comment="" internalId="_KdKVIQBZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_Password" prompt="LOC_CON_POSTG_PUBLIC_ESB_Password?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_Password" value="enc:system.encryption.key.v1:pL07A6RihQL/CiQ3Df2bE+HPB266GWneHnK2UjuQ5H75Ym3i"/>
+    <contextParameter comment="" internalId="_KdKVIgBZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_Schema" prompt="LOC_CON_POSTG_PUBLIC_ESB_Schema?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_String" value="public"/>
+    <contextParameter comment="" internalId="_KdKVIwBZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_Database" prompt="LOC_CON_POSTG_PUBLIC_ESB_Database?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_String" value="esb"/>
+    <contextParameter comment="" internalId="_KdKVJABZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_Login" prompt="LOC_CON_POSTG_PUBLIC_ESB_Login?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_String" value="adm.oho"/>
+    <contextParameter comment="" internalId="_KdKVJQBZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_AdditionalParams" prompt="LOC_CON_POSTG_PUBLIC_ESB_AdditionalParams?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_KdKVJgBZEe6sq9JO95gS-w" name="LOC_CON_POSTG_PUBLIC_ESB_Port" prompt="LOC_CON_POSTG_PUBLIC_ESB_Port?" promptNeeded="false" repositoryContextId="_EciPcABZEe6sq9JO95gS-w" type="id_String" value="5432"/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -43,7 +51,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:wRueIOQ4ZPcQEMCpNxayjHAJwvLsDPIycRlXEMD6"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:mqIn1KpwUevg+PIOPdwMRgH3CKENA0Ql5Xpl5Kdr"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +86,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:J6BJua8kDutl7qX+qpPbzCEvX6V9k9mANkKFDMg4"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:2No6aF6SD4x0o+Mv7VP8oGJok/IXDMGuNpDz6oZc"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -252,13 +260,13 @@
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;r00smwre1.ronal.int&quot;"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;esb&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.LOC_CON_POSTG_PUBLIC_ESB_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.LOC_CON_POSTG_PUBLIC_ESB_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.LOC_CON_POSTG_PUBLIC_ESB_Database"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="POSTGRESQL"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;adm.oho&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:x0qsbOqKSTk777cCuhOWcAKmacgso2fQ5dByZkTQTFTRp6g6oZU="/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.LOC_CON_POSTG_PUBLIC_ESB_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.LOC_CON_POSTG_PUBLIC_ESB_Login"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:AQaVckLO2u4FqHedLYiBXLrQtoNcEcyP8oyvAaw0t3io4ReMoF4QEmoYle3oYK/iBWUT8PD6Nk3I/2hx15a4m3XKOuNh"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rest_results&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -274,7 +282,7 @@
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="postgres_id"/>
     <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
     <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.LOC_CON_POSTG_PUBLIC_ESB_AdditionalParams"/>
     <elementParameter field="CHECK" name="SAVE_POINT" show="false" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -406,13 +414,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cf998ecb-26d0-4efc-89de-21fa47f4397a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AElh7tFrlAgANjRumX4cLiRof3t5jKGS2M9MvD+LaFNqEpBNcloHmYhmY4P7dmICalpLXoSJU4lU&#13;
-cf5CkY+ZDg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_230b5b83-71b8-417c-a52d-a7efebec89fc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F7jOlNChMZyURuI6ertouKAl3uMmSbRg9zbUigK46YkYk52ch8UJIu1ZzxwW/njrPb8mvY2D+F9W&#13;
-moRIvIAsRw==</DigestValue></Reference></SignedInfo><SignatureValue>dVtDG2QOnshoR9yB42VCqd2JKUiExtJ3vuvfDHuJtoc+WxzrW38uZHvHA9SaGrlXNFjaoaEjxfUT&#13;
-ONIgTblcNDSomB5s6XPt1xNcpJf3r/S+WCsKcqfr9SN9z9hl7VeZj1oMZaWwBrxNLrmo+jMIVlOy&#13;
-cL0pcEDpAEFylpgZu/pJf/mb7ojbahX1fHjbPdl1ys9+4/nu4pbUgApfqQoY4YKETlVupe34zt+b&#13;
-rbfaGiE9Fcl+JY5wTBYy/tSL5qVjQfrLScVF3s1JB4DSbseZgwj1UmLZ/4zB4pKgjfo/2uNE1FAa&#13;
-TqHCPpDzEKFuwwm50o3CRFHxQeNpRoyFP1a4Og==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_733999a4-84e5-4aca-9182-000106e6b247"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BzbRADtTcZbkWE244vlnYeo1OYnDwOeYyy7u9w/4UFDX4DeTV7Fd/I3C2xG334we8sehyI0NNdg6&#13;
+kH3vG/PfFg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_df770dc4-f2cd-48ae-9792-04dd28ea82e0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4DCMTTF7/BdwxfDUcDofVTDmas0lrGhhjngcGG+6CkP58+9il15A25AY3J8y4VTjpBC4Upz//OoP&#13;
+SNiWmM1DBA==</DigestValue></Reference></SignedInfo><SignatureValue>RTo5joyCn+qJXIloWuESE7TIbWIyXI2ED6ps7dLu+6JMCVxQdywA5zm/Fuaxlbhne/KD+r56Yf+r&#13;
+oyNAt75NWXjjPpG2x/oBuiiOqhc5cFgmZlQwsYtqzPIQUlBmxb8+8szRlx/5068lD5pk/yAB0Rmn&#13;
+mPWirH9zsjx47/84nKVFdcqKC7fHGiK3GQ6/gPMdRKmorJapRNyvUnad2oM93Sf8/hIRyziWajq2&#13;
+yXkZJD7Tf71466Xw/An76nYBV2kSzbTEMS5RFifD4JBjHzgZxNfMRszUJBWAmrF9DpzW5o6eNI/z&#13;
+bnpZmdXAEvH3y7v7sjIKwK/SDpP1Jp8lPgFZnQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -434,4 +442,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_230b5b83-71b8-417c-a52d-a7efebec89fc" Target="#_cf998ecb-26d0-4efc-89de-21fa47f4397a"><Timestamp>2023-05-23 10:46:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_df770dc4-f2cd-48ae-9792-04dd28ea82e0" Target="#_733999a4-84e5-4aca-9182-000106e6b247"><Timestamp>2023-06-01 08:49:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
