@@ -1,0 +1,68 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "SAP2MW",
+    "description" : "REST API for Outbound iDOCS SAP to Middleware",
+    "contact" : {
+      "name" : "Wolfgang Holz",
+      "email" : "wolfgang.holz@ronalgroup.com"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://r00smwre2.ronal.int:9001/services"
+  }, {
+    "url" : "https://r00smwre1.ronal.int:9001/services"
+  } ],
+  "security" : [ {
+    "Basisauthentifizierung" : [ ]
+  } ],
+  "paths" : {
+    "/idoc/mat" : {
+      "post" : {
+        "summary" : "ZMAT",
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/idoc/bom" : {
+      "post" : {
+        "summary" : "ZBOM",
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "securitySchemes" : {
+      "Basisauthentifizierung" : {
+        "type" : "http",
+        "scheme" : "basic"
+      }
+    }
+  }
+}
