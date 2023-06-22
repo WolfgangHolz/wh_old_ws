@@ -43,7 +43,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:xJl/9AqtoKMaymK5yWpM0vLwbquEZGUQ7x98Cn4A"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:z847O1w+e+TIEWYmo7GVRXGl1n8h0iNXXFB1MTuT"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -78,7 +78,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Wri3uQwrDgaepIxXsRqam5RVca2IvW2tyrsIs5hD"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Rjaq/5GQxRm9PrR85GzB6UdF1QLuQOZp+PgqoZXy"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -113,14 +113,36 @@
     <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
     <routinesParameter id="_0-lmkJDBEe2UN6GjnIa2fw" name="TalendString"/>
   </parameters>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/Work/Job_Data/Beispiel-Dokumente/VW-Konzern/SKODA Auto&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;edixml_*.xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
   <node componentName="tFileInputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Work/Job_Data/Beispiel-Dokumente/VW-Konzern/SKODA Auto/edixml_e23050461.xml&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="RADIO" name="AS_STRING" value="true"/>
     <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
     <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFIR_01"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -197,29 +219,29 @@
         <nodes expression="" name="payload" pattern="" type="id_Document" xpath="tHM_01TtXM_01/payload">
           <children main="true" name="root" type="id_String" xpath="tHM_01TtXM_01.payload:/root">
             <children loop="true" main="true" name="header_data" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data">
-              <children name="ordernumber" outgoingConnections="//@node.2/@nodeData/@connections.0" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/ordernumber"/>
-              <children name="orderdate_new" outgoingConnections="//@node.2/@nodeData/@connections.1" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/orderdate_new"/>
-              <children name="responsibility" outgoingConnections="//@node.2/@nodeData/@connections.2" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/responsibility"/>
-              <children name="purchaser" outgoingConnections="//@node.2/@nodeData/@connections.3" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/purchaser"/>
-              <children name="suppliernumber" outgoingConnections="//@node.2/@nodeData/@connections.4" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/suppliernumber"/>
+              <children name="ordernumber" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/ordernumber"/>
+              <children name="orderdate_new" outgoingConnections="//@node.3/@nodeData/@connections.1" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/orderdate_new"/>
+              <children name="responsibility" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/responsibility"/>
+              <children name="purchaser" outgoingConnections="//@node.3/@nodeData/@connections.3" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/purchaser"/>
+              <children name="suppliernumber" outgoingConnections="//@node.3/@nodeData/@connections.4" type="id_String" xpath="tHM_01TtXM_01.payload:/root/header_data/suppliernumber"/>
             </children>
           </children>
         </nodes>
       </inputTrees>
       <outputTrees name="out_003">
         <nodes expression="((String)globalMap.get(&quot;tFileInputRaw_1_FILENAME_PATH&quot;))" name="filename" pattern="" type="id_String" xpath="out_003/filename"/>
-        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/ordernumber]" incomingConnections="//@node.2/@nodeData/@connections.0" name="ordernumber" type="id_String" xpath="out_003/ordernumber"/>
-        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/orderdate_new]" incomingConnections="//@node.2/@nodeData/@connections.1" name="orderdate_new" type="id_String" xpath="out_003/orderdate_new"/>
-        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/responsibility]" incomingConnections="//@node.2/@nodeData/@connections.2" name="responsibility" type="id_String" xpath="out_003/responsibility"/>
-        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/purchaser]" incomingConnections="//@node.2/@nodeData/@connections.3" name="purchaser" type="id_String" xpath="out_003/purchaser"/>
-        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/suppliernumber]" incomingConnections="//@node.2/@nodeData/@connections.4" name="suppliernumber" type="id_String" xpath="out_003/suppliernumber"/>
+        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/ordernumber]" incomingConnections="//@node.3/@nodeData/@connections.0" name="ordernumber" type="id_String" xpath="out_003/ordernumber"/>
+        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/orderdate_new]" incomingConnections="//@node.3/@nodeData/@connections.1" name="orderdate_new" type="id_String" xpath="out_003/orderdate_new"/>
+        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/responsibility]" incomingConnections="//@node.3/@nodeData/@connections.2" name="responsibility" type="id_String" xpath="out_003/responsibility"/>
+        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/purchaser]" incomingConnections="//@node.3/@nodeData/@connections.3" name="purchaser" type="id_String" xpath="out_003/purchaser"/>
+        <nodes expression="[tHM_01TtXM_01.payload:/root/header_data/suppliernumber]" incomingConnections="//@node.3/@nodeData/@connections.4" name="suppliernumber" type="id_String" xpath="out_003/suppliernumber"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.2/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.2/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.3/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.3/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.3/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.3/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.3/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
@@ -324,41 +346,41 @@
         <nodes expression="" name="payload" pattern="" type="id_Document" xpath="tHM_02TtXM_02/payload">
           <children main="true" name="root" type="id_String" xpath="tHM_02TtXM_02.payload:/root">
             <children loop="true" main="true" name="detail_data_flat" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat">
-              <children name="position" outgoingConnections="//@node.5/@nodeData/@connections.0" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/position"/>
-              <children name="partnumber" outgoingConnections="//@node.5/@nodeData/@connections.1" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/partnumber"/>
-              <children name="priceflag" outgoingConnections="//@node.5/@nodeData/@connections.2" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/priceflag"/>
-              <children name="pricevalue" outgoingConnections="//@node.5/@nodeData/@connections.3" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/pricevalue"/>
-              <children name="pricecount" outgoingConnections="//@node.5/@nodeData/@connections.4" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/pricecount"/>
-              <children name="priceunit" outgoingConnections="//@node.5/@nodeData/@connections.5" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/priceunit"/>
-              <children name="pricecurrency" outgoingConnections="//@node.5/@nodeData/@connections.6" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/pricecurrency"/>
-              <children name="dateflag" outgoingConnections="//@node.5/@nodeData/@connections.7" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/dateflag"/>
-              <children name="datevalue" outgoingConnections="//@node.5/@nodeData/@connections.8" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/datevalue"/>
+              <children name="position" outgoingConnections="//@node.6/@nodeData/@connections.0" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/position"/>
+              <children name="partnumber" outgoingConnections="//@node.6/@nodeData/@connections.1" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/partnumber"/>
+              <children name="priceflag" outgoingConnections="//@node.6/@nodeData/@connections.2" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/priceflag"/>
+              <children name="pricevalue" outgoingConnections="//@node.6/@nodeData/@connections.3" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/pricevalue"/>
+              <children name="pricecount" outgoingConnections="//@node.6/@nodeData/@connections.4" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/pricecount"/>
+              <children name="priceunit" outgoingConnections="//@node.6/@nodeData/@connections.5" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/priceunit"/>
+              <children name="pricecurrency" outgoingConnections="//@node.6/@nodeData/@connections.6" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/pricecurrency"/>
+              <children name="dateflag" outgoingConnections="//@node.6/@nodeData/@connections.7" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/dateflag"/>
+              <children name="datevalue" outgoingConnections="//@node.6/@nodeData/@connections.8" type="id_String" xpath="tHM_02TtXM_02.payload:/root/detail_data_flat/datevalue"/>
             </children>
           </children>
         </nodes>
       </inputTrees>
       <outputTrees name="out_001">
         <nodes expression="((String)globalMap.get(&quot;tFileInputRaw_1_FILENAME_PATH&quot;))" name="filename" pattern="" type="id_String" xpath="out_001/filename"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/position]" incomingConnections="//@node.5/@nodeData/@connections.0" name="position" type="id_String" xpath="out_001/position"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/partnumber]" incomingConnections="//@node.5/@nodeData/@connections.1" name="partnumber" type="id_String" xpath="out_001/partnumber"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/priceflag]" incomingConnections="//@node.5/@nodeData/@connections.2" name="priceflag" type="id_String" xpath="out_001/priceflag"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/pricevalue]" incomingConnections="//@node.5/@nodeData/@connections.3" name="pricevalue" type="id_String" xpath="out_001/pricevalue"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/pricecount]" incomingConnections="//@node.5/@nodeData/@connections.4" name="pricecount" type="id_String" xpath="out_001/pricecount"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/priceunit]" incomingConnections="//@node.5/@nodeData/@connections.5" name="priceunit" type="id_String" xpath="out_001/priceunit"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/pricecurrency]" incomingConnections="//@node.5/@nodeData/@connections.6" name="pricecurrency" type="id_String" xpath="out_001/pricecurrency"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/dateflag]" incomingConnections="//@node.5/@nodeData/@connections.7" name="dateflag" type="id_String" xpath="out_001/dateflag"/>
-        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/datevalue]" incomingConnections="//@node.5/@nodeData/@connections.8" name="datevalue" type="id_String" xpath="out_001/datevalue"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/position]" incomingConnections="//@node.6/@nodeData/@connections.0" name="position" type="id_String" xpath="out_001/position"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/partnumber]" incomingConnections="//@node.6/@nodeData/@connections.1" name="partnumber" type="id_String" xpath="out_001/partnumber"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/priceflag]" incomingConnections="//@node.6/@nodeData/@connections.2" name="priceflag" type="id_String" xpath="out_001/priceflag"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/pricevalue]" incomingConnections="//@node.6/@nodeData/@connections.3" name="pricevalue" type="id_String" xpath="out_001/pricevalue"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/pricecount]" incomingConnections="//@node.6/@nodeData/@connections.4" name="pricecount" type="id_String" xpath="out_001/pricecount"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/priceunit]" incomingConnections="//@node.6/@nodeData/@connections.5" name="priceunit" type="id_String" xpath="out_001/priceunit"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/pricecurrency]" incomingConnections="//@node.6/@nodeData/@connections.6" name="pricecurrency" type="id_String" xpath="out_001/pricecurrency"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/dateflag]" incomingConnections="//@node.6/@nodeData/@connections.7" name="dateflag" type="id_String" xpath="out_001/dateflag"/>
+        <nodes expression="[tHM_02TtXM_02.payload:/root/detail_data_flat/datevalue]" incomingConnections="//@node.6/@nodeData/@connections.8" name="datevalue" type="id_String" xpath="out_001/datevalue"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.5/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.5/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.5/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.5/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.5/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.5/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.5/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.5/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.5/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.6/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.6/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.6/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.6/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.6/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.6/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.6/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.6/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.6/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="832" posY="416">
@@ -385,41 +407,41 @@
         <nodes expression="" name="payload" pattern="" type="id_Document" xpath="tHM_02TtXM_03/payload">
           <children main="true" name="root" type="id_String" xpath="tHM_02TtXM_03.payload:/root">
             <children loop="true" main="true" name="detail_data_flat" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat">
-              <children name="position" outgoingConnections="//@node.6/@nodeData/@connections.0" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/position"/>
-              <children name="partnumber" outgoingConnections="//@node.6/@nodeData/@connections.1" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/partnumber"/>
-              <children name="priceflag" outgoingConnections="//@node.6/@nodeData/@connections.2" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/priceflag"/>
-              <children name="pricevalue" outgoingConnections="//@node.6/@nodeData/@connections.3" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/pricevalue"/>
-              <children name="pricecount" outgoingConnections="//@node.6/@nodeData/@connections.4" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/pricecount"/>
-              <children name="priceunit" outgoingConnections="//@node.6/@nodeData/@connections.5" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/priceunit"/>
-              <children name="pricecurrency" outgoingConnections="//@node.6/@nodeData/@connections.6" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/pricecurrency"/>
-              <children name="dateflag" outgoingConnections="//@node.6/@nodeData/@connections.7" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/dateflag"/>
-              <children name="datevalue" outgoingConnections="//@node.6/@nodeData/@connections.8" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/datevalue"/>
+              <children name="position" outgoingConnections="//@node.7/@nodeData/@connections.0" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/position"/>
+              <children name="partnumber" outgoingConnections="//@node.7/@nodeData/@connections.1" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/partnumber"/>
+              <children name="priceflag" outgoingConnections="//@node.7/@nodeData/@connections.2" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/priceflag"/>
+              <children name="pricevalue" outgoingConnections="//@node.7/@nodeData/@connections.3" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/pricevalue"/>
+              <children name="pricecount" outgoingConnections="//@node.7/@nodeData/@connections.4" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/pricecount"/>
+              <children name="priceunit" outgoingConnections="//@node.7/@nodeData/@connections.5" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/priceunit"/>
+              <children name="pricecurrency" outgoingConnections="//@node.7/@nodeData/@connections.6" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/pricecurrency"/>
+              <children name="dateflag" outgoingConnections="//@node.7/@nodeData/@connections.7" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/dateflag"/>
+              <children name="datevalue" outgoingConnections="//@node.7/@nodeData/@connections.8" type="id_String" xpath="tHM_02TtXM_03.payload:/root/detail_data_flat/datevalue"/>
             </children>
           </children>
         </nodes>
       </inputTrees>
       <outputTrees name="out_002">
         <nodes expression="((String)globalMap.get(&quot;tFileInputRaw_1_FILENAME_PATH&quot;))" name="filename" pattern="" type="id_String" xpath="out_002/filename"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/position]" incomingConnections="//@node.6/@nodeData/@connections.0" name="position" type="id_String" xpath="out_002/position"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/partnumber]" incomingConnections="//@node.6/@nodeData/@connections.1" name="partnumber" type="id_String" xpath="out_002/partnumber"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/priceflag]" incomingConnections="//@node.6/@nodeData/@connections.2" name="priceflag" type="id_String" xpath="out_002/priceflag"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/pricevalue]" incomingConnections="//@node.6/@nodeData/@connections.3" name="pricevalue" type="id_String" xpath="out_002/pricevalue"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/pricecount]" incomingConnections="//@node.6/@nodeData/@connections.4" name="pricecount" type="id_String" xpath="out_002/pricecount"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/priceunit]" incomingConnections="//@node.6/@nodeData/@connections.5" name="priceunit" type="id_String" xpath="out_002/priceunit"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/pricecurrency]" incomingConnections="//@node.6/@nodeData/@connections.6" name="pricecurrency" type="id_String" xpath="out_002/pricecurrency"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/dateflag]" incomingConnections="//@node.6/@nodeData/@connections.7" name="dateflag" type="id_String" xpath="out_002/dateflag"/>
-        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/datevalue]" incomingConnections="//@node.6/@nodeData/@connections.8" name="datevalue" type="id_String" xpath="out_002/datevalue"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/position]" incomingConnections="//@node.7/@nodeData/@connections.0" name="position" type="id_String" xpath="out_002/position"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/partnumber]" incomingConnections="//@node.7/@nodeData/@connections.1" name="partnumber" type="id_String" xpath="out_002/partnumber"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/priceflag]" incomingConnections="//@node.7/@nodeData/@connections.2" name="priceflag" type="id_String" xpath="out_002/priceflag"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/pricevalue]" incomingConnections="//@node.7/@nodeData/@connections.3" name="pricevalue" type="id_String" xpath="out_002/pricevalue"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/pricecount]" incomingConnections="//@node.7/@nodeData/@connections.4" name="pricecount" type="id_String" xpath="out_002/pricecount"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/priceunit]" incomingConnections="//@node.7/@nodeData/@connections.5" name="priceunit" type="id_String" xpath="out_002/priceunit"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/pricecurrency]" incomingConnections="//@node.7/@nodeData/@connections.6" name="pricecurrency" type="id_String" xpath="out_002/pricecurrency"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/dateflag]" incomingConnections="//@node.7/@nodeData/@connections.7" name="dateflag" type="id_String" xpath="out_002/dateflag"/>
+        <nodes expression="[tHM_02TtXM_03.payload:/root/detail_data_flat/datevalue]" incomingConnections="//@node.7/@nodeData/@connections.8" name="datevalue" type="id_String" xpath="out_002/datevalue"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.6/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.6/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.6/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.6/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.6/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.6/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.6/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.6/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.6/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.7/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.7/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.7/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.7/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.7/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.7/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.7/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.7/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.7/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.8" target="//@node.7/@nodeData/@outputTrees.0/@nodes.9" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="288">
@@ -563,6 +585,11 @@
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputRaw_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
   <connection connectorName="FLOW" label="tFIR_01TtHM_01" lineStyle="0" metaname="tFileInputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputRaw_1" target="tHMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFIR_01TtHM_01"/>
@@ -600,17 +627,17 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out_002"/>
   </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputRaw_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_65cfb63e-6126-4c64-9ece-34fd14de4efe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>424BLxWFbpyZX9ls0RWjHyHM5XwhboLeiNiJ1PCFMpNL60szE0jQdU+JQvshYbCwMErRwm8ecbIq&#13;
-82rZv2G2mA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_62aa69fc-dc03-4382-bd65-3fe19508ff53"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eOmbIQ5eBE5Y5dBqmPWuNte1l7Z6SE+NnO2owAl6uZ20m2cmIKa5LJt8rWnSDf4hnrwMCemHJzO3&#13;
-SFpEHcTdwQ==</DigestValue></Reference></SignedInfo><SignatureValue>WmOHRa1qfWV38qs1xU/sh1izE3UTbOXlEf0mwQMONo9+6VzQFIs7XAvtI2sCJ4JG1hbzoWgoJhwZ&#13;
-sxIwjPhBb++gD6693CalnJFsrq3oGiuUIdhJLMKxiUen/PCchCrnOf8DOR89KaH05f/BxwpjxxP2&#13;
-hsizm65Nb9Dv7qAdtIaQiVRqi+NR3Fs5RViZBv6GmEHhArWjPnpzx7S76xJVy90DqHrE/f3W42++&#13;
-r/f9xwXNIxfLc3XVGabP41I0/HygVTVFJ8ILXnj+qmmqCanheGkav8J0v5DV2dlpz6eIfssDBNjt&#13;
-+chQClg+5FMXACTI0ROKl9e3UbQUJzAU8I2nEA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3a9891c5-1f50-4262-9d01-31cdb36c29ea"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>N+rQAJx0/geBH06PvqFEXWsX8wQCkGe7HRcA7QhE0gn6gJ31SuQyxcRyO1vdpmAARQXzp3CWTz9A&#13;
+YsdmlTTCCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_17581135-7f9c-48e1-bfd4-6029c45bd4d9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5xplOzxBsjEK+YOIuBbrB6CMXkMEOcJEyc5Y5Cp6spFzF2cxazLldTej22Rekll2ixjcP+yXxCm+&#13;
+Ivl1rAXOvw==</DigestValue></Reference></SignedInfo><SignatureValue>HIIUqrg6g7ZVpU2xsCEweCDAqoNFCZYvBHFY0m+yLQVcaVLcWlwvLx6Ty9mTNLzjuz/KxjRY+4mK&#13;
+I0rcc5b2fnbIch4m1ohuyrbGOWt83iVOoBCQU4yD7JYtqzBqzq9H9t97VBZMMM4/shG7KrDrYZs7&#13;
+k+GfO527ETUxU63IT2LQpOOlEQnjv5GOyLGzVDQhnbIHAxYnstDAClUsTZ9YH6HFmD+nsXU6KLYe&#13;
+RArY8KVSVusC+uSyknGcqF/Mm5WR8oySL/SVow+sGM26VdiWfpxaTHup41gHB+ej2O1X9TQV274f&#13;
+3J7Rr7fSj4sxMLlEToYk6asJxL8tQb12v0Jgqg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -632,4 +659,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_62aa69fc-dc03-4382-bd65-3fe19508ff53" Target="#_65cfb63e-6126-4c64-9ece-34fd14de4efe"><Timestamp>2023-06-22 07:00:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_17581135-7f9c-48e1-bfd4-6029c45bd4d9" Target="#_3a9891c5-1f50-4262-9d01-31cdb36c29ea"><Timestamp>2023-06-22 07:04:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
