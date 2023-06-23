@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:8e0j2nm4SKpGMiiAnuJyKa5Gi1T0lfiUmSYhIsv4"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:K37fBl3M5g1voUys3B/kTq7I2CgE4PFgzGZlBxlE"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:CdJAvHWNuAOMX1xB5tsETGM0gouhwdfILjKTorvu"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:thqIlzZPqlQn5TvqcVsm23sScDhlLKVS+AKejRyM"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -294,7 +294,8 @@
       <column comment="" key="false" length="-1" name="customer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="brand" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ordernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="orderdate_new" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="orderdate_flag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="oderdate_date" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -303,38 +304,43 @@
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tHM_01TtXM_02">
         <nodes expression="" name="payload" type="id_Document" xpath="tHM_01TtXM_02/payload">
           <children main="true" name="root" type="id_String" xpath="tHM_01TtXM_02.payload:/root">
-            <children loop="true" main="true" name="header_data" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data">
+            <children main="true" name="header_data" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data">
               <children name="filename" nodeType="ATTRIBUT" outgoingConnections="//@node.6/@nodeData/@connections.0" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/@filename"/>
-              <children name="customer" nodeType="ATTRIBUT" outgoingConnections="//@node.6/@nodeData/@connections.6" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/@customer"/>
-              <children name="brand" nodeType="ATTRIBUT" outgoingConnections="//@node.6/@nodeData/@connections.7" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/@brand"/>
+              <children name="customer" nodeType="ATTRIBUT" outgoingConnections="//@node.6/@nodeData/@connections.5" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/@customer"/>
+              <children name="brand" nodeType="ATTRIBUT" outgoingConnections="//@node.6/@nodeData/@connections.6" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/@brand"/>
               <children name="ordernumber" outgoingConnections="//@node.6/@nodeData/@connections.1" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/ordernumber"/>
-              <children name="orderdate_new" outgoingConnections="//@node.6/@nodeData/@connections.2" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/orderdate_new"/>
-              <children name="responsibility" outgoingConnections="//@node.6/@nodeData/@connections.3" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/responsibility"/>
-              <children name="purchaser" outgoingConnections="//@node.6/@nodeData/@connections.4" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/purchaser"/>
-              <children name="suppliernumber" outgoingConnections="//@node.6/@nodeData/@connections.5" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/suppliernumber"/>
+              <children expression="" loop="true" main="true" name="orderdate_new" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/orderdate_new">
+                <children name="flag" outgoingConnections="//@node.6/@nodeData/@connections.7" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/orderdate_new/flag"/>
+                <children name="date" outgoingConnections="//@node.6/@nodeData/@connections.8" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/orderdate_new/date"/>
+              </children>
+              <children name="responsibility" outgoingConnections="//@node.6/@nodeData/@connections.2" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/responsibility"/>
+              <children name="purchaser" outgoingConnections="//@node.6/@nodeData/@connections.3" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/purchaser"/>
+              <children name="suppliernumber" outgoingConnections="//@node.6/@nodeData/@connections.4" type="id_String" xpath="tHM_01TtXM_02.payload:/root/header_data/suppliernumber"/>
             </children>
           </children>
         </nodes>
       </inputTrees>
       <outputTrees name="ouut2">
         <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/@filename]" incomingConnections="//@node.6/@nodeData/@connections.0" name="filename" type="id_String" xpath="ouut2/filename"/>
-        <nodes expression="[tHM_01TtXM_02.payload:/root/header_data/@customer]" incomingConnections="//@node.6/@nodeData/@connections.6" name="customer" type="id_String" xpath="ouut2/customer"/>
-        <nodes expression="[tHM_01TtXM_02.payload:/root/header_data/@brand]" incomingConnections="//@node.6/@nodeData/@connections.7" name="brand" type="id_String" xpath="ouut2/brand"/>
+        <nodes expression="[tHM_01TtXM_02.payload:/root/header_data/@customer]" incomingConnections="//@node.6/@nodeData/@connections.5" name="customer" type="id_String" xpath="ouut2/customer"/>
+        <nodes expression="[tHM_01TtXM_02.payload:/root/header_data/@brand]" incomingConnections="//@node.6/@nodeData/@connections.6" name="brand" type="id_String" xpath="ouut2/brand"/>
         <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/ordernumber]" incomingConnections="//@node.6/@nodeData/@connections.1" name="ordernumber" type="id_String" xpath="ouut2/ordernumber"/>
-        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/orderdate_new]" incomingConnections="//@node.6/@nodeData/@connections.2" name="orderdate_new" type="id_String" xpath="ouut2/orderdate_new"/>
-        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/responsibility]" incomingConnections="//@node.6/@nodeData/@connections.3" name="responsibility" type="id_String" xpath="ouut2/responsibility"/>
-        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/purchaser]" incomingConnections="//@node.6/@nodeData/@connections.4" name="purchaser" type="id_String" xpath="ouut2/purchaser"/>
-        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/suppliernumber]" incomingConnections="//@node.6/@nodeData/@connections.5" name="suppliernumber" type="id_String" xpath="ouut2/suppliernumber"/>
+        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/orderdate_new/flag]" incomingConnections="//@node.6/@nodeData/@connections.7" name="orderdate_flag" type="id_String" xpath="ouut2/orderdate_flag"/>
+        <nodes expression="[tHM_01TtXM_02.payload:/root/header_data/orderdate_new/date]" incomingConnections="//@node.6/@nodeData/@connections.8" name="oderdate_date" type="id_String" xpath="ouut2/oderdate_date"/>
+        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/responsibility]" incomingConnections="//@node.6/@nodeData/@connections.2" name="responsibility" type="id_String" xpath="ouut2/responsibility"/>
+        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/purchaser]" incomingConnections="//@node.6/@nodeData/@connections.3" name="purchaser" type="id_String" xpath="ouut2/purchaser"/>
+        <nodes expression=" [tHM_01TtXM_02.payload:/root/header_data/suppliernumber]" incomingConnections="//@node.6/@nodeData/@connections.4" name="suppliernumber" type="id_String" xpath="ouut2/suppliernumber"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="//@node.6/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.3" target="//@node.6/@nodeData/@outputTrees.0/@nodes.3" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4" target="//@node.6/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.6/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.6/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.6/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.5" target="//@node.6/@nodeData/@outputTrees.0/@nodes.6" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.6" target="//@node.6/@nodeData/@outputTrees.0/@nodes.7" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.7" target="//@node.6/@nodeData/@outputTrees.0/@nodes.8" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1" target="//@node.6/@nodeData/@outputTrees.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
       <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2" target="//@node.6/@nodeData/@outputTrees.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4/@children.0" target="//@node.6/@nodeData/@outputTrees.0/@nodes.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.4/@children.1" target="//@node.6/@nodeData/@outputTrees.0/@nodes.5" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="320">
@@ -758,13 +764,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_644dbd96-82bd-4534-9a0f-7770e1614fdf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QJM87D3XhpgdvfDPa9nKx8ZT5/ZoScvARib8ovKNlw9lCNp9WWWTorClDQqMS6wB2H9aCosClmxM&#13;
-NKEIkj0aKw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_462d06ed-3103-473d-ae8d-73629201ba41"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Q6ADD8BWpnks5IW6ZidJYRikWyzz9PPymjOauGW9i4VkQmrnDt+AeCvyDgYrDb2vCRKAKjBixQsL&#13;
-eAXjWjIX3g==</DigestValue></Reference></SignedInfo><SignatureValue>C5afUw4EHSLg1hPXS3VM0AkNKlJOfP+PJpvuZDob9cd9kYzdSs4j2EIWuL2c4dXnEO7hM2sUQ4Dr&#13;
-cCdyeLGPcLt4e7O6PyeT0PpLjj7NFbt4fUsnwh6rd0CKx5ud3j9a4mA/bV4K7GXgekzrpp+mqrH3&#13;
-g7Y2oDYEFK2B5vt3VU7VCmSh+meKEv4nlM1sHuO9uagA/w5pAmoC809x1piIu0RypFXDpJTXcF5g&#13;
-EkCxdaas3a5RZvx56lKYmI6VtxwzSMAqmrAC4aeyPz8R/giOMO8veGRjR+ZVgwUl35AqEmXJ2gqv&#13;
-mDtzVFkW90Wxck2/NK+e5T3Sz3IhXXRP3WEflw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f857f0fa-04b4-4584-bf5c-7f23b9d7a389"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+dFvkVp53W7Tpjeph3owm7HBitaq2utINnyo9OAVhJWUxdcvBUvGnm1Ohd1R85jsKRJSa5pqJUjT&#13;
+eoSfDyFI6A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_91ab0711-a869-4b5e-86f6-4c45467d62ff"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qRyPz3ISnEZI3msZUKlSre4GFaEutMTZaSmqwTQ5NmXjsukDCAnhI+iXU5snTgc38wyD8lu1I3yt&#13;
+1NjFDbqdKA==</DigestValue></Reference></SignedInfo><SignatureValue>RrSfwH6k9TYB3XFryZrGsaG/KhI0RF2iPEy7vUg7wZTUa4dIr3+NPcd2/BJHgB7KrVGzp2/Z7Y3A&#13;
+HLpXKZhUMqMdnCh+Y/H2pHU23ZUFc8LZ60kJMSJJJGDvyXCrAVNYssma4FsU2e3Yy8k/NOjxjFge&#13;
+0gCsMhRRYEHzt4WCGxygElGsQ4QhIVytti5VSYnQ9fTBUXuGFbkKAIIzp11AlDUVEmooTnAHjZYu&#13;
+QHixYXfj3JyMHmXpY6/dcKC7mcp8+op8+AS3OxVH1DAq/Xg7puSWThH2lrFZnH/KSga9U/bW5yEb&#13;
+iUiGrm+5qRUXmKmrPNBWtq1XgvrSZXsCUbPunQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -786,4 +792,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_462d06ed-3103-473d-ae8d-73629201ba41" Target="#_644dbd96-82bd-4534-9a0f-7770e1614fdf"><Timestamp>2023-06-23 08:15:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_91ab0711-a869-4b5e-86f6-4c45467d62ff" Target="#_f857f0fa-04b4-4584-bf5c-7f23b9d7a389"><Timestamp>2023-06-23 08:23:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
