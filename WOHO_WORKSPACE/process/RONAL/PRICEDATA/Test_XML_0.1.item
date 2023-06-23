@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:MI9ZCa2YfMALZW1cgOL8brKXpYV1GT8IQOOdMwPz"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:MbXdSQkQXjYdYiYuZw5qkPKDyA5ESoSzjfLkInor"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:z/yPT0A6SpjTBOu14SBUzrViD+MKPK8DxxFxYjmN"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:CCliiuPewEkuNU1qRc0ogSQwRxFERuG8owABQ20y"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -899,6 +899,81 @@
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_3"/>
+    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
+    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
+    <elementParameter field="CHECK" name="RELEASE_CACHE" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="ouut5" name="tHashInput_3">
+      <column comment="" key="false" length="-1" name="filename" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="partnumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="priceflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pricevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_3"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="filename"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="position"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="partnumber"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="number"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="priceflag"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pricevalue"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pricecount"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="priceunit"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pricecurrency"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateflag"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="datevalue"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="ouut5" name="tLogRow_3">
+      <column comment="" key="false" length="-1" name="filename" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="partnumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="priceflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pricevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileInputRaw_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
@@ -1007,6 +1082,10 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tLogRow_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_2"/>
@@ -1045,13 +1124,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_17e528b7-ac9e-4fbf-a001-a96eef31103f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>INCQOmEFxserNWRF0L+JPtVyjBHXz5ejc7x5p5L66D4rLH/frjLibGSwhqS1LauOs2fJa246RI27&#13;
-4Bk9SjFdIg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_adbd31ab-08b3-4678-9dc9-47dfb86c9619"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QMWTE7QpKrQos9BAMlHmtQNZSMHMTifbnOlfSknGqY0kfH2FLbTZFZcrvdik853UA4pzds9gH9wB&#13;
-SF3Z4TTyCQ==</DigestValue></Reference></SignedInfo><SignatureValue>U2BFeqqT6ZGF77UGmYvgpUar6OGD2ppgOjOGwl7QkjywNBbBByoS2GC3ISr9IUONjTCDdaRi8qMY&#13;
-NT7Q27EaAB//8jZmHw1SP9paRHF9pezNGWZNPnm/2l+xLjc4NNHx51bj+m5fH7WQvL/Jz0rQKrnV&#13;
-b8ZcepMF3GkrZRIQ7ETbFRfdBtuu5UfAZsjPM8e6ZE91wSgAbS+eEbkpVf5YxzHihQf83n/MPJ7A&#13;
-ETdD3uCr6ZmCshCoN65RaTdxfXg3X4Ak+jq5dV+Rreo52Ovcr4cSCHDkFyUhe3c2Lz/korJw1yEp&#13;
-VNsk0hNy01DhIczRNh3y/ImBlVCEXXq2Y5tFkA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c6aa70a5-4c4b-4e2a-a0d2-81f5528a53d9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zSFnL+6xLzjthx4ike4v5seqGgn0/8lzSSeArk1OIa3u1sf52PV4Gs0Nzs8MKkLHtFHeW9FQlwEw&#13;
+PFkN4y66Rw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_510d0262-19eb-458a-bcf9-43372a32870f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MFLaVNo9LGbDX+8e1ydH6jakrsAxpmFFqiECL7oTVQwe254rpv+l7sc+5ej51L036KJjAqs20CmX&#13;
+tQ7kKx6V5g==</DigestValue></Reference></SignedInfo><SignatureValue>CUfEhVcFARD4m/hTOeEbDAP9V96z1V7+0vpSzQjbHyS5JeXw725QxWMUXHxVOgSwNnU5j4u6bnS3&#13;
+Z6/4u/YTiLSB3x6UjbiusNDhCr1VeSSz4X207eBj4l2g5jALJ9FZoeWVAVWw/eGlSVL73eWgL64Z&#13;
+RzBcORWSzAxmbYpcyyvXJ89LEC99SokQO+hdJJNmEjJg46xkL6ygfw6ELgpLAxcDRUlbPy6bG2e7&#13;
+fPTwVxjgb7hj1zbTapZ+zxhUkqYnlo1FKyQ9PR5TZpKdboGuGVWaQr7Z4XA4jqdJv5sfXIBf0hsu&#13;
+WLW/jYSZuDmWGMIXnR5BpXGL8vJheygzzxMXuw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1073,4 +1157,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_adbd31ab-08b3-4678-9dc9-47dfb86c9619" Target="#_17e528b7-ac9e-4fbf-a001-a96eef31103f"><Timestamp>2023-06-23 09:01:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_510d0262-19eb-458a-bcf9-43372a32870f" Target="#_c6aa70a5-4c4b-4e2a-a0d2-81f5528a53d9"><Timestamp>2023-06-23 09:03:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
