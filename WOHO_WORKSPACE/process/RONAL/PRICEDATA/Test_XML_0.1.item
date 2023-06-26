@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:jzwpnYdehJzrhy217upZQgAzf9SQ5rI+TFzpiCz3"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hcTnMD1nwSWwHqTSnpid47fGwPJ3LaSYFtT2Xu+r"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:JR+opKSPIUdKHcx2dQkDnMTLkMilOpgoOIw8fiuY"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:UHcjSIO9Ubk1+4/CNfneFxv7hZqrjcxdmBDGrJeS"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -1910,8 +1910,6 @@
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -1922,9 +1920,10 @@
       <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_part_1" nullable="true" originalDbColumnName="loop_part" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_price_1" nullable="true" originalDbColumnName="loop_price" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="from_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -1941,8 +1940,6 @@
         <mapperTableEntries expression="out_12.responsibility" name="responsibility" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.purchaser" name="purchaser" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.suppliernumber" name="suppliernumber" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_12.loop_part" name="loop_part" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_12.loop_price" name="loop_price" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis" name="basis" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis_price" name="basis_price" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis_pricecount" name="basis_pricecount" nullable="true" type="id_String"/>
@@ -1953,9 +1950,10 @@
         <mapperTableEntries expression="out_12.pricecount" name="pricecount" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.priceunit" name="priceunit" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.pricecurrency" name="pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_12.loop_part_1" name="loop_part_1" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_12.loop_price_1" name="loop_price_1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row18.loop_part " name="loop_part" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row18.loop_price " name="loop_price" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row18.loop_date " name="loop_date" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row18.dateflag " name="dateflag" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row18.datevalue " name="from_datevalue" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="out_12" sizeState="INTERMEDIATE">
@@ -1984,7 +1982,7 @@
         <mapperTableEntries name="loop_part_1" nullable="true" type="id_String"/>
         <mapperTableEntries name="loop_price_1" nullable="true" type="id_String"/>
       </inputTables>
-      <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row18.dateflag.equals(&quot;300&quot;)" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row18" sizeState="INTERMEDIATE">
+      <inputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row18.dateflag.equals(&quot;300&quot;)" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row18" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="out_12.filename " name="filename" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_12.position " name="position" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_12.partnumber " name="partnumber" nullable="true" operator="=" type="id_String"/>
@@ -1995,8 +1993,8 @@
         <mapperTableEntries name="pricecurrency" nullable="true" type="id_String"/>
         <mapperTableEntries name="dateflag" nullable="true" type="id_String"/>
         <mapperTableEntries name="datevalue" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_12.loop_part_1 " name="loop_part" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="out_12.loop_price_1 " name="loop_price" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="" name="loop_part" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="loop_price" nullable="true" type="id_String"/>
         <mapperTableEntries name="loop_date" nullable="true" type="id_String"/>
       </inputTables>
     </nodeData>
@@ -2058,10 +2056,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="suppliernumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="loop_part"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="loop_price"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="basis"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="basis_price"/>
@@ -2082,11 +2076,13 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="pricecurrency"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="loop_part_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="loop_part"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="loop_price_1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="loop_price"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="loop_date"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateflag"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="from_datevalue"/>
       <elementValue elementRef="LENGTH" value="10"/>
@@ -2105,8 +2101,6 @@
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -2117,9 +2111,10 @@
       <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_part_1" nullable="true" originalDbColumnName="loop_part" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_price_1" nullable="true" originalDbColumnName="loop_price" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="from_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -2377,6 +2372,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="from_datevalue"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="dateflag"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ouzzzz"/>
@@ -2444,13 +2442,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_241340f9-299b-4164-8df4-42b64233517c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1hGbGNdH27uUTTZLYQlkU+F7hLXw9TThQpD2spQBZ+6h/jty/08jkz01jpps6nbhNBJ+TIfwhRhi&#13;
-m8d9r6gFVQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_946739c1-1e9b-47e1-a027-32c0acd3b895"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vOAy9prBdPN8/4M4b8RNVVXhFo/1uBtYFleJMQ4QsPGAsr1zpTj111nluEZJZZtu2bxcWqrSbJgm&#13;
-q4oFDfS1Dg==</DigestValue></Reference></SignedInfo><SignatureValue>BYQTs7985l+0n/m0hqdw856lZOP3PBasc+2GQ/uGzo6hUQR6L/MrAzT3H7oFFDAf7qEHKx1R5uPN&#13;
-0LegSaQyo9n6CK6Kw2mNDIyvt/uz6Za9GpBEXd0cuysc7EUOpmwX1kt+rGzZoGEEA0UhBSjZozLk&#13;
-pkS91BJp2UYk7q4w47wJ4wJzLQ8OCDjwP1UPnb8TQ5QA73Pp8H3HW1oDVsawIBVn9Cn7sAPIc4Mr&#13;
-+aIAOSX8N19/L+emQ8fPxTmZPuYMdx5AmQMueLUgERc2hdEsZWNwKYgjxnVUB3afdmAPPp3h3fqy&#13;
-wWMScLR2Zy4MPW3Rx2KCeTOPid2gG09J8XQTYA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_28964476-3c0f-4260-94f6-800c46697250"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wBag8lPopLiRMjHuO2wy/C28O2MRcRADMTwskHsiTeU/54jlIKPhDQ76akJc4dj79noL9KpGfO0A&#13;
+w6jCOjGVVg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3f760852-17fc-4ff2-9083-05620b774ffb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oIzPHgWHTMQfXuaWduHbyUc/FqZuGUCmKwfiGvVrl5SjxrjsdCz3JsKk7PIizSJnoh9JVw1oe4R5&#13;
+87goQLzJNg==</DigestValue></Reference></SignedInfo><SignatureValue>ZK2hmFsohHWbDPM9FoSzHHogKx/FLYzf4MN36c976UAwUnLU8yDowbNUA+t+EdiSPp+uk5qhAe9V&#13;
+6mzZvfcuv8PPWteE8XAiAplrauoNK3d2Fw/XDGSTsJSPB8Uk2R/V5h+S4NxE9QC7ewcpnTnp3LqJ&#13;
+vfalBl96gbWVxPS5g5MCZo+4cYgV0wqN66RyIiKeeuRLwC043WUR+W4SFCY7NkGm9A51FxRaou/W&#13;
+GHLajLfNjRP+5kO8I9BmE2J/+Lgw3J05A5a2wgxzWEzUD4Fmg+LgB9U/vgP5G+dn493MbQC4knJy&#13;
+y4R70tLrsBiJ+O76kkad9oEdDmA73IMihD4PDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2472,4 +2470,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_946739c1-1e9b-47e1-a027-32c0acd3b895" Target="#_241340f9-299b-4164-8df4-42b64233517c"><Timestamp>2023-06-26 08:56:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3f760852-17fc-4ff2-9083-05620b774ffb" Target="#_28964476-3c0f-4260-94f6-800c46697250"><Timestamp>2023-06-26 08:58:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
