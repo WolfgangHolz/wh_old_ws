@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:qZow1SthLJfJWozkXj+EZ19IYhtgMcRl3944au16"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:vgh7k9ZKg1QS/dIah2hJDGrD4crd2V1yfPfi+DCb"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:BS7NcuwkMoOm5C9xR/i4EziieTcpcwKMY62VIXl1"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:r9Pdf9G71CI3RkAqr58GoHb4cjQMfsadkf64HFUb"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -2417,8 +2417,8 @@
       <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="from_dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="from_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -2447,8 +2447,8 @@
         <mapperTableEntries expression="row22.loop_part " name="loop_part" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row22.loop_price " name="loop_price" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row22.loop_date " name="loop_date" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row22.dateflag " name="from_dateflag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row22.datevalue " name="from_datevalue" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row22.dateflag " name="dateflag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row22.datevalue " name="datevalue" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="copyOfout_12" sizeState="INTERMEDIATE">
         <mapperTableEntries name="filename" nullable="true" type="id_String"/>
@@ -2483,7 +2483,7 @@
         <mapperTableEntries name="pricecount" nullable="true" type="id_String"/>
         <mapperTableEntries name="priceunit" nullable="true" type="id_String"/>
         <mapperTableEntries name="pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;300&quot;" name="dateflag" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="" name="dateflag" nullable="true" type="id_String"/>
         <mapperTableEntries name="datevalue" nullable="true" type="id_String"/>
         <mapperTableEntries expression="copyOfout_12.loop_part " name="loop_part" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="copyOfout_12.loop_price " name="loop_price" nullable="true" operator="=" type="id_String"/>
@@ -2514,150 +2514,8 @@
       <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="992">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_12"/>
-    <elementParameter field="EXTERNAL" name="MAP" value=""/>
-    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
-    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_c6wwwA5uEe6do7ByieCHOg-tMap_12-PREVIEW.bmp"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
-    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
-    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
-    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
-    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="outtt" name="copyOfoutlast">
-      <column comment="" key="false" length="-1" name="filename" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="customer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="brand" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="partnumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="ordernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="oderdate_date" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="basis_priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="basis_pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="priceflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pricevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="from_dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="from_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="to_dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="to_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateExpressionFilter="true" expressionFilter="!Relational.ISNULL(copyOfouzzzz.loop_part) &amp;&amp; !Relational.ISNULL(copyOfouzzzz.loop_price) &amp;&amp; !Relational.ISNULL(copyOfouzzzz.loop_date)" name="copyOfoutlast" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="copyOfouzzzz.filename" name="filename" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.customer" name="customer" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.brand" name="brand" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.position" name="position" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.partnumber" name="partnumber" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.ordernumber" name="ordernumber" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.oderdate_date" name="oderdate_date" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.responsibility" name="responsibility" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.purchaser" name="purchaser" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.suppliernumber" name="suppliernumber" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.basis" name="basis" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.basis_price" name="basis_price" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.basis_pricecount" name="basis_pricecount" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.basis_priceunit" name="basis_priceunit" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.basis_pricecurrency" name="basis_pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.priceflag" name="priceflag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.pricevalue" name="pricevalue" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.pricecount" name="pricecount" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.priceunit" name="priceunit" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.pricecurrency" name="pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.loop_part" name="loop_part" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.loop_price" name="loop_price" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.loop_date" name="loop_date" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.from_dateflag" name="from_dateflag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.from_datevalue" name="from_datevalue" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row23.dateflag " name="to_dateflag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row23.datevalue " name="to_datevalue" nullable="true" type="id_String"/>
-      </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="copyOfouzzzz" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="filename" nullable="true" type="id_String"/>
-        <mapperTableEntries name="customer" nullable="true" type="id_String"/>
-        <mapperTableEntries name="brand" nullable="true" type="id_String"/>
-        <mapperTableEntries name="position" nullable="true" type="id_String"/>
-        <mapperTableEntries name="partnumber" nullable="true" type="id_String"/>
-        <mapperTableEntries name="ordernumber" nullable="true" type="id_String"/>
-        <mapperTableEntries name="oderdate_date" nullable="true" type="id_String"/>
-        <mapperTableEntries name="responsibility" nullable="true" type="id_String"/>
-        <mapperTableEntries name="purchaser" nullable="true" type="id_String"/>
-        <mapperTableEntries name="suppliernumber" nullable="true" type="id_String"/>
-        <mapperTableEntries name="basis" nullable="true" type="id_String"/>
-        <mapperTableEntries name="basis_price" nullable="true" type="id_String"/>
-        <mapperTableEntries name="basis_pricecount" nullable="true" type="id_String"/>
-        <mapperTableEntries name="basis_priceunit" nullable="true" type="id_String"/>
-        <mapperTableEntries name="basis_pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries name="priceflag" nullable="true" type="id_String"/>
-        <mapperTableEntries name="pricevalue" nullable="true" type="id_String"/>
-        <mapperTableEntries name="pricecount" nullable="true" type="id_String"/>
-        <mapperTableEntries name="priceunit" nullable="true" type="id_String"/>
-        <mapperTableEntries name="pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries name="loop_part" nullable="true" type="id_String"/>
-        <mapperTableEntries name="loop_price" nullable="true" type="id_String"/>
-        <mapperTableEntries name="loop_date" nullable="true" type="id_String"/>
-        <mapperTableEntries name="from_dateflag" nullable="true" type="id_String"/>
-        <mapperTableEntries name="from_datevalue" nullable="true" type="id_String"/>
-      </inputTables>
-      <inputTables activateCondensedTool="true" lookupMode="LOAD_ONCE" matchingMode="ALL_MATCHES" name="row23" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="copyOfouzzzz.filename " name="filename" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.position " name="position" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.partnumber " name="partnumber" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries name="priceflag" nullable="true" type="id_String"/>
-        <mapperTableEntries name="pricevalue" nullable="true" type="id_String"/>
-        <mapperTableEntries name="pricecount" nullable="true" type="id_String"/>
-        <mapperTableEntries name="priceunit" nullable="true" type="id_String"/>
-        <mapperTableEntries name="pricecurrency" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;299&quot;" name="dateflag" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="" name="datevalue" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.loop_part " name="loop_part" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="copyOfouzzzz.loop_price " name="loop_price" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries name="loop_date" nullable="true" type="id_String"/>
-      </inputTables>
-    </nodeData>
-  </node>
-  <node componentName="tHashInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="1088">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHashInput_17"/>
-    <elementParameter field="CHECK" name="LINK_WITH" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="LIST" value="tHashOutput_3"/>
-    <elementParameter field="FILE" name="BASE_FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.hash&quot;"/>
-    <elementParameter field="CHECK" name="RELEASE_CACHE" value="false"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="ouut5" name="tHashInput_17">
-      <column comment="" key="false" length="-1" name="filename" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="position" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="partnumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="priceflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pricevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1728" posY="992">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_4"/>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1504" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -2716,19 +2574,15 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="loop_date"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="from_dateflag"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dateflag"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="from_datevalue"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="to_dateflag"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="to_datevalue"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="datevalue"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="outtt" name="tLogRow_4">
+    <metadata connector="FLOW" label="outtt" name="tLogRow_1">
       <column comment="" key="false" length="-1" name="filename" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="customer" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="brand" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -2752,10 +2606,8 @@
       <column comment="" key="false" length="-1" name="loop_part" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="loop_price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="loop_date" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="from_dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="from_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="to_dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="to_datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dateflag" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="datevalue" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1856" posY="704">
@@ -3223,21 +3075,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row21"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfouzzzz" lineStyle="0" metaname="copyOfouzzzz" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tMap_12">
+  <connection connectorName="FLOW" label="copyOfouzzzz" lineStyle="0" metaname="copyOfouzzzz" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfouzzzz"/>
   </connection>
   <connection connectorName="FLOW" label="row22" lineStyle="8" metaname="tHashInput_16" offsetLabelX="0" offsetLabelY="0" source="tHashInput_16" target="tMap_11">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row22"/>
-  </connection>
-  <connection connectorName="FLOW" label="copyOfoutlast" lineStyle="0" metaname="copyOfoutlast" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tLogRow_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfoutlast"/>
-  </connection>
-  <connection connectorName="FLOW" label="row23" lineStyle="8" metaname="tHashInput_17" offsetLabelX="0" offsetLabelY="0" source="tHashInput_17" target="tMap_12">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row23"/>
   </connection>
   <connection connectorName="FLOW" label="tFFI_05TtHO_05" lineStyle="0" metaname="tFixedFlowInput_5" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_5" target="tHashOutput_12">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -3308,13 +3152,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_259d7cf5-36ce-4729-9755-ff0942d36694"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>emaJoEFo6jwdkGpNCwVEHkBMMXmVYPEjDGO0mlmySPTMkbRZY3mzY6iFRxExetjFFJB2MKz0Tg2d&#13;
-k5LEovzGbQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_af0edc2c-3643-4557-b1cb-4c21afe71797"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zBDJ8596qiZhf7Zt8by1m0tE2xQvsmKll87hxAC4R2SxQcpTtd/4G4Fi+JNI+g5QJtJtNGP9W0FU&#13;
-BRujj6pvRQ==</DigestValue></Reference></SignedInfo><SignatureValue>CaGMv9MsgGVcsADkR5Olli7tgMllr2CG7YTCaxzEA2ForgdAgAV5+zSCrVbKLXm8KMqdUDoQIDqK&#13;
-YWdyGS4J3QYhmFQsTQTmNFP1l3YZv857l0elQlVA7teeI+xUDfHo7GJtifesNhAAd2X6JDtd9s21&#13;
-GG+zBTK3ubJ9Uz91VNfhRIfXTKAtTzxLHmR8ehrYvxZvLgl1kNyw7bjx6ahIfedpQ64fB36Dw18N&#13;
-TGMi3YM6BY7Lhb85hLLWiNk6zyIVb/92MF/LEy6ulyjGjD8z0ei2A1XpIhCscnxNz1jUhx/7ldRW&#13;
-F+Fc4Ek9E7YAmv01yj3r/NSeZpdAyQ/MVn4Zwg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f65bdda4-1149-4d75-8c7c-f00678f022a8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zOivplTnjztf+f503+KPHaQKs9gUGAsR8QxcG9iCFjeJ0OvsH7eZaLSapBGCeNRIOJ0VBaGMj1O1&#13;
+ER3xSE0ixg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_48a29834-0607-4a3d-99fb-861d99279c94"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+5J0h1/90bIgXR8S0ybWFNyJFiygB7dNz/y4toGvDfvZ0uk9+fqWMeFlHk3nR2Ed0Q8eKyxC0hV3&#13;
+8DVAqWVtBA==</DigestValue></Reference></SignedInfo><SignatureValue>Sg1l6VADsL5hWTALtlUUlq72q4FwepmNYgz9hUIvvKtJAN/hpncgUFajpm/YTo/X8oSEoE2tjiiW&#13;
+SHNNs0pMlGUJtzMVBaWQ68eQpDNFJ8Xe+tFEY14/5K1loeV0MNUOy2VHmcJpW6i5/E0DFbBE8fY3&#13;
+8ULoiOsX9mandBYoRsW2C7MIonnS/G4IPbdcS9Gyq6Ce2Eq7s8YTtQCaZLPoH6sKVEHLf+KOe1WO&#13;
+13Wy/ZLZtKGEaw/KCS/frmZnFeYC9/kwZDwS4vqjr+MQEezsEnsUiT8t/vx2XgORG9oBw3p1a/VP&#13;
+1DKzlzQci2bGJYvpd5Ff48+uMEhYfb80BjXsJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3336,4 +3180,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_af0edc2c-3643-4557-b1cb-4c21afe71797" Target="#_259d7cf5-36ce-4729-9755-ff0942d36694"><Timestamp>2023-06-26 14:17:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_48a29834-0607-4a3d-99fb-861d99279c94" Target="#_f65bdda4-1149-4d75-8c7c-f00678f022a8"><Timestamp>2023-06-26 14:20:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
