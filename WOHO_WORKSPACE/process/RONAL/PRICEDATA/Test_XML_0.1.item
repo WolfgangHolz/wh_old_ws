@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:/vVmWtMz5Y2a9aNg/hGvAlw563rwG46bGDKlXD2U"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:nlFNCw/lJnOsdww89KkopWwrgRIPiJq2OibUkVwz"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:A+5vRwWYZ06OSeizinM7RDchTSj+O+gAm7U0V8iy"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:rSLKUWnluBtCNoIhBE/D3WwaruLmTKiGI6XPt5Ez"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -1853,7 +1853,6 @@
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -1864,6 +1863,8 @@
       <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number_1" nullable="true" originalDbColumnName="number" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateflag_from" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="datevalue_from" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1881,7 +1882,6 @@
         <mapperTableEntries expression="out_12.responsibility" name="responsibility" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.purchaser" name="purchaser" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.suppliernumber" name="suppliernumber" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="out_12.number " name="number" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis" name="basis" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis_price" name="basis_price" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis_pricecount" name="basis_pricecount" nullable="true" type="id_String"/>
@@ -1892,6 +1892,8 @@
         <mapperTableEntries expression="out_12.pricecount " name="pricecount" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.priceunit " name="priceunit" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.pricecurrency " name="pricecurrency" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_12.number " name="number" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row18.number " name="number_1" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row18.dateflag " name="dateflag_from" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row18.datevalue " name="datevalue_from" nullable="true" type="id_String"/>
       </outputTables>
@@ -1922,7 +1924,7 @@
         <mapperTableEntries expression="out_12.filename " name="filename" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_12.position " name="position" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_12.partnumber " name="partnumber" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries expression="out_12.number " name="number" nullable="true" operator="=" type="id_String"/>
+        <mapperTableEntries expression="" name="number" nullable="true" type="id_String"/>
         <mapperTableEntries name="priceflag" nullable="true" type="id_String"/>
         <mapperTableEntries name="pricevalue" nullable="true" type="id_String"/>
         <mapperTableEntries name="pricecount" nullable="true" type="id_String"/>
@@ -1988,8 +1990,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="suppliernumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="number"/>
-      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="basis"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="basis_price"/>
@@ -2010,6 +2010,10 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="pricecurrency"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="number"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="number_1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="dateflag_from"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="datevalue_from"/>
@@ -2029,7 +2033,6 @@
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -2040,6 +2043,8 @@
       <column comment="" key="false" length="-1" name="pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="priceunit" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="pricecurrency" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number_1" nullable="true" originalDbColumnName="number" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="dateflag_from" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="datevalue_from" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -2341,6 +2346,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="number"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="number_1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfouttt"/>
@@ -2408,13 +2416,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1cdc71b7-5038-41f8-9f4b-2724195db3f8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>y+uMbrqToxv8BqBRUHwCNDv3/SFO2uhf8uIsg7bNauYdd34RRKLe4rYnxLwkt21DnhqtPPTNXQy2&#13;
-+oTFUthj3w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_db5fd10b-7a86-4e23-9369-ec680951d5a6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wm45EALxOqW9bWfB64eyq+NNE7mmIP4Fzza3FiAI971RNBE5ii793P8ILYCZ+9+oFn1ndqseEb62&#13;
-PXNETmuIAw==</DigestValue></Reference></SignedInfo><SignatureValue>XWU5ge8Hpqaz0mSKVRswZYYLfQq19sfkDQBkX4hBDDL83a5Ysw0PPPLgvlmeFozioh9cK9lSMU8V&#13;
-BFR8LUorQIvUmTLM7Lnvz2AOKVfaKuS1lhVaBmX/kpDrcVX5y8C6IWDOJw9QkATcG892X07O+IGA&#13;
-0c7p0DMbWsdj34ztBYQh+uIFgVmSMy/v2hSlgEeFPA5+wm5oLs10Y9QDzg0KULMtUGfv02/FbDaU&#13;
-rfiO9WzSvJdCinMj5KxSiTRVYPhelNJrqV8eFc9EF2iZ1ipMtlhpFGUTPnpqvx7brHCLbXYg5QhT&#13;
-UajkDAl83s/buUTAMaSwfvsw7V6iLusY4ZL+tw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_de625ec4-188e-4578-b430-825d3d8601ca"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Y1mfKbnrcoxN1RM2WACwZKOOXTkzUPRJwW6+K0JEbOZ7lCiRrDLXsavetQZJnHYjTrkZkLwKkEme&#13;
+jJU4P6LpaA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_843d54ee-0ecd-4f6c-b07c-04851e348841"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+AET9cwApueaKlHaRc8vvxtFpOPHIhPUQYJJh6fKOO4G0pdvYWvOJxskDiwu6UT5oEkdXgGkr9bw&#13;
+5tUmA7fHRQ==</DigestValue></Reference></SignedInfo><SignatureValue>AbEfv+CTT/q3B9aHTh0ncfkh3MbRTZj25iqf53NA3YGNnPkheg9URKFVQCn7uti55YKNQahaaY0N&#13;
+QiHE/IcRkMjtWniyY0fGF/jr4J8x+3/Syvv/C8kbDjWtv68vq5aCfVXamwFLn/jWjpMhpAbtqZIn&#13;
+Sp+PtFfPN98YmhjUMArs8kF1jUKA9+e/NGXLYnNQfvV/O1tsxM5oBdpZe1W09Py8zlgijlucZc0S&#13;
+PszPfXq2VylAltitRFsjOxax0beP5ZKVuaMNxnr8ke/rQJ7HAkjtCqxGNyCvzDpy+HuzJfSrFZ3y&#13;
+mlVGCnj9x/aNqJxb2G4Gqi5j6mJo+XGsV07apA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2436,4 +2444,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_db5fd10b-7a86-4e23-9369-ec680951d5a6" Target="#_1cdc71b7-5038-41f8-9f4b-2724195db3f8"><Timestamp>2023-06-26 06:30:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_843d54ee-0ecd-4f6c-b07c-04851e348841" Target="#_de625ec4-188e-4578-b430-825d3d8601ca"><Timestamp>2023-06-26 06:31:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
