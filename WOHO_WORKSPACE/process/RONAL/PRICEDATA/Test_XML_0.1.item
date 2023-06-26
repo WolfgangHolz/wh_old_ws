@@ -47,7 +47,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:kf2FVx+SKZKQBI2oxyYyk43GAtjrpyD4dDkIRaHv"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:GvP/mNhaHdUszGvH87wx8/0sPiuO6qpGn6ceBv8N"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -82,7 +82,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:2JmPPiIAbmOSiBx+SoEMtCoQixPVm4/keY6sAQ9R"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:/XqWFllWENO4MSWplcb1tH2hz6BSoPm2jElW1Stm"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -1853,6 +1853,7 @@
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -1880,6 +1881,7 @@
         <mapperTableEntries expression="out_12.responsibility" name="responsibility" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.purchaser" name="purchaser" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.suppliernumber" name="suppliernumber" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_12.number " name="number" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis" name="basis" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis_price" name="basis_price" nullable="true" type="id_String"/>
         <mapperTableEntries expression="out_12.basis_pricecount" name="basis_pricecount" nullable="true" type="id_String"/>
@@ -1920,7 +1922,7 @@
         <mapperTableEntries expression="out_12.filename " name="filename" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_12.position " name="position" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries expression="out_12.partnumber " name="partnumber" nullable="true" operator="=" type="id_String"/>
-        <mapperTableEntries name="number" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="out_12.number " name="number" nullable="true" operator="=" type="id_String"/>
         <mapperTableEntries name="priceflag" nullable="true" type="id_String"/>
         <mapperTableEntries name="pricevalue" nullable="true" type="id_String"/>
         <mapperTableEntries name="pricecount" nullable="true" type="id_String"/>
@@ -1986,6 +1988,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="suppliernumber"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="number"/>
+      <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="basis"/>
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="basis_price"/>
@@ -2025,6 +2029,7 @@
       <column comment="" key="false" length="-1" name="responsibility" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="purchaser" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="suppliernumber" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="number" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_price" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="basis_pricecount" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
@@ -2333,6 +2338,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="pricevalue"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="number"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfouttt"/>
@@ -2400,13 +2408,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_59979905-c861-4e35-8bdf-3ec547f49087"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xa6JtkJkr/21vwtRgoVLxugpjmLSQAGm2S2/RdRFv4yRpvrjAvw+2b6gvWZvqI3W8M+wN7AKY1IC&#13;
-TDq5Y8bG/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d36af998-2408-418c-9123-2a66ebc23ff6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LK/wQqHiMK3kqi6WQHgyjG9AdswPgH3EP1KJmaMD911bqZhrDLbTOk4U1sHR+bnaXK00fj2d4TyB&#13;
-zDjfbRNRSQ==</DigestValue></Reference></SignedInfo><SignatureValue>ogZVDNlYxsqMUzyBkhwYwkgr0iW9YtTrgS9BRhkFsMVAEZCAok+7xX8lV5pxphWY+DJrs+7uDx47&#13;
-/zBWi4PA3Vt5fnbtvwXzK7pSxCYgmO3SrE5xX+5WqSKtDHSDGgPsr5UhC/Y7be7W8SU3onFQV8Vd&#13;
-hQXpaOJ0CVPKtrp2ftj6OfA8C6V6T0kqINZ/AJbsrf91R6z5oEF1TI+Z5DgOlpuL4yYPOEzSp4nH&#13;
-ShzqQAeKhW8yMeREf3anVgzrbO7clT1F+3wt72lzM0713i/FAFUAfwDGK5pOM6Z3RGcmQ+mBd1d1&#13;
-NsBjmQvGPyL8nyS0AyyHFC+mD/Tq/h64GefgiQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_833b29ac-278d-4e72-9274-a1f4178c2478"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bT9Qu3TllM8GuER4P4L4o9O3iMblCWs/O2FscEYXq4W0OlAqGBGTK3ix8PYDNxChIWYvr5N+NtC1&#13;
+aGM7bLxy/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_636e560f-4b33-4887-8d40-d8e3f508b9ef"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qQSrNoMbY/YfJD2G/VHkO4rwmB90vfNmfakNZ0ZPblAqNpehiAJCl+o7Wj75Jku+WeLyrUlPUdg/&#13;
+Wxo1Fke89w==</DigestValue></Reference></SignedInfo><SignatureValue>TpUIzIADQuBGEXWbpMxjw2su6AY2hBPvVjA5Vyb+TO8+EMCmASVSrombf9GEfyYSjzx5V0GE46fB&#13;
+uBvisIL4fW6oGIiR2jaT0Adfh+ro33b6TEQr4TZLpqjxfgKRruMwCr5K2G0dGYc26yqVKdM6UecM&#13;
+j5UhYP2xedaznxQqM9ZfmGQ+4E/7+GuNOdhNzVyHeJhW8HZeuLX8Jz4VSZQto95V5C8rEByHhrET&#13;
+rw6LFPbMRontwNOGIuATulsRAD/QwESTRH6gRSC9VJKYVkQ+zKDLkckuGeJiSTIivyuP2+4IP9gs&#13;
+4hLXCziQdJIDYTdYEEuPOxeBT2A53MDi/rt55w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2428,4 +2436,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d36af998-2408-418c-9123-2a66ebc23ff6" Target="#_59979905-c861-4e35-8bdf-3ec547f49087"><Timestamp>2023-06-26 06:25:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_636e560f-4b33-4887-8d40-d8e3f508b9ef" Target="#_833b29ac-278d-4e72-9274-a1f4178c2478"><Timestamp>2023-06-26 06:26:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
