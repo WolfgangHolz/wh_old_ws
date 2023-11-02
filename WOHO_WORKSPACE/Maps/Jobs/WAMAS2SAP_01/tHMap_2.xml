@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root t='190' id='1' V190='11' inStruct='Structures/WAMAS/LOGIMATSDACK00004/LOGIMATSDACK00004.xml' outStruct='Structures/SAP/_SCWM_WMTCID01/IDocs/_SCWM_WMTCID01.xml' inputRep='172' outputRep='181' nextMap='' inputStructUserName='LOGIMATSDACK00004' outputStructUserName='_SCWM_WMTCID01' V1='4' name='tHMap_2' incarnation='1467'>
+  <inputMapElem t='200' id='2' V200='8' input='true' structElemExists='true' usedCount='6' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='root'>
+    <mapNode t='190' idref='1'/>
+    <child t='200' id='152' V200='8' input='true' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='9999' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='StorageDemandeResponse'>
+      <mapNode t='190' idref='1'/>
+      <child t='200' id='153' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='LogimatStorageDemand_demandNo'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='154' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' decimalPositions='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='LogimatStorageDemandLine_ToStoredAmount'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='155' V200='8' input='true' structElemExists='true' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' decimalPositions='1' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='LogimatStorageActivity_storedAmount'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='156' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='WHO'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='157' V200='8' input='true' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' dataType='2' repHandlerStruct='' visible='true' nullable='true' inheritsFrom='' V281='13' V1='4' name='TANUM'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+  </inputMapElem>
+  <outputMapElem t='200' id='3' V200='8' structElemExists='true' usedCount='39' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_loop='true' V1='4' name='_SCWM_WMTCID01' description='Confirm Warehouse Task'>
+    <mapNode t='190' idref='1'/>
+    <loop>SimpleLoop(in$/root,{Filter},{Sort Keys},NestedContext(SimpleLoop(in$/root/StorageDemandeResponse,{Filter},{Sort Keys},{Contexts})))</loop>
+    <child t='200' id='4' V200='8' structElemExists='true' usedCount='25' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/EDI_DC40.xml' V281='13' V1='4' name='EDI_DC40' description='Control record'>
+      <mapNode t='190' idref='1'/>
+      <delimTerminator>\n</delimTerminator>
+      <child t='200' id='5' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' modifiedFromParent_value='true' V1='4' name='TABNAM' description='Table Name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>EDI_DC40  </delimInitiator>
+        <value>Constant([value="EDI_DC40",dataType="2"],)</value>
+      </child>
+      <child t='200' id='6' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.connection_SAP_CLIENT"],)</value>
+      </child>
+      <child t='200' id='7' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='8' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='4' maxSize='4' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCREL' description='SAP release'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='9' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STATUS' description='Status'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='10' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DIRECT' description='Direction'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='11' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='OUTMOD' description='Output Mode'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='12' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EXPRSS' description='Express'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='13' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='TEST' description='Test flag'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='14' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='IDOCTYP' description='EDBAS Basic type'>
+        <mapNode t='190' idref='1'/>
+        <value>Constant([value="/SCWM/WMTCID01",dataType="2"],)</value>
+      </child>
+      <child t='200' id='15' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CIMTYP' description='EDCIM Extension'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='16' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='MESTYP' description='EDMSG Message type'>
+        <mapNode t='190' idref='1'/>
+        <value>Constant([value="/SCWM/WMTOCO",dataType="2"],)</value>
+      </child>
+      <child t='200' id='17' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MESCOD' description='Message code'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='18' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MESFCT' description='Message Function'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='19' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STD' description='EDI Standard'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='20' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STDVRS' description='EDI std version'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='21' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STDMES' description='EDI message type'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='22' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SNDPOR' description='Sender port'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_SNDPOR"],)</value>
+      </child>
+      <child t='200' id='23' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SNDPRT' description='Sender partner type'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_SNDPRT"],)</value>
+      </child>
+      <child t='200' id='24' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SNDPFC' description='Sender function'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='25' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SNDPRN' description='Sender partner no.'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_SNDPRN"],)</value>
+      </child>
+      <child t='200' id='26' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='21' maxSize='21' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SNDSAD' description='SADR sender address'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='27' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='70' maxSize='70' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SNDLAD'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='28' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='RCVPOR' description='Receiver port'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_RCVPOR"],)</value>
+      </child>
+      <child t='200' id='29' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='RCVPRT' description='Receiver Partn. Type'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_RCVPRT"],)</value>
+      </child>
+      <child t='200' id='30' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RCVPFC' description='Recipient partn. funct.'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='31' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='RCVPRN' description='Receiv. Partner No.'>
+        <mapNode t='190' idref='1'/>
+        <value>GetMapProperty([property="context.LOC_HEADER_RCVPRN"],)</value>
+      </child>
+      <child t='200' id='32' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='21' maxSize='21' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RCVSAD' description='SADR recipient addr.'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='33' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='70' maxSize='70' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RCVLAD'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='34' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='8' maxSize='8' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CREDAT' description='Created on'>
+        <mapNode t='190' idref='1'/>
+        <value>FormatDateTime([pattern="yyyyMMdd"],GetCurrentDateTime())</value>
+      </child>
+      <child t='200' id='35' V200='8' structElemExists='true' usedCount='3' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='CRETIM' description='Created at'>
+        <mapNode t='190' idref='1'/>
+        <value>FormatDateTime([pattern="hhmmss"],GetCurrentDateTime())</value>
+      </child>
+      <child t='200' id='36' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='14' maxSize='14' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='REFINT' description='Transmission'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='37' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='14' maxSize='14' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='REFGRP' description='Message Group'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='38' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='14' maxSize='14' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='REFMES' description='EDI message'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='39' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='70' maxSize='70' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ARCKEY' description='Archive Key'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='40' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SERIAL' description='Serialization'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+    <child t='200' id='41' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='9999' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/_SCWM_E1LCOHU000.xml' V281='13' V1='4' name='_SCWM_E1LCOHU000' description='HU Data per Warehouse Task Item for Confirmation'>
+      <mapNode t='190' idref='1'/>
+      <delimTerminator>\n</delimTerminator>
+      <child t='200' id='42' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>/SCWM/E1LCOHU000              </delimInitiator>
+      </child>
+      <child t='200' id='43' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='44' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='45' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='46' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='47' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='48' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='13' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='TANUM' description='Warehouse Task'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='49' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='VONHU' description='Source Handling Unit'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='50' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NACHU' description='Destination Handling Unit'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='51' V200='8' structElemExists='true' valueSetIndex='1' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HUENT' description='Indicator: Handling Unit Will Be Withdrawn Completely'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='52' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='33' maxSize='33' dataType='22' dataFormat='212' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MENGA' description='Actual Quantity in Alternative Unit of Measure'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='53' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ALTME' description='Alternative Unit of Measure for Stockkeeping Unit'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='54' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='33' maxSize='33' dataType='22' dataFormat='212' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DMGEA' description='Destination difference qty. in alternative unit'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='55' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='12' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PAPOS' description='Sequential Number of WT Data Row Within a WT Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+    <child t='200' id='56' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/_SCWM_E1LEXCP000.xml' V281='13' V1='4' name='_SCWM_E1LEXCP000' description='Exceptions in Warehouse Task Confirmation'>
+      <mapNode t='190' idref='1'/>
+      <delimTerminator>\n</delimTerminator>
+      <child t='200' id='57' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>/SCWM/E1LEXCP000              </delimInitiator>
+      </child>
+      <child t='200' id='58' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='59' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='60' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='61' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='62' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='63' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='13' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='TANUM' description='Warehouse Task'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='64' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='12' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PAPOS' description='Sequential Number of WT Data Row Within a WT Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='65' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EXCCODE' description='Exception Code'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='66' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='BUSCON' description='Business Context'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='67' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='EXEC_STEP' description='Execution Step in Business Context'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+    <child t='200' id='68' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='9999' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/_SCWM_E1LCNFS000.xml' V281='13' V1='4' name='_SCWM_E1LCNFS000' description='Serial Numbers for Warehouse Task Confirmation'>
+      <mapNode t='190' idref='1'/>
+      <delimTerminator>\n</delimTerminator>
+      <child t='200' id='69' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>/SCWM/E1LCNFS000              </delimInitiator>
+      </child>
+      <child t='200' id='70' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='71' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='72' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='73' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='74' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='75' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='13' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='TANUM' description='Warehouse Task'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='76' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='12' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PAPOS' description='Sequential Number of WT Data Row Within a WT Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='77' V200='8' structElemExists='true' valueSetIndex='1' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DIFF' description='Checkbox'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='78' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SERID' description='Serial Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+    <child t='200' id='79' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/_SCWM_E1LTCOX001.xml' V281='13' V1='4' name='_SCWM_E1LTCOX001' description='Handling Unit Move Confirm'>
+      <mapNode t='190' idref='1'/>
+      <delimTerminator>\n</delimTerminator>
+      <child t='200' id='80' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>/SCWM/E1LTCOX001              </delimInitiator>
+      </child>
+      <child t='200' id='81' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='82' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='83' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='84' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='85' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='86' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LGNUM' description='Warehouse Number/Warehouse Complex'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='87' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LENUM' description='Handling Unit Identification'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='88' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='QNAME' description='User Name for Confirmation'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='89' V200='8' structElemExists='true' valueSetIndex='1' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SQUIT' description='Indicator: Confirm Entire Storage Unit (Actual = Target)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='90' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='18' maxSize='18' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NLPLA' description='Destination Storage Bin'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='91' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NLENR' description='Destination Handling Unit'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='92' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='18' maxSize='18' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RSRC' description='Resource (Means of Transportation or User)'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='93' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PROCESSOR' description='Processor'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='94' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='8' maxSize='8' dataType='31' dataFormat='301' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STARTED_DATE' description='Start Date'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='95' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='6' maxSize='6' dataType='32' dataFormat='403' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STARTED_TIME' description='Start Time'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='96' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='8' maxSize='8' dataType='31' dataFormat='301' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CONFIRMED_DATE' description='Confirmation Date'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='97' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='6' maxSize='6' dataType='32' dataFormat='403' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CONFIRMED_TIME' description='Confirmation Time'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+    <child t='200' id='98' V200='8' structElemExists='true' usedCount='11' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='Loop-_SCWM_E1LTCOH001' description='Warehouse Task Header IDoc - Confirm'>
+      <mapNode t='190' idref='1'/>
+      <child t='200' id='99' V200='8' structElemExists='true' usedCount='7' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/_SCWM_E1LTCOH001.xml' V281='13' V1='4' name='_SCWM_E1LTCOH001' description='Warehouse Task Header IDoc - Confirm'>
+        <mapNode t='190' idref='1'/>
+        <delimTerminator>\n</delimTerminator>
+        <child t='200' id='100' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+          <mapNode t='190' idref='1'/>
+          <delimInitiator>/SCWM/E1LTCOH001              </delimInitiator>
+        </child>
+        <child t='200' id='101' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='102' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='103' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='104' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='105' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='106' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='LGNUM' description='Warehouse Number/Warehouse Complex'>
+          <mapNode t='190' idref='1'/>
+          <value>Constant([value="1008",dataType="2"],)</value>
+        </child>
+        <child t='200' id='107' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='13' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='WHO' description='Warehouse Order Number'>
+          <mapNode t='190' idref='1'/>
+          <value>in$/root/StorageDemandeResponse/WHO</value>
+        </child>
+        <child t='200' id='108' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='QNAME' description='User Name for Confirmation'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='109' V200='8' structElemExists='true' valueSetIndex='1' usedCount='3' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SQUIT' description='Indicator: Confirm Entire Warehouse Order (Actual = Target)'>
+          <mapNode t='190' idref='1'/>
+          <value>Constant([value="X",dataType="2"],)</value>
+        </child>
+        <child t='200' id='110' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='18' maxSize='18' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='RSRC' description='Resource (Means of Transportation or User)'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='111' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PROCESSOR' description='Processor'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='112' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='8' maxSize='8' dataType='31' dataFormat='301' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STARTED_DATE' description='Start Date'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='113' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='6' maxSize='6' dataType='32' dataFormat='403' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='STARTED_TIME' description='Start Time'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='114' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='8' maxSize='8' dataType='31' dataFormat='301' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CONFIRMED_DATE' description='Confirmation Date'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='115' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='6' maxSize='6' dataType='32' dataFormat='403' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CONFIRMED_TIME' description='Confirmation Time'>
+          <mapNode t='190' idref='1'/>
+        </child>
+      </child>
+      <child t='200' id='116' V200='8' structElemExists='true' usedCount='5' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/_SCWM_E1LTCOI001.xml' V281='13' V1='4' name='_SCWM_E1LTCOI001' description='Confirm Warehouse Task'>
+        <mapNode t='190' idref='1'/>
+        <delimTerminator>\n</delimTerminator>
+        <child t='200' id='117' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+          <mapNode t='190' idref='1'/>
+          <delimInitiator>/SCWM/E1LTCOI001              </delimInitiator>
+        </child>
+        <child t='200' id='118' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='119' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='120' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='121' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='122' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='123' V200='8' structElemExists='true' usedCount='3' V283='2' occurMaxTimes='1' minSize='12' maxSize='12' dataType='13' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='TANUM' description='Warehouse Task'>
+          <mapNode t='190' idref='1'/>
+          <value>in$/root/StorageDemandeResponse/TANUM</value>
+        </child>
+        <child t='200' id='124' V200='8' structElemExists='true' valueSetIndex='1' usedCount='3' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' modifiedFromParent_value='true' V1='4' name='SQUIT' description='Confirm Warehouse Task Immediately'>
+          <mapNode t='190' idref='1'/>
+          <value>Constant([value="X",dataType="2"],)</value>
+        </child>
+        <child t='200' id='125' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='33' maxSize='33' dataType='22' dataFormat='212' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NISTA' description='Actual Quantity in Alternative Unit of Measure'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='126' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='33' maxSize='33' dataType='22' dataFormat='212' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NDIFA' description='Destination difference qty. in alternative unit'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='127' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='KZNUL' description='Status of Zero Stock Check in Warehouse Task'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='128' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='ALTME' description='Alternative Unit of Measure for Stockkeeping Unit'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='129' V200='8' structElemExists='true' valueSetIndex='2' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='KZDIF' description='Difference Indicator Category'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='130' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='20' maxSize='20' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='LENUM' description='Handling Unit Identification'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='131' V200='8' structElemExists='true' valueSetIndex='1' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='VQUIT' description='Confirmation in Bulk Storage Area: Removal of Complete HU'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='132' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='18' maxSize='18' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='NLPLA' description='Destination Storage Bin'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='133' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='4' maxSize='4' dataType='12' dataFormat='213' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PAPOS' description='Sequential Number of WT Data Row Within a WT Number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='134' V200='8' structElemExists='true' valueSetIndex='1' usedCount='1' V283='2' occurMaxTimes='1' minSize='1' maxSize='1' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PARTI' description='Flag: Confirm Partial Quantity for Warehouse Task'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='135' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='10' maxSize='10' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CHARG' description='Batch Number'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='136' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='33' maxSize='33' dataType='22' dataFormat='212' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CWQUAN' description='Valuation Quantity'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='137' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='33' maxSize='33' dataType='22' dataFormat='212' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CWQUAN_DIFF' description='Valuation Quantity'>
+          <mapNode t='190' idref='1'/>
+        </child>
+        <child t='200' id='138' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='CWUNIT' description='Unit for Valuation Quantity'>
+          <mapNode t='190' idref='1'/>
+        </child>
+      </child>
+    </child>
+    <child t='200' id='139' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='999999' minSize='-1' maxSize='-1' inheritsFromCopyRule='28' groupType='1' repHandlerStruct='' visible='true' inheritsFrom='Structures/SAP/_SCWM_WMTCID01/Segments/E2IDOCENHANCEMENT000.xml' V281='13' V1='4' name='E2IDOCENHANCEMENT000' description='Segment for Dynamic Enhancement of IDoc Types'>
+      <mapNode t='190' idref='1'/>
+      <delimTerminator>\n</delimTerminator>
+      <child t='200' id='140' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' delimIncludeInitiator='true' V281='13' V1='4' name='SEGNAM' description='Segment name'>
+        <mapNode t='190' idref='1'/>
+        <delimInitiator>E2IDOCENHANCEMENT000          </delimInitiator>
+      </child>
+      <child t='200' id='141' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='3' maxSize='3' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='MANDT' description='Client'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='142' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='16' maxSize='16' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DOCNUM' description='Number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='143' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='SEGNUM' description='Record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='144' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='6' maxSize='6' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='PSGNUM' description='Parent record number'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='145' V200='8' structElemExists='true' usedCount='1' V283='2' occurMinTimes='1' occurMaxTimes='1' minSize='2' maxSize='2' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='HLEVEL' description='Hierarchy level'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='146' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='30' maxSize='30' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='IDENTIFIER' description='Data Containers for Enhancement of IDoc Types'>
+        <mapNode t='190' idref='1'/>
+      </child>
+      <child t='200' id='147' V200='8' structElemExists='true' usedCount='1' V283='2' occurMaxTimes='1' minSize='970' maxSize='970' dataType='2' repHandlerStruct='' visible='true' inheritsFrom='' V281='13' V1='4' name='DATA' description='Data Container for IDoc Enhancement'>
+        <mapNode t='190' idref='1'/>
+      </child>
+    </child>
+  </outputMapElem>
+  <inputRepRuntime t='692' id='148' V692='1' unnamedElemsNamespace='1' V690='1' encoding='UTF-8'>
+    <namespaceContainers t='220' ref='Namespace Containers/WAMAS_LOGIMATSDACK00004.xml'/>
+  </inputRepRuntime>
+  <outputRepRuntime t='704' id='149' V704='2' idoctyp='/SCWM/WMTCID01' isTrimTrailingEmptyFields='true' V690='1' encoding='UTF-8'>
+  </outputRepRuntime>
+  <valueSets></valueSets>
+  <valueSets>X</valueSets>
+  <valueSets>1|2|3</valueSets>
+  <inputXmlRepRuntime t='692' idref='148'/>
+  <outputXmlRepRuntime t='692' id='150' V692='1' V690='1'>
+  </outputXmlRepRuntime>
+  <child t='165' id='158' V1='4' name='Document Bindings'>
+    <child t='166' id='159' V166='5' docType='1' docReposPath='/WOHO_WORKSPACE/Sample Data/WAMAS/LOGIMATSDACK00004/LOGIMATSDACK00004/LOGIMATSDACK00004_intermedia' V1='4' name='in$/root'>
+      <elemNode t='200' idref='2'/>
+    </child>
+    <child t='166' id='160' V166='5' docType='2' V1='4' name='out$/_SCWM_WMTCID01'>
+      <elemNode t='200' idref='3'/>
+    </child>
+  </child>
+  <child t='201' id='151' V1='4' name='Inherits From'>
+  </child>
+</root>

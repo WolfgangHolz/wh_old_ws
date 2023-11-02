@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:model="http://www.talend.com/joblet.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmi:version="2.0">
+  <model:JobletProcess defaultContext="DEVELOPMENT" jobType="Standard">
+    <context confirmationNeeded="false" name="TEST">
+      <contextParameter comment="" internalId="_HAIXYPrkEe25l7CzQt2Unw" name="loc_result_id" prompt="loc_result_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+      <contextParameter comment="" internalId="_HAIXYfrkEe25l7CzQt2Unw" name="loc_result_message" prompt="loc_result_message?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+      <contextParameter comment="" internalId="_3dZpgCIYEe6RIfuXmhwgFg" name="loc_WAMAS_directoy" prompt="loc_WAMAS_directoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\"/>
+      <contextParameter comment="" internalId="_PG5aoCIqEe6RIfuXmhwgFg" name="loc_Pickup_count" prompt="loc_Pickup_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0"/>
+      <contextParameter comment="" internalId="_PG5aoSIqEe6RIfuXmhwgFg" name="loc_Storage_count" prompt="loc_Storage_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0"/>
+    </context>
+    <context confirmationNeeded="false" name="DEVELOPMENT">
+      <contextParameter comment="" internalId="_HAIXYvrkEe25l7CzQt2Unw" name="loc_result_id" prompt="loc_result_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+      <contextParameter comment="" internalId="_HAIXY_rkEe25l7CzQt2Unw" name="loc_result_message" prompt="loc_result_message?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+      <contextParameter comment="" internalId="_3dZpgSIYEe6RIfuXmhwgFg" name="loc_WAMAS_directoy" prompt="loc_WAMAS_directoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\"/>
+      <contextParameter comment="" internalId="_PG5aoiIqEe6RIfuXmhwgFg" name="loc_Pickup_count" prompt="loc_Pickup_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0"/>
+      <contextParameter comment="" internalId="_PG5aoyIqEe6RIfuXmhwgFg" name="loc_Storage_count" prompt="loc_Storage_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0"/>
+    </context>
+    <context confirmationNeeded="false" name="PRODUKTIV">
+      <contextParameter comment="" internalId="_HAIXZPrkEe25l7CzQt2Unw" name="loc_result_id" prompt="loc_result_id?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
+      <contextParameter comment="" internalId="_HAIXZfrkEe25l7CzQt2Unw" name="loc_result_message" prompt="loc_result_message?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+      <contextParameter comment="" internalId="_3dZpgiIYEe6RIfuXmhwgFg" name="loc_WAMAS_directoy" prompt="loc_WAMAS_directoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\"/>
+      <contextParameter comment="" internalId="_PG5apCIqEe6RIfuXmhwgFg" name="loc_Pickup_count" prompt="loc_Pickup_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0"/>
+      <contextParameter comment="" internalId="_PG5apSIqEe6RIfuXmhwgFg" name="loc_Storage_count" prompt="loc_Storage_count?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value="0"/>
+    </context>
+    <parameters>
+      <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+      <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+      <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+      <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+      <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="false"/>
+      <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="false"/>
+      <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" show="false" value="false"/>
+      <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" show="false" value="25000"/>
+      <elementParameter field="CHECK" name="STARTABLE" value="true"/>
+      <elementParameter field="ICON_SELECTION" name="ICONSELECTION" value=""/>
+      <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" show="false" value="false"/>
+      <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+      <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+      <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/in.csv&quot;"/>
+      <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+      <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+      <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+      <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+      <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+      <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value="ORACLE_12"/>
+      <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+      <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:AKIWQmXgkH9TGiQI6oDBseQua65mlA2OXd3J3CoA"/>
+      <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+      <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+      <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+      <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+      <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+      <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="true"/>
+      <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="true"/>
+      <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+      <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+      <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+      <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+      <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+      <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+      <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+      <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+      <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+      <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+      <routinesParameter id="_1qliMJDHEe2MW5pQrfqoXg" name="DQTechnical"/>
+      <routinesParameter id="_1qD9wJDHEe2MW5pQrfqoXg" name="DataMasking"/>
+      <routinesParameter id="_09hPkJDBEe2UN6GjnIa2fw" name="DataOperation"/>
+      <routinesParameter id="_1qVqkJDHEe2MW5pQrfqoXg" name="DataQualityDependencies"/>
+      <routinesParameter id="_1qNuwJDHEe2MW5pQrfqoXg" name="DataQuality"/>
+      <routinesParameter id="_1qc_UJDHEe2MW5pQrfqoXg" name="DqStringHandling"/>
+      <routinesParameter id="_09pLYJDBEe2UN6GjnIa2fw" name="Mathematical"/>
+      <routinesParameter id="_09wgIJDBEe2UN6GjnIa2fw" name="Numeric"/>
+      <routinesParameter id="_0-EpMJDBEe2UN6GjnIa2fw" name="Relational"/>
+      <routinesParameter id="_08i_MJDBEe2UN6GjnIa2fw" name="SQLike"/>
+      <routinesParameter id="_0-MlAJDBEe2UN6GjnIa2fw" name="StringHandling"/>
+      <routinesParameter id="_0-T5wJDBEe2UN6GjnIa2fw" name="TalendDataGenerator"/>
+      <routinesParameter id="_0-b1kJDBEe2UN6GjnIa2fw" name="TalendDate"/>
+      <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
+      <routinesParameter id="_0-lmkJDBEe2UN6GjnIa2fw" name="TalendString"/>
+    </parameters>
+    <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tConvertType_1"/>
+      <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
+      <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
+      <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
+      <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tCT_01"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tConvertType_1">
+        <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="REJECT" name="REJECT">
+        <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+        <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="544" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+      <elementParameter field="EXTERNAL" name="MAP" value=""/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+      <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tXM_01"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tXM_01TtJR_01">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+      <metadata connector="FLOW" name="tXM_01TtJR_02">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+      <nodeData xsi:type="TalendXMLMap:XmlMapData">
+        <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tCT_01TtXM_01">
+          <nodes expression="" name="body" pattern="" type="id_Document" xpath="tCT_01TtXM_01/body">
+            <children main="true" name="_-SCWM_-WMTOID01" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01">
+              <children main="true" name="IDOC" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC">
+                <children name="BEGIN" nodeType="ATTRIBUT" outgoingConnections="/0/@node.1/@nodeData/@connections.0 /0/@node.1/@nodeData/@connections.47" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/@BEGIN"/>
+                <children name="EDI_DC40" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" outgoingConnections="/0/@node.1/@nodeData/@connections.1 /0/@node.1/@nodeData/@connections.20 /0/@node.1/@nodeData/@connections.24 /0/@node.1/@nodeData/@connections.48 /0/@node.1/@nodeData/@connections.67 /0/@node.1/@nodeData/@connections.71" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT"/>
+                  <children name="TABNAM" outgoingConnections="/0/@node.1/@nodeData/@connections.2 /0/@node.1/@nodeData/@connections.49" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM"/>
+                  <children name="MANDT" outgoingConnections="/0/@node.1/@nodeData/@connections.3 /0/@node.1/@nodeData/@connections.50" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT"/>
+                  <children name="DOCNUM" outgoingConnections="/0/@node.1/@nodeData/@connections.4 /0/@node.1/@nodeData/@connections.51" type="id_Long" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM"/>
+                  <children name="DOCREL" outgoingConnections="/0/@node.1/@nodeData/@connections.5 /0/@node.1/@nodeData/@connections.52" type="id_Integer" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL"/>
+                  <children name="STATUS" outgoingConnections="/0/@node.1/@nodeData/@connections.6 /0/@node.1/@nodeData/@connections.53" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS"/>
+                  <children name="DIRECT" outgoingConnections="/0/@node.1/@nodeData/@connections.7 /0/@node.1/@nodeData/@connections.54" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT"/>
+                  <children name="OUTMOD" outgoingConnections="/0/@node.1/@nodeData/@connections.8 /0/@node.1/@nodeData/@connections.55" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD"/>
+                  <children name="IDOCTYP" outgoingConnections="/0/@node.1/@nodeData/@connections.9 /0/@node.1/@nodeData/@connections.56" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP"/>
+                  <children name="MESTYP" outgoingConnections="/0/@node.1/@nodeData/@connections.10 /0/@node.1/@nodeData/@connections.57" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP"/>
+                  <children name="SNDPOR" outgoingConnections="/0/@node.1/@nodeData/@connections.11 /0/@node.1/@nodeData/@connections.58" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR"/>
+                  <children name="SNDPRT" outgoingConnections="/0/@node.1/@nodeData/@connections.12 /0/@node.1/@nodeData/@connections.59" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT"/>
+                  <children name="SNDPRN" outgoingConnections="/0/@node.1/@nodeData/@connections.13 /0/@node.1/@nodeData/@connections.60" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN"/>
+                  <children name="RCVPOR" outgoingConnections="/0/@node.1/@nodeData/@connections.14 /0/@node.1/@nodeData/@connections.61" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR"/>
+                  <children name="RCVPRT" outgoingConnections="/0/@node.1/@nodeData/@connections.15 /0/@node.1/@nodeData/@connections.62" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT"/>
+                  <children name="RCVPRN" outgoingConnections="/0/@node.1/@nodeData/@connections.16 /0/@node.1/@nodeData/@connections.63" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN"/>
+                  <children name="CREDAT" outgoingConnections="/0/@node.1/@nodeData/@connections.17 /0/@node.1/@nodeData/@connections.64" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT"/>
+                  <children name="CRETIM" outgoingConnections="/0/@node.1/@nodeData/@connections.18 /0/@node.1/@nodeData/@connections.65" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM"/>
+                  <children name="SERIAL" outgoingConnections="/0/@node.1/@nodeData/@connections.19 /0/@node.1/@nodeData/@connections.66" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL"/>
+                </children>
+                <children main="true" name="_-SCWM_-E1LTORH" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/@SEGMENT"/>
+                  <children name="LGNUM" outgoingConnections="/0/@node.1/@nodeData/@connections.21 /0/@node.1/@nodeData/@connections.68" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM"/>
+                  <children name="WHO" outgoingConnections="/0/@node.1/@nodeData/@connections.22 /0/@node.1/@nodeData/@connections.69" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO"/>
+                  <children name="QUEUE" outgoingConnections="/0/@node.1/@nodeData/@connections.23 /0/@node.1/@nodeData/@connections.70" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE"/>
+                  <children loop="true" main="true" name="_-SCWM_-E1LTORI" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI">
+                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/@SEGMENT"/>
+                    <children name="TANUM" outgoingConnections="/0/@node.1/@nodeData/@connections.25 /0/@node.1/@nodeData/@connections.72" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM"/>
+                    <children name="PROCTY" outgoingConnections="/0/@node.1/@nodeData/@connections.26 /0/@node.1/@nodeData/@connections.73" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY"/>
+                    <children name="MATNR" outgoingConnections="/0/@node.1/@nodeData/@connections.27 /0/@node.1/@nodeData/@connections.74" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR"/>
+                    <children name="ENTITLED" outgoingConnections="/0/@node.1/@nodeData/@connections.28 /0/@node.1/@nodeData/@connections.75" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED"/>
+                    <children name="ENTITLED_ROLE" outgoingConnections="/0/@node.1/@nodeData/@connections.29 /0/@node.1/@nodeData/@connections.76" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE"/>
+                    <children name="OWNER" outgoingConnections="/0/@node.1/@nodeData/@connections.30 /0/@node.1/@nodeData/@connections.77" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER"/>
+                    <children name="OWNER_ROLE" outgoingConnections="/0/@node.1/@nodeData/@connections.31 /0/@node.1/@nodeData/@connections.78" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE"/>
+                    <children name="CHARG" outgoingConnections="/0/@node.1/@nodeData/@connections.32 /0/@node.1/@nodeData/@connections.79" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG"/>
+                    <children name="ALTME" outgoingConnections="/0/@node.1/@nodeData/@connections.33 /0/@node.1/@nodeData/@connections.80" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME"/>
+                    <children name="VSOLA" outgoingConnections="/0/@node.1/@nodeData/@connections.34 /0/@node.1/@nodeData/@connections.81" type="id_BigDecimal" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA"/>
+                    <children name="VSOLM" outgoingConnections="/0/@node.1/@nodeData/@connections.35 /0/@node.1/@nodeData/@connections.82" type="id_BigDecimal" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM"/>
+                    <children name="MEINS" outgoingConnections="/0/@node.1/@nodeData/@connections.36 /0/@node.1/@nodeData/@connections.83" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS"/>
+                    <children filterOutGoingConnections="/0/@node.1/@nodeData/@connections.94" name="VLTYP" outgoingConnections="/0/@node.1/@nodeData/@connections.37 /0/@node.1/@nodeData/@connections.84" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP"/>
+                    <children name="VLPLA" outgoingConnections="/0/@node.1/@nodeData/@connections.38 /0/@node.1/@nodeData/@connections.85" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA"/>
+                    <children filterOutGoingConnections="/0/@node.1/@nodeData/@connections.95" name="NLTYP" outgoingConnections="/0/@node.1/@nodeData/@connections.39 /0/@node.1/@nodeData/@connections.86" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP"/>
+                    <children name="NLPLA" outgoingConnections="/0/@node.1/@nodeData/@connections.40 /0/@node.1/@nodeData/@connections.87" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA"/>
+                    <children name="TRART" outgoingConnections="/0/@node.1/@nodeData/@connections.41 /0/@node.1/@nodeData/@connections.88" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART"/>
+                    <children name="WDATU" outgoingConnections="/0/@node.1/@nodeData/@connections.42 /0/@node.1/@nodeData/@connections.89" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU"/>
+                    <children name="WDATZ" outgoingConnections="/0/@node.1/@nodeData/@connections.43 /0/@node.1/@nodeData/@connections.90" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ"/>
+                    <children name="VFDAT" outgoingConnections="/0/@node.1/@nodeData/@connections.44 /0/@node.1/@nodeData/@connections.91" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT"/>
+                    <children name="MAKTX" outgoingConnections="/0/@node.1/@nodeData/@connections.45 /0/@node.1/@nodeData/@connections.92" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX"/>
+                    <children name="CAT" outgoingConnections="/0/@node.1/@nodeData/@connections.46 /0/@node.1/@nodeData/@connections.93" type="id_String" xpath="tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </inputTrees>
+        <outputTrees activateCondensedTool="true" activateExpressionFilter="true" allInOne="true" expressionFilter="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP].equals(&quot;0020&quot;)" filterIncomingConnections="/0/@node.1/@nodeData/@connections.94" name="tXM_01TtJR_01">
+          <nodes expression="" name="content" type="id_Document" xpath="tXM_01TtJR_01/content">
+            <children main="true" name="_-SCWM_-WMTOID01" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children main="true" name="IDOC" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/@BEGIN]" incomingConnections="/0/@node.1/@nodeData/@connections.0" name="BEGIN" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/@BEGIN" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="EDI_DC40" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT]" incomingConnections="/0/@node.1/@nodeData/@connections.1" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM]" incomingConnections="/0/@node.1/@nodeData/@connections.2" name="TABNAM" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT]" incomingConnections="/0/@node.1/@nodeData/@connections.3" name="MANDT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM]" incomingConnections="/0/@node.1/@nodeData/@connections.4" name="DOCNUM" type="id_Long" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL]" incomingConnections="/0/@node.1/@nodeData/@connections.5" name="DOCREL" type="id_Integer" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS]" incomingConnections="/0/@node.1/@nodeData/@connections.6" name="STATUS" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT]" incomingConnections="/0/@node.1/@nodeData/@connections.7" name="DIRECT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD]" incomingConnections="/0/@node.1/@nodeData/@connections.8" name="OUTMOD" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.9" name="IDOCTYP" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.10" name="MESTYP" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR]" incomingConnections="/0/@node.1/@nodeData/@connections.11" name="SNDPOR" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT]" incomingConnections="/0/@node.1/@nodeData/@connections.12" name="SNDPRT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN]" incomingConnections="/0/@node.1/@nodeData/@connections.13" name="SNDPRN" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR]" incomingConnections="/0/@node.1/@nodeData/@connections.14" name="RCVPOR" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT]" incomingConnections="/0/@node.1/@nodeData/@connections.15" name="RCVPRT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN]" incomingConnections="/0/@node.1/@nodeData/@connections.16" name="RCVPRN" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT]" incomingConnections="/0/@node.1/@nodeData/@connections.17" name="CREDAT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM]" incomingConnections="/0/@node.1/@nodeData/@connections.18" name="CRETIM" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL]" incomingConnections="/0/@node.1/@nodeData/@connections.19" name="SERIAL" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+                <children main="true" name="_-SCWM_-E1LTORH" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT]" incomingConnections="/0/@node.1/@nodeData/@connections.20" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM]" incomingConnections="/0/@node.1/@nodeData/@connections.21" name="LGNUM" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO]" incomingConnections="/0/@node.1/@nodeData/@connections.22" name="WHO" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE]" incomingConnections="/0/@node.1/@nodeData/@connections.23" name="QUEUE" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children loop="true" main="true" name="_-SCWM_-E1LTORI" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT]" incomingConnections="/0/@node.1/@nodeData/@connections.24" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM]" incomingConnections="/0/@node.1/@nodeData/@connections.25" name="TANUM" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY]" incomingConnections="/0/@node.1/@nodeData/@connections.26" name="PROCTY" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR]" incomingConnections="/0/@node.1/@nodeData/@connections.27" name="MATNR" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED]" incomingConnections="/0/@node.1/@nodeData/@connections.28" name="ENTITLED" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE]" incomingConnections="/0/@node.1/@nodeData/@connections.29" name="ENTITLED_ROLE" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER]" incomingConnections="/0/@node.1/@nodeData/@connections.30" name="OWNER" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE]" incomingConnections="/0/@node.1/@nodeData/@connections.31" name="OWNER_ROLE" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG]" incomingConnections="/0/@node.1/@nodeData/@connections.32" name="CHARG" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME]" incomingConnections="/0/@node.1/@nodeData/@connections.33" name="ALTME" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA]" incomingConnections="/0/@node.1/@nodeData/@connections.34" name="VSOLA" type="id_BigDecimal" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM]" incomingConnections="/0/@node.1/@nodeData/@connections.35" name="VSOLM" type="id_BigDecimal" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS]" incomingConnections="/0/@node.1/@nodeData/@connections.36" name="MEINS" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.37" name="VLTYP" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA]" incomingConnections="/0/@node.1/@nodeData/@connections.38" name="VLPLA" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.39" name="NLTYP" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA]" incomingConnections="/0/@node.1/@nodeData/@connections.40" name="NLPLA" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART]" incomingConnections="/0/@node.1/@nodeData/@connections.41" name="TRART" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU]" incomingConnections="/0/@node.1/@nodeData/@connections.42" name="WDATU" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ]" incomingConnections="/0/@node.1/@nodeData/@connections.43" name="WDATZ" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT]" incomingConnections="/0/@node.1/@nodeData/@connections.44" name="VFDAT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX]" incomingConnections="/0/@node.1/@nodeData/@connections.45" name="MAKTX" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT]" incomingConnections="/0/@node.1/@nodeData/@connections.46" name="CAT" type="id_String" xpath="tXM_01TtJR_01.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </outputTrees>
+        <outputTrees activateCondensedTool="true" activateExpressionFilter="true" allInOne="true" expressionFilter="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP].equals(&quot;0020&quot;)" filterIncomingConnections="/0/@node.1/@nodeData/@connections.95" name="tXM_01TtJR_02">
+          <nodes expression="" name="content" type="id_Document" xpath="tXM_01TtJR_02/content">
+            <children main="true" name="_-SCWM_-WMTOID01" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children main="true" name="IDOC" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/@BEGIN]" incomingConnections="/0/@node.1/@nodeData/@connections.47" name="BEGIN" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/@BEGIN" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children name="EDI_DC40" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT]" incomingConnections="/0/@node.1/@nodeData/@connections.48" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM]" incomingConnections="/0/@node.1/@nodeData/@connections.49" name="TABNAM" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT]" incomingConnections="/0/@node.1/@nodeData/@connections.50" name="MANDT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM]" incomingConnections="/0/@node.1/@nodeData/@connections.51" name="DOCNUM" type="id_Long" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL]" incomingConnections="/0/@node.1/@nodeData/@connections.52" name="DOCREL" type="id_Integer" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS]" incomingConnections="/0/@node.1/@nodeData/@connections.53" name="STATUS" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT]" incomingConnections="/0/@node.1/@nodeData/@connections.54" name="DIRECT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD]" incomingConnections="/0/@node.1/@nodeData/@connections.55" name="OUTMOD" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.56" name="IDOCTYP" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.57" name="MESTYP" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR]" incomingConnections="/0/@node.1/@nodeData/@connections.58" name="SNDPOR" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT]" incomingConnections="/0/@node.1/@nodeData/@connections.59" name="SNDPRT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN]" incomingConnections="/0/@node.1/@nodeData/@connections.60" name="SNDPRN" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR]" incomingConnections="/0/@node.1/@nodeData/@connections.61" name="RCVPOR" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT]" incomingConnections="/0/@node.1/@nodeData/@connections.62" name="RCVPRT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN]" incomingConnections="/0/@node.1/@nodeData/@connections.63" name="RCVPRN" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT]" incomingConnections="/0/@node.1/@nodeData/@connections.64" name="CREDAT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM]" incomingConnections="/0/@node.1/@nodeData/@connections.65" name="CRETIM" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL]" incomingConnections="/0/@node.1/@nodeData/@connections.66" name="SERIAL" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+                <children main="true" name="_-SCWM_-E1LTORH" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT]" incomingConnections="/0/@node.1/@nodeData/@connections.67" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM]" incomingConnections="/0/@node.1/@nodeData/@connections.68" name="LGNUM" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO]" incomingConnections="/0/@node.1/@nodeData/@connections.69" name="WHO" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE]" incomingConnections="/0/@node.1/@nodeData/@connections.70" name="QUEUE" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children loop="true" main="true" name="_-SCWM_-E1LTORI" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT]" incomingConnections="/0/@node.1/@nodeData/@connections.71" name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/@SEGMENT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM]" incomingConnections="/0/@node.1/@nodeData/@connections.72" name="TANUM" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY]" incomingConnections="/0/@node.1/@nodeData/@connections.73" name="PROCTY" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR]" incomingConnections="/0/@node.1/@nodeData/@connections.74" name="MATNR" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED]" incomingConnections="/0/@node.1/@nodeData/@connections.75" name="ENTITLED" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE]" incomingConnections="/0/@node.1/@nodeData/@connections.76" name="ENTITLED_ROLE" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER]" incomingConnections="/0/@node.1/@nodeData/@connections.77" name="OWNER" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE]" incomingConnections="/0/@node.1/@nodeData/@connections.78" name="OWNER_ROLE" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG]" incomingConnections="/0/@node.1/@nodeData/@connections.79" name="CHARG" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME]" incomingConnections="/0/@node.1/@nodeData/@connections.80" name="ALTME" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA]" incomingConnections="/0/@node.1/@nodeData/@connections.81" name="VSOLA" type="id_BigDecimal" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM]" incomingConnections="/0/@node.1/@nodeData/@connections.82" name="VSOLM" type="id_BigDecimal" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS]" incomingConnections="/0/@node.1/@nodeData/@connections.83" name="MEINS" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.84" name="VLTYP" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA]" incomingConnections="/0/@node.1/@nodeData/@connections.85" name="VLPLA" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP]" incomingConnections="/0/@node.1/@nodeData/@connections.86" name="NLTYP" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA]" incomingConnections="/0/@node.1/@nodeData/@connections.87" name="NLPLA" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART]" incomingConnections="/0/@node.1/@nodeData/@connections.88" name="TRART" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU]" incomingConnections="/0/@node.1/@nodeData/@connections.89" name="WDATU" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ]" incomingConnections="/0/@node.1/@nodeData/@connections.90" name="WDATZ" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT]" incomingConnections="/0/@node.1/@nodeData/@connections.91" name="VFDAT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX]" incomingConnections="/0/@node.1/@nodeData/@connections.92" name="MAKTX" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tCT_01TtXM_01.body:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT]" incomingConnections="/0/@node.1/@nodeData/@connections.93" name="CAT" type="id_String" xpath="tXM_01TtJR_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </outputTrees>
+        <varTables minimized="true" name="Var"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.1" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.2" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.3" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.3" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.4" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.4" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.5" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.5" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.6" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.6" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.7" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.7" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.8" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.8" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.9" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.9" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.10" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.10" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.11" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.11" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.12" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.12" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.13" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.13" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.14" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.14" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.15" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.15" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.16" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.16" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.17" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.17" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.18" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.18" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.1" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.3" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.3" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.1" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.2" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.3" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.3" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.4" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.4" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.5" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.5" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.6" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.6" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.7" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.7" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.8" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.8" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.9" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.9" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.10" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.10" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.11" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.11" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.12" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.12" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.13" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.13" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.14" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.14" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.15" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.15" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.16" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.16" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.17" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.17" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.18" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.18" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.19" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.19" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.20" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.20" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.21" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.21" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.22" target="/0/@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.22" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.0" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.1" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.2" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.3" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.3" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.4" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.4" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.5" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.5" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.6" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.6" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.7" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.7" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.8" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.8" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.9" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.9" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.10" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.10" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.11" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.11" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.12" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.12" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.13" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.13" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.14" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.14" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.15" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.15" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.16" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.16" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.17" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.17" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.18" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1/@children.18" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.1" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.3" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.3" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.0" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.1" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.2" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.3" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.3" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.4" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.4" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.5" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.5" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.6" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.6" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.7" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.7" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.8" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.8" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.9" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.9" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.10" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.10" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.11" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.11" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.12" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.12" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.13" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.13" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.14" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.14" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.15" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.15" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.16" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.16" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.17" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.17" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.18" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.18" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.19" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.19" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.20" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.20" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.21" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.21" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.22" target="/0/@node.1/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.22" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.13" target="/0/@node.1/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+        <connections source="/0/@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.15" target="/0/@node.1/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
+      </nodeData>
+    </node>
+    <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.content = input_row.content;&#10;context.loc_Pickup_count=context.loc_Pickup_count+1;&#13;&#10;"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="LABEL" value="tJR_01"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tJavaRow_1">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="224">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_2"/>
+      <elementParameter field="EXTERNAL" name="MAP" value=""/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+      <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tXM_02"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tXM_02TtFOR_01">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+      <nodeData xsi:type="TalendXMLMap:XmlMapData">
+        <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tJR_01TtXM_02">
+          <nodes expression="" name="content" type="id_Document" xpath="tJR_01TtXM_02/content">
+            <children main="true" name="_-SCWM_-WMTOID01" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01">
+              <children main="true" name="IDOC" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC">
+                <children name="BEGIN" nodeType="ATTRIBUT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/@BEGIN"/>
+                <children name="EDI_DC40" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT"/>
+                  <children name="TABNAM" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM"/>
+                  <children name="MANDT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT"/>
+                  <children name="DOCNUM" outgoingConnections="/0/@node.3/@nodeData/@connections.4" type="id_Long" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM"/>
+                  <children name="DOCREL" type="id_Integer" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL"/>
+                  <children name="STATUS" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS"/>
+                  <children name="DIRECT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT"/>
+                  <children name="OUTMOD" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD"/>
+                  <children name="IDOCTYP" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP"/>
+                  <children name="MESTYP" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP"/>
+                  <children name="SNDPOR" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR"/>
+                  <children name="SNDPRT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT"/>
+                  <children name="SNDPRN" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN"/>
+                  <children name="RCVPOR" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR"/>
+                  <children name="RCVPRT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT"/>
+                  <children name="RCVPRN" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN"/>
+                  <children name="CREDAT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT"/>
+                  <children name="CRETIM" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM"/>
+                  <children name="SERIAL" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL"/>
+                </children>
+                <children main="true" name="_-SCWM_-E1LTORH" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/@SEGMENT"/>
+                  <children name="LGNUM" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM"/>
+                  <children name="WHO" outgoingConnections="/0/@node.3/@nodeData/@connections.1 /0/@node.3/@nodeData/@connections.2" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO"/>
+                  <children name="QUEUE" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE"/>
+                  <children loop="true" main="true" name="_-SCWM_-E1LTORI" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI">
+                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/@SEGMENT"/>
+                    <children name="TANUM" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM"/>
+                    <children name="PROCTY" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY"/>
+                    <children name="MATNR" outgoingConnections="/0/@node.3/@nodeData/@connections.3" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR"/>
+                    <children name="ENTITLED" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED"/>
+                    <children name="ENTITLED_ROLE" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE"/>
+                    <children name="OWNER" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER"/>
+                    <children name="OWNER_ROLE" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE"/>
+                    <children name="CHARG" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG"/>
+                    <children name="ALTME" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME"/>
+                    <children name="VSOLA" type="id_BigDecimal" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA"/>
+                    <children name="VSOLM" type="id_BigDecimal" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM"/>
+                    <children name="MEINS" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS"/>
+                    <children name="VLTYP" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP"/>
+                    <children name="VLPLA" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA"/>
+                    <children name="NLTYP" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP"/>
+                    <children name="NLPLA" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA"/>
+                    <children name="TRART" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART"/>
+                    <children name="WDATU" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU"/>
+                    <children name="WDATZ" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ"/>
+                    <children name="VFDAT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT"/>
+                    <children name="MAKTX" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX"/>
+                    <children name="CAT" type="id_String" xpath="tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </inputTrees>
+        <outputTrees activateCondensedTool="true" allInOne="true" name="tXM_02TtFOR_01">
+          <nodes expression="" name="content" type="id_Document" xpath="tXM_02TtFOR_01/content">
+            <children main="true" name="DI_TELEGRAM" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="header" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/header" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children name="FULL" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/header/FULL" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="&quot;HOST&quot;" name="HEADER_SOURCE" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/header/FULL/HEADER_SOURCE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;WAMAS&quot;" name="HEADER_DESTINATION" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/header/FULL/HEADER_DESTINATION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;1&quot;" name="HEADER_SEQUENCE" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/header/FULL/HEADER_SEQUENCE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;LOGIMATPD00004&quot;" name="HEADER_RECORDTYPENAME" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/header/FULL/HEADER_RECORDTYPENAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+              </children>
+              <children main="true" name="body" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children main="true" name="LogimatPdGroup" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children main="true" name="LOGIMATPD00004" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children expression="&quot;DEFAULT&quot;" name="LogimatPickingDemand_Client_clientId" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_Client_clientId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO]" incomingConnections="/0/@node.3/@nodeData/@connections.1" name="LogimatPickingDemand_demandNo" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;5&quot;" name="LogimatPickingDemand_priority" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_priority" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;Auslagerung&quot;" name="LogimatPickingDemand_demandType_typeId" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_demandType_typeId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression=" [tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM]" incomingConnections="/0/@node.3/@nodeData/@connections.4" name="LogimatPickingDemand_externalRef" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_externalRef" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="" name="LogimatPickingDemand_noteNo" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_noteNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;ger&quot;" name="LogimatPickingDemand_partnerRole_addr_Language_langId" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_partnerRole_addr_Language_langId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;ZONEA&quot;" name="LogimatPickingDemand_zone" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_zone" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="LogimatPickingDemand_info" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_info" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children name="LogimatPickingDemand_info2" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LogimatPickingDemand_info2" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children loop="true" main="true" name="LOGIMATPDL00003" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children expression="[tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO]" incomingConnections="/0/@node.3/@nodeData/@connections.2" name="LogimatPickingDemandLine_demand_demandNo" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_demand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="Var.LineNumber" incomingConnections="/0/@node.3/@nodeData/@connections.0" name="LogimatPickingDemandLine_sysPartnerLine" type="id_Integer" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_sysPartnerLine" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression=" [tJR_01TtXM_02.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR]" incomingConnections="/0/@node.3/@nodeData/@connections.3" name="LogimatPickingDemandLine_sqa_pkv_Item_itemNo" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_sqa_pkv_Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="" name="LogimatPickingDemandLine_orderedAmount_baseQty" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_orderedAmount_baseQty" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="LogimatPickingDemandLine_sqa_batch" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_sqa_batch" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="" name="LogimatPickingDemandLine_sqa_bbDate" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_sqa_bbDate" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="LogimatPickingDemandLine_sqa_prodDate" type="id_String" xpath="tXM_02TtFOR_01.content:/DI_TELEGRAM/body/LogimatPdGroup/LOGIMATPD00004/LOGIMATPDL00003/LogimatPickingDemandLine_sqa_prodDate" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </outputTrees>
+        <varTables name="Var">
+          <nodes expression="Numeric.sequence(&quot;LOGIMATPD00004&quot;,1,1) " name="LineNumber" outgoingConnections="/0/@node.3/@nodeData/@connections.0" type="id_Integer"/>
+        </varTables>
+        <connections source="/0/@node.3/@nodeData/@varTables.0/@nodes.0" target="/0/@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.10/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" target="/0/@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" target="/0/@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.10/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.3" target="/0/@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.10/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.3" target="/0/@node.3/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      </nodeData>
+    </node>
+    <node componentName="tFileOutputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="224">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputRaw_1"/>
+      <elementParameter field="FILE" name="FILENAME" value="&quot;C:/work/test/out/LPD4_&quot; + TalendDate.formatDate(&quot;yyyyMMddHHmmssSSS&quot;,TalendDate.getCurrentDate()) +&quot;.xml&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tFOR_01"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFileOutputRaw_1">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="352">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_2"/>
+      <elementParameter field="MEMO_JAVA" name="CODE" value="//Code erstellt anhand des Eingabe- und Ausgabeschemas&#13;&#10;output_row.content = input_row.content;&#10;context.loc_Storage_count=context.loc_Storage_count+1;&#13;&#10;"/>
+      <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+      <elementParameter field="TEXT" name="LABEL" value="tJR_02"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tJavaRow_2">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="960" posY="352">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_3"/>
+      <elementParameter field="EXTERNAL" name="MAP" value=""/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+      <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tXM_03"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tXM_03TtFOR_02">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+      </metadata>
+      <nodeData xsi:type="TalendXMLMap:XmlMapData">
+        <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tJR_02TtXM_03">
+          <nodes expression="" name="content" type="id_Document" xpath="tJR_02TtXM_03/content">
+            <children main="true" name="_-SCWM_-WMTOID01" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01">
+              <children main="true" name="IDOC" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC">
+                <children name="BEGIN" nodeType="ATTRIBUT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/@BEGIN"/>
+                <children name="EDI_DC40" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/@SEGMENT"/>
+                  <children name="TABNAM" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/TABNAM"/>
+                  <children name="MANDT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MANDT"/>
+                  <children name="DOCNUM" outgoingConnections="/0/@node.6/@nodeData/@connections.2" type="id_Long" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM"/>
+                  <children name="DOCREL" type="id_Integer" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCREL"/>
+                  <children name="STATUS" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/STATUS"/>
+                  <children name="DIRECT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DIRECT"/>
+                  <children name="OUTMOD" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/OUTMOD"/>
+                  <children name="IDOCTYP" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/IDOCTYP"/>
+                  <children name="MESTYP" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/MESTYP"/>
+                  <children name="SNDPOR" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPOR"/>
+                  <children name="SNDPRT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRT"/>
+                  <children name="SNDPRN" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SNDPRN"/>
+                  <children name="RCVPOR" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPOR"/>
+                  <children name="RCVPRT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRT"/>
+                  <children name="RCVPRN" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/RCVPRN"/>
+                  <children name="CREDAT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CREDAT"/>
+                  <children name="CRETIM" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/CRETIM"/>
+                  <children name="SERIAL" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/SERIAL"/>
+                </children>
+                <children main="true" name="_-SCWM_-E1LTORH" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH">
+                  <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/@SEGMENT"/>
+                  <children name="LGNUM" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/LGNUM"/>
+                  <children name="WHO" outgoingConnections="/0/@node.6/@nodeData/@connections.1 /0/@node.6/@nodeData/@connections.3" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO"/>
+                  <children name="QUEUE" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/QUEUE"/>
+                  <children loop="true" main="true" name="_-SCWM_-E1LTORI" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI">
+                    <children name="SEGMENT" nodeType="ATTRIBUT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/@SEGMENT"/>
+                    <children name="TANUM" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TANUM"/>
+                    <children name="PROCTY" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/PROCTY"/>
+                    <children name="MATNR" outgoingConnections="/0/@node.6/@nodeData/@connections.4" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR"/>
+                    <children name="ENTITLED" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED"/>
+                    <children name="ENTITLED_ROLE" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ENTITLED_ROLE"/>
+                    <children name="OWNER" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER"/>
+                    <children name="OWNER_ROLE" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/OWNER_ROLE"/>
+                    <children name="CHARG" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CHARG"/>
+                    <children name="ALTME" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/ALTME"/>
+                    <children name="VSOLA" type="id_BigDecimal" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLA"/>
+                    <children name="VSOLM" outgoingConnections="/0/@node.6/@nodeData/@connections.5" type="id_BigDecimal" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM"/>
+                    <children name="MEINS" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MEINS"/>
+                    <children name="VLTYP" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLTYP"/>
+                    <children name="VLPLA" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VLPLA"/>
+                    <children name="NLTYP" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLTYP"/>
+                    <children name="NLPLA" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/NLPLA"/>
+                    <children name="TRART" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/TRART"/>
+                    <children name="WDATU" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATU"/>
+                    <children name="WDATZ" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/WDATZ"/>
+                    <children name="VFDAT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VFDAT"/>
+                    <children name="MAKTX" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MAKTX"/>
+                    <children name="CAT" type="id_String" xpath="tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/CAT"/>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </inputTrees>
+        <outputTrees activateCondensedTool="true" allInOne="true" name="tXM_03TtFOR_02">
+          <nodes expression="" name="content" type="id_Document" xpath="tXM_03TtFOR_02/content">
+            <children main="true" name="DI_TELEGRAM" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children name="header" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/header" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children name="FULL" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/header/FULL" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children expression="&quot;HOST&quot;" name="HEADER_SOURCE" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/header/FULL/HEADER_SOURCE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;WAMAS&quot;" name="HEADER_DESTINATION" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/header/FULL/HEADER_DESTINATION" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;1&quot;" name="HEADER_SEQUENCE" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/header/FULL/HEADER_SEQUENCE" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                  <children expression="&quot;LOGIMATSD00004&quot;" name="HEADER_RECORDTYPENAME" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/header/FULL/HEADER_RECORDTYPENAME" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                </children>
+              </children>
+              <children main="true" name="body" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body" xsi:type="TalendXMLMap:OutputTreeNode">
+                <children main="true" name="LogimatLsdGroup" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup" xsi:type="TalendXMLMap:OutputTreeNode">
+                  <children main="true" name="LOGIMATSD00004" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004" xsi:type="TalendXMLMap:OutputTreeNode">
+                    <children expression="&quot;DEFAULT&quot;" name="LogimatStorageDemand_Client_clientId" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_Client_clientId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO]" incomingConnections="/0/@node.6/@nodeData/@connections.1" name="LogimatStorageDemand_demandNo" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;2&quot;" name="LogimatStorageDemand_priority" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_priority" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="" name="LogimatStorageDemand_noteNo" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_noteNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;Einlagerung&quot;" name="LogimatStorageDemand_demandType_typeId" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_demandType_typeId" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="[tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/EDI_DC40/DOCNUM]" incomingConnections="/0/@node.6/@nodeData/@connections.2" name="LogimatStorageDemand_extRef" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_extRef" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children expression="&quot;ZONEA&quot;" name="LogimatStorageDemand_zone" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LogimatStorageDemand_zone" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    <children loop="true" main="true" name="LOGIMATSDL00003" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003" xsi:type="TalendXMLMap:OutputTreeNode">
+                      <children expression="[tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/WHO]" incomingConnections="/0/@node.6/@nodeData/@connections.3" name="LogimatStorageDemandLine_demand_demandNo" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_demand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="Var.LineNumber" incomingConnections="/0/@node.6/@nodeData/@connections.0" name="LogimatStorageDemandLine_sysPartnerLine" type="id_Integer" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_sysPartnerLine" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression=" [tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/MATNR]" incomingConnections="/0/@node.6/@nodeData/@connections.4" name="LogimatStorageDemandLine_sqa_pkv_Item_itemNo" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_sqa_pkv_Item_itemNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="LogimatStorageDemandLine_sqa_batch" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_sqa_batch" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="LogimatStorageDemandLine_sqa_bbDate" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_sqa_bbDate" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children name="LogimatStorageDemandLine_sqa_prodDate" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_sqa_prodDate" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                      <children expression="[tJR_02TtXM_03.content:/_-SCWM_-WMTOID01/IDOC/_-SCWM_-E1LTORH/_-SCWM_-E1LTORI/VSOLM]" incomingConnections="/0/@node.6/@nodeData/@connections.5" name="LogimatStorageDemandLine_orderedAmount_baseQty" type="id_String" xpath="tXM_03TtFOR_02.content:/DI_TELEGRAM/body/LogimatLsdGroup/LOGIMATSD00004/LOGIMATSDL00003/LogimatStorageDemandLine_orderedAmount_baseQty" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                    </children>
+                  </children>
+                </children>
+              </children>
+            </children>
+          </nodes>
+        </outputTrees>
+        <varTables name="Var">
+          <nodes expression="Numeric.sequence(&quot;LOGIMATSD00004&quot;,1,1) " name="LineNumber" outgoingConnections="/0/@node.6/@nodeData/@connections.0" type="id_Integer"/>
+        </varTables>
+        <connections source="/0/@node.6/@nodeData/@varTables.0/@nodes.0" target="/0/@node.6/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.7/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" target="/0/@node.6/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.1/@children.3" target="/0/@node.6/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.5" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.2" target="/0/@node.6/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.7/@children.0" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.3" target="/0/@node.6/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.7/@children.2" xsi:type="TalendXMLMap:Connection"/>
+        <connections source="/0/@node.6/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.0/@children.2/@children.4/@children.11" target="/0/@node.6/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1/@children.0/@children.0/@children.7/@children.6" xsi:type="TalendXMLMap:Connection"/>
+      </nodeData>
+    </node>
+    <node componentName="tFileOutputRaw" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1184" posY="352">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputRaw_2"/>
+      <elementParameter field="FILE" name="FILENAME" value="&quot;C:/work/test/out/LSD4_&quot; + TalendDate.formatDate(&quot;yyyyMMddHHmmssSSS&quot;,TalendDate.getCurrentDate())+&quot;.xml&quot;"/>
+      <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+      <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+      <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tFOR_02"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFileOutputRaw_2">
+        <column defaultValue="" key="false" length="0" name="content" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Object" usefulColumn="true"/>
+      </metadata>
+    </node>
+    <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="224">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileOutputRaw_1_FILENAME_PATH&quot;))"/>
+      <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+      <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="DIRECTORY" name="DESTINATION" value="context.loc_WAMAS_directoy"/>
+      <elementParameter field="CHECK" name="RENAME" value="false"/>
+      <elementParameter field="TEXT" name="DESTINATION_RENAME" show="false" value="&quot;NewName.temp&quot;"/>
+      <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
+      <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+      <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+      <elementParameter field="CHECK" name="FAILON" value="false"/>
+      <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
+      <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tFC_01"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFileCopy_1"/>
+    </node>
+    <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1408" posY="352">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_2"/>
+      <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileOutputRaw_2_FILENAME_PATH&quot;))"/>
+      <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+      <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+      <elementParameter field="DIRECTORY" name="DESTINATION" value="context.loc_WAMAS_directoy"/>
+      <elementParameter field="CHECK" name="RENAME" value="false"/>
+      <elementParameter field="TEXT" name="DESTINATION_RENAME" show="false" value="&quot;NewName.temp&quot;"/>
+      <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
+      <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+      <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+      <elementParameter field="CHECK" name="FAILON" value="false"/>
+      <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
+      <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+      <elementParameter field="TEXT" name="LABEL" value="tFC_02"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <metadata connector="FLOW" name="tFileCopy_2"/>
+    </node>
+    <connection connectorName="FLOW" label="tJL_INP_01TtCT_01" lineStyle="0" metaname="INPUT_1" offsetLabelX="0" offsetLabelY="0" source="INPUT_1" target="tConvertType_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJL_INP_01TtCT_01"/>
+    </connection>
+    <connection connectorName="FLOW" label="tCT_01TtXM_01" lineStyle="0" metaname="tConvertType_1" offsetLabelX="0" offsetLabelY="0" source="tConvertType_1" target="tXMLMap_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tCT_01TtXM_01"/>
+    </connection>
+    <connection connectorName="FLOW" label="tXM_01TtJR_01" lineStyle="0" metaname="tXM_01TtJR_01" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tXMLMap_1" target="tJavaRow_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_01TtJR_01"/>
+    </connection>
+    <connection connectorName="FLOW" label="tXM_01TtJR_02" lineStyle="0" metaname="tXM_01TtJR_02" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tXMLMap_1" target="tJavaRow_2">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_01TtJR_02"/>
+    </connection>
+    <connection connectorName="FLOW" label="tJR_01TtXM_02" lineStyle="0" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tXMLMap_2">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJR_01TtXM_02"/>
+    </connection>
+    <connection connectorName="FLOW" label="tXM_02TtFOR_01" lineStyle="0" metaname="tXM_02TtFOR_01" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_2" target="tFileOutputRaw_1">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_02TtFOR_01"/>
+    </connection>
+    <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileOutputRaw_1" offsetLabelX="0" offsetLabelY="0" source="tFileOutputRaw_1" target="tFileCopy_1">
+      <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.loc_Pickup_count &gt; 0"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
+    </connection>
+    <connection connectorName="FLOW" label="tJR_02TtXM_03" lineStyle="0" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tXMLMap_3">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJR_02TtXM_03"/>
+    </connection>
+    <connection connectorName="FLOW" label="tXM_03TtFOR_02" lineStyle="0" metaname="tXM_03TtFOR_02" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_3" target="tFileOutputRaw_2">
+      <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_03TtFOR_02"/>
+    </connection>
+    <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tFileOutputRaw_2" offsetLabelX="0" offsetLabelY="0" source="tFileOutputRaw_2" target="tFileCopy_2">
+      <elementParameter field="MEMO_JAVA" name="CONDITION" value="context.loc_Storage_count&gt;0"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If2"/>
+    </connection>
+    <subjob>
+      <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="INPUT_1"/>
+      <elementParameter field="TEXT" name="SUBJOB_TITLE" value="input data from main job"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <subjob>
+      <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_2"/>
+      <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+      <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+    </subjob>
+    <jobletNodes componentName="INPUT" componentVersion="0.1" input="true" offsetLabelX="0" offsetLabelY="0" posX="96" posY="288">
+      <elementParameter field="TEXT" name="UNIQUE_NAME" value="INPUT_1"/>
+      <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+      <elementParameter field="CHECK" name="START" show="false" value="true"/>
+      <elementParameter field="TEXT" name="LABEL" value="tJL_INP_01"/>
+      <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;__UNIQUE_NAME__&lt;/b&gt;&lt;br&gt;__COMMENT__"/>
+      <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+      <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+      <elementParameter field="MEMO" name="COMMENT" value=""/>
+      <metadata connector="FLOW" name="INPUT_1">
+        <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      </metadata>
+    </jobletNodes>
+  </model:JobletProcess>
+  <TalendProperties:ByteArray/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3af80a92-cedb-4f7b-a209-504c971d4a37"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Bs4j9SqAUvg6KyiRO5Q1ore5avWglvhwUejtdlVjE9Qi8cy2f/vQ6B7k6sU9i5zRqYRQEM5XKUKU&#13;
+BkFiCR1G/g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_257a287e-c3d1-46d9-9d27-2433dfc49d14"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ncLnzh40EiEMnYUQ27sH8c2tKKT6cMppcQZ/6ZMsTIloAok8GudPB6O7EuNY8cZ54L17gNw53MLy&#13;
+YdLwraikYQ==</DigestValue></Reference></SignedInfo><SignatureValue>TN3uwHr3+6rbTqbLkk9up3TuWEJoVKucx2jtVXLbkdJ5/aKHUsohZ57eKPX90r0I8X0s3n7aQRhx&#13;
+P+1FKKdny4cFZbS6eqjJme7639yf1gshdhKTIBlj+3R+bamjBDKLCLuM1ADMNiRGAPhE9lWMKC+x&#13;
+AvZOYJSBos7Njt8DQdK4OF6RzyyZ2DtKNXAJ3GhHPuLLfMZGMHsD53pVjNzWbzYkdWDH7c3V5kyv&#13;
+NvEWzpoYKbmOGoCQ6IDttfFm76mGPLrmfndMGJkq0yusQMBVl5tFMGiYWNppyRuy1oQ35pCQJtsm&#13;
+L2p/EsCQ91kRKeX74rcr4yF15nwTAb2yb4X48A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_257a287e-c3d1-46d9-9d27-2433dfc49d14" Target="#_3af80a92-cedb-4f7b-a209-504c971d4a37"><Timestamp>2023-11-02 13:46:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></xmi:XMI>

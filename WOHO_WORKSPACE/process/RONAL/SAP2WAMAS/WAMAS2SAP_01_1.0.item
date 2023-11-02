@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="HD1_100" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="HQ1_400">
+    <contextParameter comment="UserName" internalId="_AgMKliSIEe6WPssXuN6sWQ" name="connection_SAP_USERNAME" prompt="connection_SAP_USERNAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="CON_MIWA_01"/>
+    <contextParameter comment="SystemNumber" internalId="_AgMKlySIEe6WPssXuN6sWQ" name="connection_SAP_SYSTEMNUMBER" prompt="connection_SAP_SYSTEMNUMBER?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="00"/>
+    <contextParameter comment="Language" internalId="_AgMKmCSIEe6WPssXuN6sWQ" name="connection_SAP_LANGUAGE" prompt="connection_SAP_LANGUAGE?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="EN"/>
+    <contextParameter comment="Client" internalId="_AgMKmSSIEe6WPssXuN6sWQ" name="connection_SAP_CLIENT" prompt="connection_SAP_CLIENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="400"/>
+    <contextParameter comment="Password" internalId="_AgMKmiSIEe6WPssXuN6sWQ" name="connection_SAP_PASSWORD" prompt="connection_SAP_PASSWORD?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_Password" value="enc:system.encryption.key.v1:2wyum/qmsuRfVbgYOaFtpsG6zP4C9HK22wDGCu0O38FJdFAXZzk="/>
+    <contextParameter comment="Host" internalId="_AgMKmySIEe6WPssXuN6sWQ" name="connection_SAP_HOST" prompt="connection_SAP_HOST?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="10.252.9.2"/>
+    <contextParameter comment="" internalId="_iWIJQCSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRT" prompt="LOC_HEADER_RCVPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJQSSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPOR" prompt="LOC_HEADER_RCVPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="SAPHQ1"/>
+    <contextParameter comment="" internalId="_iWIJQiSTEe6WPssXuN6sWQ" name="LOC_ENVIROMENT" prompt="LOC_ENVIROMENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HQ1/400"/>
+    <contextParameter comment="" internalId="_iWIJQySTEe6WPssXuN6sWQ" name="LOC_HEADER_FILENAME" prompt="LOC_HEADER_FILENAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJRCSTEe6WPssXuN6sWQ" name="LOC_HEADER_MESTYP" prompt="LOC_HEADER_MESTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJRSSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRT" prompt="LOC_HEADER_SNDPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJRiSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPOR" prompt="LOC_HEADER_SNDPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="A000000011"/>
+    <contextParameter comment="" internalId="_iWIJRySTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRN" prompt="LOC_HEADER_RCVPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HQ1CLNT400"/>
+    <contextParameter comment="" internalId="_iWIJSCSTEe6WPssXuN6sWQ" name="LOC_HEADER_IDOCTYP" prompt="LOC_HEADER_IDOCTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJSSSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRN" prompt="LOC_HEADER_SNDPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="MIDDLEWARE"/>
+    <contextParameter comment="" internalId="_NZZ1cCVIEe6ebfD6GNBygw" name="loc_WAMAS_OutDirectoy" prompt="loc_WAMAS_OutDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\out\"/>
+    <contextParameter comment="" internalId="_NZZ1cSVIEe6ebfD6GNBygw" name="loc_WAMAS_ArchiveDirectoy" prompt="loc_WAMAS_ArchiveDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\archive\"/>
+  </context>
+  <context confirmationNeeded="false" name="HQ1_100">
+    <contextParameter comment="UserName" internalId="_AgMKnCSIEe6WPssXuN6sWQ" name="connection_SAP_USERNAME" prompt="connection_SAP_USERNAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="CON_MIWA_01"/>
+    <contextParameter comment="SystemNumber" internalId="_AgMKnSSIEe6WPssXuN6sWQ" name="connection_SAP_SYSTEMNUMBER" prompt="connection_SAP_SYSTEMNUMBER?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="00"/>
+    <contextParameter comment="Language" internalId="_AgMKniSIEe6WPssXuN6sWQ" name="connection_SAP_LANGUAGE" prompt="connection_SAP_LANGUAGE?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="EN"/>
+    <contextParameter comment="Client" internalId="_AgMKnySIEe6WPssXuN6sWQ" name="connection_SAP_CLIENT" prompt="connection_SAP_CLIENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="100"/>
+    <contextParameter comment="Password" internalId="_AgMKoCSIEe6WPssXuN6sWQ" name="connection_SAP_PASSWORD" prompt="connection_SAP_PASSWORD?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_Password" value="enc:system.encryption.key.v1:BZWz7wmVzX6bF/phYmpjot82QGIIbc/CwuzvZ9tpsozAyqu0Vks="/>
+    <contextParameter comment="Host" internalId="_AgMKoSSIEe6WPssXuN6sWQ" name="connection_SAP_HOST" prompt="connection_SAP_HOST?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="10.252.9.2"/>
+    <contextParameter comment="" internalId="_iWIJSiSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRT" prompt="LOC_HEADER_RCVPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJSySTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPOR" prompt="LOC_HEADER_RCVPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="SAPHQ1"/>
+    <contextParameter comment="" internalId="_iWIJTCSTEe6WPssXuN6sWQ" name="LOC_ENVIROMENT" prompt="LOC_ENVIROMENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HQ1/100"/>
+    <contextParameter comment="" internalId="_iWIJTSSTEe6WPssXuN6sWQ" name="LOC_HEADER_FILENAME" prompt="LOC_HEADER_FILENAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJTiSTEe6WPssXuN6sWQ" name="LOC_HEADER_MESTYP" prompt="LOC_HEADER_MESTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJTySTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRT" prompt="LOC_HEADER_SNDPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJUCSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPOR" prompt="LOC_HEADER_SNDPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="A000000011"/>
+    <contextParameter comment="" internalId="_iWIJUSSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRN" prompt="LOC_HEADER_RCVPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HQ1CLNT100"/>
+    <contextParameter comment="" internalId="_iWIJUiSTEe6WPssXuN6sWQ" name="LOC_HEADER_IDOCTYP" prompt="LOC_HEADER_IDOCTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJUySTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRN" prompt="LOC_HEADER_SNDPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="MIDDLEWARE"/>
+    <contextParameter comment="" internalId="_NZZ1ciVIEe6ebfD6GNBygw" name="loc_WAMAS_OutDirectoy" prompt="loc_WAMAS_OutDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\out\"/>
+    <contextParameter comment="" internalId="_NZZ1cyVIEe6ebfD6GNBygw" name="loc_WAMAS_ArchiveDirectoy" prompt="loc_WAMAS_ArchiveDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\archive\"/>
+  </context>
+  <context confirmationNeeded="false" name="HD1_100">
+    <contextParameter comment="UserName" internalId="_AgMKoiSIEe6WPssXuN6sWQ" name="connection_SAP_USERNAME" prompt="connection_SAP_USERNAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="CON_MIWA_01"/>
+    <contextParameter comment="SystemNumber" internalId="_AgMKoySIEe6WPssXuN6sWQ" name="connection_SAP_SYSTEMNUMBER" prompt="connection_SAP_SYSTEMNUMBER?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="00"/>
+    <contextParameter comment="Language" internalId="_AgMKpCSIEe6WPssXuN6sWQ" name="connection_SAP_LANGUAGE" prompt="connection_SAP_LANGUAGE?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="EN"/>
+    <contextParameter comment="Client" internalId="_AgMKpSSIEe6WPssXuN6sWQ" name="connection_SAP_CLIENT" prompt="connection_SAP_CLIENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="100"/>
+    <contextParameter comment="Password" internalId="_AgMKpiSIEe6WPssXuN6sWQ" name="connection_SAP_PASSWORD" prompt="connection_SAP_PASSWORD?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_Password" value="enc:system.encryption.key.v1:zltY5CrPsmWHedg5SlbIa8bOXH7sMkqVddZHkUHitpB5JfHerxM="/>
+    <contextParameter comment="Host" internalId="_AgMKpySIEe6WPssXuN6sWQ" name="connection_SAP_HOST" prompt="connection_SAP_HOST?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="10.252.9.1"/>
+    <contextParameter comment="" internalId="_iWIJVCSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRT" prompt="LOC_HEADER_RCVPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJVSSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPOR" prompt="LOC_HEADER_RCVPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="SAPHD1"/>
+    <contextParameter comment="" internalId="_iWIJViSTEe6WPssXuN6sWQ" name="LOC_ENVIROMENT" prompt="LOC_ENVIROMENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HD1/100"/>
+    <contextParameter comment="" internalId="_iWIJVySTEe6WPssXuN6sWQ" name="LOC_HEADER_FILENAME" prompt="LOC_HEADER_FILENAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJWCSTEe6WPssXuN6sWQ" name="LOC_HEADER_MESTYP" prompt="LOC_HEADER_MESTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJWSSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRT" prompt="LOC_HEADER_SNDPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJWiSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPOR" prompt="LOC_HEADER_SNDPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="A000000011"/>
+    <contextParameter comment="" internalId="_iWIJWySTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRN" prompt="LOC_HEADER_RCVPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HD1CLNT100"/>
+    <contextParameter comment="" internalId="_iWIJXCSTEe6WPssXuN6sWQ" name="LOC_HEADER_IDOCTYP" prompt="LOC_HEADER_IDOCTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJXSSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRN" prompt="LOC_HEADER_SNDPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="MIDDLEWARE"/>
+    <contextParameter comment="" internalId="_NZZ1dCVIEe6ebfD6GNBygw" name="loc_WAMAS_OutDirectoy" prompt="loc_WAMAS_OutDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\out\"/>
+    <contextParameter comment="" internalId="_NZZ1dSVIEe6ebfD6GNBygw" name="loc_WAMAS_ArchiveDirectoy" prompt="loc_WAMAS_ArchiveDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\archive\"/>
+  </context>
+  <context confirmationNeeded="false" name="REP_100">
+    <contextParameter comment="UserName" internalId="_AgMKqCSIEe6WPssXuN6sWQ" name="connection_SAP_USERNAME" prompt="connection_SAP_USERNAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="CON_MIWA_01"/>
+    <contextParameter comment="SystemNumber" internalId="_AgMKqSSIEe6WPssXuN6sWQ" name="connection_SAP_SYSTEMNUMBER" prompt="connection_SAP_SYSTEMNUMBER?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="00"/>
+    <contextParameter comment="Language" internalId="_AgMKqiSIEe6WPssXuN6sWQ" name="connection_SAP_LANGUAGE" prompt="connection_SAP_LANGUAGE?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="EN"/>
+    <contextParameter comment="Client" internalId="_AgMKqySIEe6WPssXuN6sWQ" name="connection_SAP_CLIENT" prompt="connection_SAP_CLIENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="100"/>
+    <contextParameter comment="Password" internalId="_AgMKrCSIEe6WPssXuN6sWQ" name="connection_SAP_PASSWORD" prompt="connection_SAP_PASSWORD?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_Password" value="enc:system.encryption.key.v1:zUkguamaMuvKLKXzUdHa2EQrRBzdfKxZR2QAoBzIim0AIl0MKVc="/>
+    <contextParameter comment="Host" internalId="_AgMKrSSIEe6WPssXuN6sWQ" name="connection_SAP_HOST" prompt="connection_SAP_HOST?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="10.252.9.1"/>
+    <contextParameter comment="" internalId="_iWIJXiSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRT" prompt="LOC_HEADER_RCVPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJXySTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPOR" prompt="LOC_HEADER_RCVPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="SAPHD1"/>
+    <contextParameter comment="" internalId="_iWIJYCSTEe6WPssXuN6sWQ" name="LOC_ENVIROMENT" prompt="LOC_ENVIROMENT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="REP/100"/>
+    <contextParameter comment="" internalId="_iWIJYSSTEe6WPssXuN6sWQ" name="LOC_HEADER_FILENAME" prompt="LOC_HEADER_FILENAME?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJYiSTEe6WPssXuN6sWQ" name="LOC_HEADER_MESTYP" prompt="LOC_HEADER_MESTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJYySTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRT" prompt="LOC_HEADER_SNDPRT?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="LS"/>
+    <contextParameter comment="" internalId="_iWIJZCSTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPOR" prompt="LOC_HEADER_SNDPOR?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="A000000011"/>
+    <contextParameter comment="" internalId="_iWIJZSSTEe6WPssXuN6sWQ" name="LOC_HEADER_RCVPRN" prompt="LOC_HEADER_RCVPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="HD1CLNT100"/>
+    <contextParameter comment="" internalId="_iWIJZiSTEe6WPssXuN6sWQ" name="LOC_HEADER_IDOCTYP" prompt="LOC_HEADER_IDOCTYP?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_iWIJZySTEe6WPssXuN6sWQ" name="LOC_HEADER_SNDPRN" prompt="LOC_HEADER_SNDPRN?" promptNeeded="false" repositoryContextId="_qS_WELdOEe2VLLkDm0L5Eg" type="id_String" value="MIDDLEWARE"/>
+    <contextParameter comment="" internalId="_NZZ1diVIEe6ebfD6GNBygw" name="loc_WAMAS_OutDirectoy" prompt="loc_WAMAS_OutDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\out\"/>
+    <contextParameter comment="" internalId="_NZZ1dyVIEe6ebfD6GNBygw" name="loc_WAMAS_ArchiveDirectoy" prompt="loc_WAMAS_ArchiveDirectoy?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="\\R00Swlm1\interface\TEST\archive\"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:9tj9KSCGe12bq8dhTPsdfHYexNbxkQNCEtJC965Z"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="tJDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:bs7hoMTu6zD8PZXt2UOBOG4T7TGKVDBzKG9qCYGr"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_1qliMJDHEe2MW5pQrfqoXg" name="DQTechnical"/>
+    <routinesParameter id="_1qD9wJDHEe2MW5pQrfqoXg" name="DataMasking"/>
+    <routinesParameter id="_09hPkJDBEe2UN6GjnIa2fw" name="DataOperation"/>
+    <routinesParameter id="_1qVqkJDHEe2MW5pQrfqoXg" name="DataQualityDependencies"/>
+    <routinesParameter id="_1qNuwJDHEe2MW5pQrfqoXg" name="DataQuality"/>
+    <routinesParameter id="_1qc_UJDHEe2MW5pQrfqoXg" name="DqStringHandling"/>
+    <routinesParameter id="_09pLYJDBEe2UN6GjnIa2fw" name="Mathematical"/>
+    <routinesParameter id="_09wgIJDBEe2UN6GjnIa2fw" name="Numeric"/>
+    <routinesParameter id="_0-EpMJDBEe2UN6GjnIa2fw" name="Relational"/>
+    <routinesParameter id="_08i_MJDBEe2UN6GjnIa2fw" name="SQLike"/>
+    <routinesParameter id="_0-MlAJDBEe2UN6GjnIa2fw" name="StringHandling"/>
+    <routinesParameter id="_0-T5wJDBEe2UN6GjnIa2fw" name="TalendDataGenerator"/>
+    <routinesParameter id="_0-b1kJDBEe2UN6GjnIa2fw" name="TalendDate"/>
+    <routinesParameter id="_0-tiYJDBEe2UN6GjnIa2fw" name="TalendStringUtil"/>
+    <routinesParameter id="_0-lmkJDBEe2UN6GjnIa2fw" name="TalendString"/>
+  </parameters>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;M:/out&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;LSDACK_*.xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFL_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileInputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputXML_1"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/DI_TELEGRAM/body/LOGIMATSDACK00004/LOGIMATSDLACK00003&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="LogimatStorageDemand_demandNo"/>
+      <elementValue elementRef="QUERY" value="&quot;LogimatStorageDemandLine_demand_demandNo&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LogimatStorageDemandLine_ToStoredAmount"/>
+      <elementValue elementRef="QUERY" value="&quot;./LogimatStorageDemandLine_orderedAmount_baseQty&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LogimatStorageActivity_storedAmount"/>
+      <elementValue elementRef="QUERY" value="&quot;./LOGIMATSDLACTIVITYACK00001/LogimatStorageActivity_storedAmount_baseQty&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="IGNORE_NS" value="false"/>
+    <elementParameter field="CHECK" name="IGNORE_DTD" value="false"/>
+    <elementParameter field="FILE" name="TMP_FILENAME" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/temp.xml&quot;"/>
+    <elementParameter field="CHECK" name="USE_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="FIELD_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="Dom4j"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFIX_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputXML_1">
+      <column comment="" key="false" length="-1" name="LogimatStorageDemand_demandNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatStorageDemandLine_ToStoredAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatStorageActivity_storedAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="LogimatStorageDemand_demandNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatStorageDemandLine_ToStoredAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatStorageActivity_storedAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="352">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tXM_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tXM_01TtHM_01" name="tXM_01TtHM_01">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="tXM_01TtHM_01" name="tXM_01TtHM_02">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tFIX_01TtXM_01">
+        <nodes name="LogimatStorageDemand_demandNo" outgoingConnections="//@node.2/@nodeData/@connections.4 //@node.2/@nodeData/@connections.5 //@node.2/@nodeData/@connections.6 //@node.2/@nodeData/@connections.11" type="id_String" xpath="tFIX_01TtXM_01/LogimatStorageDemand_demandNo"/>
+        <nodes name="LogimatStorageDemandLine_ToStoredAmount" outgoingConnections="//@node.2/@nodeData/@connections.0 //@node.2/@nodeData/@connections.7 //@node.2/@nodeData/@connections.12" type="id_String" xpath="tFIX_01TtXM_01/LogimatStorageDemandLine_ToStoredAmount"/>
+        <nodes name="LogimatStorageActivity_storedAmount" outgoingConnections="//@node.2/@nodeData/@connections.1 //@node.2/@nodeData/@connections.8 //@node.2/@nodeData/@connections.13" type="id_String" xpath="tFIX_01TtXM_01/LogimatStorageActivity_storedAmount"/>
+      </inputTrees>
+      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter=" Var.choice_idoc==1" filterIncomingConnections="//@node.2/@nodeData/@connections.3" name="tXM_01TtHM_01">
+        <nodes expression="" name="body" type="id_Document" xpath="tXM_01TtHM_01/body">
+          <children main="true" name="root" type="id_String" xpath="tXM_01TtHM_01.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children loop="true" main="true" name="StorageDemandeResponse" type="id_String" xpath="tXM_01TtHM_01.body:/root/StorageDemandeResponse" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children expression="tFIX_01TtXM_01.LogimatStorageDemand_demandNo" incomingConnections="//@node.2/@nodeData/@connections.11" name="LogimatStorageDemand_demandNo" type="id_String" xpath="tXM_01TtHM_01.body:/root/StorageDemandeResponse/LogimatStorageDemand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_01TtXM_01.LogimatStorageDemandLine_ToStoredAmount" incomingConnections="//@node.2/@nodeData/@connections.12" name="LogimatStorageDemandLine_ToStoredAmount" type="id_Float" xpath="tXM_01TtHM_01.body:/root/StorageDemandeResponse/LogimatStorageDemandLine_ToStoredAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_01TtXM_01.LogimatStorageActivity_storedAmount" incomingConnections="//@node.2/@nodeData/@connections.13" name="LogimatStorageActivity_storedAmount" type="id_Float" xpath="tXM_01TtHM_01.body:/root/StorageDemandeResponse/LogimatStorageActivity_storedAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.WHO" incomingConnections="//@node.2/@nodeData/@connections.15" name="WHO" type="id_Integer" xpath="tXM_01TtHM_01.body:/root/StorageDemandeResponse/WHO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.TANUM" incomingConnections="//@node.2/@nodeData/@connections.14" name="TANUM" type="id_String" xpath="tXM_01TtHM_01.body:/root/StorageDemandeResponse/TANUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="Var.choice_idoc==0" filterIncomingConnections="//@node.2/@nodeData/@connections.2" name="tXM_01TtHM_02">
+        <nodes expression="" name="body" type="id_Document" xpath="tXM_01TtHM_02/body">
+          <children main="true" name="root" type="id_String" xpath="tXM_01TtHM_02.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children loop="true" main="true" name="StorageDemandeResponse" type="id_String" xpath="tXM_01TtHM_02.body:/root/StorageDemandeResponse" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children expression="tFIX_01TtXM_01.LogimatStorageDemand_demandNo" incomingConnections="//@node.2/@nodeData/@connections.6" name="LogimatStorageDemand_demandNo" type="id_String" xpath="tXM_01TtHM_02.body:/root/StorageDemandeResponse/LogimatStorageDemand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_01TtXM_01.LogimatStorageDemandLine_ToStoredAmount" incomingConnections="//@node.2/@nodeData/@connections.7" name="LogimatStorageDemandLine_ToStoredAmount" type="id_Float" xpath="tXM_01TtHM_02.body:/root/StorageDemandeResponse/LogimatStorageDemandLine_ToStoredAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_01TtXM_01.LogimatStorageActivity_storedAmount" incomingConnections="//@node.2/@nodeData/@connections.8" name="LogimatStorageActivity_storedAmount" type="id_Float" xpath="tXM_01TtHM_02.body:/root/StorageDemandeResponse/LogimatStorageActivity_storedAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.WHO" incomingConnections="//@node.2/@nodeData/@connections.9" name="WHO" type="id_Integer" xpath="tXM_01TtHM_02.body:/root/StorageDemandeResponse/WHO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.TANUM" incomingConnections="//@node.2/@nodeData/@connections.10" name="LGNUM" type="id_String" xpath="tXM_01TtHM_02.body:/root/StorageDemandeResponse/LGNUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables name="Var">
+        <nodes expression="tFIX_01TtXM_01.LogimatStorageDemandLine_ToStoredAmount.equals(tFIX_01TtXM_01.LogimatStorageActivity_storedAmount)?1:0 " filterOutGoingConnections="//@node.2/@nodeData/@connections.2 //@node.2/@nodeData/@connections.3" incomingConnections="//@node.2/@nodeData/@connections.0 //@node.2/@nodeData/@connections.1" name="choice_idoc" type="id_Integer"/>
+        <nodes expression="StringHandling.LEFT(tFIX_01TtXM_01.LogimatStorageDemand_demandNo,StringHandling.INDEX(tFIX_01TtXM_01.LogimatStorageDemand_demandNo,&quot;/&quot;)) " incomingConnections="//@node.2/@nodeData/@connections.4" name="WHO" outgoingConnections="//@node.2/@nodeData/@connections.9 //@node.2/@nodeData/@connections.15" type="id_String"/>
+        <nodes expression="StringHandling.RIGHT(tFIX_01TtXM_01.LogimatStorageDemand_demandNo,(StringHandling.LEN(tFIX_01TtXM_01.LogimatStorageDemand_demandNo)-(StringHandling.INDEX(tFIX_01TtXM_01.LogimatStorageDemand_demandNo,&quot;/&quot;))-1)) " incomingConnections="//@node.2/@nodeData/@connections.5" name="TANUM" outgoingConnections="//@node.2/@nodeData/@connections.10 //@node.2/@nodeData/@connections.14" type="id_String"/>
+      </varTables>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.1" target="//@node.2/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.2" target="//@node.2/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@varTables.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.2/@nodeData/@varTables.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@varTables.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@varTables.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@varTables.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@varTables.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.0" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@inputTrees.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@varTables.0/@nodes.2" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.2/@nodeData/@varTables.0/@nodes.1" target="//@node.2/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_1"/>
+    <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
+    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
+    <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/WAMAS2SAP_01/tHMap_1&quot;"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="true"/>
+    <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" show="false" value="tXM_01TtHM_01"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
+    <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="EMIT_EMPTY_PAYLOAD" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
+    <elementParameter field="TEXT" name="LABEL" value="tHM_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHM_01TtSDO_01">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSAPIDocOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPIDocOutput_1"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_E2kX4LdOEe2VLLkDm0L5Eg"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSAPConnection_1"/>
+    <elementParameter field="TEXT" name="CLIENT" show="false" value="context.connection_SAP_CLIENT"/>
+    <elementParameter field="TEXT" name="USERID" show="false" value="context.connection_SAP_USERNAME"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:/EplDr24U+Q7Jt1EfeIG+oeDlcTIneeE+ZosRuD9FfBv4quhIjhuNdJ2EGi3/h3vOZyeYjXswAZixUs="/>
+    <elementParameter field="TEXT" name="LANGUAGE" show="false" value="context.connection_SAP_LANGUAGE"/>
+    <elementParameter field="TEXT" name="HOSTNAME" show="false" value="context.connection_SAP_HOST"/>
+    <elementParameter field="TEXT" name="SYSTEMNUMBER" show="false" value="context.connection_SAP_SYSTEMNUMBER"/>
+    <elementParameter field="COLUMN_LIST" name="IDOC_COLUMN" value="iDOC"/>
+    <elementParameter field="CHECK" name="FROM_XML" value="false"/>
+    <elementParameter field="FILE" name="FILE_IDOC_XML" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSDO_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSAPIDocOutput_1">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_2"/>
+    <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
+    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
+    <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/WAMAS2SAP_01/tHMap_2&quot;"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="true"/>
+    <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" show="false" value="tXM_01TtHM_02"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
+    <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="EMIT_EMPTY_PAYLOAD" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
+    <elementParameter field="TEXT" name="LABEL" value="tHM_02"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHM_02TtSDO_02">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSAPIDocOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPIDocOutput_2"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_E2kX4LdOEe2VLLkDm0L5Eg"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSAPConnection_1"/>
+    <elementParameter field="TEXT" name="CLIENT" show="false" value="context.connection_SAP_CLIENT"/>
+    <elementParameter field="TEXT" name="USERID" show="false" value="context.connection_SAP_USERNAME"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:83yDuCY+aGHxSx31jXocQvagfexRifA2Yn1lGxs1xFXU6ff8u/QWMzrYucaFfSpIe6LMsFdIR9aZ9xo="/>
+    <elementParameter field="TEXT" name="LANGUAGE" show="false" value="context.connection_SAP_LANGUAGE"/>
+    <elementParameter field="TEXT" name="HOSTNAME" show="false" value="context.connection_SAP_HOST"/>
+    <elementParameter field="TEXT" name="SYSTEMNUMBER" show="false" value="context.connection_SAP_SYSTEMNUMBER"/>
+    <elementParameter field="COLUMN_LIST" name="IDOC_COLUMN" value="iDOC"/>
+    <elementParameter field="CHECK" name="FROM_XML" value="false"/>
+    <elementParameter field="FILE" name="FILE_IDOC_XML" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSDO_02"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSAPIDocOutput_2">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_2"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;M:/out&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;LPDACK_*.xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFL_02"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileInputXML" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputXML_2"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="TEXT" name="LOOP_QUERY" value="&quot;/DI_TELEGRAM/body/LOGIMATPDACK00005/LOGIMATPDLACK00003&quot;"/>
+    <elementParameter field="TABLE" name="MAPPING">
+      <elementValue elementRef="SCHEMA_COLUMN" value="LogimatPickupDemand_demandNo"/>
+      <elementValue elementRef="QUERY" value="&quot;LogimatPickingDemandLine_demand_demandNo&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LogimatPickupDemandLine_ToPickedAmount"/>
+      <elementValue elementRef="QUERY" value="&quot;./LogimatPickingDemandLine_orderedAmount_baseQty&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LogimatPickupActivity_PickedAmount"/>
+      <elementValue elementRef="QUERY" value="&quot;./LOGIMATPDLACTIVITYACK00002/LogimatPickingActivity_pickedAmount_baseQty&quot;"/>
+      <elementValue elementRef="NODECHECK" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="IGNORE_NS" value="false"/>
+    <elementParameter field="CHECK" name="IGNORE_DTD" value="false"/>
+    <elementParameter field="FILE" name="TMP_FILENAME" show="false" value="&quot;C:/Work/talend_workspace/cloud studio/temp.xml&quot;"/>
+    <elementParameter field="CHECK" name="USE_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="FIELD_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="Dom4j"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFIX_02"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputXML_2">
+      <column comment="" key="false" length="-1" name="LogimatPickupDemand_demandNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatPickupDemandLine_ToPickedAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatPickupActivity_PickedAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="LogimatPickupDemand_demandNo" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatPickupDemandLine_ToPickedAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LogimatPickupActivity_PickedAmount" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tXM_02"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="tXM_02TtHM_03" name="tXM_02TtHM_03">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="tXM_02TtHM_04" name="tXM_02TtHM_04">
+      <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="tFIX_02TtXM_02">
+        <nodes name="LogimatPickupDemand_demandNo" outgoingConnections="//@node.9/@nodeData/@connections.2 //@node.9/@nodeData/@connections.3 //@node.9/@nodeData/@connections.6 //@node.9/@nodeData/@connections.11" type="id_String" xpath="tFIX_02TtXM_02/LogimatPickupDemand_demandNo"/>
+        <nodes name="LogimatPickupDemandLine_ToPickedAmount" outgoingConnections="//@node.9/@nodeData/@connections.0 //@node.9/@nodeData/@connections.7 //@node.9/@nodeData/@connections.12" type="id_String" xpath="tFIX_02TtXM_02/LogimatPickupDemandLine_ToPickedAmount"/>
+        <nodes name="LogimatPickupActivity_PickedAmount" outgoingConnections="//@node.9/@nodeData/@connections.1 //@node.9/@nodeData/@connections.8 //@node.9/@nodeData/@connections.13" type="id_String" xpath="tFIX_02TtXM_02/LogimatPickupActivity_PickedAmount"/>
+      </inputTrees>
+      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter=" Var.choice_idoc==1" filterIncomingConnections="//@node.9/@nodeData/@connections.4" name="tXM_02TtHM_03">
+        <nodes expression="" name="body" pattern="" type="id_Document" xpath="tXM_02TtHM_03/body">
+          <children expression="" main="true" name="root" type="id_String" xpath="tXM_02TtHM_03.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children expression="" loop="true" main="true" name="PickupDemandeResponse" type="id_String" xpath="tXM_02TtHM_03.body:/root/PickupDemandeResponse" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children expression="tFIX_02TtXM_02.LogimatPickupDemand_demandNo" incomingConnections="//@node.9/@nodeData/@connections.6" name="LogimatPickupDemand_demandNo" type="id_String" xpath="tXM_02TtHM_03.body:/root/PickupDemandeResponse/LogimatPickupDemand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_02TtXM_02.LogimatPickupDemandLine_ToPickedAmount" incomingConnections="//@node.9/@nodeData/@connections.7" name="LogimatPickupDemandLine_ToPickedAmount" type="id_String" xpath="tXM_02TtHM_03.body:/root/PickupDemandeResponse/LogimatPickupDemandLine_ToPickedAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_02TtXM_02.LogimatPickupActivity_PickedAmount" incomingConnections="//@node.9/@nodeData/@connections.8" name="LogimatPickupActivity_PickedAmount" type="id_String" xpath="tXM_02TtHM_03.body:/root/PickupDemandeResponse/LogimatPickupActivity_PickedAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.WHO" incomingConnections="//@node.9/@nodeData/@connections.9" name="WHO" xpath="tXM_02TtHM_03.body:/root/PickupDemandeResponse/WHO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.TANUM" incomingConnections="//@node.9/@nodeData/@connections.10" name="TANUM" xpath="tXM_02TtHM_03.body:/root/PickupDemandeResponse/TANUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <outputTrees activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="Var.choice_idoc==0" filterIncomingConnections="//@node.9/@nodeData/@connections.5" name="tXM_02TtHM_04">
+        <nodes expression="" name="body" pattern="" type="id_Document" xpath="tXM_02TtHM_04/body">
+          <children expression="" main="true" name="root" type="id_String" xpath="tXM_02TtHM_04.body:/root" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children expression="" loop="true" main="true" name="PickupDemandeResponse" type="id_String" xpath="tXM_02TtHM_04.body:/root/PickupDemandeResponse" xsi:type="TalendXMLMap:OutputTreeNode">
+              <children expression="tFIX_02TtXM_02.LogimatPickupDemand_demandNo" incomingConnections="//@node.9/@nodeData/@connections.11" name="LogimatPickupDemand_demandNo" type="id_String" xpath="tXM_02TtHM_04.body:/root/PickupDemandeResponse/LogimatPickupDemand_demandNo" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_02TtXM_02.LogimatPickupDemandLine_ToPickedAmount" incomingConnections="//@node.9/@nodeData/@connections.12" name="LogimatPickupDemandLine_ToPickedAmount" type="id_String" xpath="tXM_02TtHM_04.body:/root/PickupDemandeResponse/LogimatPickupDemandLine_ToPickedAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="tFIX_02TtXM_02.LogimatPickupActivity_PickedAmount" incomingConnections="//@node.9/@nodeData/@connections.13" name="LogimatPickupActivity_PickedAmount" type="id_String" xpath="tXM_02TtHM_04.body:/root/PickupDemandeResponse/LogimatPickupActivity_PickedAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.WHO" incomingConnections="//@node.9/@nodeData/@connections.14" name="WHO" xpath="tXM_02TtHM_04.body:/root/PickupDemandeResponse/WHO" xsi:type="TalendXMLMap:OutputTreeNode"/>
+              <children expression="Var.TANUM" incomingConnections="//@node.9/@nodeData/@connections.15" name="TANUM" xpath="tXM_02TtHM_04.body:/root/PickupDemandeResponse/TANUM" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            </children>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables name="Var">
+        <nodes expression="tFIX_02TtXM_02.LogimatPickupDemandLine_ToPickedAmount.equals(tFIX_02TtXM_02.LogimatPickupActivity_PickedAmount)?1:0 " filterOutGoingConnections="//@node.9/@nodeData/@connections.4 //@node.9/@nodeData/@connections.5" incomingConnections="//@node.9/@nodeData/@connections.0 //@node.9/@nodeData/@connections.1" name="choice_idoc" type="id_Integer"/>
+        <nodes expression="StringHandling.LEFT(tFIX_02TtXM_02.LogimatPickupDemand_demandNo,StringHandling.INDEX(tFIX_02TtXM_02.LogimatPickupDemand_demandNo,&quot;/&quot;)) " incomingConnections="//@node.9/@nodeData/@connections.2" name="WHO" outgoingConnections="//@node.9/@nodeData/@connections.9 //@node.9/@nodeData/@connections.14" type="id_String"/>
+        <nodes expression="StringHandling.RIGHT(tFIX_02TtXM_02.LogimatPickupDemand_demandNo,(StringHandling.LEN(tFIX_02TtXM_02.LogimatPickupDemand_demandNo)-(StringHandling.INDEX(tFIX_02TtXM_02.LogimatPickupDemand_demandNo,&quot;/&quot;))-1)) " incomingConnections="//@node.9/@nodeData/@connections.3" name="TANUM" outgoingConnections="//@node.9/@nodeData/@connections.10 //@node.9/@nodeData/@connections.15" type="id_String"/>
+      </varTables>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.1" target="//@node.9/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.2" target="//@node.9/@nodeData/@varTables.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0" target="//@node.9/@nodeData/@varTables.0/@nodes.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0" target="//@node.9/@nodeData/@varTables.0/@nodes.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@varTables.0/@nodes.0" target="//@node.9/@nodeData/@outputTrees.0" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.9/@nodeData/@varTables.0/@nodes.0" target="//@node.9/@nodeData/@outputTrees.1" xsi:type="TalendXMLMap:FilterConnection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.1" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.2" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@varTables.0/@nodes.1" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@varTables.0/@nodes.2" target="//@node.9/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.0" target="//@node.9/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.0" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.1" target="//@node.9/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@inputTrees.0/@nodes.2" target="//@node.9/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@varTables.0/@nodes.1" target="//@node.9/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.9/@nodeData/@varTables.0/@nodes.2" target="//@node.9/@nodeData/@outputTrees.1/@nodes.0/@children.0/@children.0/@children.4" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_3"/>
+    <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
+    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
+    <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/WAMAS2SAP_01/tHMap_3&quot;"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="true"/>
+    <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" show="false" value="tXM_02TtHM_03"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
+    <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="EMIT_EMPTY_PAYLOAD" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
+    <elementParameter field="TEXT" name="LABEL" value="tHM_03"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHM_03TtSDO_03">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHMap" componentVersion="1.0" offsetLabelX="0" offsetLabelY="0" posX="1344" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHMap_4"/>
+    <elementParameter field="LABEL" name="MAPPATH_HELP" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP_EDITOR" value=""/>
+    <elementParameter field="CHECK" name="RECREATE_MAP_SYNC_CONNECTIONS" value="false"/>
+    <elementParameter field="HMAP_PATH" name="HMAP_PATH" value="&quot;Jobs/WAMAS2SAP_01/tHMap_4&quot;"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="SOURCE_AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_MAP" show="false" value="false"/>
+    <elementParameter field="RADIO" name="AS_STRING" value="true"/>
+    <elementParameter field="RADIO" name="AS_BYTEARRAY" value="false"/>
+    <elementParameter field="RADIO" name="AS_INPUTSTREAM" value="false"/>
+    <elementParameter field="RADIO" name="AS_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SOURCE_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_TDM_STRUCT_INCARNATION" show="false" value=""/>
+    <elementParameter field="TEXT" name="SOURCE_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="TARGET_GENERATED_TDM_STRUCT_PATH" show="false" value=""/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_OBJECTTYPE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_STRING" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_BYTEARRAY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SINGLE_COLUMN_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_INPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HIDE_OUTPUT_SET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_INPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_STRING" show="false" value="true"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_MAP" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_DOCUMENT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="IS_NEW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SHOW_OUTPUT_BYTES" show="false" value="true"/>
+    <elementParameter field="RADIO" name="INCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="RADIO" name="OUTCONNECTIONS_SYNCED" show="false" value="true"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_ORDER" show="false" value="tXM_02TtHM_04"/>
+    <elementParameter field="TEXT" name="INCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="OUTCONNECTIONS_REMOVED" show="false" value=""/>
+    <elementParameter field="TEXT" name="HMAP_VAR_PATH" value="&quot;&quot;"/>
+    <elementParameter field="HMAP_VAR_USED_MAPS" name="HMAP_VAR_USED_MAPS" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="MAP_ROW_BY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="EMIT_EMPTY_PAYLOAD" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="EXCEPTION" value="64"/>
+    <elementParameter field="TEXT" name="LABEL" value="tHM_04"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tHM_04TtSDO_04">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSAPIDocOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPIDocOutput_3"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_E2kX4LdOEe2VLLkDm0L5Eg"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSAPConnection_1"/>
+    <elementParameter field="TEXT" name="CLIENT" show="false" value="context.connection_SAP_CLIENT"/>
+    <elementParameter field="TEXT" name="USERID" show="false" value="context.connection_SAP_USERNAME"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:XCS1VpCJAA8nyehGPTpv7tFOFgFTUQC4WLIJc1IiphwyE7fSjMMkRMzZWCnh1kxbtKcEPa16oP0elSw="/>
+    <elementParameter field="TEXT" name="LANGUAGE" show="false" value="context.connection_SAP_LANGUAGE"/>
+    <elementParameter field="TEXT" name="HOSTNAME" show="false" value="context.connection_SAP_HOST"/>
+    <elementParameter field="TEXT" name="SYSTEMNUMBER" show="false" value="context.connection_SAP_SYSTEMNUMBER"/>
+    <elementParameter field="COLUMN_LIST" name="IDOC_COLUMN" value="iDOC"/>
+    <elementParameter field="CHECK" name="FROM_XML" value="false"/>
+    <elementParameter field="FILE" name="FILE_IDOC_XML" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSDO_03"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSAPIDocOutput_3">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tSAPIDocOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1568" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPIDocOutput_4"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_E2kX4LdOEe2VLLkDm0L5Eg"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tSAPConnection_1"/>
+    <elementParameter field="TEXT" name="CLIENT" show="false" value="context.connection_SAP_CLIENT"/>
+    <elementParameter field="TEXT" name="USERID" show="false" value="context.connection_SAP_USERNAME"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" show="false" value="enc:system.encryption.key.v1:IrvYYCMVSJhOJqkulW4ApF5ePhAwRqJVv6Igt41ibhp8Jap5Di3DYVH8udhuCz0hqahaF4CoEWzeCQE="/>
+    <elementParameter field="TEXT" name="LANGUAGE" show="false" value="context.connection_SAP_LANGUAGE"/>
+    <elementParameter field="TEXT" name="HOSTNAME" show="false" value="context.connection_SAP_HOST"/>
+    <elementParameter field="TEXT" name="SYSTEMNUMBER" show="false" value="context.connection_SAP_SYSTEMNUMBER"/>
+    <elementParameter field="COLUMN_LIST" name="IDOC_COLUMN" value="iDOC"/>
+    <elementParameter field="CHECK" name="FROM_XML" value="false"/>
+    <elementParameter field="FILE" name="FILE_IDOC_XML" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSDO_04"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSAPIDocOutput_4">
+      <column comment="" key="false" length="-1" name="iDOC" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="VALIDATION_REJECT" name="VALIDATION_REJECT">
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Object" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_3"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;M:/out&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="NO"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;LSDACK_*.xml&quot;"/>
+      <elementValue elementRef="FILEMASK" value="&quot;LPDACK_*.xml&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFL_03"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="704">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_1"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEPATH&quot;))"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="&quot;M:/archive&quot;"/>
+    <elementParameter field="CHECK" name="RENAME" value="false"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" show="false" value="&quot;NewName.temp&quot;"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="true"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
+    <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFC_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_1"/>
+  </node>
+  <node componentName="tSAPConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPConnection_1"/>
+    <elementParameter field="LABEL" name="NOTE3" show="false" value="The selected SAP JCO version allows you to share this SAP connection only with tSAPInput and tSAPOutput"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_E2kX4LdOEe2VLLkDm0L5Eg"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="TALENDSAP"/>
+    <elementParameter field="CLOSED_LIST" name="SERVERTYPE" value="ApplicationServer"/>
+    <elementParameter field="TEXT" name="CLIENT" value="context.connection_SAP_CLIENT"/>
+    <elementParameter field="TEXT" name="USERID" value="context.connection_SAP_USERNAME"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:S6vXgYKF/zBvagtEOzXx5pa1cAzNgIt0pCH3WdGpT6gNh/I3rlOd+lky9qiI+N/KvzYHuDQ0fWAXJHs="/>
+    <elementParameter field="TEXT" name="LANGUAGE" value="context.connection_SAP_LANGUAGE"/>
+    <elementParameter field="TEXT" name="HOSTNAME" value="context.connection_SAP_HOST"/>
+    <elementParameter field="TEXT" name="SYSTEMNUMBER" value="context.connection_SAP_SYSTEMNUMBER"/>
+    <elementParameter field="TEXT" name="SYSTEMID" show="false" value="&quot;PRD&quot;"/>
+    <elementParameter field="TEXT" name="GROUPNAME" show="false" value="&quot;tGroup&quot;"/>
+    <elementParameter field="LABEL" name="NOTE_DATASOURCE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="SAP_DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES"/>
+    <elementParameter field="CHECK" name="FTP_HTTP_FUNCTION" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tSAPCO_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
+    <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+    <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;net use M: \\\\R00Swlm1\\interface\\TEST RonalW00 /user:RONAL\\adm.oho&quot;"/>
+    <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+    <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+      <elementValue elementRef="VALUE" value="&quot;net use Q: \\\\R00SQSENT1\\QLIKData\\InputData RonalW00 /user:RONAL/adm.oho&quot;"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="TABLE" name="PARAMS"/>
+    <elementParameter field="TEXT" name="LABEL" value="tS_01"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSystem_1"/>
+  </node>
+  <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="832">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_2"/>
+    <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;C:/Work/talend_workspace/cloud studio&quot;"/>
+    <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;net use M: /delete&quot;"/>
+    <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
+    <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false">
+      <elementValue elementRef="VALUE" value="&quot;net use Q: \\\\R00SQSENT1\\QLIKData\\InputData RonalW00 /user:RONAL/adm.oho&quot;"/>
+    </elementParameter>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="OUTPUT_TO_CONSOLE"/>
+    <elementParameter field="TABLE" name="PARAMS"/>
+    <elementParameter field="TEXT" name="LABEL" value="tS_02"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tSystem_2"/>
+  </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputXML_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileList_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
+  </connection>
+  <connection connectorName="FLOW" label="tFIX_01TtXM_01" lineStyle="0" metaname="tFileInputXML_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_1" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFIX_01TtXM_01"/>
+  </connection>
+  <connection connectorName="FLOW" label="tXM_01TtHM_01" lineStyle="0" metaname="tXM_01TtHM_01" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tXMLMap_1" target="tHMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_01TtHM_01"/>
+  </connection>
+  <connection connectorName="FLOW" label="tXM_01TtHM_02" lineStyle="0" metaname="tXM_01TtHM_02" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tXMLMap_1" target="tHMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_01TtHM_02"/>
+  </connection>
+  <connection connectorName="FLOW" label="tHM_01TtSDO_01" lineStyle="0" metaname="tHM_01TtSDO_01" offsetLabelX="0" offsetLabelY="0" source="tHMap_1" target="tSAPIDocOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHM_01TtSDO_01"/>
+  </connection>
+  <connection connectorName="FLOW" label="tHM_02TtSDO_02" lineStyle="0" metaname="tHM_02TtSDO_02" offsetLabelX="0" offsetLabelY="0" source="tHMap_2" target="tSAPIDocOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHM_02TtSDO_02"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileInputXML_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate4"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileList_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk4"/>
+  </connection>
+  <connection connectorName="FLOW" label="tFIX_02TtXM_02" lineStyle="0" metaname="tFileInputXML_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputXML_2" target="tXMLMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFIX_02TtXM_02"/>
+  </connection>
+  <connection connectorName="FLOW" label="tXM_02TtHM_03" lineStyle="0" metaname="tXM_02TtHM_03" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tXMLMap_2" target="tHMap_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_02TtHM_03"/>
+  </connection>
+  <connection connectorName="FLOW" label="tXM_02TtHM_04" lineStyle="0" metaname="tXM_02TtHM_04" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tXMLMap_2" target="tHMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXM_02TtHM_04"/>
+  </connection>
+  <connection connectorName="FLOW" label="tHM_03TtSDO_03" lineStyle="0" metaname="tHM_03TtSDO_03" offsetLabelX="0" offsetLabelY="0" source="tHMap_3" target="tSAPIDocOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHM_03TtSDO_03"/>
+  </connection>
+  <connection connectorName="FLOW" label="tHM_04TtSDO_04" lineStyle="0" metaname="tHM_04TtSDO_04" offsetLabelX="0" offsetLabelY="0" source="tHMap_4" target="tSAPIDocOutput_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHM_04TtSDO_04"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tFileCopy_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate3"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tSystem_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSAPConnection_1" offsetLabelX="0" offsetLabelY="0" source="tSAPConnection_1" target="tSystem_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileList_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSAPConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6ad4e656-8a96-4efc-9bf8-757b82522875"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jeoEAXbaDVjWWCgt9WbxYxt23HFkQ64VNYzU6OJDGrdw40XwdjA87yi44YpMcfDtAz0uSM0q9i0B&#13;
+hUm99pEvZA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f9323898-c02d-4a03-8312-424e86925015"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bbxpedUm5H5AgqA6WtyyUWqquDAKTiqxe6QQyYxcqfclf0suCVLsduEvBcizTgGZmiVPFtM0KpH9&#13;
+Y8dv68AT9Q==</DigestValue></Reference></SignedInfo><SignatureValue>DiN9v/Q5xP/2H3wKC427LD5HhFzI3uSTXzyjRojTG0WkoQySn9wCrNqRHOf7jTu+vPuRTNDfIPXN&#13;
+HJwD6U/WDhgQcHYDh7Tzwp0LLK+xPmbovXpjE+xUeaLSAJr1l5rVE/myajfsvAiKaHhUAhuxiyGH&#13;
+xsjBhlrCt1Q1B8IS3FxhDdmjwqiBvk+n09WtPseCKKhtvwaFmrdBMqKuIVpzCNX9Pk8DRFzpis0H&#13;
+pA9mIeKB2iEaxhldHSJOru7y4mw12prMzYAtZ0avRJiUw459UPwO2MaLJE9R903YBgtnSKiyyUoP&#13;
+j9OJFldaXhA2017EZj4Jjg9N4nIOec79RdoP5A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f9323898-c02d-4a03-8312-424e86925015" Target="#_6ad4e656-8a96-4efc-9bf8-757b82522875"><Timestamp>2023-11-02 13:46:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
